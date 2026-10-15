@@ -11,6 +11,7 @@ import { toErrorPayload } from "./core/errors.js";
 import { DOMAIN_LIKE, UsageError, num } from "./cli-args.js";
 import { parseCrawl, type CrawlCli } from "./cli-crawl.js";
 import { parseDiff, type DiffCli } from "./cli-diff.js";
+import { parseReverse, type ReverseCli } from "./cli-reverse.js";
 import { VERSION } from "./version.js";
 import { AI_ENGINES } from "./adapters/cite.js";
 import { isEngineName } from "./adapters/serp.js";
@@ -22,6 +23,8 @@ Usage:
   seo-rea strategy <domain> [--vs <domain>] ...   Same as above: why a site leads (Strategy Dossier)
   seo-rea teardown --keyword "<kw>" --target <domain> --out <dir> [options] [--json]
   seo-rea crawl <domain> [--out <dir>] [--max-pages 500] [--max-depth 10] [--delay-ms 500] [--force] [--json]
+  seo-rea reverse <domain> [--out <dir>] [--max-pages 300] [--from-crawl <run>] [--no-offpage] [--json]
+                                    Reverse engineer a domain's SEO/AEO strategy (free sources only)
   seo-rea diff <older-run> <newer-run> [--out <dir>] [--json]   Fixed / new / regressed between two runs
   seo-rea audit <domain|url> [--out <dir>] [--no-psi] [--lighthouse] [--json]
   seo-rea batch --sites <file.json|file.csv> [--out <dir>] [--site-delay-ms <n>] [options] [--json]
@@ -107,6 +110,7 @@ export type Command =
     }
   | { command: "crawl"; options: CrawlCli }
   | { command: "diff"; options: DiffCli }
+  | { command: "reverse"; options: ReverseCli }
   | { command: "cite"; out: string; engine: string; prompt: string; urls: string; note: string };
 
 export interface TeardownCli {
@@ -280,6 +284,7 @@ export function parseCli(argv: string[]): Command {
   if (cmd === "batch") return { command: "batch", options: parseBatch(rest) };
   if (cmd === "crawl") return { command: "crawl", options: parseCrawl(rest) };
   if (cmd === "diff") return { command: "diff", options: parseDiff(rest) };
+  if (cmd === "reverse") return { command: "reverse", options: parseReverse(rest) };
   if (cmd === "audit") {
     const { values: v, positionals } = parseArgs({
       args: rest,
@@ -464,6 +469,10 @@ async function dispatch(cmd: Command): Promise<number> {
     case "crawl": {
       const { runCrawlCommand } = await import("./cli-crawl.js");
       return runCrawlCommand(cmd.options, err, printJson);
+    }
+    case "reverse": {
+      const { runReverseCommand } = await import("./cli-reverse.js");
+      return runReverseCommand(cmd.options, err, printJson);
     }
     case "diff": {
       const { runDiffCommand } = await import("./cli-diff.js");
