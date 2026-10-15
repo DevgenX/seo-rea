@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "import", "unicorn", "oxc"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  },
+  "rules": {
+    "no-var": "error",
+    "eqeqeq": "error",
+    "no-console": "error",
+    "typescript/no-explicit-any": "error",
+    "typescript/no-import-type-side-effects": "error",
+    "max-lines": ["warn", { "max": 500, "skipBlankLines": true, "skipComments": true }]
+  },
+  "ignorePatterns": ["dist/**", "node_modules/**", "examples/**", "coverage/**"]
+}
