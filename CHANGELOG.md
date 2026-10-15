@@ -41,7 +41,7 @@ Rewrite in strict TypeScript as a CLI, an MCP server and an agent skill.
 - `--engines`, `--no-browser`, `--adlib-capture`, `--no-psi`, `--lighthouse`
   and `--delay-ms` teardown flags.
 - `grok` as a `cite` engine.
-- Docs (`docs/`), CI workflow, issue and PR templates, `llms.txt`,
+- Docs (`docs/`), issue and PR templates, `llms.txt`,
   contributor and security policies, third-party notices.
 
 ### Changed
