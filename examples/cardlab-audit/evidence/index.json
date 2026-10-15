@@ -18,7 +18,7 @@
     "note": "3 checked node(s)",
     "file": "E002-schema-getcardlab-app.json",
     "costUsd": 0,
-    "fetchedAt": "2026-10-15T04:46:55.486Z",
+    "fetchedAt": "2026-10-15T05:16:15.715Z",
     "fromCache": false
   },
   {
@@ -40,7 +40,7 @@
     "note": "114 URLs",
     "file": "E004-sitemap-getcardlab-app.json",
     "costUsd": 0,
-    "fetchedAt": "2026-10-15T04:46:55.491Z",
+    "fetchedAt": "2026-10-15T05:16:15.720Z",
     "fromCache": false
   },
   {
@@ -73,7 +73,7 @@
     "note": "0 of 9 AI crawlers blocked at /",
     "file": "E007-ai-crawlers-getcardlab-app.json",
     "costUsd": 0,
-    "fetchedAt": "2026-10-15T04:46:55.500Z",
+    "fetchedAt": "2026-10-15T05:16:15.727Z",
     "fromCache": false
   },
   {
@@ -84,7 +84,7 @@
     "note": "skipped: PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key",
     "file": "E008-psi-getcardlab-app.json",
     "costUsd": 0,
-    "fetchedAt": "2026-10-15T04:46:55.833Z",
+    "fetchedAt": "2026-10-15T05:16:15.919Z",
     "fromCache": false
   }
 ]
