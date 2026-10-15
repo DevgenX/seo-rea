@@ -1,12 +1,12 @@
 {
   "tool": "seo-rea",
-  "version": "0.2.0",
-  "runId": "20261015T044454Z",
+  "version": "0.3.0",
+  "runId": "20261015T051545Z",
   "keyword": "credit card rewards app",
-  "createdAt": "2026-10-15T04:44:54.629Z",
+  "createdAt": "2026-10-15T05:15:45.652Z",
   "budgetUsd": 0,
   "spentUsd": 0,
-  "userAgent": "seo-rea/0.2.0 (+https://github.com/DevgenX/seo-rea; polite research bot)",
+  "userAgent": "seo-rea/0.3.0 (+https://github.com/DevgenX/seo-rea; polite research bot)",
   "browserUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
   "serp": {
     "attempts": [
@@ -43,21 +43,21 @@
         "position": 1,
         "url": "https://www.forbes.com/advisor/credit-cards/best-apps-to-track-credit-card-rewards/",
         "title": "The Best 4 Apps For Tracking Credit Cards And Travel Rewards",
-        "snippet": "Jan 30, 2025 · It’s important to track your credit card rewards for a variety of reasons, so we’ve compiled a list of the best four apps …",
+        "snippet": "One of the biggest reasons to use a tracking app is to see all of your accounts in one place. That means you can check the balances to see how many miles and points you have in every account all at once using only a single login. Not only does this sav…",
         "domain": "forbes.com"
       },
       {
         "position": 2,
         "url": "https://www.cnbc.com/select/best-apps-for-tracking-your-credit-card-rewards/",
-        "title": "Best Apps for Tracking Your Credit Card Rewards in 2026 - CNBC",
-        "snippet": "Jul 31, 2026 · These are the best apps for tracking your credit card, airline and hotel rewards AwardWallet and MaxRewards can …",
+        "title": "Best Apps for Tracking Your Credit Card Rewards in …",
+        "snippet": "Jul 31, 2026 · These are the best apps for tracking your credit card, airline and hotel rewards AwardWallet …",
         "domain": "cnbc.com"
       },
       {
         "position": 3,
         "url": "https://money.usnews.com/credit-cards/articles/best-credit-card-apps-for-tracking-rewards",
-        "title": "Here Are the Best Apps for Tracking Your Credit Card Rewards",
-        "snippet": "Feb 24, 2026 · Credit card rewards apps can help solve this problem by making sure you stay on top of the rewards you have and …",
+        "title": "Here Are the Best Apps for Tracking Your Credit Card …",
+        "snippet": "Feb 24, 2026 · Credit card rewards apps can help solve this problem by making sure you stay on top of the …",
         "domain": "money.usnews.com"
       },
       {
@@ -2755,7 +2755,7 @@
         "scores": {},
         "lab": {},
         "field": {},
-        "fetchedAt": "2026-10-15T04:45:26.085Z",
+        "fetchedAt": "2026-10-15T05:16:15.273Z",
         "fromCache": false,
         "evidenceId": "E022"
       }
@@ -2980,132 +2980,120 @@
       "brand": "cardlab",
       "platform": "Google Ads Transparency Center",
       "url": "https://adstransparency.google.com/?region=anywhere&domain=getcardlab.app",
-      "status": "captured",
-      "visibleCount": 0,
-      "note": "visible count: no ads shown",
-      "evidenceId": "E025",
-      "screenshotEvidenceId": "E024"
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceId": "E024"
     },
     {
       "domain": "getcardlab.app",
       "brand": "cardlab",
       "platform": "Meta Ad Library",
       "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=cardlab&search_type=keyword_unordered&media_type=all",
-      "status": "captured",
-      "visibleCount": 95,
-      "note": "visible count: ~95 results",
-      "evidenceId": "E027",
-      "screenshotEvidenceId": "E026"
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceId": "E025"
     },
     {
       "domain": "getcardlab.app",
       "brand": "cardlab",
       "platform": "LinkedIn Ad Library",
       "url": "https://www.linkedin.com/ad-library/search?keyword=cardlab",
-      "status": "captured",
-      "visibleCount": 2,
-      "note": "visible count: 2 ads match",
-      "evidenceId": "E029",
-      "screenshotEvidenceId": "E028"
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceId": "E026"
     },
     {
       "domain": "rewardswise.app",
       "brand": "rewardswise",
       "platform": "Google Ads Transparency Center",
       "url": "https://adstransparency.google.com/?region=anywhere&domain=rewardswise.app",
-      "status": "captured",
-      "visibleCount": 0,
-      "note": "visible count: no ads shown",
-      "evidenceId": "E031",
-      "screenshotEvidenceId": "E030"
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceId": "E027"
     },
     {
       "domain": "rewardswise.app",
       "brand": "rewardswise",
       "platform": "Meta Ad Library",
       "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=rewardswise&search_type=keyword_unordered&media_type=all",
-      "status": "captured",
-      "visibleCount": 0,
-      "note": "visible count: no ads shown",
-      "evidenceId": "E033",
-      "screenshotEvidenceId": "E032"
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceId": "E028"
     },
     {
       "domain": "rewardswise.app",
       "brand": "rewardswise",
       "platform": "LinkedIn Ad Library",
       "url": "https://www.linkedin.com/ad-library/search?keyword=rewardswise",
-      "status": "captured",
-      "visibleCount": 0,
-      "note": "visible count: no ads shown",
-      "evidenceId": "E035",
-      "screenshotEvidenceId": "E034"
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceId": "E029"
     },
     {
       "domain": "maxrewards.com",
       "brand": "maxrewards",
       "platform": "Google Ads Transparency Center",
       "url": "https://adstransparency.google.com/?region=anywhere&domain=maxrewards.com",
-      "status": "captured",
-      "visibleCount": 0,
-      "note": "visible count: no ads shown",
-      "evidenceId": "E037",
-      "screenshotEvidenceId": "E036"
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceId": "E030"
     },
     {
       "domain": "maxrewards.com",
       "brand": "maxrewards",
       "platform": "Meta Ad Library",
       "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=maxrewards&search_type=keyword_unordered&media_type=all",
-      "status": "captured",
-      "visibleCount": 61,
-      "note": "visible count: ~61 results",
-      "evidenceId": "E039",
-      "screenshotEvidenceId": "E038"
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceId": "E031"
     },
     {
       "domain": "maxrewards.com",
       "brand": "maxrewards",
       "platform": "LinkedIn Ad Library",
       "url": "https://www.linkedin.com/ad-library/search?keyword=maxrewards",
-      "status": "captured",
-      "visibleCount": 0,
-      "note": "visible count: no ads shown",
-      "evidenceId": "E041",
-      "screenshotEvidenceId": "E040"
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceId": "E032"
     },
     {
       "domain": "joinkudos.com",
       "brand": "joinkudos",
       "platform": "Google Ads Transparency Center",
       "url": "https://adstransparency.google.com/?region=anywhere&domain=joinkudos.com",
-      "status": "captured",
-      "visibleCount": 46,
-      "note": "visible count: 46 ads",
-      "evidenceId": "E043",
-      "screenshotEvidenceId": "E042"
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceId": "E033"
     },
     {
       "domain": "joinkudos.com",
       "brand": "joinkudos",
       "platform": "Meta Ad Library",
       "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=joinkudos&search_type=keyword_unordered&media_type=all",
-      "status": "captured",
-      "visibleCount": 20,
-      "note": "visible count: ~20 results",
-      "evidenceId": "E045",
-      "screenshotEvidenceId": "E044"
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceId": "E034"
     },
     {
       "domain": "joinkudos.com",
       "brand": "joinkudos",
       "platform": "LinkedIn Ad Library",
       "url": "https://www.linkedin.com/ad-library/search?keyword=joinkudos",
-      "status": "captured",
-      "visibleCount": 0,
-      "note": "visible count: no ads shown",
-      "evidenceId": "E047",
-      "screenshotEvidenceId": "E046"
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceId": "E035"
     }
   ],
   "citations": [],
