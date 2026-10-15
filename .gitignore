@@ -3,14 +3,21 @@
 .env.*
 !.env.example
 
+# Build, coverage, dependencies
+dist/
+coverage/
+node_modules/
+*.tgz
+
 # Cache, paid-call ledger and local runs
 .seo-rea/
+seo-rea-runs/
 cache/
 out/
 output/
 
-# Raw third-party HTML in example runs (parsed evidence is kept)
+# Raw third-party HTML and screenshots in example runs (parsed evidence is kept)
 examples/**/evidence/*.html
+examples/**/evidence/*.png
 
-node_modules/
 .DS_Store
