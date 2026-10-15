@@ -1,0 +1,3052 @@
+{
+  "schemaVersion": "1",
+  "tool": "seo-rea",
+  "toolVersion": "0.4.0",
+  "kind": "strategy",
+  "runId": "20261015T064652Z",
+  "inputs": {
+    "domain": "nerdwallet.com",
+    "vs": null,
+    "budgetUsd": 0
+  },
+  "timestamps": {
+    "createdAt": "2026-10-15T06:46:52.510Z",
+    "writtenAt": "2026-10-15T06:48:20.285Z"
+  },
+  "cost": {
+    "spentUsd": 0,
+    "budgetUsd": 0
+  },
+  "roles": {
+    "leader": "nerdwallet.com",
+    "challenger": null,
+    "basis": "Single-domain run: nerdwallet.com is analysed as the leader.",
+    "evidenceIds": []
+  },
+  "actionsFor": "nerdwallet.com",
+  "topActions": [
+    {
+      "rank": 1,
+      "title": "Build a page that targets \"capital one business\" (closest page now: /business/credit-cards/best/capital-one)",
+      "why": "nerdwallet.com is not in the 10 results Bing (headless Chromium) returned; #1 is capitalone.com/small-business/bank/. The phrase appears in 7 of the site's titles/H1s/slugs.",
+      "evidenceIds": [
+        "E054",
+        "E022"
+      ],
+      "effort": "M",
+      "impact": "high",
+      "owner": "content"
+    },
+    {
+      "rank": 2,
+      "title": "Build a page that targets \"credit score\" (closest page now: /free-credit-score)",
+      "why": "nerdwallet.com is not in the 10 results Bing (headless Chromium) returned; #1 is creditkarma.com/. The phrase appears in 15 of the site's titles/H1s/slugs.",
+      "evidenceIds": [
+        "E058",
+        "E024"
+      ],
+      "effort": "M",
+      "impact": "high",
+      "owner": "content"
+    },
+    {
+      "rank": 3,
+      "title": "Make /financial-advisors the target page for \"financial advisors\": exact phrase in its title and H1, linked from the 41 /financial-advisors URLs",
+      "why": "nerdwallet.com is not in the 10 results Bing (headless Chromium) returned; #1 is yelp.com/search. The phrase appears in 42 of the site's titles/H1s/slugs.",
+      "evidenceIds": [
+        "E062"
+      ],
+      "effort": "M",
+      "impact": "high",
+      "owner": "content"
+    },
+    {
+      "rank": 4,
+      "title": "Build a page that targets \"credit report\" (closest page now: /finance/learn/how-to-use-annualcreditreport-com)",
+      "why": "nerdwallet.com is not in the 10 results Bing (headless Chromium) returned; #1 is annualcreditreport.com/index.action. The phrase appears in 9 of the site's titles/H1s/slugs.",
+      "evidenceIds": [
+        "E064",
+        "E007"
+      ],
+      "effort": "M",
+      "impact": "high",
+      "owner": "content"
+    },
+    {
+      "rank": 5,
+      "title": "Build a page that targets \"credit union\"",
+      "why": "nerdwallet.com is not in the 10 results Bing (headless Chromium) returned; #1 is lafcu.org/. The phrase appears in 34 of the site's titles/H1s/slugs.",
+      "evidenceIds": [
+        "E066"
+      ],
+      "effort": "M",
+      "impact": "high",
+      "owner": "content"
+    },
+    {
+      "rank": 6,
+      "title": "Review whether blocking Google-Extended is intended",
+      "why": "Blocks AI training crawlers: Google-Extended. Search-time bots are allowed; training bots are not (a policy choice).",
+      "evidenceIds": [
+        "E036",
+        "E034",
+        "E035",
+        "E002",
+        "E003",
+        "E004"
+      ],
+      "effort": "S",
+      "impact": "low",
+      "owner": "seo"
+    },
+    {
+      "rank": 7,
+      "title": "Publish /llms.txt: H1 name, > summary, ## sections linking key pages",
+      "why": "No /llms.txt. HTTP 404",
+      "evidenceIds": [
+        "E034"
+      ],
+      "effort": "S",
+      "impact": "low",
+      "owner": "dev"
+    },
+    {
+      "rank": 8,
+      "title": "Cut inline payload below 200 KB (now 1160 KB median)",
+      "why": "Heavy HTML: median 1160 KB per sampled page. Raw HTML only (scripts and images not counted).",
+      "evidenceIds": [
+        "E002",
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E007"
+      ],
+      "effort": "M",
+      "impact": "low",
+      "owner": "dev"
+    }
+  ],
+  "sites": [
+    {
+      "domain": "nerdwallet.com",
+      "role": "subject",
+      "error": "",
+      "snapshot": {
+        "title": "NerdWallet: Finance smarter",
+        "description": "NerdWallet makes it easy to find the right financial product for you. Our Nerds do all the research so you don’t have to.",
+        "h1": "Smart financial decisions start with NerdWallet",
+        "whatItIs": {
+          "value": "NerdWallet makes it easy to find the right financial product for you. Our Nerds do all the research so you don’t have to.",
+          "why": "homepage meta description",
+          "basis": "observed",
+          "evidenceIds": [
+            "E002"
+          ]
+        },
+        "businessModel": [
+          {
+            "value": "Mobile app (App Store + Google Play links on site)",
+            "why": "store links found in page HTML",
+            "basis": "observed",
+            "evidenceIds": [
+              "E002",
+              "E033"
+            ]
+          },
+          {
+            "value": "Affiliate or partner revenue (advertiser/affiliate disclosure on pages)",
+            "why": "22/30 fetched pages carry disclosure wording",
+            "basis": "inferred",
+            "evidenceIds": [
+              "E003",
+              "E004",
+              "E005"
+            ]
+          },
+          {
+            "value": "Content publisher (editorial pages are the bulk of the site)",
+            "why": "1060/1504 known URLs sit in blog/guide/review/comparison clusters",
+            "basis": "inferred",
+            "evidenceIds": [
+              "E032",
+              "E033"
+            ]
+          }
+        ],
+        "audiences": [
+          {
+            "value": "People researching mortgages, insurance, credit cards, business",
+            "why": "largest clusters: /mortgages (175), /insurance (167), /credit-cards (141), /business (134)",
+            "basis": "inferred",
+            "evidenceIds": [
+              "E032",
+              "E033"
+            ]
+          },
+          {
+            "value": "Navigation leads with: Skip to content, Best credit cards, Best credit card bonus offers, Best travel credit cards, Best cash back credit cards, Best 0% APR credit cards",
+            "why": "homepage <nav>/<header> anchors in page order",
+            "basis": "observed",
+            "evidenceIds": [
+              "E002"
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "E002"
+        ]
+      },
+      "map": {
+        "sitemapFiles": 13,
+        "indexChildren": 107,
+        "childStems": [
+          {
+            "stem": "us/posts-articles",
+            "files": 61
+          },
+          {
+            "stem": "ca/posts-flex-pages",
+            "files": 9
+          },
+          {
+            "stem": "us/posts-insurance-flex-pages",
+            "files": 6
+          },
+          {
+            "stem": "us/posts-credit-cards-pages",
+            "files": 3
+          },
+          {
+            "stem": "us/posts-smb-pages",
+            "files": 3
+          },
+          {
+            "stem": "us/posts-user-pages",
+            "files": 3
+          },
+          {
+            "stem": "us/posts-banking-pages",
+            "files": 2
+          },
+          {
+            "stem": "us/posts-mortgages-pages",
+            "files": 2
+          },
+          {
+            "stem": "ca/posts-user-pages",
+            "files": 1
+          },
+          {
+            "stem": "us/news-articles",
+            "files": 1
+          },
+          {
+            "stem": "us/posts-auto-loan-pages",
+            "files": 1
+          },
+          {
+            "stem": "us/posts-calculator-pages",
+            "files": 1
+          },
+          {
+            "stem": "us/posts-financial-advisors-pages",
+            "files": 1
+          },
+          {
+            "stem": "us/posts-flex-pages",
+            "files": 1
+          },
+          {
+            "stem": "us/posts-home-services-pages",
+            "files": 1
+          }
+        ],
+        "knownUrls": 1504,
+        "mappedUrls": 200,
+        "pagesFetched": 30,
+        "robotsSkipped": 15,
+        "clusters": [
+          {
+            "key": "/mortgages",
+            "name": "mortgages",
+            "terms": [
+              "mortgages",
+              "loan",
+              "credit union",
+              "first time",
+              "heloc"
+            ],
+            "urlCount": 175,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/mortgages/learn/programs-help-first-time-homebuyers",
+              "https://www.nerdwallet.com/mortgages/learn/tips-for-first-time-home-buyers",
+              "https://www.nerdwallet.com/mortgages/learn/va-home-loan"
+            ],
+            "template": "review",
+            "baseTemplate": "review",
+            "fetchedPages": 1,
+            "medianWords": 3793,
+            "linkDensity": 316,
+            "inlinks": 729,
+            "hubs": [
+              {
+                "url": "https://www.nerdwallet.com/mortgages/learn/programs-help-first-time-homebuyers",
+                "linksIntoCluster": 54
+              }
+            ],
+            "programmatic": null
+          },
+          {
+            "key": "/insurance",
+            "name": "insurance",
+            "terms": [
+              "insurance",
+              "state farm",
+              "speeding ticket",
+              "amica",
+              "lemonade"
+            ],
+            "urlCount": 167,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/insurance/auto/learn/how-to-fight-a-speeding-ticket",
+              "https://www.nerdwallet.com/insurance/auto/learn/liability-car-insurance",
+              "https://www.nerdwallet.com/insurance/auto/learn/ways-to-get-cheapest-car-insurance"
+            ],
+            "template": "programmatic",
+            "baseTemplate": "review",
+            "fetchedPages": 1,
+            "medianWords": 3623,
+            "linkDensity": 295,
+            "inlinks": 1259,
+            "hubs": [
+              {
+                "url": "https://www.nerdwallet.com/insurance/auto/learn/how-to-fight-a-speeding-ticket",
+                "linksIntoCluster": 60
+              }
+            ],
+            "programmatic": {
+              "pattern": "/insurance/{x}-insurance-review",
+              "share": 0.6,
+              "basis": "slug-affix",
+              "headingSimilarity": null
+            }
+          },
+          {
+            "key": "/credit-cards",
+            "name": "credit cards",
+            "terms": [
+              "credit cards",
+              "cash back",
+              "rewards",
+              "american express",
+              "wells fargo"
+            ],
+            "urlCount": 141,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/credit-cards/learn/secured-credit-cards-vs-unsecured-difference",
+              "https://www.nerdwallet.com/credit-cards/learn/apply-for-a-credit-card",
+              "https://www.nerdwallet.com/credit-cards/learn/how-to-pick-the-best-credit-card-for-you-4-easy-steps"
+            ],
+            "template": "page",
+            "baseTemplate": "page",
+            "fetchedPages": 0,
+            "medianWords": null,
+            "linkDensity": null,
+            "inlinks": 621,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/business",
+            "name": "business",
+            "terms": [
+              "business",
+              "credit cards",
+              "american express",
+              "capital",
+              "cash"
+            ],
+            "urlCount": 134,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/business/credit-cards/reviews/capital-one-spark-cash",
+              "https://www.nerdwallet.com/business/credit-cards/reviews/chase-ink-cash",
+              "https://www.nerdwallet.com/business/credit-cards/reviews/american-express-business-platinum"
+            ],
+            "template": "review",
+            "baseTemplate": "review",
+            "fetchedPages": 2,
+            "medianWords": 8596,
+            "linkDensity": 328,
+            "inlinks": 669,
+            "hubs": [
+              {
+                "url": "https://www.nerdwallet.com/business/credit-cards/best/capital-one",
+                "linksIntoCluster": 40
+              },
+              {
+                "url": "https://www.nerdwallet.com/business/credit-cards/reviews/capital-one-spark-cash",
+                "linksIntoCluster": 33
+              }
+            ],
+            "programmatic": null
+          },
+          {
+            "key": "/author",
+            "name": "author",
+            "terms": [
+              "author",
+              "arielle oshea",
+              "cfp",
+              "hurd"
+            ],
+            "urlCount": 120,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/author/arielle-oshea",
+              "https://www.nerdwallet.com/author/spencer-tierney",
+              "https://www.nerdwallet.com/author/hal-m-bundrick-cfp"
+            ],
+            "template": "page",
+            "baseTemplate": "page",
+            "fetchedPages": 1,
+            "medianWords": 2275,
+            "linkDensity": 317,
+            "inlinks": 83,
+            "hubs": [
+              {
+                "url": "https://www.nerdwallet.com/author/arielle-oshea",
+                "linksIntoCluster": 5
+              }
+            ],
+            "programmatic": null
+          },
+          {
+            "key": "/banking",
+            "name": "banking",
+            "terms": [
+              "banking",
+              "credit union",
+              "accounts",
+              "cd rates",
+              "savings"
+            ],
+            "urlCount": 118,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/banking/learn/responsibly-handle-inheritance",
+              "https://www.nerdwallet.com/banking/learn/how-to-set-up-direct-deposit",
+              "https://www.nerdwallet.com/banking/learn/money-orders"
+            ],
+            "template": "review",
+            "baseTemplate": "review",
+            "fetchedPages": 0,
+            "medianWords": null,
+            "linkDensity": null,
+            "inlinks": 508,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "//support.nerdwallet.com/en/articles",
+            "name": "support.nerdwallet.com / en / articles",
+            "terms": [
+              "credit score",
+              "bank",
+              "accounts",
+              "phone number",
+              "information"
+            ],
+            "urlCount": 105,
+            "exampleUrls": [
+              "https://support.nerdwallet.com/en/articles/14035975-trouble-signing-in-password-change-required",
+              "https://support.nerdwallet.com/en/articles/14035976-why-are-the-funds-i-withdrew-from-my-atomic-account-delayed",
+              "https://support.nerdwallet.com/en/articles/14035977-oops-something-went-wrong"
+            ],
+            "template": "guide",
+            "baseTemplate": "guide",
+            "fetchedPages": 1,
+            "medianWords": 991,
+            "linkDensity": 23,
+            "inlinks": 41,
+            "hubs": [
+              {
+                "url": "https://support.nerdwallet.com/en/articles/14035975-trouble-signing-in-password-change-required",
+                "linksIntoCluster": 5
+              }
+            ],
+            "programmatic": null
+          },
+          {
+            "key": "/finance",
+            "name": "finance",
+            "terms": [
+              "finance",
+              "credit",
+              "budget",
+              "money",
+              "expensive"
+            ],
+            "urlCount": 64,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/finance/learn/how-to-use-annualcreditreport-com",
+              "https://www.nerdwallet.com/finance/learn/how-to-choose-the-right-budget-system",
+              "https://www.nerdwallet.com/finance/learn/raise-credit-score-fast"
+            ],
+            "template": "guide",
+            "baseTemplate": "guide",
+            "fetchedPages": 2,
+            "medianWords": 3324,
+            "linkDensity": 301,
+            "inlinks": 550,
+            "hubs": [
+              {
+                "url": "https://www.nerdwallet.com/finance/learn/price-of-food",
+                "linksIntoCluster": 34
+              },
+              {
+                "url": "https://www.nerdwallet.com/finance/learn/how-to-use-annualcreditreport-com",
+                "linksIntoCluster": 33
+              }
+            ],
+            "programmatic": null
+          },
+          {
+            "key": "/investing",
+            "name": "investing",
+            "terms": [
+              "investing",
+              "social security",
+              "calculator",
+              "stock",
+              "brokers"
+            ],
+            "urlCount": 62,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/investing/learn/dont-believe-these-social-security-myths",
+              "https://www.nerdwallet.com/investing/learn/how-to-invest-in-stocks",
+              "https://www.nerdwallet.com/investing/learn/buy-amazon-stock"
+            ],
+            "template": "guide",
+            "baseTemplate": "guide",
+            "fetchedPages": 1,
+            "medianWords": 2742,
+            "linkDensity": 288,
+            "inlinks": 492,
+            "hubs": [
+              {
+                "url": "https://www.nerdwallet.com/investing/learn/dont-believe-these-social-security-myths",
+                "linksIntoCluster": 21
+              }
+            ],
+            "programmatic": null
+          },
+          {
+            "key": "/home-ownership",
+            "name": "home ownership",
+            "terms": [
+              "ownership",
+              "improvement",
+              "cost",
+              "replace",
+              "hardwood floors"
+            ],
+            "urlCount": 57,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/home-ownership",
+              "https://www.nerdwallet.com/home-ownership/home-improvement/learn/203k-and-homestyle-mortgage-loans-for-home-renovation",
+              "https://www.nerdwallet.com/home-ownership/home-improvement/learn/choice-renovation-loan"
+            ],
+            "template": "guide",
+            "baseTemplate": "guide",
+            "fetchedPages": 2,
+            "medianWords": 2864,
+            "linkDensity": 331,
+            "inlinks": 96,
+            "hubs": [
+              {
+                "url": "https://www.nerdwallet.com/home-ownership/home-improvement/learn/estimate-the-cost-of-your-home-renovation",
+                "linksIntoCluster": 42
+              },
+              {
+                "url": "https://www.nerdwallet.com/home-ownership",
+                "linksIntoCluster": 29
+              }
+            ],
+            "programmatic": null
+          },
+          {
+            "key": "/auto-loans",
+            "name": "auto loans",
+            "terms": [
+              "auto loans",
+              "car",
+              "credit",
+              "lease",
+              "buy"
+            ],
+            "urlCount": 44,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/auto-loans/learn/ev-lease-vs-buy",
+              "https://www.nerdwallet.com/auto-loans/learn/how-to-refinance-your-car-loan",
+              "https://www.nerdwallet.com/auto-loans/learn/how-to-buy-a-new-car"
+            ],
+            "template": "review",
+            "baseTemplate": "review",
+            "fetchedPages": 1,
+            "medianWords": 2959,
+            "linkDensity": 294,
+            "inlinks": 178,
+            "hubs": [
+              {
+                "url": "https://www.nerdwallet.com/auto-loans/learn/ev-lease-vs-buy",
+                "linksIntoCluster": 16
+              }
+            ],
+            "programmatic": null
+          },
+          {
+            "key": "/taxes",
+            "name": "taxes",
+            "terms": [
+              "taxes",
+              "deduction",
+              "capital gains"
+            ],
+            "urlCount": 43,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/taxes",
+              "https://www.nerdwallet.com/taxes/learn/federal-income-tax-brackets",
+              "https://www.nerdwallet.com/taxes/learn/capital-gains-tax-rates"
+            ],
+            "template": "guide",
+            "baseTemplate": "guide",
+            "fetchedPages": 1,
+            "medianWords": 3179,
+            "linkDensity": 321,
+            "inlinks": 365,
+            "hubs": [
+              {
+                "url": "https://www.nerdwallet.com/taxes",
+                "linksIntoCluster": 42
+              }
+            ],
+            "programmatic": null
+          },
+          {
+            "key": "/student-loans",
+            "name": "student loans",
+            "terms": [
+              "student loans",
+              "pay",
+              "college",
+              "fafsa",
+              "federal"
+            ],
+            "urlCount": 42,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/student-loans/learn/pay-off-student-loans-fast",
+              "https://www.nerdwallet.com/student-loans/learn/biweekly-student-loan-payments",
+              "https://www.nerdwallet.com/student-loans/learn/how-to-lower-student-loan-interest-rate"
+            ],
+            "template": "guide",
+            "baseTemplate": "guide",
+            "fetchedPages": 1,
+            "medianWords": 3307,
+            "linkDensity": 313,
+            "inlinks": 314,
+            "hubs": [
+              {
+                "url": "https://www.nerdwallet.com/student-loans/learn/pay-off-student-loans-fast",
+                "linksIntoCluster": 38
+              }
+            ],
+            "programmatic": null
+          },
+          {
+            "key": "/financial-advisors",
+            "name": "financial advisors",
+            "terms": [
+              "financial advisors",
+              "wealth",
+              "personal",
+              "services"
+            ],
+            "urlCount": 41,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/financial-advisors/best/wealth-advisors",
+              "https://www.nerdwallet.com/financial-advisors/reviews/vanguard-personal-advisor-services",
+              "https://www.nerdwallet.com/financial-advisors/reviews/empower"
+            ],
+            "template": "review",
+            "baseTemplate": "review",
+            "fetchedPages": 1,
+            "medianWords": 8891,
+            "linkDensity": 301,
+            "inlinks": 109,
+            "hubs": [
+              {
+                "url": "https://www.nerdwallet.com/financial-advisors/best/wealth-advisors",
+                "linksIntoCluster": 13
+              }
+            ],
+            "programmatic": null
+          },
+          {
+            "key": "/travel",
+            "name": "travel",
+            "terms": [
+              "travel",
+              "credit",
+              "points",
+              "american airlines",
+              "centurion lounge"
+            ],
+            "urlCount": 36,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/travel/news/north-american-airlines-made-16-5-billion-in-fees-last-year",
+              "https://www.nerdwallet.com/travel/news/star-wars-galaxys-edge-at-disney-parks-opening-date-announced",
+              "https://www.nerdwallet.com/travel/learn/bringing-alcohol-into-the-us-guide"
+            ],
+            "template": "guide",
+            "baseTemplate": "guide",
+            "fetchedPages": 1,
+            "medianWords": 2381,
+            "linkDensity": 296,
+            "inlinks": 69,
+            "hubs": [
+              {
+                "url": "https://www.nerdwallet.com/travel/news/north-american-airlines-made-16-5-billion-in-fees-last-year",
+                "linksIntoCluster": 7
+              }
+            ],
+            "programmatic": null
+          },
+          {
+            "key": "/retirement",
+            "name": "retirement",
+            "terms": [
+              "retirement",
+              "ira",
+              "401k",
+              "contribution limits",
+              "social security"
+            ],
+            "urlCount": 34,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/retirement/learn/learn-about-ira-accounts",
+              "https://www.nerdwallet.com/retirement/learn/roth-or-traditional-ira-account",
+              "https://www.nerdwallet.com/retirement/learn/what-is-a-roth-ira"
+            ],
+            "template": "guide",
+            "baseTemplate": "guide",
+            "fetchedPages": 1,
+            "medianWords": 3953,
+            "linkDensity": 301,
+            "inlinks": 212,
+            "hubs": [
+              {
+                "url": "https://www.nerdwallet.com/retirement/learn/learn-about-ira-accounts",
+                "linksIntoCluster": 22
+              }
+            ],
+            "programmatic": null
+          },
+          {
+            "key": "/personal-loans",
+            "name": "personal loans",
+            "terms": [
+              "personal loans",
+              "debt",
+              "pre qualify",
+              "credit",
+              "alternatives"
+            ],
+            "urlCount": 29,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/personal-loans/learn/401k-loans",
+              "https://www.nerdwallet.com/personal-loans/learn/steps-to-pre-qualify-for-personal-loan",
+              "https://www.nerdwallet.com/personal-loans/learn/chase-personal-loans"
+            ],
+            "template": "guide",
+            "baseTemplate": "guide",
+            "fetchedPages": 1,
+            "medianWords": 4532,
+            "linkDensity": 301,
+            "inlinks": 301,
+            "hubs": [
+              {
+                "url": "https://www.nerdwallet.com/personal-loans/learn/401k-loans",
+                "linksIntoCluster": 24
+              }
+            ],
+            "programmatic": null
+          },
+          {
+            "key": "/(top-level)",
+            "name": "(top level)",
+            "terms": [
+              "credit score",
+              "company",
+              "corporate",
+              "editorial",
+              "leadership"
+            ],
+            "urlCount": 27,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/free-credit-score",
+              "https://www.nerdwallet.com/api/nts/v1/login",
+              "https://www.nerdwallet.com/recommend/CreditScore"
+            ],
+            "template": "page",
+            "baseTemplate": "page",
+            "fetchedPages": 5,
+            "medianWords": 1738,
+            "linkDensity": 142,
+            "inlinks": 508,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/redirect",
+            "name": "redirect",
+            "terms": [
+              "credit cards",
+              "redirect credit",
+              "11ee",
+              "11eb"
+            ],
+            "urlCount": 14,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/redirect/9a64ba6a-8336-11ee-83a4-d332713194b1",
+              "https://www.nerdwallet.com/redirect/credit-cards/c80daea2-993d-4a6a-83ba-916bbcc9dc12",
+              "https://www.nerdwallet.com/redirect/credit-cards/56c06ee4-0ee7-4d3b-9589-08de4e4b80e2"
+            ],
+            "template": "page",
+            "baseTemplate": "page",
+            "fetchedPages": 0,
+            "medianWords": null,
+            "linkDensity": null,
+            "inlinks": 71,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/p",
+            "name": "p",
+            "terms": [
+              "advertiser",
+              "disclosures"
+            ],
+            "urlCount": 9,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/p/nerdwallet-compare-inc-licenses-and-disclosures",
+              "https://www.nerdwallet.com/p/our-partners",
+              "https://www.nerdwallet.com/p/advertiser-disclosures"
+            ],
+            "template": "page",
+            "baseTemplate": "page",
+            "fetchedPages": 0,
+            "medianWords": null,
+            "linkDensity": null,
+            "inlinks": 76,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/l",
+            "name": "l",
+            "terms": [
+              "editorial guidelines",
+              "atomic brokerage",
+              "cash",
+              "offered"
+            ],
+            "urlCount": 8,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/l/cash-account-offered-by-atomic-brokerage",
+              "https://www.nerdwallet.com/l/nerdwallet-app-track-your-wealth-and-build-your-future",
+              "https://www.nerdwallet.com/l/security"
+            ],
+            "template": "page",
+            "baseTemplate": "page",
+            "fetchedPages": 1,
+            "medianWords": 2856,
+            "linkDensity": 283,
+            "inlinks": 83,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "//support.nerdwallet.com/en/collections",
+            "name": "support.nerdwallet.com / en / collections",
+            "terms": [
+              "collections",
+              "errors",
+              "troubleshooting"
+            ],
+            "urlCount": 5,
+            "exampleUrls": [
+              "https://support.nerdwallet.com/en/collections/18931166-troubleshooting-and-errors",
+              "https://support.nerdwallet.com/en/collections/19084646-email-and-notifications",
+              "https://support.nerdwallet.com/en/collections/19084779-account-and-login"
+            ],
+            "template": "guide",
+            "baseTemplate": "guide",
+            "fetchedPages": 1,
+            "medianWords": 1323,
+            "linkDensity": 53,
+            "inlinks": 1,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/best",
+            "name": "best",
+            "terms": [
+              "accounts",
+              "banking"
+            ],
+            "urlCount": 4,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/best/banking/high-yield-online-savings-accounts",
+              "https://www.nerdwallet.com/best/banking/cash-management-accounts",
+              "https://www.nerdwallet.com/best/small-business/business-credit-cards-bad-credit"
+            ],
+            "template": "comparison",
+            "baseTemplate": "comparison",
+            "fetchedPages": 0,
+            "medianWords": null,
+            "linkDensity": null,
+            "inlinks": 4,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/article/credit-cards",
+            "name": "article / credit cards",
+            "terms": [
+              "credit cards",
+              "business credit"
+            ],
+            "urlCount": 3,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/article/credit-cards/which-capital-one-spark-card-to-get",
+              "https://www.nerdwallet.com/article/credit-cards/who-can-apply-small-business-credit-card",
+              "https://www.nerdwallet.com/article/credit-cards/business-credit-card-personal-guarantee-explained"
+            ],
+            "template": "blog",
+            "baseTemplate": "blog",
+            "fetchedPages": 0,
+            "medianWords": null,
+            "linkDensity": null,
+            "inlinks": 3,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/article/mortgages",
+            "name": "article / mortgages",
+            "terms": [
+              "mortgages",
+              "renovation"
+            ],
+            "urlCount": 3,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/article/mortgages/estimate-the-cost-of-your-home-renovation",
+              "https://www.nerdwallet.com/article/mortgages/ways-to-avoid-costly-home-renovation-mistakes",
+              "https://www.nerdwallet.com/article/mortgages/fed-mortgage-rates"
+            ],
+            "template": "blog",
+            "baseTemplate": "blog",
+            "fetchedPages": 0,
+            "medianWords": null,
+            "linkDensity": null,
+            "inlinks": 3,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/cost-of-living-calculator",
+            "name": "cost of living calculator",
+            "terms": [
+              "living calculator",
+              "calculator city",
+              "city life",
+              "cost"
+            ],
+            "urlCount": 3,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/cost-of-living-calculator",
+              "https://www.nerdwallet.com/cost-of-living-calculator/city-life/san-francisco-ca",
+              "https://www.nerdwallet.com/cost-of-living-calculator/city-life/new-york-manhattan-ny"
+            ],
+            "template": "tool",
+            "baseTemplate": "tool",
+            "fetchedPages": 1,
+            "medianWords": 3483,
+            "linkDensity": 293,
+            "inlinks": 26,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/article/finance",
+            "name": "article / finance",
+            "terms": [
+              "finance"
+            ],
+            "urlCount": 2,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/article/finance/price-of-food",
+              "https://www.nerdwallet.com/article/finance/how-to-budget"
+            ],
+            "template": "blog",
+            "baseTemplate": "blog",
+            "fetchedPages": 0,
+            "medianWords": null,
+            "linkDensity": null,
+            "inlinks": 2,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/careers",
+            "name": "careers",
+            "terms": [],
+            "urlCount": 2,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/careers",
+              "https://www.nerdwallet.com/careers/jobs"
+            ],
+            "template": "tool",
+            "baseTemplate": "tool",
+            "fetchedPages": 1,
+            "medianWords": 1470,
+            "linkDensity": 24,
+            "inlinks": 32,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/home",
+            "name": "home",
+            "terms": [],
+            "urlCount": 2,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/home/dashboard/home",
+              "https://www.nerdwallet.com/home/investment-accounts"
+            ],
+            "template": "page",
+            "baseTemplate": "page",
+            "fetchedPages": 0,
+            "medianWords": null,
+            "linkDensity": null,
+            "inlinks": 3,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/prequalify",
+            "name": "prequalify",
+            "terms": [
+              "prequalify"
+            ],
+            "urlCount": 2,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/prequalify/mortgage-heloc/start",
+              "https://www.nerdwallet.com/prequalify/m/home/lp1"
+            ],
+            "template": "page",
+            "baseTemplate": "page",
+            "fetchedPages": 0,
+            "medianWords": null,
+            "linkDensity": null,
+            "inlinks": 2,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/reviewer",
+            "name": "reviewer",
+            "terms": [
+              "michael soon",
+              "reviewer michael",
+              "soon lee"
+            ],
+            "urlCount": 2,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/reviewer/michael-soon-lee",
+              "https://www.nerdwallet.com/reviewer/michael-randall"
+            ],
+            "template": "tool",
+            "baseTemplate": "tool",
+            "fetchedPages": 1,
+            "medianWords": 1709,
+            "linkDensity": 288,
+            "inlinks": 2,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/",
+            "name": "home",
+            "terms": [],
+            "urlCount": 1,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/"
+            ],
+            "template": "page",
+            "baseTemplate": "page",
+            "fetchedPages": 1,
+            "medianWords": 3295,
+            "linkDensity": 294,
+            "inlinks": 28,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "//support.nerdwallet.com/en",
+            "name": "support.nerdwallet.com / en",
+            "terms": [],
+            "urlCount": 1,
+            "exampleUrls": [
+              "https://support.nerdwallet.com/en/"
+            ],
+            "template": "guide",
+            "baseTemplate": "guide",
+            "fetchedPages": 0,
+            "medianWords": null,
+            "linkDensity": null,
+            "inlinks": 7,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "//support.nerdwallet.com/hc",
+            "name": "support.nerdwallet.com / hc",
+            "terms": [
+              "hc"
+            ],
+            "urlCount": 1,
+            "exampleUrls": [
+              "https://support.nerdwallet.com/hc/en-us"
+            ],
+            "template": "guide",
+            "baseTemplate": "guide",
+            "fetchedPages": 0,
+            "medianWords": null,
+            "linkDensity": null,
+            "inlinks": 25,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/article/banking",
+            "name": "article / banking",
+            "terms": [
+              "fed rate",
+              "banking"
+            ],
+            "urlCount": 1,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/article/banking/what-is-the-fed-rate"
+            ],
+            "template": "guide",
+            "baseTemplate": "guide",
+            "fetchedPages": 0,
+            "medianWords": null,
+            "linkDensity": null,
+            "inlinks": 1,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/article/investing",
+            "name": "article / investing",
+            "terms": [
+              "investing inflation"
+            ],
+            "urlCount": 1,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/article/investing/inflation"
+            ],
+            "template": "blog",
+            "baseTemplate": "blog",
+            "fetchedPages": 0,
+            "medianWords": null,
+            "linkDensity": null,
+            "inlinks": 1,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/p/small-business",
+            "name": "p / small business",
+            "terms": [
+              "business credit",
+              "cards ratings",
+              "credit cards",
+              "ratings methodology",
+              "small business"
+            ],
+            "urlCount": 1,
+            "exampleUrls": [
+              "https://www.nerdwallet.com/p/small-business/business-credit-cards-ratings-methodology"
+            ],
+            "template": "page",
+            "baseTemplate": "page",
+            "fetchedPages": 0,
+            "medianWords": null,
+            "linkDensity": null,
+            "inlinks": 2,
+            "hubs": [],
+            "programmatic": null
+          }
+        ],
+        "evidenceIds": [
+          "E032",
+          "E033",
+          "E001"
+        ]
+      },
+      "keywords": {
+        "terms": [
+          {
+            "term": "business credit cards",
+            "docs": 60,
+            "sources": [
+              "title",
+              "h1",
+              "meta",
+              "slug"
+            ],
+            "pages": [
+              "https://www.nerdwallet.com/business/credit-cards/best/capital-one"
+            ],
+            "check": {
+              "status": "ranked",
+              "position": 1,
+              "url": "https://www.nerdwallet.com/business/credit-cards/best",
+              "engine": "Bing (headless Chromium)",
+              "evidenceId": "E048"
+            }
+          },
+          {
+            "term": "pay off student",
+            "docs": 8,
+            "sources": [
+              "title",
+              "h1",
+              "meta",
+              "slug"
+            ],
+            "pages": [
+              "https://www.nerdwallet.com/student-loans/learn/pay-off-student-loans-fast"
+            ],
+            "check": {
+              "status": "ranked",
+              "position": 2,
+              "url": "https://www.nerdwallet.com/student-loans/learn/pay-off-student-loans-fast",
+              "engine": "Bing (headless Chromium)",
+              "evidenceId": "E050"
+            }
+          },
+          {
+            "term": "student loans",
+            "docs": 46,
+            "sources": [
+              "title",
+              "h1",
+              "meta",
+              "slug"
+            ],
+            "pages": [
+              "https://www.nerdwallet.com/student-loans/learn/pay-off-student-loans-fast"
+            ],
+            "check": {
+              "status": "ranked",
+              "position": 10,
+              "url": "https://www.nerdwallet.com/student-loans",
+              "engine": "Bing (headless Chromium)",
+              "evidenceId": "E052"
+            }
+          },
+          {
+            "term": "capital one business",
+            "docs": 7,
+            "sources": [
+              "title",
+              "h1",
+              "meta",
+              "h2"
+            ],
+            "pages": [
+              "https://www.nerdwallet.com/business/credit-cards/best/capital-one"
+            ],
+            "check": {
+              "status": "not-in-results",
+              "position": null,
+              "url": "",
+              "engine": "Bing (headless Chromium)",
+              "evidenceId": "E054"
+            }
+          },
+          {
+            "term": "personal finance news",
+            "docs": 3,
+            "sources": [
+              "title",
+              "h1",
+              "meta"
+            ],
+            "pages": [
+              "https://www.nerdwallet.com/news"
+            ],
+            "check": {
+              "status": "ranked",
+              "position": 6,
+              "url": "https://www.nerdwallet.com/news",
+              "engine": "Bing (headless Chromium)",
+              "evidenceId": "E056"
+            }
+          },
+          {
+            "term": "credit score",
+            "docs": 15,
+            "sources": [
+              "title",
+              "h1",
+              "meta",
+              "h2"
+            ],
+            "pages": [
+              "https://www.nerdwallet.com/free-credit-score"
+            ],
+            "check": {
+              "status": "not-in-results",
+              "position": null,
+              "url": "",
+              "engine": "Bing (headless Chromium)",
+              "evidenceId": "E058"
+            }
+          },
+          {
+            "term": "auto loans",
+            "docs": 45,
+            "sources": [
+              "slug",
+              "cluster /auto-loans"
+            ],
+            "pages": [],
+            "check": {
+              "status": "ranked",
+              "position": 1,
+              "url": "https://www.nerdwallet.com/auto-loans/best/auto-loans-for-good-fair-and-bad-credit",
+              "engine": "Bing (headless Chromium)",
+              "evidenceId": "E060"
+            }
+          },
+          {
+            "term": "financial advisors",
+            "docs": 42,
+            "sources": [
+              "slug",
+              "cluster /financial-advisors"
+            ],
+            "pages": [],
+            "check": {
+              "status": "not-in-results",
+              "position": null,
+              "url": "",
+              "engine": "Bing (headless Chromium)",
+              "evidenceId": "E062"
+            }
+          },
+          {
+            "term": "credit report",
+            "docs": 9,
+            "sources": [
+              "title",
+              "h2",
+              "slug"
+            ],
+            "pages": [
+              "https://www.nerdwallet.com/finance/learn/how-to-use-annualcreditreport-com"
+            ],
+            "check": {
+              "status": "not-in-results",
+              "position": null,
+              "url": "",
+              "engine": "Bing (headless Chromium)",
+              "evidenceId": "E064"
+            }
+          },
+          {
+            "term": "credit union",
+            "docs": 34,
+            "sources": [
+              "slug",
+              "cluster /mortgages",
+              "cluster /banking"
+            ],
+            "pages": [],
+            "check": {
+              "status": "not-in-results",
+              "position": null,
+              "url": "",
+              "engine": "Bing (headless Chromium)",
+              "evidenceId": "E066"
+            }
+          }
+        ],
+        "checked": 10,
+        "rankedTop10": 5,
+        "unknown": 0,
+        "evidenceIds": [
+          "E048",
+          "E050",
+          "E052",
+          "E054",
+          "E056",
+          "E058",
+          "E060",
+          "E062",
+          "E064",
+          "E066",
+          "E033"
+        ]
+      },
+      "pillars": {
+        "onPage": {
+          "pagesFetched": 30,
+          "medianTitleLength": 55,
+          "h1Coverage": 0.93,
+          "metaDescriptionCoverage": 0.93,
+          "medianWords": 3009,
+          "medianH2": 5,
+          "datedPages": 19,
+          "medianAgeDays": 182,
+          "updatedWithinYear": 0.74,
+          "evidenceIds": [
+            "E002",
+            "E003",
+            "E004",
+            "E005",
+            "E006",
+            "E007",
+            "E008",
+            "E009",
+            "E010",
+            "E011",
+            "E012",
+            "E013",
+            "E014",
+            "E015",
+            "E016",
+            "E017",
+            "E018",
+            "E019",
+            "E020",
+            "E021",
+            "E022",
+            "E023",
+            "E024",
+            "E025",
+            "E026",
+            "E027",
+            "E028",
+            "E029",
+            "E030",
+            "E031",
+            "E033"
+          ]
+        },
+        "technical": {
+          "schemaTypes": [
+            {
+              "type": "Organization",
+              "pages": 25
+            },
+            {
+              "type": "ImageObject",
+              "pages": 21
+            },
+            {
+              "type": "Person",
+              "pages": 21
+            },
+            {
+              "type": "WebSite",
+              "pages": 21
+            },
+            {
+              "type": "Country",
+              "pages": 20
+            },
+            {
+              "type": "PostalAddress",
+              "pages": 20
+            },
+            {
+              "type": "SearchAction",
+              "pages": 20
+            },
+            {
+              "type": "WebPage",
+              "pages": 18
+            },
+            {
+              "type": "BreadcrumbList",
+              "pages": 16
+            },
+            {
+              "type": "EntryPoint",
+              "pages": 16
+            },
+            {
+              "type": "ListItem",
+              "pages": 16
+            },
+            {
+              "type": "Article",
+              "pages": 12
+            }
+          ],
+          "pagesWithSchema": 0.93,
+          "pagesWithSchemaErrors": 0,
+          "schemaErrorSamples": [],
+          "canonicalCoverage": 0.9,
+          "selfCanonical": 0.9,
+          "noindexPages": 0,
+          "robotsFound": true,
+          "sitemapFiles": 13,
+          "sitemapUrls": 873,
+          "hreflangPages": 4,
+          "langs": [
+            "en",
+            "en-us"
+          ],
+          "psi": null,
+          "psiProblem": "PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key",
+          "medianHtmlKb": 1160,
+          "evidenceIds": [
+            "E002",
+            "E003",
+            "E004",
+            "E005",
+            "E006",
+            "E007",
+            "E008",
+            "E009",
+            "E010",
+            "E011",
+            "E012",
+            "E013",
+            "E014",
+            "E015",
+            "E016",
+            "E017",
+            "E018",
+            "E019",
+            "E020",
+            "E021",
+            "E022",
+            "E023",
+            "E024",
+            "E025",
+            "E026",
+            "E027",
+            "E028",
+            "E029",
+            "E030",
+            "E031",
+            "E033",
+            "E001",
+            "E032"
+          ]
+        },
+        "offPage": {
+          "trancoRank": 4832,
+          "wikipediaLinkingArticles": 28,
+          "wikipediaMentions": 78,
+          "commonCrawlBlocks": 2,
+          "brandSerpThirdParty": 2,
+          "brandSerpDomains": [
+            "en.wikipedia.org",
+            "consumeraffairs.com"
+          ],
+          "pressLinksOnSite": 1,
+          "unknowns": [
+            "Backlink counts and referring domains need a paid index; not measured at $0"
+          ],
+          "evidenceIds": [
+            "E038",
+            "E039",
+            "E040",
+            "E041",
+            "E068"
+          ]
+        },
+        "aeo": {
+          "llmsTxt": "absent",
+          "llmsFullTxt": false,
+          "blockedCrawlers": [
+            "Google-Extended"
+          ],
+          "blockedSearchCrawlers": [],
+          "faqSchemaPages": 4,
+          "questionBlockPages": 14,
+          "answerFirstShare": 0.38,
+          "organizationSchema": true,
+          "sameAsCount": 9,
+          "citationsLogged": 0,
+          "citedIn": 0,
+          "evidenceIds": [
+            "E036",
+            "E034",
+            "E035",
+            "E002",
+            "E003",
+            "E004"
+          ]
+        },
+        "paid": {
+          "serpAdsByDomain": 0,
+          "serpsWithAnyAds": 0,
+          "serpsChecked": 10,
+          "adLibraries": [
+            {
+              "platform": "Google Ads Transparency Center",
+              "url": "https://adstransparency.google.com/?region=anywhere&domain=nerdwallet.com",
+              "status": "manual-check",
+              "visibleCount": null,
+              "evidenceId": "E042"
+            },
+            {
+              "platform": "Meta Ad Library",
+              "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=nerdwallet&search_type=keyword_unordered&media_type=all",
+              "status": "manual-check",
+              "visibleCount": null,
+              "evidenceId": "E043"
+            },
+            {
+              "platform": "LinkedIn Ad Library",
+              "url": "https://www.linkedin.com/ad-library/search?keyword=nerdwallet",
+              "status": "manual-check",
+              "visibleCount": null,
+              "evidenceId": "E044"
+            }
+          ],
+          "evidenceIds": [
+            "E042",
+            "E043",
+            "E044"
+          ]
+        },
+        "distribution": {
+          "channels": [
+            {
+              "channel": "iOS App Store",
+              "detail": "4.8 stars, 125314 ratings (E045)",
+              "url": "https://apps.apple.com/us/app/nerdwallet-smart-money-app/id1174471607"
+            },
+            {
+              "channel": "Google Play",
+              "detail": "store link on site",
+              "url": "https://play.google.com/store/apps/details?id=com.mobilecreditcards&hl=en_US&source_caller=ui&shortlink=233a7a41&c=mbma_mktg_footer_badge_android&pid=footer"
+            },
+            {
+              "channel": "Social: x",
+              "detail": "profile link on site",
+              "url": "https://x.com/NerdWallet"
+            },
+            {
+              "channel": "Social: youtube",
+              "detail": "profile link on site",
+              "url": "https://www.youtube.com/@nerdwallet"
+            },
+            {
+              "channel": "Social: instagram",
+              "detail": "profile link on site",
+              "url": "https://www.instagram.com/NerdWallet/"
+            },
+            {
+              "channel": "Social: tiktok",
+              "detail": "profile link on site",
+              "url": "https://www.tiktok.com/@nerdwallet?lang=en"
+            },
+            {
+              "channel": "Social: linkedin",
+              "detail": "profile link on site",
+              "url": "https://www.linkedin.com/company/nerdwallet"
+            },
+            {
+              "channel": "Social: facebook",
+              "detail": "profile link on site",
+              "url": "https://www.facebook.com/NerdWallet/"
+            },
+            {
+              "channel": "Newsletter",
+              "detail": "email signup form with newsletter/subscribe wording",
+              "url": ""
+            }
+          ],
+          "app": {
+            "name": "NerdWallet: Smart Money App",
+            "rating": 4.83092,
+            "ratingCount": 125314,
+            "genre": "Finance",
+            "evidenceId": "E045"
+          },
+          "affiliateDisclosure": true,
+          "evidenceIds": [
+            "E002",
+            "E003",
+            "E004",
+            "E005",
+            "E006",
+            "E007"
+          ]
+        }
+      },
+      "drivers": [
+        {
+          "rank": 1,
+          "id": "popularity",
+          "title": "Popularity: Tranco rank #4,832; 28 Wikipedia article(s) link to it",
+          "detail": "Tranco ranks the top 1M domains by aggregated traffic lists (2026-10-14). Linking articles include: Walnut Valley Unified School District, Diamond Bar, California, Walnut, California, Walnut High School.",
+          "strength": 91,
+          "copyDifficulty": "hard",
+          "copyNote": "Brand demand and reference links build over years.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E038",
+            "E039"
+          ]
+        },
+        {
+          "rank": 2,
+          "id": "app",
+          "title": "App Store demand: \"NerdWallet: Smart Money App\" rated 4.8 from 125,314 ratings",
+          "detail": "Finance; Free; last update 2026-10-13. Store listings rank for brand and category searches and send users who never touch the website.",
+          "strength": 90,
+          "copyDifficulty": "hard",
+          "copyNote": "Ratings accrue with users; prompt for reviews at the moment of value.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E045"
+          ]
+        },
+        {
+          "rank": 3,
+          "id": "scale",
+          "title": "Topical breadth: 1,504 known URLs across 17 clusters of 10+ pages",
+          "detail": "Largest clusters: /mortgages (175, review), /insurance (167, programmatic), /credit-cards (141, page), /business (134, review). Sitemap index lists 107 child sitemaps (us/posts-articles x61, ca/posts-flex-pages x9, us/posts-insurance-flex-pages x6).",
+          "strength": 89,
+          "copyDifficulty": "medium",
+          "copyNote": "Years of publishing; copy the cluster shape, not the volume.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E032",
+            "E033"
+          ]
+        },
+        {
+          "rank": 4,
+          "id": "commercial",
+          "title": "Commercial-intent pages: 28 review/comparison URLs in the mapped sample",
+          "detail": "Examples: /credit-cards/learn/secured-credit-cards-vs-unsecured-difference, /business/credit-cards/reviews/capital-one-spark-cash, /auto-loans/learn/ev-lease-vs-buy, /best/banking/high-yield-online-savings-accounts.",
+          "strength": 85,
+          "copyDifficulty": "medium",
+          "copyNote": "Needs honest product testing to be credible.",
+          "basis": "inferred",
+          "evidenceIds": [
+            "E032",
+            "E033"
+          ]
+        },
+        {
+          "rank": 5,
+          "id": "depth",
+          "title": "Long-form content: median 3,221 words across 6 fetched editorial pages",
+          "detail": "Median 6 H2 sections. Longest: /business/credit-cards/best/capital-one (11,581), /business/credit-cards/reviews/capital-one-spark-cash (5,611).",
+          "strength": 85,
+          "copyDifficulty": "medium",
+          "copyNote": "Needs writers with subject knowledge; length alone does not rank.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E005",
+            "E014",
+            "E016",
+            "E019",
+            "E022",
+            "E025"
+          ]
+        },
+        {
+          "rank": 6,
+          "id": "schema",
+          "title": "Structured data on 93% of 30 sampled pages",
+          "detail": "Types by page count: Organization 25, ImageObject 21, Person 21, WebSite 21, Country 20. Pages with JSON-LD errors: 0.",
+          "strength": 72,
+          "copyDifficulty": "easy",
+          "copyNote": "A template change; no content needed.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E002",
+            "E003",
+            "E004",
+            "E005",
+            "E006",
+            "E007"
+          ]
+        },
+        {
+          "rank": 7,
+          "id": "tools",
+          "title": "Interactive tools: 7 calculator/tool URLs",
+          "detail": "Examples: /cost-of-living-calculator, /cost-of-living-calculator/city-life/san-francisco-ca, /cost-of-living-calculator/city-life/new-york-manhattan-ny, /taxes/calculators/tax-calculator.",
+          "strength": 72,
+          "copyDifficulty": "medium",
+          "copyNote": "Needs engineering, then earns links and repeat visits.",
+          "basis": "inferred",
+          "evidenceIds": [
+            "E032",
+            "E033"
+          ]
+        },
+        {
+          "rank": 8,
+          "id": "distribution",
+          "title": "Distribution beyond search: iOS App Store, Google Play, 6 social profiles, Newsletter",
+          "detail": "iOS App Store (https://apps.apple.com/us/app/nerdwallet-smart-money-app/id1174471607); Google Play (https://play.google.com/store/apps/details?id=com.mobilecreditcards&hl=en_US&source_caller=ui&shortlink=233a7a41&c=mbma_mktg_footer_badge_android&pid=footer); Social: x (https://x.com/NerdWallet); Social: youtube (https://www.youtube.com/@nerdwallet); Social: instagram (https://www.instagram.com/NerdWallet/); Social: tiktok (https://www.tiktok.com/@nerdwallet?lang=en); Social: linkedin (https://www.linkedin.com/company/nerdwallet); Social: facebook (https://www.facebook.com/NerdWallet/); Newsletter",
+          "strength": 68,
+          "copyDifficulty": "hard",
+          "copyNote": "Each channel is a product or a habit, not a page.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E002",
+            "E003",
+            "E004",
+            "E005",
+            "E006",
+            "E007"
+          ]
+        }
+      ],
+      "weaknesses": [
+        {
+          "id": "unranked-terms",
+          "title": "Not in the checked results for 5/10 of its own head terms",
+          "detail": "\"capital one business\" (#1 capitalone.com); \"credit score\" (#1 creditkarma.com); \"financial advisors\" (#1 yelp.com); \"credit report\" (#1 annualcreditreport.com); \"credit union\" (#1 lafcu.org)",
+          "severity": "high",
+          "opening": "Publish a better page for \"capital one business\", \"credit score\", \"financial advisors\"; nerdwallet.com is not in the checked results.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E054",
+            "E058",
+            "E062",
+            "E064",
+            "E066"
+          ]
+        },
+        {
+          "id": "ai-training-blocked",
+          "title": "Blocks AI training crawlers: Google-Extended",
+          "detail": "Search-time bots are allowed; training bots are not (a policy choice).",
+          "severity": "low",
+          "opening": "Models trained without the site know less about the brand.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E036",
+            "E034",
+            "E035",
+            "E002",
+            "E003",
+            "E004"
+          ]
+        },
+        {
+          "id": "llms-txt",
+          "title": "No /llms.txt",
+          "detail": "HTTP 404",
+          "severity": "low",
+          "opening": "Publish your own /llms.txt; it has none that validates.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E034"
+          ]
+        },
+        {
+          "id": "heavy",
+          "title": "Heavy HTML: median 1160 KB per sampled page",
+          "detail": "Raw HTML only (scripts and images not counted).",
+          "severity": "low",
+          "opening": "Lighter pages crawl and render faster.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E002",
+            "E003",
+            "E004",
+            "E005",
+            "E006",
+            "E007"
+          ]
+        }
+      ]
+    }
+  ],
+  "serp": {
+    "checks": [
+      {
+        "term": "business credit cards",
+        "kind": "head-term",
+        "from": "nerdwallet.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E048",
+        "results": [
+          {
+            "position": 1,
+            "domain": "nerdwallet.com",
+            "url": "https://www.nerdwallet.com/business/credit-cards/best"
+          },
+          {
+            "position": 2,
+            "domain": "creditcards.com",
+            "url": "https://www.creditcards.com/business/"
+          },
+          {
+            "position": 3,
+            "domain": "creditcards.chase.com",
+            "url": "https://creditcards.chase.com/business-credit-cards"
+          },
+          {
+            "position": 4,
+            "domain": "forbes.com",
+            "url": "https://www.forbes.com/advisor/credit-cards/best/business/"
+          },
+          {
+            "position": 5,
+            "domain": "bankrate.com",
+            "url": "https://www.bankrate.com/credit-cards/business/best-business-cards/"
+          },
+          {
+            "position": 6,
+            "domain": "business.bankofamerica.com",
+            "url": "https://business.bankofamerica.com/en/credit-cards"
+          },
+          {
+            "position": 7,
+            "domain": "forbes.com",
+            "url": "https://www.forbes.com/advisor/credit-cards/best/business-cards-for-startups/"
+          },
+          {
+            "position": 8,
+            "domain": "thepointsguy.com",
+            "url": "https://thepointsguy.com/credit-cards/business/"
+          },
+          {
+            "position": 9,
+            "domain": "americanexpress.com",
+            "url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/"
+          },
+          {
+            "position": 10,
+            "domain": "upgradedpoints.com",
+            "url": "https://upgradedpoints.com/credit-cards/business/best/"
+          }
+        ],
+        "adDomains": []
+      },
+      {
+        "term": "pay off student",
+        "kind": "head-term",
+        "from": "nerdwallet.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E050",
+        "results": [
+          {
+            "position": 1,
+            "domain": "studentaid.gov",
+            "url": "https://studentaid.gov/manage-loans/repayment"
+          },
+          {
+            "position": 2,
+            "domain": "nerdwallet.com",
+            "url": "https://www.nerdwallet.com/student-loans/learn/pay-off-student-loans-fast"
+          },
+          {
+            "position": 3,
+            "domain": "studentaid.gov",
+            "url": "https://studentaid.gov/manage-loans/make-payment"
+          },
+          {
+            "position": 4,
+            "domain": "studentloanplanner.com",
+            "url": "https://www.studentloanplanner.com/student-loan-payoff-calculator/"
+          },
+          {
+            "position": 5,
+            "domain": "earnest.com",
+            "url": "https://www.earnest.com/blog/paying-off-student-loans-with-a-grant"
+          },
+          {
+            "position": 6,
+            "domain": "bold.org",
+            "url": "https://bold.org/scholarships/by-type/grants-to-pay-off-student-loans/"
+          },
+          {
+            "position": 7,
+            "domain": "studentpayoff.com",
+            "url": "https://www.studentpayoff.com/"
+          },
+          {
+            "position": 8,
+            "domain": "edfinancial.studentaid.gov",
+            "url": "https://edfinancial.studentaid.gov/loan-payoff-information"
+          },
+          {
+            "position": 9,
+            "domain": "money.usnews.com",
+            "url": "https://money.usnews.com/loans/student-loans/articles/companies-that-help-pay-off-student-loans"
+          },
+          {
+            "position": 10,
+            "domain": "debtdiscipline.com",
+            "url": "https://www.debtdiscipline.com/complete-guide-paying-off-student-loans/"
+          }
+        ],
+        "adDomains": []
+      },
+      {
+        "term": "student loans",
+        "kind": "head-term",
+        "from": "nerdwallet.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E052",
+        "results": [
+          {
+            "position": 1,
+            "domain": "studentaid.gov",
+            "url": "https://studentaid.gov/"
+          },
+          {
+            "position": 2,
+            "domain": "studentaid.gov",
+            "url": "https://studentaid.gov/understand-aid/types/loans"
+          },
+          {
+            "position": 3,
+            "domain": "ed.gov",
+            "url": "https://www.ed.gov/higher-education/manage-your-loans"
+          },
+          {
+            "position": 4,
+            "domain": "nelnet.studentaid.gov",
+            "url": "https://nelnet.studentaid.gov/"
+          },
+          {
+            "position": 5,
+            "domain": "navyfederal.org",
+            "url": "https://www.navyfederal.org/loans-cards/student-loans.html"
+          },
+          {
+            "position": 6,
+            "domain": "consumerfinance.gov",
+            "url": "https://www.consumerfinance.gov/consumer-tools/student-loans/"
+          },
+          {
+            "position": 7,
+            "domain": "earnest.com",
+            "url": "https://www.earnest.com/student-loans"
+          },
+          {
+            "position": 8,
+            "domain": "salliemae.com",
+            "url": "https://www.salliemae.com/student-loans/"
+          },
+          {
+            "position": 9,
+            "domain": "credible.com",
+            "url": "https://www.credible.com/student-loans"
+          },
+          {
+            "position": 10,
+            "domain": "nerdwallet.com",
+            "url": "https://www.nerdwallet.com/student-loans"
+          }
+        ],
+        "adDomains": []
+      },
+      {
+        "term": "capital one business",
+        "kind": "head-term",
+        "from": "nerdwallet.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E054",
+        "results": [
+          {
+            "position": 1,
+            "domain": "capitalone.com",
+            "url": "https://www.capitalone.com/small-business/bank/"
+          },
+          {
+            "position": 2,
+            "domain": "capitalone.com",
+            "url": "https://www.capitalone.com/small-business/homepage/"
+          },
+          {
+            "position": 3,
+            "domain": "myaccounts.capitalone.com",
+            "url": "https://myaccounts.capitalone.com/"
+          },
+          {
+            "position": 4,
+            "domain": "businessapply.capitalone.com",
+            "url": "https://businessapply.capitalone.com/product-selection"
+          },
+          {
+            "position": 5,
+            "domain": "mycard.capitalone.com",
+            "url": "https://mycard.capitalone.com/"
+          },
+          {
+            "position": 6,
+            "domain": "clientview.capitalone.com",
+            "url": "https://clientview.capitalone.com/login"
+          },
+          {
+            "position": 7,
+            "domain": "capitalone.com",
+            "url": "https://www.capitalone.com/small-business/bank/services/online-banking/"
+          },
+          {
+            "position": 8,
+            "domain": "capitalone.com",
+            "url": "https://www.capitalone.com/small-business/bank/products/checking/"
+          },
+          {
+            "position": 9,
+            "domain": "capitalone.com",
+            "url": "https://www.capitalone.com/small-business/bank/products/"
+          },
+          {
+            "position": 10,
+            "domain": "capitalone.com",
+            "url": "https://www.capitalone.com/"
+          }
+        ],
+        "adDomains": []
+      },
+      {
+        "term": "personal finance news",
+        "kind": "head-term",
+        "from": "nerdwallet.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E056",
+        "results": [
+          {
+            "position": 1,
+            "domain": "cnbc.com",
+            "url": "https://www.cnbc.com/personal-finance/"
+          },
+          {
+            "position": 2,
+            "domain": "wsj.com",
+            "url": "https://www.wsj.com/personal-finance"
+          },
+          {
+            "position": 3,
+            "domain": "washingtonpost.com",
+            "url": "https://www.washingtonpost.com/personal-finance/"
+          },
+          {
+            "position": 4,
+            "domain": "morningstar.com",
+            "url": "https://www.morningstar.com/personal-finance"
+          },
+          {
+            "position": 5,
+            "domain": "experian.com",
+            "url": "https://www.experian.com/blogs/ask-experian/latest-personal-finance-news/"
+          },
+          {
+            "position": 6,
+            "domain": "nerdwallet.com",
+            "url": "https://www.nerdwallet.com/news"
+          },
+          {
+            "position": 7,
+            "domain": "fortune.com",
+            "url": "https://fortune.com/section/personal-finance/"
+          },
+          {
+            "position": 8,
+            "domain": "kiplinger.com",
+            "url": "https://www.kiplinger.com/"
+          },
+          {
+            "position": 9,
+            "domain": "marketwatch.com",
+            "url": "https://www.marketwatch.com/personal-finance"
+          },
+          {
+            "position": 10,
+            "domain": "consumeraffairs.com",
+            "url": "https://www.consumeraffairs.com/news/finance/"
+          }
+        ],
+        "adDomains": []
+      },
+      {
+        "term": "credit score",
+        "kind": "head-term",
+        "from": "nerdwallet.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E058",
+        "results": [
+          {
+            "position": 1,
+            "domain": "creditkarma.com",
+            "url": "https://www.creditkarma.com/"
+          },
+          {
+            "position": 2,
+            "domain": "experian.com",
+            "url": "https://www.experian.com/credit/credit-score/"
+          },
+          {
+            "position": 3,
+            "domain": "creditkarma.com",
+            "url": "https://www.creditkarma.com/free-credit-score"
+          },
+          {
+            "position": 4,
+            "domain": "transunion.com",
+            "url": "https://www.transunion.com/free-credit-score"
+          },
+          {
+            "position": 5,
+            "domain": "experian.com",
+            "url": "https://www.experian.com/"
+          },
+          {
+            "position": 6,
+            "domain": "usa.gov",
+            "url": "https://www.usa.gov/credit-reports"
+          },
+          {
+            "position": 7,
+            "domain": "transunion.com",
+            "url": "https://www.transunion.com/"
+          },
+          {
+            "position": 8,
+            "domain": "annualcreditreport.com",
+            "url": "https://www.annualcreditreport.com/index.action"
+          },
+          {
+            "position": 9,
+            "domain": "equifax.com",
+            "url": "https://www.equifax.com/"
+          },
+          {
+            "position": 10,
+            "domain": "investopedia.com",
+            "url": "https://www.investopedia.com/terms/c/credit_score.asp"
+          }
+        ],
+        "adDomains": []
+      },
+      {
+        "term": "auto loans",
+        "kind": "head-term",
+        "from": "nerdwallet.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E060",
+        "results": [
+          {
+            "position": 1,
+            "domain": "nerdwallet.com",
+            "url": "https://www.nerdwallet.com/auto-loans/best/auto-loans-for-good-fair-and-bad-credit"
+          },
+          {
+            "position": 2,
+            "domain": "bankofamerica.com",
+            "url": "https://www.bankofamerica.com/auto-loans/"
+          },
+          {
+            "position": 3,
+            "domain": "capitalone.com",
+            "url": "https://www.capitalone.com/cars/auto-financing"
+          },
+          {
+            "position": 4,
+            "domain": "vccuonline.net",
+            "url": "https://www.vccuonline.net/Borrow/Vehicle-Loans"
+          },
+          {
+            "position": 5,
+            "domain": "yelp.com",
+            "url": "https://www.yelp.com/search?find_desc=Auto+Loans&find_loc=Camarillo%2C+CA"
+          },
+          {
+            "position": 6,
+            "domain": "wellsfargo.com",
+            "url": "https://www.wellsfargo.com/auto-loans/"
+          },
+          {
+            "position": 7,
+            "domain": "bankofamerica.com",
+            "url": "https://www.bankofamerica.com/auto-loans/auto-loan-rates/"
+          },
+          {
+            "position": 8,
+            "domain": "yelp.com",
+            "url": "https://www.yelp.com/search?cflt=autoloanproviders&find_loc=Camarillo%2C+CA"
+          },
+          {
+            "position": 9,
+            "domain": "monitorbankrates.com",
+            "url": "https://www.monitorbankrates.com/auto-loan-rates/california/camarillo"
+          },
+          {
+            "position": 10,
+            "domain": "usbank.com",
+            "url": "https://www.usbank.com/vehicle-loans/auto-loans.html"
+          }
+        ],
+        "adDomains": []
+      },
+      {
+        "term": "financial advisors",
+        "kind": "head-term",
+        "from": "nerdwallet.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E062",
+        "results": [
+          {
+            "position": 1,
+            "domain": "yelp.com",
+            "url": "https://www.yelp.com/search?find_desc=financial+advisor&find_loc=Clovis%2C+CA"
+          },
+          {
+            "position": 2,
+            "domain": "yelp.com",
+            "url": "https://www.yelp.com/search?find_desc=Financial+Advisor+Clovis&find_loc=Clovis%2C+CA"
+          },
+          {
+            "position": 3,
+            "domain": "money.usnews.com",
+            "url": "https://money.usnews.com/financial-advisors/california/clovis"
+          },
+          {
+            "position": 4,
+            "domain": "expertise.com",
+            "url": "https://www.expertise.com/finance/financial-advisors/california/clovis"
+          },
+          {
+            "position": 5,
+            "domain": "edwardjones.com",
+            "url": "https://www.edwardjones.com/us-en/find-a-financial-advisor/locations/california/clovis"
+          },
+          {
+            "position": 6,
+            "domain": "money.usnews.com",
+            "url": "https://money.usnews.com/financial-advisors"
+          },
+          {
+            "position": 7,
+            "domain": "ameripriseadvisors.com",
+            "url": "https://www.ameripriseadvisors.com/find-a-financial-advisor-by-state/california/clovis/"
+          },
+          {
+            "position": 8,
+            "domain": "edwardjones.com",
+            "url": "https://www.edwardjones.com/us-en/financial-advisor/aaron-friedrich"
+          },
+          {
+            "position": 9,
+            "domain": "local.thrivent.com",
+            "url": "https://local.thrivent.com/directory/ca/clovis"
+          },
+          {
+            "position": 10,
+            "domain": "expertise.com",
+            "url": "https://www.expertise.com/finance/financial-advisors/california/fresno"
+          }
+        ],
+        "adDomains": []
+      },
+      {
+        "term": "credit report",
+        "kind": "head-term",
+        "from": "nerdwallet.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E064",
+        "results": [
+          {
+            "position": 1,
+            "domain": "annualcreditreport.com",
+            "url": "https://www.annualcreditreport.com/index.action"
+          },
+          {
+            "position": 2,
+            "domain": "usa.gov",
+            "url": "https://www.usa.gov/credit-reports"
+          },
+          {
+            "position": 3,
+            "domain": "transunion.com",
+            "url": "https://www.transunion.com/free-credit-report"
+          },
+          {
+            "position": 4,
+            "domain": "experian.com",
+            "url": "https://www.experian.com/"
+          },
+          {
+            "position": 5,
+            "domain": "annualcreditreport.com",
+            "url": "https://www.annualcreditreport.com/gettingReports.action"
+          },
+          {
+            "position": 6,
+            "domain": "transunion.com",
+            "url": "https://www.transunion.com/"
+          },
+          {
+            "position": 7,
+            "domain": "equifax.com",
+            "url": "https://www.equifax.com/"
+          },
+          {
+            "position": 8,
+            "domain": "creditkarma.com",
+            "url": "https://www.creditkarma.com/free-credit-report"
+          },
+          {
+            "position": 9,
+            "domain": "equifax.com",
+            "url": "https://www.equifax.com/personal/credit-report-services/free-credit-reports/"
+          },
+          {
+            "position": 10,
+            "domain": "consumer.ftc.gov",
+            "url": "https://consumer.ftc.gov/articles/free-credit-reports"
+          }
+        ],
+        "adDomains": []
+      },
+      {
+        "term": "credit union",
+        "kind": "head-term",
+        "from": "nerdwallet.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E066",
+        "results": [
+          {
+            "position": 1,
+            "domain": "lafcu.org",
+            "url": "https://www.lafcu.org/"
+          },
+          {
+            "position": 2,
+            "domain": "cusocal.org",
+            "url": "https://www.cusocal.org/"
+          },
+          {
+            "position": 3,
+            "domain": "ccu.com",
+            "url": "https://www.ccu.com/"
+          },
+          {
+            "position": 4,
+            "domain": "creditunionmatch.com",
+            "url": "https://creditunionmatch.com/credit-unions-in-los-angeles-county-ca"
+          },
+          {
+            "position": 5,
+            "domain": "firstcitycu.org",
+            "url": "https://www.firstcitycu.org/"
+          },
+          {
+            "position": 6,
+            "domain": "usccreditunion.org",
+            "url": "https://www.usccreditunion.org/"
+          },
+          {
+            "position": 7,
+            "domain": "southlandcu.org",
+            "url": "https://www.southlandcu.org/"
+          },
+          {
+            "position": 8,
+            "domain": "fpcu.org",
+            "url": "https://fpcu.org/"
+          },
+          {
+            "position": 9,
+            "domain": "cusocal.org",
+            "url": "https://www.cusocal.org/access/branches-and-atms/credit-union-in-los-angeles-county/"
+          },
+          {
+            "position": 10,
+            "domain": "creditunionsonline.com",
+            "url": "https://www.creditunionsonline.com/credit-unions-in-los-angeles-ca.html"
+          }
+        ],
+        "adDomains": []
+      },
+      {
+        "term": "nerdwallet",
+        "kind": "brand",
+        "from": "nerdwallet.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E068",
+        "results": [
+          {
+            "position": 1,
+            "domain": "nerdwallet.com",
+            "url": "https://www.nerdwallet.com/"
+          },
+          {
+            "position": 2,
+            "domain": "nerdwallet.com",
+            "url": "https://www.nerdwallet.com/finance"
+          },
+          {
+            "position": 3,
+            "domain": "en.wikipedia.org",
+            "url": "https://en.wikipedia.org/wiki/NerdWallet"
+          },
+          {
+            "position": 4,
+            "domain": "nerdwallet.com",
+            "url": "https://www.nerdwallet.com/personal-loans"
+          },
+          {
+            "position": 5,
+            "domain": "nerdwallet.com",
+            "url": "https://www.nerdwallet.com/banking"
+          },
+          {
+            "position": 6,
+            "domain": "nerdwallet.com",
+            "url": "https://www.nerdwallet.com/credit-cards/best"
+          },
+          {
+            "position": 7,
+            "domain": "nerdwallet.com",
+            "url": "https://www.nerdwallet.com/credit-cards"
+          },
+          {
+            "position": 8,
+            "domain": "nerdwallet.com",
+            "url": "https://www.nerdwallet.com/l/nerdwallet-app-track-your-wealth-and-build-your-future"
+          },
+          {
+            "position": 9,
+            "domain": "support.nerdwallet.com",
+            "url": "https://support.nerdwallet.com/en/collections/19084830-using-nerdwallet"
+          },
+          {
+            "position": 10,
+            "domain": "consumeraffairs.com",
+            "url": "https://www.consumeraffairs.com/finance/nerdwallet.html"
+          }
+        ],
+        "adDomains": []
+      }
+    ],
+    "notes": [
+      "Google (headless Chromium) blocked on \"business credit cards\" (Google captcha (unusual traffic page)); not asked again this run."
+    ]
+  },
+  "competitors": [
+    {
+      "domain": "experian.com",
+      "serps": 3,
+      "terms": [
+        "personal finance news",
+        "credit score",
+        "credit report"
+      ],
+      "bestPosition": 2,
+      "medianPosition": 4,
+      "isVs": false,
+      "evidenceIds": [
+        "E056",
+        "E058",
+        "E064"
+      ]
+    },
+    {
+      "domain": "studentaid.gov",
+      "serps": 2,
+      "terms": [
+        "pay off student",
+        "student loans"
+      ],
+      "bestPosition": 1,
+      "medianPosition": 1,
+      "isVs": false,
+      "evidenceIds": [
+        "E050",
+        "E052"
+      ]
+    },
+    {
+      "domain": "capitalone.com",
+      "serps": 2,
+      "terms": [
+        "capital one business",
+        "auto loans"
+      ],
+      "bestPosition": 1,
+      "medianPosition": 2,
+      "isVs": false,
+      "evidenceIds": [
+        "E054",
+        "E060"
+      ]
+    },
+    {
+      "domain": "yelp.com",
+      "serps": 2,
+      "terms": [
+        "auto loans",
+        "financial advisors"
+      ],
+      "bestPosition": 1,
+      "medianPosition": 3,
+      "isVs": false,
+      "evidenceIds": [
+        "E060",
+        "E062"
+      ]
+    },
+    {
+      "domain": "transunion.com",
+      "serps": 2,
+      "terms": [
+        "credit score",
+        "credit report"
+      ],
+      "bestPosition": 3,
+      "medianPosition": 4,
+      "isVs": false,
+      "evidenceIds": [
+        "E058",
+        "E064"
+      ]
+    },
+    {
+      "domain": "usa.gov",
+      "serps": 2,
+      "terms": [
+        "credit score",
+        "credit report"
+      ],
+      "bestPosition": 2,
+      "medianPosition": 4,
+      "isVs": false,
+      "evidenceIds": [
+        "E058",
+        "E064"
+      ]
+    },
+    {
+      "domain": "annualcreditreport.com",
+      "serps": 2,
+      "terms": [
+        "credit score",
+        "credit report"
+      ],
+      "bestPosition": 1,
+      "medianPosition": 5,
+      "isVs": false,
+      "evidenceIds": [
+        "E058",
+        "E064"
+      ]
+    },
+    {
+      "domain": "creditkarma.com",
+      "serps": 2,
+      "terms": [
+        "credit score",
+        "credit report"
+      ],
+      "bestPosition": 1,
+      "medianPosition": 5,
+      "isVs": false,
+      "evidenceIds": [
+        "E058",
+        "E064"
+      ]
+    },
+    {
+      "domain": "earnest.com",
+      "serps": 2,
+      "terms": [
+        "pay off student",
+        "student loans"
+      ],
+      "bestPosition": 5,
+      "medianPosition": 6,
+      "isVs": false,
+      "evidenceIds": [
+        "E050",
+        "E052"
+      ]
+    },
+    {
+      "domain": "money.usnews.com",
+      "serps": 2,
+      "terms": [
+        "pay off student",
+        "financial advisors"
+      ],
+      "bestPosition": 3,
+      "medianPosition": 6,
+      "isVs": false,
+      "evidenceIds": [
+        "E050",
+        "E062"
+      ]
+    },
+    {
+      "domain": "equifax.com",
+      "serps": 2,
+      "terms": [
+        "credit score",
+        "credit report"
+      ],
+      "bestPosition": 7,
+      "medianPosition": 8,
+      "isVs": false,
+      "evidenceIds": [
+        "E058",
+        "E064"
+      ]
+    },
+    {
+      "domain": "cnbc.com",
+      "serps": 1,
+      "terms": [
+        "personal finance news"
+      ],
+      "bestPosition": 1,
+      "medianPosition": 1,
+      "isVs": false,
+      "evidenceIds": [
+        "E056"
+      ]
+    },
+    {
+      "domain": "lafcu.org",
+      "serps": 1,
+      "terms": [
+        "credit union"
+      ],
+      "bestPosition": 1,
+      "medianPosition": 1,
+      "isVs": false,
+      "evidenceIds": [
+        "E066"
+      ]
+    },
+    {
+      "domain": "bankofamerica.com",
+      "serps": 1,
+      "terms": [
+        "auto loans"
+      ],
+      "bestPosition": 2,
+      "medianPosition": 2,
+      "isVs": false,
+      "evidenceIds": [
+        "E060"
+      ]
+    },
+    {
+      "domain": "creditcards.com",
+      "serps": 1,
+      "terms": [
+        "business credit cards"
+      ],
+      "bestPosition": 2,
+      "medianPosition": 2,
+      "isVs": false,
+      "evidenceIds": [
+        "E048"
+      ]
+    }
+  ],
+  "playbook": [
+    {
+      "step": "Publish \"X vs Y\" and \"<product> review\" pages for what your users compare, like /credit-cards/learn/secured-credit-cards-vs-unsecured-difference and /business/credit-cards/reviews/capital-one-spark-cash.",
+      "why": "nerdwallet.com driver #4 (strength 85, medium to copy): Commercial-intent pages: 28 review/comparison URLs in the mapped sample",
+      "from": "commercial",
+      "effort": "M",
+      "impact": "high",
+      "evidenceIds": [
+        "E032",
+        "E033"
+      ]
+    },
+    {
+      "step": "Publish a better page for \"capital one business\", \"credit score\", \"financial advisors\"; nerdwallet.com is not in the checked results.",
+      "why": "nerdwallet.com weakness: Not in the checked results for 5/10 of its own head terms",
+      "from": "unranked-terms",
+      "effort": "M",
+      "impact": "high",
+      "evidenceIds": [
+        "E054",
+        "E058",
+        "E062",
+        "E064",
+        "E066"
+      ]
+    },
+    {
+      "step": "Ask for App Store ratings right after the in-app moment users came for; nerdwallet.com has 125,314.",
+      "why": "nerdwallet.com driver #2 (strength 90, hard to copy): App Store demand: \"NerdWallet: Smart Money App\" rated 4.8 from 125,314 ratings",
+      "from": "app",
+      "effort": "S",
+      "impact": "medium",
+      "evidenceIds": [
+        "E045"
+      ]
+    },
+    {
+      "step": "Pick the 2-3 nerdwallet.com clusters closest to your product (/mortgages, /insurance, /credit-cards) and publish 10+ linked pages in each before widening.",
+      "why": "nerdwallet.com driver #3 (strength 89, medium to copy): Topical breadth: 1,504 known URLs across 17 clusters of 10+ pages",
+      "from": "scale",
+      "effort": "L",
+      "impact": "high",
+      "evidenceIds": [
+        "E032",
+        "E033"
+      ]
+    },
+    {
+      "step": "Add the JSON-LD nerdwallet.com uses on matching templates: Organization, ImageObject, Person, WebSite.",
+      "why": "nerdwallet.com driver #6 (strength 72, easy to copy): Structured data on 93% of 30 sampled pages",
+      "from": "schema",
+      "effort": "S",
+      "impact": "medium",
+      "evidenceIds": [
+        "E002",
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E007"
+      ]
+    },
+    {
+      "step": "Match depth on your top 5 pages: about 3,221 words and 6 H2 sections, like /business/credit-cards/reviews/capital-one-spark-cash.",
+      "why": "nerdwallet.com driver #5 (strength 85, medium to copy): Long-form content: median 3,221 words across 6 fetched editorial pages",
+      "from": "depth",
+      "effort": "M",
+      "impact": "medium",
+      "evidenceIds": [
+        "E005",
+        "E014",
+        "E016",
+        "E019",
+        "E022",
+        "E025"
+      ]
+    },
+    {
+      "step": "Ship free tools for the questions your users repeat; nerdwallet.com has /cost-of-living-calculator, /cost-of-living-calculator/city-life/san-francisco-ca, /cost-of-living-calculator/city-life/new-york-manhattan-ny.",
+      "why": "nerdwallet.com driver #7 (strength 72, medium to copy): Interactive tools: 7 calculator/tool URLs",
+      "from": "tools",
+      "effort": "M",
+      "impact": "medium",
+      "evidenceIds": [
+        "E032",
+        "E033"
+      ]
+    },
+    {
+      "step": "Publish one original data study a quarter in your strongest cluster so reference sites have something to cite (nerdwallet.com is linked from 28 Wikipedia article(s)).",
+      "why": "nerdwallet.com driver #1 (strength 91, hard to copy): Popularity: Tranco rank #4,832; 28 Wikipedia article(s) link to it",
+      "from": "popularity",
+      "effort": "L",
+      "impact": "medium",
+      "evidenceIds": [
+        "E038",
+        "E039"
+      ]
+    },
+    {
+      "step": "Add the owned channels nerdwallet.com uses that you lack (iOS App Store, Google Play, social, Newsletter); start with a newsletter or extension tied to your best tool.",
+      "why": "nerdwallet.com driver #8 (strength 68, hard to copy): Distribution beyond search: iOS App Store, Google Play, 6 social profiles, Newsletter",
+      "from": "distribution",
+      "effort": "L",
+      "impact": "medium",
+      "evidenceIds": [
+        "E002",
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E007"
+      ]
+    }
+  ],
+  "plan": {
+    "for": "a challenger to nerdwallet.com",
+    "days30": [
+      {
+        "step": "Ask for App Store ratings right after the in-app moment users came for; nerdwallet.com has 125,314.",
+        "why": "nerdwallet.com driver #2 (strength 90, hard to copy): App Store demand: \"NerdWallet: Smart Money App\" rated 4.8 from 125,314 ratings",
+        "from": "app",
+        "effort": "S",
+        "impact": "medium",
+        "evidenceIds": [
+          "E045"
+        ]
+      },
+      {
+        "step": "Add the JSON-LD nerdwallet.com uses on matching templates: Organization, ImageObject, Person, WebSite.",
+        "why": "nerdwallet.com driver #6 (strength 72, easy to copy): Structured data on 93% of 30 sampled pages",
+        "from": "schema",
+        "effort": "S",
+        "impact": "medium",
+        "evidenceIds": [
+          "E002",
+          "E003",
+          "E004",
+          "E005",
+          "E006",
+          "E007"
+        ]
+      }
+    ],
+    "days60": [
+      {
+        "step": "Publish \"X vs Y\" and \"<product> review\" pages for what your users compare, like /credit-cards/learn/secured-credit-cards-vs-unsecured-difference and /business/credit-cards/reviews/capital-one-spark-cash.",
+        "why": "nerdwallet.com driver #4 (strength 85, medium to copy): Commercial-intent pages: 28 review/comparison URLs in the mapped sample",
+        "from": "commercial",
+        "effort": "M",
+        "impact": "high",
+        "evidenceIds": [
+          "E032",
+          "E033"
+        ]
+      },
+      {
+        "step": "Publish a better page for \"capital one business\", \"credit score\", \"financial advisors\"; nerdwallet.com is not in the checked results.",
+        "why": "nerdwallet.com weakness: Not in the checked results for 5/10 of its own head terms",
+        "from": "unranked-terms",
+        "effort": "M",
+        "impact": "high",
+        "evidenceIds": [
+          "E054",
+          "E058",
+          "E062",
+          "E064",
+          "E066"
+        ]
+      },
+      {
+        "step": "Match depth on your top 5 pages: about 3,221 words and 6 H2 sections, like /business/credit-cards/reviews/capital-one-spark-cash.",
+        "why": "nerdwallet.com driver #5 (strength 85, medium to copy): Long-form content: median 3,221 words across 6 fetched editorial pages",
+        "from": "depth",
+        "effort": "M",
+        "impact": "medium",
+        "evidenceIds": [
+          "E005",
+          "E014",
+          "E016",
+          "E019",
+          "E022",
+          "E025"
+        ]
+      },
+      {
+        "step": "Ship free tools for the questions your users repeat; nerdwallet.com has /cost-of-living-calculator, /cost-of-living-calculator/city-life/san-francisco-ca, /cost-of-living-calculator/city-life/new-york-manhattan-ny.",
+        "why": "nerdwallet.com driver #7 (strength 72, medium to copy): Interactive tools: 7 calculator/tool URLs",
+        "from": "tools",
+        "effort": "M",
+        "impact": "medium",
+        "evidenceIds": [
+          "E032",
+          "E033"
+        ]
+      }
+    ],
+    "days90": [
+      {
+        "step": "Pick the 2-3 nerdwallet.com clusters closest to your product (/mortgages, /insurance, /credit-cards) and publish 10+ linked pages in each before widening.",
+        "why": "nerdwallet.com driver #3 (strength 89, medium to copy): Topical breadth: 1,504 known URLs across 17 clusters of 10+ pages",
+        "from": "scale",
+        "effort": "L",
+        "impact": "high",
+        "evidenceIds": [
+          "E032",
+          "E033"
+        ]
+      },
+      {
+        "step": "Publish one original data study a quarter in your strongest cluster so reference sites have something to cite (nerdwallet.com is linked from 28 Wikipedia article(s)).",
+        "why": "nerdwallet.com driver #1 (strength 91, hard to copy): Popularity: Tranco rank #4,832; 28 Wikipedia article(s) link to it",
+        "from": "popularity",
+        "effort": "L",
+        "impact": "medium",
+        "evidenceIds": [
+          "E038",
+          "E039"
+        ]
+      },
+      {
+        "step": "Add the owned channels nerdwallet.com uses that you lack (iOS App Store, Google Play, social, Newsletter); start with a newsletter or extension tied to your best tool.",
+        "why": "nerdwallet.com driver #8 (strength 68, hard to copy): Distribution beyond search: iOS App Store, Google Play, 6 social profiles, Newsletter",
+        "from": "distribution",
+        "effort": "L",
+        "impact": "medium",
+        "evidenceIds": [
+          "E002",
+          "E003",
+          "E004",
+          "E005",
+          "E006",
+          "E007"
+        ]
+      }
+    ]
+  },
+  "comparison": null,
+  "unknowns": [
+    "nerdwallet.com: PageSpeed Insights skipped: PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key",
+    "Paid data (search volume, backlinks, paid SERP fallback) skipped: budget is 0",
+    "nerdwallet.com: Backlink counts and referring domains need a paid index; not measured at $0"
+  ],
+  "evidenceIndex": "evidence/index.json"
+}
