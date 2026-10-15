@@ -1,0 +1,2117 @@
+{
+  "schemaVersion": "1",
+  "tool": "seo-rea",
+  "toolVersion": "0.4.0",
+  "kind": "strategy",
+  "runId": "20261015T064612Z",
+  "inputs": {
+    "domain": "cardpointers.com",
+    "vs": null,
+    "budgetUsd": 0
+  },
+  "timestamps": {
+    "createdAt": "2026-10-15T06:46:12.359Z",
+    "writtenAt": "2026-10-15T06:46:50.252Z"
+  },
+  "cost": {
+    "spentUsd": 0,
+    "budgetUsd": 0
+  },
+  "roles": {
+    "leader": "cardpointers.com",
+    "challenger": null,
+    "basis": "Single-domain run: cardpointers.com is analysed as the leader.",
+    "evidenceIds": []
+  },
+  "actionsFor": "cardpointers.com",
+  "topActions": [
+    {
+      "rank": 1,
+      "title": "Build a page that targets \"credit card offers\" (closest page now: /cards/)",
+      "why": "cardpointers.com is not in the 10 results Bing (headless Chromium) returned; #1 is wallethub.com/best-credit-card-deals. The phrase appears in 3 of the site's titles/H1s/slugs.",
+      "evidenceIds": [
+        "E048",
+        "E016"
+      ],
+      "effort": "M",
+      "impact": "high",
+      "owner": "content"
+    },
+    {
+      "rank": 2,
+      "title": "Build a page that targets \"credit cards\" (closest page now: /)",
+      "why": "cardpointers.com is not in the 10 results Bing (headless Chromium) returned; #1 is creditcards.com/. The phrase appears in 11 of the site's titles/H1s/slugs.",
+      "evidenceIds": [
+        "E050",
+        "E002"
+      ],
+      "effort": "M",
+      "impact": "high",
+      "owner": "content"
+    },
+    {
+      "rank": 3,
+      "title": "Build a page that targets \"credit card rewards\" (closest page now: /)",
+      "why": "cardpointers.com is not in the 10 results Bing (headless Chromium) returned; #1 is nerdwallet.com/credit-cards/best/rewards. The phrase appears in 1 of the site's titles/H1s/slugs.",
+      "evidenceIds": [
+        "E052",
+        "E002"
+      ],
+      "effort": "M",
+      "impact": "high",
+      "owner": "content"
+    },
+    {
+      "rank": 4,
+      "title": "Build a page that targets \"bank offers\" (closest page now: /offers/)",
+      "why": "cardpointers.com is not in the 10 results Bing (headless Chromium) returned; #1 is moneycrashers.com/best-new-bank-account-promotions-offers/. The phrase appears in 2 of the site's titles/H1s/slugs.",
+      "evidenceIds": [
+        "E054",
+        "E015"
+      ],
+      "effort": "M",
+      "impact": "high",
+      "owner": "content"
+    },
+    {
+      "rank": 5,
+      "title": "Build a page that targets \"gift card\" (closest page now: /gift/)",
+      "why": "cardpointers.com is not in the 10 results Bing (headless Chromium) returned; #1 is apple.com/shop/gift-cards. The phrase appears in 2 of the site's titles/H1s/slugs.",
+      "evidenceIds": [
+        "E056",
+        "E025"
+      ],
+      "effort": "M",
+      "impact": "high",
+      "owner": "content"
+    },
+    {
+      "rank": 6,
+      "title": "Add JSON-LD to the 22 unmarked pages (/, /partner/prime/): Organization on home, Article/Product/FAQPage by template",
+      "why": "No JSON-LD on 22/30 sampled pages. e.g. /, /partner/prime/, /search/.",
+      "evidenceIds": [
+        "E002",
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E007"
+      ],
+      "effort": "S",
+      "impact": "medium",
+      "owner": "dev"
+    },
+    {
+      "rank": 7,
+      "title": "Add one descriptive H1 per page (/search/, /apps/iphone/ first)",
+      "why": "No H1 on 19/30 sampled pages. e.g. /search/, /apps/iphone/, /apps/ipad/.",
+      "evidenceIds": [
+        "E004",
+        "E005",
+        "E006",
+        "E007",
+        "E008",
+        "E009"
+      ],
+      "effort": "S",
+      "impact": "medium",
+      "owner": "content"
+    },
+    {
+      "rank": 8,
+      "title": "Open each inner page with a 1-3 sentence answer that repeats the H1 topic",
+      "why": "Only 14% of 29 inner pages open with a direct answer. First paragraph after the H1 is missing, too long, or does not name the topic.",
+      "evidenceIds": [
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E007",
+        "E008"
+      ],
+      "effort": "S",
+      "impact": "medium",
+      "owner": "content"
+    },
+    {
+      "rank": 9,
+      "title": "Refresh and re-date the oldest high-traffic pages first",
+      "why": "Stale content: median page age 1011 days across 7 dated pages. None updated within 12 months.",
+      "evidenceIds": [
+        "E002",
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E007"
+      ],
+      "effort": "M",
+      "impact": "medium",
+      "owner": "content"
+    },
+    {
+      "rank": 10,
+      "title": "Expand /offers pages past 600 words with answers and examples",
+      "why": "Thin cluster /offers: median 222 words over 2 fetched pages. 11 URLs, programmatic template; examples /offers/, /offers/menchies-frozen-yogurt-lake-nona-5-back-48/.",
+      "evidenceIds": [
+        "E033"
+      ],
+      "effort": "M",
+      "impact": "medium",
+      "owner": "content"
+    }
+  ],
+  "sites": [
+    {
+      "domain": "cardpointers.com",
+      "role": "subject",
+      "error": "",
+      "snapshot": {
+        "title": "CardPointers: Credit card rewards made easy",
+        "description": "Earn more rewards from your credit cards every day.",
+        "h1": "Earn more from your credit cards every day.",
+        "whatItIs": {
+          "value": "Earn more rewards from your credit cards every day.",
+          "why": "homepage meta description",
+          "basis": "observed",
+          "evidenceIds": [
+            "E002"
+          ]
+        },
+        "businessModel": [
+          {
+            "value": "Mobile app (App Store + Google Play links on site)",
+            "why": "store links found in page HTML",
+            "basis": "observed",
+            "evidenceIds": [
+              "E002",
+              "E003",
+              "E005"
+            ]
+          },
+          {
+            "value": "Paid tier or subscription",
+            "why": "URL paths /pro in sitemap/nav",
+            "basis": "inferred",
+            "evidenceIds": [
+              "E032",
+              "E002"
+            ]
+          },
+          {
+            "value": "Affiliate or partner revenue (advertiser/affiliate disclosure on pages)",
+            "why": "2/30 fetched pages carry disclosure wording",
+            "basis": "inferred",
+            "evidenceIds": [
+              "E016",
+              "E028",
+              "E033"
+            ]
+          },
+          {
+            "value": "Browser extension",
+            "why": "extension store link or /extension page",
+            "basis": "observed",
+            "evidenceIds": [
+              "E032",
+              "E002"
+            ]
+          }
+        ],
+        "audiences": [
+          {
+            "value": "People researching cards, offers",
+            "why": "largest clusters: /cards (12), /offers (11)",
+            "basis": "inferred",
+            "evidenceIds": [
+              "E032",
+              "E033"
+            ]
+          },
+          {
+            "value": "Navigation leads with: Save 50% →, CardPointers, iPhone iOS 15+, iPad iPadOS 15+, Mac macOS 12+ (Monterey), Vision Pro visionOS",
+            "why": "homepage <nav>/<header> anchors in page order",
+            "basis": "observed",
+            "evidenceIds": [
+              "E002"
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "E002"
+        ]
+      },
+      "map": {
+        "sitemapFiles": 2,
+        "indexChildren": 0,
+        "childStems": [],
+        "knownUrls": 135,
+        "mappedUrls": 135,
+        "pagesFetched": 30,
+        "robotsSkipped": 0,
+        "clusters": [
+          {
+            "key": "//help.cardpointers.com/article",
+            "name": "help.cardpointers.com / article",
+            "terms": [
+              "offers",
+              "card",
+              "add",
+              "android",
+              "install"
+            ],
+            "urlCount": 73,
+            "exampleUrls": [
+              "https://help.cardpointers.com/article/24-how-to-install-on-safari",
+              "https://help.cardpointers.com/article/41-what-is-a-savings-card",
+              "https://help.cardpointers.com/article/26-adding-amex-chase-boa-and-citi-offers"
+            ],
+            "template": "guide",
+            "baseTemplate": "guide",
+            "fetchedPages": 4,
+            "medianWords": 386,
+            "linkDensity": 9,
+            "inlinks": 45,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/cards",
+            "name": "cards",
+            "terms": [
+              "cards",
+              "american express",
+              "ink business",
+              "sapphire reserve",
+              "preferred"
+            ],
+            "urlCount": 12,
+            "exampleUrls": [
+              "https://cardpointers.com/cards/",
+              "https://cardpointers.com/cards/chase-sapphire-reserve-new/",
+              "https://cardpointers.com/cards/american-express-gold-card/"
+            ],
+            "template": "page",
+            "baseTemplate": "page",
+            "fetchedPages": 2,
+            "medianWords": 915,
+            "linkDensity": 28,
+            "inlinks": 32,
+            "hubs": [
+              {
+                "url": "https://cardpointers.com/cards/",
+                "linksIntoCluster": 12
+              }
+            ],
+            "programmatic": null
+          },
+          {
+            "key": "/offers",
+            "name": "offers",
+            "terms": [
+              "offers",
+              "back",
+              "frozen yogurt",
+              "lake nona",
+              "yogurt lake"
+            ],
+            "urlCount": 11,
+            "exampleUrls": [
+              "https://cardpointers.com/offers/",
+              "https://cardpointers.com/offers/menchies-frozen-yogurt-lake-nona-5-back-48/",
+              "https://cardpointers.com/offers/tsuki-sushi-grill-5-back-50/"
+            ],
+            "template": "programmatic",
+            "baseTemplate": "page",
+            "fetchedPages": 2,
+            "medianWords": 222,
+            "linkDensity": 27,
+            "inlinks": 31,
+            "hubs": [
+              {
+                "url": "https://cardpointers.com/offers/",
+                "linksIntoCluster": 11
+              }
+            ],
+            "programmatic": {
+              "pattern": "/offers/{x}-back-#",
+              "share": 0.9,
+              "basis": "slug-affix",
+              "headingSimilarity": null
+            }
+          },
+          {
+            "key": "/(top-level)",
+            "name": "(top level)",
+            "terms": [
+              "ai",
+              "extension",
+              "search"
+            ],
+            "urlCount": 10,
+            "exampleUrls": [
+              "https://cardpointers.com/extension/",
+              "https://cardpointers.com/app/",
+              "https://cardpointers.com/signup/"
+            ],
+            "template": "page",
+            "baseTemplate": "page",
+            "fetchedPages": 9,
+            "medianWords": 270,
+            "linkDensity": 22,
+            "inlinks": 171,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/apps",
+            "name": "apps",
+            "terms": [
+              "apple",
+              "ipad",
+              "iphone",
+              "mac",
+              "vision"
+            ],
+            "urlCount": 7,
+            "exampleUrls": [
+              "https://cardpointers.com/apps/iphone/",
+              "https://cardpointers.com/apps/ipad/",
+              "https://cardpointers.com/apps/watch/"
+            ],
+            "template": "product",
+            "baseTemplate": "product",
+            "fetchedPages": 5,
+            "medianWords": 414,
+            "linkDensity": 22,
+            "inlinks": 147,
+            "hubs": [
+              {
+                "url": "https://cardpointers.com/apps/iphone/",
+                "linksIntoCluster": 7
+              },
+              {
+                "url": "https://cardpointers.com/apps/ipad/",
+                "linksIntoCluster": 7
+              },
+              {
+                "url": "https://cardpointers.com/apps/mac/",
+                "linksIntoCluster": 7
+              }
+            ],
+            "programmatic": null
+          },
+          {
+            "key": "/help",
+            "name": "help",
+            "terms": [
+              "ai",
+              "extension"
+            ],
+            "urlCount": 7,
+            "exampleUrls": [
+              "https://cardpointers.com/help/extension/safari",
+              "https://cardpointers.com/help/extension/chrome",
+              "https://cardpointers.com/help/extension/firefox"
+            ],
+            "template": "guide",
+            "baseTemplate": "guide",
+            "fetchedPages": 0,
+            "medianWords": null,
+            "linkDensity": null,
+            "inlinks": 7,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "//help.cardpointers.com/category",
+            "name": "help.cardpointers.com / category",
+            "terms": [
+              "asked questions",
+              "frequently asked",
+              "center"
+            ],
+            "urlCount": 6,
+            "exampleUrls": [
+              "https://help.cardpointers.com/category/16-cardpointers",
+              "https://help.cardpointers.com/category/17-frequently-asked-questions",
+              "https://help.cardpointers.com/category/8-android-app"
+            ],
+            "template": "guide",
+            "baseTemplate": "guide",
+            "fetchedPages": 2,
+            "medianWords": 137,
+            "linkDensity": 20,
+            "inlinks": 48,
+            "hubs": [
+              {
+                "url": "https://help.cardpointers.com/category/16-cardpointers",
+                "linksIntoCluster": 6
+              },
+              {
+                "url": "https://help.cardpointers.com/category/17-frequently-asked-questions",
+                "linksIntoCluster": 6
+              }
+            ],
+            "programmatic": null
+          },
+          {
+            "key": "/gift",
+            "name": "gift",
+            "terms": [
+              "gift"
+            ],
+            "urlCount": 2,
+            "exampleUrls": [
+              "https://cardpointers.com/gift/",
+              "https://cardpointers.com/gift/redeem/"
+            ],
+            "template": "tool",
+            "baseTemplate": "tool",
+            "fetchedPages": 1,
+            "medianWords": 320,
+            "linkDensity": 23,
+            "inlinks": 22,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/login",
+            "name": "login",
+            "terms": [],
+            "urlCount": 2,
+            "exampleUrls": [
+              "https://cardpointers.com/login/",
+              "http://cardpointers.com/login"
+            ],
+            "template": "category",
+            "baseTemplate": "category",
+            "fetchedPages": 1,
+            "medianWords": 140,
+            "linkDensity": 23,
+            "inlinks": 22,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/pro",
+            "name": "pro",
+            "terms": [
+              "pro"
+            ],
+            "urlCount": 2,
+            "exampleUrls": [
+              "https://cardpointers.com/pro/",
+              "https://cardpointers.com/pro/autolink/"
+            ],
+            "template": "product",
+            "baseTemplate": "product",
+            "fetchedPages": 1,
+            "medianWords": 1934,
+            "linkDensity": 23,
+            "inlinks": 22,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "/",
+            "name": "home",
+            "terms": [],
+            "urlCount": 1,
+            "exampleUrls": [
+              "https://cardpointers.com/"
+            ],
+            "template": "page",
+            "baseTemplate": "page",
+            "fetchedPages": 1,
+            "medianWords": 483,
+            "linkDensity": 22,
+            "inlinks": 29,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "//help.cardpointers.com",
+            "name": "help.cardpointers.com",
+            "terms": [],
+            "urlCount": 1,
+            "exampleUrls": [
+              "https://help.cardpointers.com/"
+            ],
+            "template": "category",
+            "baseTemplate": "category",
+            "fetchedPages": 1,
+            "medianWords": 96,
+            "linkDensity": 18,
+            "inlinks": 29,
+            "hubs": [],
+            "programmatic": null
+          },
+          {
+            "key": "//help.cardpointers.com/collection",
+            "name": "help.cardpointers.com / collection",
+            "terms": [],
+            "urlCount": 1,
+            "exampleUrls": [
+              "https://help.cardpointers.com/collection/1-cardpointers"
+            ],
+            "template": "guide",
+            "baseTemplate": "guide",
+            "fetchedPages": 1,
+            "medianWords": 81,
+            "linkDensity": 18,
+            "inlinks": 0,
+            "hubs": [],
+            "programmatic": null
+          }
+        ],
+        "evidenceIds": [
+          "E032",
+          "E033",
+          "E001"
+        ]
+      },
+      "keywords": {
+        "terms": [
+          {
+            "term": "credit card offers",
+            "docs": 3,
+            "sources": [
+              "title",
+              "meta",
+              "h2"
+            ],
+            "pages": [
+              "https://cardpointers.com/cards/"
+            ],
+            "check": {
+              "status": "not-in-results",
+              "position": null,
+              "url": "",
+              "engine": "Bing (headless Chromium)",
+              "evidenceId": "E048"
+            }
+          },
+          {
+            "term": "credit cards",
+            "docs": 11,
+            "sources": [
+              "h1",
+              "meta"
+            ],
+            "pages": [
+              "https://cardpointers.com/"
+            ],
+            "check": {
+              "status": "not-in-results",
+              "position": null,
+              "url": "",
+              "engine": "Bing (headless Chromium)",
+              "evidenceId": "E050"
+            }
+          },
+          {
+            "term": "credit card rewards",
+            "docs": 1,
+            "sources": [
+              "title"
+            ],
+            "pages": [
+              "https://cardpointers.com/"
+            ],
+            "check": {
+              "status": "not-in-results",
+              "position": null,
+              "url": "",
+              "engine": "Bing (headless Chromium)",
+              "evidenceId": "E052"
+            }
+          },
+          {
+            "term": "bank offers",
+            "docs": 2,
+            "sources": [
+              "title",
+              "h2"
+            ],
+            "pages": [
+              "https://cardpointers.com/offers/"
+            ],
+            "check": {
+              "status": "not-in-results",
+              "position": null,
+              "url": "",
+              "engine": "Bing (headless Chromium)",
+              "evidenceId": "E054"
+            }
+          },
+          {
+            "term": "gift card",
+            "docs": 2,
+            "sources": [
+              "title",
+              "meta"
+            ],
+            "pages": [
+              "https://cardpointers.com/gift/"
+            ],
+            "check": {
+              "status": "not-in-results",
+              "position": null,
+              "url": "",
+              "engine": "Bing (headless Chromium)",
+              "evidenceId": "E056"
+            }
+          },
+          {
+            "term": "amex offers",
+            "docs": 1,
+            "sources": [
+              "title"
+            ],
+            "pages": [
+              "https://cardpointers.com/extension/"
+            ],
+            "check": {
+              "status": "not-in-results",
+              "position": null,
+              "url": "",
+              "engine": "Bing (headless Chromium)",
+              "evidenceId": "E058"
+            }
+          }
+        ],
+        "checked": 6,
+        "rankedTop10": 0,
+        "unknown": 0,
+        "evidenceIds": [
+          "E048",
+          "E050",
+          "E052",
+          "E054",
+          "E056",
+          "E058",
+          "E033"
+        ]
+      },
+      "pillars": {
+        "onPage": {
+          "pagesFetched": 30,
+          "medianTitleLength": 33,
+          "h1Coverage": 0.37,
+          "metaDescriptionCoverage": 0.97,
+          "medianWords": 295,
+          "medianH2": 2,
+          "datedPages": 7,
+          "medianAgeDays": 1011,
+          "updatedWithinYear": 0,
+          "evidenceIds": [
+            "E002",
+            "E003",
+            "E004",
+            "E005",
+            "E006",
+            "E007",
+            "E008",
+            "E009",
+            "E010",
+            "E011",
+            "E012",
+            "E013",
+            "E014",
+            "E015",
+            "E016",
+            "E017",
+            "E018",
+            "E019",
+            "E020",
+            "E021",
+            "E022",
+            "E023",
+            "E024",
+            "E025",
+            "E026",
+            "E027",
+            "E028",
+            "E029",
+            "E030",
+            "E031",
+            "E033"
+          ]
+        },
+        "technical": {
+          "schemaTypes": [
+            {
+              "type": "SearchAction",
+              "pages": 8
+            },
+            {
+              "type": "WebSite",
+              "pages": 8
+            },
+            {
+              "type": "BreadcrumbList",
+              "pages": 6
+            },
+            {
+              "type": "ListItem",
+              "pages": 6
+            }
+          ],
+          "pagesWithSchema": 0.27,
+          "pagesWithSchemaErrors": 0,
+          "schemaErrorSamples": [],
+          "canonicalCoverage": 0.27,
+          "selfCanonical": 0.27,
+          "noindexPages": 1,
+          "robotsFound": false,
+          "sitemapFiles": 2,
+          "sitemapUrls": 96,
+          "hreflangPages": 0,
+          "langs": [
+            "en"
+          ],
+          "psi": null,
+          "psiProblem": "PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key",
+          "medianHtmlKb": 177,
+          "evidenceIds": [
+            "E002",
+            "E003",
+            "E004",
+            "E005",
+            "E006",
+            "E007",
+            "E008",
+            "E009",
+            "E010",
+            "E011",
+            "E012",
+            "E013",
+            "E014",
+            "E015",
+            "E016",
+            "E017",
+            "E018",
+            "E019",
+            "E020",
+            "E021",
+            "E022",
+            "E023",
+            "E024",
+            "E025",
+            "E026",
+            "E027",
+            "E028",
+            "E029",
+            "E030",
+            "E031",
+            "E033",
+            "E001",
+            "E032"
+          ]
+        },
+        "offPage": {
+          "trancoRank": 365175,
+          "wikipediaLinkingArticles": 0,
+          "wikipediaMentions": 0,
+          "commonCrawlBlocks": 1,
+          "brandSerpThirdParty": 3,
+          "brandSerpDomains": [
+            "upgradedpoints.com",
+            "reddit.com",
+            "clark.com"
+          ],
+          "pressLinksOnSite": 0,
+          "unknowns": [
+            "Backlink counts and referring domains need a paid index; not measured at $0"
+          ],
+          "evidenceIds": [
+            "E038",
+            "E039",
+            "E040",
+            "E041",
+            "E060"
+          ]
+        },
+        "aeo": {
+          "llmsTxt": "valid",
+          "llmsFullTxt": true,
+          "blockedCrawlers": [],
+          "blockedSearchCrawlers": [],
+          "faqSchemaPages": 0,
+          "questionBlockPages": 1,
+          "answerFirstShare": 0.14,
+          "organizationSchema": false,
+          "sameAsCount": 0,
+          "citationsLogged": 0,
+          "citedIn": 0,
+          "evidenceIds": [
+            "E036",
+            "E034",
+            "E035",
+            "E002",
+            "E003",
+            "E004"
+          ]
+        },
+        "paid": {
+          "serpAdsByDomain": 0,
+          "serpsWithAnyAds": 0,
+          "serpsChecked": 6,
+          "adLibraries": [
+            {
+              "platform": "Google Ads Transparency Center",
+              "url": "https://adstransparency.google.com/?region=anywhere&domain=cardpointers.com",
+              "status": "manual-check",
+              "visibleCount": null,
+              "evidenceId": "E042"
+            },
+            {
+              "platform": "Meta Ad Library",
+              "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=cardpointers&search_type=keyword_unordered&media_type=all",
+              "status": "manual-check",
+              "visibleCount": null,
+              "evidenceId": "E043"
+            },
+            {
+              "platform": "LinkedIn Ad Library",
+              "url": "https://www.linkedin.com/ad-library/search?keyword=cardpointers",
+              "status": "manual-check",
+              "visibleCount": null,
+              "evidenceId": "E044"
+            }
+          ],
+          "evidenceIds": [
+            "E042",
+            "E043",
+            "E044"
+          ]
+        },
+        "distribution": {
+          "channels": [
+            {
+              "channel": "iOS App Store",
+              "detail": "4.7 stars, 10355 ratings (E045)",
+              "url": "https://apps.apple.com/app/apple-store/id1472875808?pt=285054&ct=homepage&mt=8"
+            },
+            {
+              "channel": "Google Play",
+              "detail": "store link on site",
+              "url": "https://play.google.com/store/apps/details?id=com.cardpointers.app"
+            },
+            {
+              "channel": "Browser extension",
+              "detail": "extension store link",
+              "url": "https://chrome.google.com/webstore/detail/cardpointers-x/hlambnnbnnjkabpgemeompijpdliimkm"
+            },
+            {
+              "channel": "Social: instagram",
+              "detail": "profile link on site",
+              "url": "https://www.instagram.com/cardpointers/"
+            },
+            {
+              "channel": "Social: x",
+              "detail": "profile link on site",
+              "url": "https://twitter.com/cardpointers"
+            },
+            {
+              "channel": "Social: youtube",
+              "detail": "profile link on site",
+              "url": "https://www.youtube.com/channel/UCQETiaLC_AZWDgEhQeKki2w"
+            },
+            {
+              "channel": "Social: facebook",
+              "detail": "profile link on site",
+              "url": "https://www.facebook.com/cardpointers"
+            },
+            {
+              "channel": "Community",
+              "detail": "forum/Discord/Reddit link",
+              "url": "https://www.reddit.com/r/cardpointers"
+            },
+            {
+              "channel": "Newsletter",
+              "detail": "email signup form with newsletter/subscribe wording",
+              "url": ""
+            }
+          ],
+          "app": {
+            "name": "CardPointers for Credit Cards",
+            "rating": 4.71878,
+            "ratingCount": 10355,
+            "genre": "Finance",
+            "evidenceId": "E045"
+          },
+          "affiliateDisclosure": true,
+          "evidenceIds": [
+            "E002",
+            "E003",
+            "E004",
+            "E005",
+            "E006",
+            "E007"
+          ]
+        }
+      },
+      "drivers": [
+        {
+          "rank": 1,
+          "id": "app",
+          "title": "App Store demand: \"CardPointers for Credit Cards\" rated 4.7 from 10,355 ratings",
+          "detail": "Finance; Free; last update 2026-10-13. Store listings rank for brand and category searches and send users who never touch the website.",
+          "strength": 86,
+          "copyDifficulty": "hard",
+          "copyNote": "Ratings accrue with users; prompt for reviews at the moment of value.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E045"
+          ]
+        },
+        {
+          "rank": 2,
+          "id": "distribution",
+          "title": "Distribution beyond search: iOS App Store, Google Play, Browser extension, 4 social profiles, Community, Newsletter",
+          "detail": "iOS App Store (https://apps.apple.com/app/apple-store/id1472875808?pt=285054&ct=homepage&mt=8); Google Play (https://play.google.com/store/apps/details?id=com.cardpointers.app); Browser extension (https://chrome.google.com/webstore/detail/cardpointers-x/hlambnnbnnjkabpgemeompijpdliimkm); Social: instagram (https://www.instagram.com/cardpointers/); Social: x (https://twitter.com/cardpointers); Social: youtube (https://www.youtube.com/channel/UCQETiaLC_AZWDgEhQeKki2w); Social: facebook (https://www.facebook.com/cardpointers); Community (https://www.reddit.com/r/cardpointers); Newsletter",
+          "strength": 85,
+          "copyDifficulty": "hard",
+          "copyNote": "Each channel is a product or a habit, not a page.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E002",
+            "E003",
+            "E004",
+            "E005",
+            "E006",
+            "E007"
+          ]
+        },
+        {
+          "rank": 3,
+          "id": "scale",
+          "title": "Topical breadth: 135 known URLs across 2 clusters of 10+ pages",
+          "detail": "Largest clusters: /cards (12, page), /offers (11, programmatic).",
+          "strength": 51,
+          "copyDifficulty": "medium",
+          "copyNote": "Years of publishing; copy the cluster shape, not the volume.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E032",
+            "E033"
+          ]
+        },
+        {
+          "rank": 4,
+          "id": "popularity",
+          "title": "Popularity: Tranco rank #365,175",
+          "detail": "Tranco ranks the top 1M domains by aggregated traffic lists (2026-10-14).",
+          "strength": 50,
+          "copyDifficulty": "hard",
+          "copyNote": "Brand demand and reference links build over years.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E038",
+            "E039"
+          ]
+        },
+        {
+          "rank": 5,
+          "id": "programmatic:/offers",
+          "title": "Programmatic pages: 11 URLs on one template at /offers/{x}-back-#",
+          "detail": "90% of /offers URLs fit /offers/{x}-back-# (slug-affix). Examples: /offers/, /offers/menchies-frozen-yogurt-lake-nona-5-back-48/, /offers/tsuki-sushi-grill-5-back-50/.",
+          "strength": 46,
+          "copyDifficulty": "medium",
+          "copyNote": "Needs a structured data source covering ~11 entities plus a template; the template is easy, the data is the moat.",
+          "basis": "inferred",
+          "evidenceIds": [
+            "E032",
+            "E033"
+          ]
+        },
+        {
+          "rank": 6,
+          "id": "brand-mentions",
+          "title": "Third-party coverage: brand search \"cardpointers\" returns 3 other domains",
+          "detail": "Domains: upgradedpoints.com, reddit.com, clark.com.",
+          "strength": 43,
+          "copyDifficulty": "hard",
+          "copyNote": "Reviews, forums and press pick a brand up once it has users.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E038",
+            "E039",
+            "E040",
+            "E041",
+            "E060"
+          ]
+        }
+      ],
+      "weaknesses": [
+        {
+          "id": "unranked-terms",
+          "title": "Not in the checked results for 6/6 of its own head terms",
+          "detail": "\"credit card offers\" (#1 wallethub.com); \"credit cards\" (#1 creditcards.com); \"credit card rewards\" (#1 nerdwallet.com); \"bank offers\" (#1 moneycrashers.com); \"gift card\" (#1 apple.com)",
+          "severity": "high",
+          "opening": "Publish a better page for \"credit card offers\", \"credit cards\", \"credit card rewards\"; cardpointers.com is not in the checked results.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E048",
+            "E050",
+            "E052",
+            "E054",
+            "E056",
+            "E058"
+          ]
+        },
+        {
+          "id": "schema-missing",
+          "title": "No JSON-LD on 22/30 sampled pages",
+          "detail": "e.g. /, /partner/prime/, /search/.",
+          "severity": "medium",
+          "opening": "Mark up the same templates with JSON-LD; cardpointers.com leaves 22/30 sampled pages bare.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E002",
+            "E003",
+            "E004",
+            "E005",
+            "E006",
+            "E007"
+          ]
+        },
+        {
+          "id": "stale",
+          "title": "Stale content: median page age 1011 days across 7 dated pages",
+          "detail": "None updated within 12 months.",
+          "severity": "medium",
+          "opening": "Publish dated, current versions of its oldest topics (median age 1011 days).",
+          "basis": "observed",
+          "evidenceIds": [
+            "E002",
+            "E003",
+            "E004",
+            "E005",
+            "E006",
+            "E007"
+          ]
+        },
+        {
+          "id": "h1-missing",
+          "title": "No H1 on 19/30 sampled pages",
+          "detail": "e.g. /search/, /apps/iphone/, /apps/ipad/.",
+          "severity": "medium",
+          "opening": "Give your matching pages a clear H1; cardpointers.com leaves 19/30 without one.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E004",
+            "E005",
+            "E006",
+            "E007",
+            "E008",
+            "E009"
+          ]
+        },
+        {
+          "id": "thin:/offers",
+          "title": "Thin cluster /offers: median 222 words over 2 fetched pages",
+          "detail": "11 URLs, programmatic template; examples /offers/, /offers/menchies-frozen-yogurt-lake-nona-5-back-48/.",
+          "severity": "low",
+          "opening": "Out-write /offers with ~800-word pages on offers, back, frozen yogurt.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E033"
+          ]
+        },
+        {
+          "id": "no-answer-first",
+          "title": "Only 14% of 29 inner pages open with a direct answer",
+          "detail": "First paragraph after the H1 is missing, too long, or does not name the topic.",
+          "severity": "low",
+          "opening": "Lead your pages with the answer; cardpointers.com does so on 14% of inner pages.",
+          "basis": "inferred",
+          "evidenceIds": [
+            "E003",
+            "E004",
+            "E005",
+            "E006",
+            "E007",
+            "E008"
+          ]
+        },
+        {
+          "id": "canonical-missing",
+          "title": "No canonical tag on 22/30 sampled pages",
+          "detail": "e.g. /, /partner/prime/, /search/.",
+          "severity": "low",
+          "opening": "Duplicate URLs split signals.",
+          "basis": "observed",
+          "evidenceIds": [
+            "E002",
+            "E003",
+            "E004",
+            "E005",
+            "E006",
+            "E007"
+          ]
+        }
+      ]
+    }
+  ],
+  "serp": {
+    "checks": [
+      {
+        "term": "credit card offers",
+        "kind": "head-term",
+        "from": "cardpointers.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E048",
+        "results": [
+          {
+            "position": 1,
+            "domain": "wallethub.com",
+            "url": "https://wallethub.com/best-credit-card-deals"
+          },
+          {
+            "position": 2,
+            "domain": "wallethub.com",
+            "url": "https://wallethub.com/best-credit-card-promotions"
+          },
+          {
+            "position": 3,
+            "domain": "nerdwallet.com",
+            "url": "https://www.nerdwallet.com/credit-cards/best"
+          },
+          {
+            "position": 4,
+            "domain": "bankrate.com",
+            "url": "https://www.bankrate.com/credit-cards/"
+          },
+          {
+            "position": 5,
+            "domain": "upgradedpoints.com",
+            "url": "https://upgradedpoints.com/credit-cards/sign-up-bonuses/"
+          },
+          {
+            "position": 6,
+            "domain": "nerdwallet.com",
+            "url": "https://www.nerdwallet.com/credit-cards/best/bonus-offers"
+          },
+          {
+            "position": 7,
+            "domain": "thepointsguy.com",
+            "url": "https://thepointsguy.com/credit-cards/limited-time-card-offers/"
+          },
+          {
+            "position": 8,
+            "domain": "awardwallet.com",
+            "url": "https://awardwallet.com/credit-cards/best-credit-card-offers/"
+          },
+          {
+            "position": 9,
+            "domain": "bankofamerica.com",
+            "url": "https://www.bankofamerica.com/credit-cards/"
+          },
+          {
+            "position": 10,
+            "domain": "finance.yahoo.com",
+            "url": "https://finance.yahoo.com/personal-finance/credit-cards/article/best-credit-card-signup-welcome-bonus-offers-180435497.html"
+          }
+        ],
+        "adDomains": []
+      },
+      {
+        "term": "credit cards",
+        "kind": "head-term",
+        "from": "cardpointers.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E050",
+        "results": [
+          {
+            "position": 1,
+            "domain": "creditcards.com",
+            "url": "https://www.creditcards.com/"
+          },
+          {
+            "position": 2,
+            "domain": "nerdwallet.com",
+            "url": "https://www.nerdwallet.com/credit-cards/best"
+          },
+          {
+            "position": 3,
+            "domain": "creditkarma.com",
+            "url": "https://www.creditkarma.com/credit-cards"
+          },
+          {
+            "position": 4,
+            "domain": "bankofamerica.com",
+            "url": "https://www.bankofamerica.com/credit-cards/"
+          },
+          {
+            "position": 5,
+            "domain": "forbes.com",
+            "url": "https://www.forbes.com/advisor/credit-cards/best-credit-cards/"
+          },
+          {
+            "position": 6,
+            "domain": "usbank.com",
+            "url": "https://www.usbank.com/credit-cards.html"
+          },
+          {
+            "position": 7,
+            "domain": "creditcards.chase.com",
+            "url": "https://creditcards.chase.com/"
+          },
+          {
+            "position": 8,
+            "domain": "americanexpress.com",
+            "url": "https://www.americanexpress.com/"
+          },
+          {
+            "position": 9,
+            "domain": "americanexpress.com",
+            "url": "https://www.americanexpress.com/us/credit-cards/"
+          },
+          {
+            "position": 10,
+            "domain": "bankrate.com",
+            "url": "https://www.bankrate.com/credit-cards/"
+          }
+        ],
+        "adDomains": []
+      },
+      {
+        "term": "credit card rewards",
+        "kind": "head-term",
+        "from": "cardpointers.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E052",
+        "results": [
+          {
+            "position": 1,
+            "domain": "nerdwallet.com",
+            "url": "https://www.nerdwallet.com/credit-cards/best/rewards"
+          },
+          {
+            "position": 2,
+            "domain": "thepointsguy.com",
+            "url": "https://thepointsguy.com/credit-cards/rewards/"
+          },
+          {
+            "position": 3,
+            "domain": "creditcards.com",
+            "url": "https://www.creditcards.com/rewards-cards/"
+          },
+          {
+            "position": 4,
+            "domain": "forbes.com",
+            "url": "https://www.forbes.com/advisor/credit-cards/best/rewards/"
+          },
+          {
+            "position": 5,
+            "domain": "bankrate.com",
+            "url": "https://www.bankrate.com/credit-cards/rewards/best-rewards-cards/"
+          },
+          {
+            "position": 6,
+            "domain": "cnbc.com",
+            "url": "https://www.cnbc.com/select/best-rewards-credit-cards/"
+          },
+          {
+            "position": 7,
+            "domain": "finance.yahoo.com",
+            "url": "https://finance.yahoo.com/personal-finance/credit-cards/article/best-credit-card-signup-welcome-bonus-offers-180435497.html"
+          },
+          {
+            "position": 8,
+            "domain": "bankofamerica.com",
+            "url": "https://www.bankofamerica.com/credit-cards/"
+          },
+          {
+            "position": 9,
+            "domain": "fool.com",
+            "url": "https://www.fool.com/money/credit-cards/best-rewards-credit-cards/"
+          },
+          {
+            "position": 10,
+            "domain": "bankrate.com",
+            "url": "https://www.bankrate.com/credit-cards/rewards/best-credit-card-rewards-programs/"
+          }
+        ],
+        "adDomains": []
+      },
+      {
+        "term": "bank offers",
+        "kind": "head-term",
+        "from": "cardpointers.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E054",
+        "results": [
+          {
+            "position": 1,
+            "domain": "moneycrashers.com",
+            "url": "https://www.moneycrashers.com/best-new-bank-account-promotions-offers/"
+          },
+          {
+            "position": 2,
+            "domain": "nerdwallet.com",
+            "url": "https://www.nerdwallet.com/banking/best/bank-bonuses-and-promotions"
+          },
+          {
+            "position": 3,
+            "domain": "bankbonus.com",
+            "url": "https://bankbonus.com/promotions/"
+          },
+          {
+            "position": 4,
+            "domain": "forbes.com",
+            "url": "https://www.forbes.com/advisor/banking/best-bank-bonuses-promotions/"
+          },
+          {
+            "position": 5,
+            "domain": "hustlermoneyblog.com",
+            "url": "https://www.hustlermoneyblog.com/best-bank-promotions/"
+          },
+          {
+            "position": 6,
+            "domain": "bankcheckingsavings.com",
+            "url": "https://www.bankcheckingsavings.com/best-bank-bonuses/"
+          },
+          {
+            "position": 7,
+            "domain": "bankrate.com",
+            "url": "https://www.bankrate.com/banking/best-bank-account-bonuses-and-promotions/"
+          },
+          {
+            "position": 8,
+            "domain": "thepennyhoarder.com",
+            "url": "https://www.thepennyhoarder.com/bank-accounts/best-bank-promotions/"
+          },
+          {
+            "position": 9,
+            "domain": "finance.yahoo.com",
+            "url": "https://finance.yahoo.com/personal-finance/banking/article/new-bank-account-bonuses-214704427.html"
+          },
+          {
+            "position": 10,
+            "domain": "millennialmoney.com",
+            "url": "https://millennialmoney.com/best-bank-promotions-bonus-offers/"
+          }
+        ],
+        "adDomains": []
+      },
+      {
+        "term": "gift card",
+        "kind": "head-term",
+        "from": "cardpointers.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E056",
+        "results": [
+          {
+            "position": 1,
+            "domain": "apple.com",
+            "url": "https://www.apple.com/shop/gift-cards"
+          },
+          {
+            "position": 2,
+            "domain": "giftcards.com",
+            "url": "https://www.giftcards.com/"
+          },
+          {
+            "position": 3,
+            "domain": "amazon.com",
+            "url": "https://www.amazon.com/gift-cards/b?node=2238192011"
+          },
+          {
+            "position": 4,
+            "domain": "target.com",
+            "url": "https://www.target.com/c/gift-cards/-/N-5xsxu"
+          },
+          {
+            "position": 5,
+            "domain": "mastercardgiftcard.com",
+            "url": "https://www.mastercardgiftcard.com/"
+          },
+          {
+            "position": 6,
+            "domain": "gift-card.com",
+            "url": "https://www.gift-card.com/us/"
+          },
+          {
+            "position": 7,
+            "domain": "thegiftcardshop.com",
+            "url": "https://www.thegiftcardshop.com/"
+          },
+          {
+            "position": 8,
+            "domain": "mygiftcardsupply.com",
+            "url": "https://www.mygiftcardsupply.com/"
+          },
+          {
+            "position": 9,
+            "domain": "egifter.com",
+            "url": "https://www.egifter.com/"
+          },
+          {
+            "position": 10,
+            "domain": "apple.com",
+            "url": "https://www.apple.com/shop/buy-giftcard/giftcard"
+          }
+        ],
+        "adDomains": []
+      },
+      {
+        "term": "amex offers",
+        "kind": "head-term",
+        "from": "cardpointers.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E058",
+        "results": [
+          {
+            "position": 1,
+            "domain": "americanexpress.com",
+            "url": "https://www.americanexpress.com/en-us/benefits/offers/"
+          },
+          {
+            "position": 2,
+            "domain": "upgradedpoints.com",
+            "url": "https://upgradedpoints.com/news/best-amex-offers/"
+          },
+          {
+            "position": 3,
+            "domain": "americanexpress.com",
+            "url": "https://www.americanexpress.com/us/homepage/?searchresult=offers"
+          },
+          {
+            "position": 4,
+            "domain": "global.americanexpress.com",
+            "url": "https://global.americanexpress.com/card-offers/view-all?locale=en-US"
+          },
+          {
+            "position": 5,
+            "domain": "frequentmiler.com",
+            "url": "https://frequentmiler.com/current-amex-offers/"
+          },
+          {
+            "position": 6,
+            "domain": "global.americanexpress.com",
+            "url": "https://global.americanexpress.com/card-offers/view-all"
+          },
+          {
+            "position": 7,
+            "domain": "wallethacks.com",
+            "url": "https://wallethacks.com/best-american-express-credit-card-promotions/"
+          },
+          {
+            "position": 8,
+            "domain": "thepointsguy.com",
+            "url": "https://thepointsguy.com/credit-cards/american-express/"
+          },
+          {
+            "position": 9,
+            "domain": "upgradedpoints.com",
+            "url": "https://upgradedpoints.com/credit-cards/amex-offers/"
+          },
+          {
+            "position": 10,
+            "domain": "awardwallet.com",
+            "url": "https://awardwallet.com/news/amex-membership-rewards/amex-offers/"
+          }
+        ],
+        "adDomains": []
+      },
+      {
+        "term": "cardpointers",
+        "kind": "brand",
+        "from": "cardpointers.com",
+        "engine": "Bing (headless Chromium)",
+        "status": "used",
+        "problem": "",
+        "evidenceId": "E060",
+        "results": [
+          {
+            "position": 1,
+            "domain": "cardpointers.com",
+            "url": "https://cardpointers.com/"
+          },
+          {
+            "position": 2,
+            "domain": "cardpointers.com",
+            "url": "https://cardpointers.com/extension/"
+          },
+          {
+            "position": 3,
+            "domain": "upgradedpoints.com",
+            "url": "https://upgradedpoints.com/credit-cards/cardpointers-review/"
+          },
+          {
+            "position": 4,
+            "domain": "cardpointers.com",
+            "url": "https://cardpointers.com/app/login/"
+          },
+          {
+            "position": 5,
+            "domain": "cardpointers.com",
+            "url": "https://cardpointers.com/account/"
+          },
+          {
+            "position": 6,
+            "domain": "cardpointers.com",
+            "url": "https://cardpointers.com/pro/"
+          },
+          {
+            "position": 7,
+            "domain": "reddit.com",
+            "url": "https://www.reddit.com/r/CardPointers/comments/1d9pnrp/has_cardpointers_been_a_good_purchase_for_you/"
+          },
+          {
+            "position": 8,
+            "domain": "clark.com",
+            "url": "https://clark.com/credit-cards/cardpointers-review/"
+          },
+          {
+            "position": 9,
+            "domain": "cardpointers.com",
+            "url": "https://cardpointers.com/app/"
+          },
+          {
+            "position": 10,
+            "domain": "reddit.com",
+            "url": "https://www.reddit.com/r/CardPointers/"
+          }
+        ],
+        "adDomains": [
+          "bing.com"
+        ]
+      }
+    ],
+    "notes": [
+      "Google (headless Chromium) blocked on \"credit card offers\" (Google captcha (unusual traffic page)); not asked again this run."
+    ]
+  },
+  "competitors": [
+    {
+      "domain": "nerdwallet.com",
+      "serps": 4,
+      "terms": [
+        "credit card offers",
+        "credit cards",
+        "credit card rewards",
+        "bank offers"
+      ],
+      "bestPosition": 1,
+      "medianPosition": 2,
+      "isVs": false,
+      "evidenceIds": [
+        "E048",
+        "E050",
+        "E052",
+        "E054"
+      ]
+    },
+    {
+      "domain": "bankrate.com",
+      "serps": 4,
+      "terms": [
+        "credit card offers",
+        "credit cards",
+        "credit card rewards",
+        "bank offers"
+      ],
+      "bestPosition": 4,
+      "medianPosition": 6,
+      "isVs": false,
+      "evidenceIds": [
+        "E048",
+        "E050",
+        "E052",
+        "E054"
+      ]
+    },
+    {
+      "domain": "forbes.com",
+      "serps": 3,
+      "terms": [
+        "credit cards",
+        "credit card rewards",
+        "bank offers"
+      ],
+      "bestPosition": 4,
+      "medianPosition": 4,
+      "isVs": false,
+      "evidenceIds": [
+        "E050",
+        "E052",
+        "E054"
+      ]
+    },
+    {
+      "domain": "thepointsguy.com",
+      "serps": 3,
+      "terms": [
+        "credit card offers",
+        "credit card rewards",
+        "amex offers"
+      ],
+      "bestPosition": 2,
+      "medianPosition": 7,
+      "isVs": false,
+      "evidenceIds": [
+        "E048",
+        "E052",
+        "E058"
+      ]
+    },
+    {
+      "domain": "bankofamerica.com",
+      "serps": 3,
+      "terms": [
+        "credit card offers",
+        "credit cards",
+        "credit card rewards"
+      ],
+      "bestPosition": 4,
+      "medianPosition": 8,
+      "isVs": false,
+      "evidenceIds": [
+        "E048",
+        "E050",
+        "E052"
+      ]
+    },
+    {
+      "domain": "finance.yahoo.com",
+      "serps": 3,
+      "terms": [
+        "credit card offers",
+        "credit card rewards",
+        "bank offers"
+      ],
+      "bestPosition": 7,
+      "medianPosition": 9,
+      "isVs": false,
+      "evidenceIds": [
+        "E048",
+        "E052",
+        "E054"
+      ]
+    },
+    {
+      "domain": "creditcards.com",
+      "serps": 2,
+      "terms": [
+        "credit cards",
+        "credit card rewards"
+      ],
+      "bestPosition": 1,
+      "medianPosition": 2,
+      "isVs": false,
+      "evidenceIds": [
+        "E050",
+        "E052"
+      ]
+    },
+    {
+      "domain": "upgradedpoints.com",
+      "serps": 2,
+      "terms": [
+        "credit card offers",
+        "amex offers"
+      ],
+      "bestPosition": 2,
+      "medianPosition": 4,
+      "isVs": false,
+      "evidenceIds": [
+        "E048",
+        "E058"
+      ]
+    },
+    {
+      "domain": "americanexpress.com",
+      "serps": 2,
+      "terms": [
+        "credit cards",
+        "amex offers"
+      ],
+      "bestPosition": 1,
+      "medianPosition": 5,
+      "isVs": false,
+      "evidenceIds": [
+        "E050",
+        "E058"
+      ]
+    },
+    {
+      "domain": "awardwallet.com",
+      "serps": 2,
+      "terms": [
+        "credit card offers",
+        "amex offers"
+      ],
+      "bestPosition": 8,
+      "medianPosition": 9,
+      "isVs": false,
+      "evidenceIds": [
+        "E048",
+        "E058"
+      ]
+    },
+    {
+      "domain": "apple.com",
+      "serps": 1,
+      "terms": [
+        "gift card"
+      ],
+      "bestPosition": 1,
+      "medianPosition": 1,
+      "isVs": false,
+      "evidenceIds": [
+        "E056"
+      ]
+    },
+    {
+      "domain": "moneycrashers.com",
+      "serps": 1,
+      "terms": [
+        "bank offers"
+      ],
+      "bestPosition": 1,
+      "medianPosition": 1,
+      "isVs": false,
+      "evidenceIds": [
+        "E054"
+      ]
+    },
+    {
+      "domain": "wallethub.com",
+      "serps": 1,
+      "terms": [
+        "credit card offers"
+      ],
+      "bestPosition": 1,
+      "medianPosition": 1,
+      "isVs": false,
+      "evidenceIds": [
+        "E048"
+      ]
+    },
+    {
+      "domain": "giftcards.com",
+      "serps": 1,
+      "terms": [
+        "gift card"
+      ],
+      "bestPosition": 2,
+      "medianPosition": 2,
+      "isVs": false,
+      "evidenceIds": [
+        "E056"
+      ]
+    },
+    {
+      "domain": "amazon.com",
+      "serps": 1,
+      "terms": [
+        "gift card"
+      ],
+      "bestPosition": 3,
+      "medianPosition": 3,
+      "isVs": false,
+      "evidenceIds": [
+        "E056"
+      ]
+    }
+  ],
+  "playbook": [
+    {
+      "step": "Publish a better page for \"credit card offers\", \"credit cards\", \"credit card rewards\"; cardpointers.com is not in the checked results.",
+      "why": "cardpointers.com weakness: Not in the checked results for 6/6 of its own head terms",
+      "from": "unranked-terms",
+      "effort": "M",
+      "impact": "high",
+      "evidenceIds": [
+        "E048",
+        "E050",
+        "E052",
+        "E054",
+        "E056",
+        "E058"
+      ]
+    },
+    {
+      "step": "Ask for App Store ratings right after the in-app moment users came for; cardpointers.com has 10,355.",
+      "why": "cardpointers.com driver #1 (strength 86, hard to copy): App Store demand: \"CardPointers for Credit Cards\" rated 4.7 from 10,355 ratings",
+      "from": "app",
+      "effort": "S",
+      "impact": "medium",
+      "evidenceIds": [
+        "E045"
+      ]
+    },
+    {
+      "step": "Pick the 2-3 cardpointers.com clusters closest to your product (/cards, /offers) and publish 10+ linked pages in each before widening.",
+      "why": "cardpointers.com driver #3 (strength 51, medium to copy): Topical breadth: 135 known URLs across 2 clusters of 10+ pages",
+      "from": "scale",
+      "effort": "L",
+      "impact": "high",
+      "evidenceIds": [
+        "E032",
+        "E033"
+      ]
+    },
+    {
+      "step": "Build one page template like /offers/{x}-back-# and launch it for the 20 entities your users ask about most, then expand (cardpointers.com runs 11 of these; e.g. /offers/).",
+      "why": "cardpointers.com driver #5 (strength 46, medium to copy): Programmatic pages: 11 URLs on one template at /offers/{x}-back-#",
+      "from": "programmatic:/offers",
+      "effort": "L",
+      "impact": "high",
+      "evidenceIds": [
+        "E032",
+        "E033"
+      ]
+    },
+    {
+      "step": "Mark up the same templates with JSON-LD; cardpointers.com leaves 22/30 sampled pages bare.",
+      "why": "cardpointers.com weakness: No JSON-LD on 22/30 sampled pages",
+      "from": "schema-missing",
+      "effort": "S",
+      "impact": "medium",
+      "evidenceIds": [
+        "E002",
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E007"
+      ]
+    },
+    {
+      "step": "Give your matching pages a clear H1; cardpointers.com leaves 19/30 without one.",
+      "why": "cardpointers.com weakness: No H1 on 19/30 sampled pages",
+      "from": "h1-missing",
+      "effort": "S",
+      "impact": "medium",
+      "evidenceIds": [
+        "E004",
+        "E005",
+        "E006",
+        "E007",
+        "E008",
+        "E009"
+      ]
+    },
+    {
+      "step": "Get listed or reviewed on the sites that cover cardpointers: upgradedpoints.com, reddit.com, clark.com.",
+      "why": "cardpointers.com driver #6 (strength 43, hard to copy): Third-party coverage: brand search \"cardpointers\" returns 3 other domains",
+      "from": "brand-mentions",
+      "effort": "M",
+      "impact": "medium",
+      "evidenceIds": [
+        "E038",
+        "E039",
+        "E040",
+        "E041",
+        "E060"
+      ]
+    },
+    {
+      "step": "Publish dated, current versions of its oldest topics (median age 1011 days).",
+      "why": "cardpointers.com weakness: Stale content: median page age 1011 days across 7 dated pages",
+      "from": "stale",
+      "effort": "M",
+      "impact": "medium",
+      "evidenceIds": [
+        "E002",
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E007"
+      ]
+    },
+    {
+      "step": "Add the owned channels cardpointers.com uses that you lack (iOS App Store, Google Play, Browser extension, social, Community, Newsletter); start with a newsletter or extension tied to your best tool.",
+      "why": "cardpointers.com driver #2 (strength 85, hard to copy): Distribution beyond search: iOS App Store, Google Play, Browser extension, 4 social profiles, Community, Newsletter",
+      "from": "distribution",
+      "effort": "L",
+      "impact": "medium",
+      "evidenceIds": [
+        "E002",
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E007"
+      ]
+    },
+    {
+      "step": "Publish one original data study a quarter in your strongest cluster so reference sites have something to cite (cardpointers.com is linked from 0 Wikipedia article(s)).",
+      "why": "cardpointers.com driver #4 (strength 50, hard to copy): Popularity: Tranco rank #365,175",
+      "from": "popularity",
+      "effort": "L",
+      "impact": "medium",
+      "evidenceIds": [
+        "E038",
+        "E039"
+      ]
+    }
+  ],
+  "plan": {
+    "for": "a challenger to cardpointers.com",
+    "days30": [
+      {
+        "step": "Ask for App Store ratings right after the in-app moment users came for; cardpointers.com has 10,355.",
+        "why": "cardpointers.com driver #1 (strength 86, hard to copy): App Store demand: \"CardPointers for Credit Cards\" rated 4.7 from 10,355 ratings",
+        "from": "app",
+        "effort": "S",
+        "impact": "medium",
+        "evidenceIds": [
+          "E045"
+        ]
+      },
+      {
+        "step": "Mark up the same templates with JSON-LD; cardpointers.com leaves 22/30 sampled pages bare.",
+        "why": "cardpointers.com weakness: No JSON-LD on 22/30 sampled pages",
+        "from": "schema-missing",
+        "effort": "S",
+        "impact": "medium",
+        "evidenceIds": [
+          "E002",
+          "E003",
+          "E004",
+          "E005",
+          "E006",
+          "E007"
+        ]
+      },
+      {
+        "step": "Give your matching pages a clear H1; cardpointers.com leaves 19/30 without one.",
+        "why": "cardpointers.com weakness: No H1 on 19/30 sampled pages",
+        "from": "h1-missing",
+        "effort": "S",
+        "impact": "medium",
+        "evidenceIds": [
+          "E004",
+          "E005",
+          "E006",
+          "E007",
+          "E008",
+          "E009"
+        ]
+      }
+    ],
+    "days60": [
+      {
+        "step": "Publish a better page for \"credit card offers\", \"credit cards\", \"credit card rewards\"; cardpointers.com is not in the checked results.",
+        "why": "cardpointers.com weakness: Not in the checked results for 6/6 of its own head terms",
+        "from": "unranked-terms",
+        "effort": "M",
+        "impact": "high",
+        "evidenceIds": [
+          "E048",
+          "E050",
+          "E052",
+          "E054",
+          "E056",
+          "E058"
+        ]
+      },
+      {
+        "step": "Get listed or reviewed on the sites that cover cardpointers: upgradedpoints.com, reddit.com, clark.com.",
+        "why": "cardpointers.com driver #6 (strength 43, hard to copy): Third-party coverage: brand search \"cardpointers\" returns 3 other domains",
+        "from": "brand-mentions",
+        "effort": "M",
+        "impact": "medium",
+        "evidenceIds": [
+          "E038",
+          "E039",
+          "E040",
+          "E041",
+          "E060"
+        ]
+      },
+      {
+        "step": "Publish dated, current versions of its oldest topics (median age 1011 days).",
+        "why": "cardpointers.com weakness: Stale content: median page age 1011 days across 7 dated pages",
+        "from": "stale",
+        "effort": "M",
+        "impact": "medium",
+        "evidenceIds": [
+          "E002",
+          "E003",
+          "E004",
+          "E005",
+          "E006",
+          "E007"
+        ]
+      }
+    ],
+    "days90": [
+      {
+        "step": "Pick the 2-3 cardpointers.com clusters closest to your product (/cards, /offers) and publish 10+ linked pages in each before widening.",
+        "why": "cardpointers.com driver #3 (strength 51, medium to copy): Topical breadth: 135 known URLs across 2 clusters of 10+ pages",
+        "from": "scale",
+        "effort": "L",
+        "impact": "high",
+        "evidenceIds": [
+          "E032",
+          "E033"
+        ]
+      },
+      {
+        "step": "Build one page template like /offers/{x}-back-# and launch it for the 20 entities your users ask about most, then expand (cardpointers.com runs 11 of these; e.g. /offers/).",
+        "why": "cardpointers.com driver #5 (strength 46, medium to copy): Programmatic pages: 11 URLs on one template at /offers/{x}-back-#",
+        "from": "programmatic:/offers",
+        "effort": "L",
+        "impact": "high",
+        "evidenceIds": [
+          "E032",
+          "E033"
+        ]
+      },
+      {
+        "step": "Add the owned channels cardpointers.com uses that you lack (iOS App Store, Google Play, Browser extension, social, Community, Newsletter); start with a newsletter or extension tied to your best tool.",
+        "why": "cardpointers.com driver #2 (strength 85, hard to copy): Distribution beyond search: iOS App Store, Google Play, Browser extension, 4 social profiles, Community, Newsletter",
+        "from": "distribution",
+        "effort": "L",
+        "impact": "medium",
+        "evidenceIds": [
+          "E002",
+          "E003",
+          "E004",
+          "E005",
+          "E006",
+          "E007"
+        ]
+      },
+      {
+        "step": "Publish one original data study a quarter in your strongest cluster so reference sites have something to cite (cardpointers.com is linked from 0 Wikipedia article(s)).",
+        "why": "cardpointers.com driver #4 (strength 50, hard to copy): Popularity: Tranco rank #365,175",
+        "from": "popularity",
+        "effort": "L",
+        "impact": "medium",
+        "evidenceIds": [
+          "E038",
+          "E039"
+        ]
+      }
+    ]
+  },
+  "comparison": null,
+  "unknowns": [
+    "cardpointers.com: PageSpeed Insights skipped: PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key",
+    "Paid data (search volume, backlinks, paid SERP fallback) skipped: budget is 0",
+    "cardpointers.com: Backlink counts and referring domains need a paid index; not measured at $0"
+  ],
+  "evidenceIndex": "evidence/index.json"
+}
