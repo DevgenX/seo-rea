@@ -36,6 +36,17 @@ All notable changes to this project are documented here. The format follows
   are `not-rechecked`, not fixed. Writes `report/diff.{md,json}` with
   `--out` (schema `docs/diff-schema.json`). See [docs/diff.md](docs/diff.md).
 
+- `seo-rea reverse <domain>` and the MCP tool `seo_reverse`: reverse
+  engineers any domain's SEO / AEO strategy from its crawl plus free signals:
+  target topics, content clusters and templates, programmatic patterns,
+  internal-link hubs, free authority proxies (Tranco, Wikipedia, Common
+  Crawl), schema usage, AEO tactics (llms.txt, AI crawler rules, FAQ /
+  question formatting, raw-HTML readability), publishing cadence and stack,
+  plus a "what to copy" playbook. Every line cites evidence; cost is $0.
+  `--from-crawl` reuses a crawl. Schema `docs/reverse-schema.json`; design in
+  [docs/reverse-engineering.md](docs/reverse-engineering.md); sample in
+  `examples/reverse-cardpointers`.
+
 ### Changed
 
 - Crawl: redirected URLs are no longer counted as indexable pages (they

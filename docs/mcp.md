@@ -36,6 +36,20 @@ Compare two runs (crawl, audit, teardown or strategy) by stable issue id. See
 | `newRun` | string | required               |
 | `out`    | string | none (nothing written) |
 
+### seo_reverse
+
+Reverse engineer a domain's SEO / AEO strategy (free sources only). See
+[reverse-engineering.md](reverse-engineering.md).
+
+| Input       | Type           | Default                           |
+| ----------- | -------------- | --------------------------------- |
+| `domain`    | string         | required                          |
+| `out`       | string         | `./seo-rea-runs/reverse-<domain>` |
+| `maxPages`  | integer 1-5000 | 300                               |
+| `fromCrawl` | string         | none (crawl now)                  |
+| `offpage`   | boolean        | true                              |
+| `force`     | boolean        | false                             |
+
 ### seo_strategy
 
 Strategy Dossier for a domain, optionally against a second one.
