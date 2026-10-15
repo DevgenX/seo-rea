@@ -12,7 +12,8 @@ seo-rea doctor [--json]
 seo-rea --version | help
 ```
 
-Exit codes: 0 success, 1 runtime error, 2 usage error.
+Exit codes: 0 success, 1 runtime error, 2 usage error. Every failure has a
+stable code; see [error-codes.md](error-codes.md).
 
 ## strategy (also `seo-rea <domain>`)
 
