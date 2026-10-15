@@ -2,6 +2,7 @@
 // keyword gap -> ad libraries -> reports. Free sources first; paid only with
 // a budget above 0.
 
+import { SeoReaError } from "../core/errors.js";
 import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { BudgetError, BudgetGuard } from "../core/budget.js";
@@ -62,7 +63,8 @@ export async function prepareOut(out: string, force: boolean, marker = "run.json
   } else {
     try {
       await readFile(join(out, "data", marker));
-      throw new Error(
+      throw new SeoReaError(
+        "RUN_EXISTS",
         `${out} already has a run. Use --force to replace it (deletes evidence/, report/, data/ in that folder).`,
       );
     } catch (err) {

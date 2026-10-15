@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 import type { EngineName } from "./core/types.js";
 import { normalizeDomain, parseUrlList } from "./core/util.js";
+import { SeoReaError, toErrorPayload } from "./core/errors.js";
 import { VERSION } from "./version.js";
 import { AI_ENGINES } from "./adapters/cite.js";
 import { isEngineName } from "./adapters/serp.js";
@@ -62,8 +63,11 @@ Batch: runs audit for every site, and teardown when the site has a keyword.
 Paid calls (DataForSEO) read DATAFORSEO_LOGIN and DATAFORSEO_PASSWORD from the environment only.
 `;
 
-export class UsageError extends Error {
+export class UsageError extends SeoReaError {
   override name = "UsageError";
+  constructor(message: string) {
+    super("USAGE", message);
+  }
 }
 
 const num = (v: string | undefined, name: string): number | undefined => {
@@ -328,14 +332,27 @@ const printJson = (value: unknown): void => {
   process.stdout.write(`${JSON.stringify(value, null, 2)}\n`);
 };
 
+/**
+ * Report a failure per the error contract: `seo-rea: [CODE] message` on
+ * stderr, plus the JSON payload on stdout when --json was given.
+ */
+export function reportError(e: unknown, json: boolean): number {
+  const p = toErrorPayload(e);
+  process.stderr.write(`seo-rea: [${p.error.code}] ${p.error.message}\n  hint: ${p.error.hint}\n`);
+  if (p.error.code === "USAGE") process.stderr.write(`\n${HELP}`);
+  if (json) printJson(p);
+  return p.error.exitCode;
+}
+
 export async function main(argv: string[]): Promise<number> {
-  let cmd: Command;
   try {
-    cmd = parseCli(argv);
+    return await dispatch(parseCli(argv));
   } catch (e) {
-    process.stderr.write(`seo-rea: ${(e as Error).message}\n\n${HELP}`);
-    return 2;
+    return reportError(e, argv.includes("--json"));
   }
+}
+
+async function dispatch(cmd: Command): Promise<number> {
   switch (cmd.command) {
     case "help":
       process.stdout.write(HELP);
@@ -470,8 +487,7 @@ if (isEntry()) {
       if (code >= 0) process.exitCode = code;
     },
     (e: unknown) => {
-      process.stderr.write(`seo-rea: ${e instanceof Error ? e.message : String(e)}\n`);
-      process.exitCode = 1;
+      process.exitCode = reportError(e, process.argv.includes("--json"));
     },
   );
 }

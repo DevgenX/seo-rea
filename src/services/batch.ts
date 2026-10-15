@@ -1,6 +1,7 @@
 // `batch`: audit (and teardown when a keyword is given) for many sites in turn,
 // then write <out>/summary.json and <out>/summary.md.
 
+import { SeoReaError } from "../core/errors.js";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { extname, join, relative, resolve } from "node:path";
 import type { Dossier, TopAction } from "../core/dossier.js";
@@ -62,7 +63,8 @@ export function parseSitesCsv(text: string): BatchSite[] {
     .filter((l) => l && !l.startsWith("#"));
   const header = splitCsvLine(lines[0] ?? "").map((h) => h.toLowerCase());
   const siteCol = header.findIndex((h) => h === "site" || h === "domain");
-  if (siteCol < 0) throw new Error('sites CSV needs a header row with a "site" (or "domain") column');
+  if (siteCol < 0)
+    throw new SeoReaError("INVALID_INPUT", 'sites CSV needs a header row with a "site" (or "domain") column');
   const col = (name: string): number => header.indexOf(name);
   return lines.slice(1).map((l) => {
     const f = splitCsvLine(l);
@@ -73,7 +75,8 @@ export function parseSitesCsv(text: string): BatchSite[] {
 export function parseSitesJson(text: string): BatchSite[] {
   const raw: unknown = JSON.parse(text);
   const list = Array.isArray(raw) ? raw : (raw as { sites?: unknown } | null)?.sites;
-  if (!Array.isArray(list)) throw new Error('sites JSON must be an array or an object with a "sites" array');
+  if (!Array.isArray(list))
+    throw new SeoReaError("INVALID_INPUT", 'sites JSON must be an array or an object with a "sites" array');
   return list.map((e: unknown) => (typeof e === "string" ? toSite({ site: e }) : toSite((e ?? {}) as object)));
 }
 
@@ -82,7 +85,7 @@ export function parseSites(text: string, filename = ""): BatchSite[] {
   const ext = extname(filename).toLowerCase();
   const json = ext === ".json" || (ext !== ".csv" && /^\s*[[{]/.test(text));
   const sites = json ? parseSitesJson(text) : parseSitesCsv(text);
-  if (!sites.length) throw new Error("sites file lists no sites");
+  if (!sites.length) throw new SeoReaError("INVALID_INPUT", "sites file lists no sites");
   return sites;
 }
 
