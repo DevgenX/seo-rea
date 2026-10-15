@@ -1,0 +1,33 @@
+{
+  "name": "seo-rea",
+  "version": "0.1.0",
+  "description": "Evidence-first SEO teardown CLI and agent skill: reverse engineer why pages rank, free sources first.",
+  "type": "module",
+  "license": "MIT",
+  "author": "DevgenX",
+  "bin": {
+    "seo-rea": "bin/seo-rea.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    ".agents",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "check": "node --check bin/seo-rea.js && for f in src/*.js; do node --check $f || exit 1; done"
+  },
+  "keywords": [
+    "seo",
+    "serp",
+    "competitor-analysis",
+    "keyword-gap",
+    "agent-skill",
+    "cli"
+  ]
+}
