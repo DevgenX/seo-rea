@@ -1,0 +1,731 @@
+{
+  "schemaVersion": "1",
+  "tool": "seo-rea",
+  "toolVersion": "0.4.0",
+  "kind": "reverse",
+  "runId": "20261015T223928Z",
+  "domain": "cardpointers.com",
+  "timestamps": {
+    "createdAt": "2026-10-15T22:39:28.348Z",
+    "writtenAt": "2026-10-15T22:39:32.490Z"
+  },
+  "cost": {
+    "usd": 0,
+    "paidCalls": 0
+  },
+  "coverage": {
+    "pagesCrawled": 70,
+    "indexablePages": 59,
+    "crawlComplete": true,
+    "crawlReport": "report/crawl.json"
+  },
+  "summary": [
+    {
+      "claim": "Content is concentrated in /offers (25 of 59 indexable pages, mostly entity pages).",
+      "basis": "observed",
+      "confidence": "high",
+      "evidenceIds": [
+        "E001"
+      ],
+      "examples": [
+        "https://cardpointers.com/offers/",
+        "https://cardpointers.com/offers/menchies-frozen-yogurt-lake-nona-5-back-48/",
+        "https://cardpointers.com/offers/tsuki-sushi-grill-5-back-50/"
+      ]
+    },
+    {
+      "claim": "Likely target topics (repeated across titles, H1s and URLs): \"offers\", \"credit card\", \"gift card\", \"amex\", \"apple\", \"pro\".",
+      "basis": "inferred",
+      "confidence": "medium",
+      "evidenceIds": [
+        "E001"
+      ],
+      "examples": [
+        "https://cardpointers.com/extension/",
+        "https://cardpointers.com/offers/",
+        "https://cardpointers.com/cards/"
+      ]
+    },
+    {
+      "claim": "Page types that carry the site: entity (37), comparison (1), product (1).",
+      "basis": "inferred",
+      "confidence": "medium",
+      "evidenceIds": [
+        "E001"
+      ],
+      "examples": [
+        "https://cardpointers.com/offers/menchies-frozen-yogurt-lake-nona-5-back-48/",
+        "https://cardpointers.com/cards/",
+        "https://cardpointers.com/app/"
+      ]
+    },
+    {
+      "claim": "Programmatic SEO: /offers/* (24 pages, titles \"... 5% back\"); /cards/* (13 pages, titles \"(varied titles, uniform layout)\").",
+      "basis": "inferred",
+      "confidence": "medium",
+      "evidenceIds": [
+        "E001"
+      ],
+      "examples": [
+        "https://cardpointers.com/offers/menchies-frozen-yogurt-lake-nona-5-back-48/",
+        "https://cardpointers.com/offers/tsuki-sushi-grill-5-back-50/",
+        "https://cardpointers.com/offers/handels-homemade-ice-cream-oviedo-5-back/"
+      ]
+    },
+    {
+      "claim": "Internal linking: 22 links repeat on most pages (nav/footer); average 22.8 internal links per page; strongest internal hubs: /apps/iphone/, /apps/ipad/, /apps/watch/.",
+      "basis": "observed",
+      "confidence": "high",
+      "evidenceIds": [
+        "E001"
+      ],
+      "examples": [
+        "https://cardpointers.com/apps/iphone/",
+        "https://cardpointers.com/apps/ipad/",
+        "https://cardpointers.com/apps/watch/"
+      ]
+    },
+    {
+      "claim": "AEO: llms.txt present and valid (13 links); AI crawlers blocked: none; FAQPage on 0 page(s); 0 question-style titles; 68% of pages readable without JavaScript.",
+      "basis": "observed",
+      "confidence": "high",
+      "evidenceIds": [
+        "E002",
+        "E003",
+        "E004",
+        "E001"
+      ],
+      "examples": []
+    },
+    {
+      "claim": "Stack fingerprints: Nuxt, Vue, HubSpot.",
+      "basis": "observed",
+      "confidence": "medium",
+      "evidenceIds": [
+        "E001"
+      ],
+      "examples": []
+    },
+    {
+      "claim": "Authority signals (free): Tranco rank 365175; 0 Wikipedia article(s) link to it; unknown Common Crawl index page(s).",
+      "basis": "observed",
+      "confidence": "medium",
+      "evidenceIds": [
+        "E005",
+        "E001"
+      ],
+      "examples": []
+    }
+  ],
+  "keywords": [
+    {
+      "term": "offers",
+      "pages": 3,
+      "inTitles": 3,
+      "examples": [
+        "https://cardpointers.com/extension/",
+        "https://cardpointers.com/offers/",
+        "https://cardpointers.com/cards/"
+      ]
+    },
+    {
+      "term": "credit card",
+      "pages": 2,
+      "inTitles": 2,
+      "examples": [
+        "https://cardpointers.com/",
+        "https://cardpointers.com/cards/"
+      ]
+    },
+    {
+      "term": "gift card",
+      "pages": 2,
+      "inTitles": 2,
+      "examples": [
+        "https://cardpointers.com/gift/",
+        "https://cardpointers.com/gift/redeem/?id=undefined"
+      ]
+    },
+    {
+      "term": "amex",
+      "pages": 2,
+      "inTitles": 2,
+      "examples": [
+        "https://cardpointers.com/extension/",
+        "https://cardpointers.com/offers/"
+      ]
+    },
+    {
+      "term": "apple",
+      "pages": 2,
+      "inTitles": 2,
+      "examples": [
+        "https://cardpointers.com/apps/watch/",
+        "https://cardpointers.com/apps/vision/"
+      ]
+    },
+    {
+      "term": "pro",
+      "pages": 2,
+      "inTitles": 1,
+      "examples": [
+        "https://cardpointers.com/apps/vision/",
+        "https://cardpointers.com/pro/"
+      ]
+    },
+    {
+      "term": "cards",
+      "pages": 2,
+      "inTitles": 0,
+      "examples": [
+        "https://cardpointers.com/",
+        "https://cardpointers.com/cards/"
+      ]
+    }
+  ],
+  "clusters": [
+    {
+      "key": "/offers",
+      "pages": 25,
+      "share": 0.42,
+      "template": "entity",
+      "avgWords": 213,
+      "schemaTypes": [],
+      "topTerms": [],
+      "hub": "https://cardpointers.com/offers/",
+      "examples": [
+        "https://cardpointers.com/offers/",
+        "https://cardpointers.com/offers/menchies-frozen-yogurt-lake-nona-5-back-48/",
+        "https://cardpointers.com/offers/tsuki-sushi-grill-5-back-50/"
+      ]
+    },
+    {
+      "key": "/cards",
+      "pages": 14,
+      "share": 0.24,
+      "template": "entity",
+      "avgWords": 582,
+      "schemaTypes": [],
+      "topTerms": [],
+      "hub": "https://cardpointers.com/cards/",
+      "examples": [
+        "https://cardpointers.com/cards/",
+        "https://cardpointers.com/cards/chase-sapphire-reserve-new/",
+        "https://cardpointers.com/cards/american-express-gold-card/"
+      ]
+    },
+    {
+      "key": "/apps",
+      "pages": 7,
+      "share": 0.12,
+      "template": "other",
+      "avgWords": 372,
+      "schemaTypes": [],
+      "topTerms": [
+        "apple"
+      ],
+      "hub": "https://cardpointers.com/apps/iphone/",
+      "examples": [
+        "https://cardpointers.com/apps/iphone/",
+        "https://cardpointers.com/apps/ipad/",
+        "https://cardpointers.com/apps/watch/"
+      ]
+    },
+    {
+      "key": "/gift",
+      "pages": 2,
+      "share": 0.03,
+      "template": "other",
+      "avgWords": 311,
+      "schemaTypes": [],
+      "topTerms": [
+        "gift card"
+      ],
+      "hub": null,
+      "examples": [
+        "https://cardpointers.com/gift/",
+        "https://cardpointers.com/gift/redeem/?id=undefined"
+      ]
+    },
+    {
+      "key": "/",
+      "pages": 1,
+      "share": 0.02,
+      "template": "home",
+      "avgWords": 483,
+      "schemaTypes": [],
+      "topTerms": [],
+      "hub": null,
+      "examples": [
+        "https://cardpointers.com/"
+      ]
+    },
+    {
+      "key": "/account",
+      "pages": 1,
+      "share": 0.02,
+      "template": "other",
+      "avgWords": 525,
+      "schemaTypes": [],
+      "topTerms": [],
+      "hub": null,
+      "examples": [
+        "https://cardpointers.com/account/"
+      ]
+    },
+    {
+      "key": "/ai",
+      "pages": 1,
+      "share": 0.02,
+      "template": "other",
+      "avgWords": 270,
+      "schemaTypes": [],
+      "topTerms": [],
+      "hub": null,
+      "examples": [
+        "https://cardpointers.com/ai/"
+      ]
+    },
+    {
+      "key": "/app",
+      "pages": 1,
+      "share": 0.02,
+      "template": "product",
+      "avgWords": 24,
+      "schemaTypes": [],
+      "topTerms": [],
+      "hub": null,
+      "examples": [
+        "https://cardpointers.com/app/"
+      ]
+    },
+    {
+      "key": "/extension",
+      "pages": 1,
+      "share": 0.02,
+      "template": "other",
+      "avgWords": 337,
+      "schemaTypes": [],
+      "topTerms": [],
+      "hub": null,
+      "examples": [
+        "https://cardpointers.com/extension/"
+      ]
+    },
+    {
+      "key": "/forgot",
+      "pages": 1,
+      "share": 0.02,
+      "template": "other",
+      "avgWords": 122,
+      "schemaTypes": [],
+      "topTerms": [],
+      "hub": null,
+      "examples": [
+        "https://cardpointers.com/forgot/"
+      ]
+    },
+    {
+      "key": "/login",
+      "pages": 1,
+      "share": 0.02,
+      "template": "other",
+      "avgWords": 140,
+      "schemaTypes": [],
+      "topTerms": [],
+      "hub": null,
+      "examples": [
+        "https://cardpointers.com/login/"
+      ]
+    },
+    {
+      "key": "/privacy",
+      "pages": 1,
+      "share": 0.02,
+      "template": "legal",
+      "avgWords": 1176,
+      "schemaTypes": [],
+      "topTerms": [],
+      "hub": null,
+      "examples": [
+        "https://cardpointers.com/privacy/"
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "type": "entity",
+      "pages": 37,
+      "avgWords": 344,
+      "examples": [
+        "https://cardpointers.com/offers/menchies-frozen-yogurt-lake-nona-5-back-48/",
+        "https://cardpointers.com/offers/tsuki-sushi-grill-5-back-50/",
+        "https://cardpointers.com/offers/handels-homemade-ice-cream-oviedo-5-back/"
+      ]
+    },
+    {
+      "type": "other",
+      "pages": 18,
+      "avgWords": 391,
+      "examples": [
+        "https://cardpointers.com/apps/iphone/",
+        "https://cardpointers.com/apps/ipad/",
+        "https://cardpointers.com/apps/watch/"
+      ]
+    },
+    {
+      "type": "comparison",
+      "pages": 1,
+      "avgWords": 536,
+      "examples": [
+        "https://cardpointers.com/cards/"
+      ]
+    },
+    {
+      "type": "home",
+      "pages": 1,
+      "avgWords": 483,
+      "examples": [
+        "https://cardpointers.com/"
+      ]
+    },
+    {
+      "type": "legal",
+      "pages": 1,
+      "avgWords": 1176,
+      "examples": [
+        "https://cardpointers.com/privacy/"
+      ]
+    },
+    {
+      "type": "product",
+      "pages": 1,
+      "avgWords": 24,
+      "examples": [
+        "https://cardpointers.com/app/"
+      ]
+    }
+  ],
+  "programmatic": [
+    {
+      "pattern": "/offers/*",
+      "pages": 24,
+      "titlePattern": "... 5% back",
+      "examples": [
+        "https://cardpointers.com/offers/menchies-frozen-yogurt-lake-nona-5-back-48/",
+        "https://cardpointers.com/offers/tsuki-sushi-grill-5-back-50/",
+        "https://cardpointers.com/offers/handels-homemade-ice-cream-oviedo-5-back/"
+      ]
+    },
+    {
+      "pattern": "/cards/*",
+      "pages": 13,
+      "titlePattern": "(varied titles, uniform layout)",
+      "examples": [
+        "https://cardpointers.com/cards/chase-sapphire-reserve-new/",
+        "https://cardpointers.com/cards/american-express-gold-card/",
+        "https://cardpointers.com/cards/capital-one-venture-x-rewards-credit-card/"
+      ]
+    }
+  ],
+  "linking": {
+    "avgInternalLinks": 22.8,
+    "globalLinks": [
+      "https://cardpointers.com/",
+      "https://help.cardpointers.com/",
+      "https://cardpointers.com/privacy/",
+      "https://cardpointers.com/account/",
+      "https://cardpointers.com/ai/",
+      "https://cardpointers.com/app/",
+      "https://cardpointers.com/apps/android/",
+      "https://cardpointers.com/apps/carplay/",
+      "https://cardpointers.com/apps/ipad/",
+      "https://cardpointers.com/apps/iphone/",
+      "https://cardpointers.com/apps/mac/",
+      "https://cardpointers.com/apps/vision/",
+      "https://cardpointers.com/apps/watch/",
+      "https://cardpointers.com/cards/",
+      "https://cardpointers.com/extension/",
+      "https://cardpointers.com/gift/",
+      "https://cardpointers.com/login/",
+      "https://cardpointers.com/offers/",
+      "https://cardpointers.com/partner/prime/",
+      "https://cardpointers.com/pro/",
+      "https://cardpointers.com/search/",
+      "https://cardpointers.com/signup/"
+    ],
+    "hubs": [
+      {
+        "url": "https://cardpointers.com/apps/iphone/",
+        "pagerank": 0.03829,
+        "inlinks": 60
+      },
+      {
+        "url": "https://cardpointers.com/apps/ipad/",
+        "pagerank": 0.03829,
+        "inlinks": 60
+      },
+      {
+        "url": "https://cardpointers.com/apps/watch/",
+        "pagerank": 0.03829,
+        "inlinks": 60
+      },
+      {
+        "url": "https://cardpointers.com/apps/vision/",
+        "pagerank": 0.03829,
+        "inlinks": 60
+      },
+      {
+        "url": "https://cardpointers.com/apps/mac/",
+        "pagerank": 0.03829,
+        "inlinks": 60
+      },
+      {
+        "url": "https://cardpointers.com/apps/android/",
+        "pagerank": 0.03829,
+        "inlinks": 60
+      },
+      {
+        "url": "https://cardpointers.com/extension/",
+        "pagerank": 0.03829,
+        "inlinks": 60
+      },
+      {
+        "url": "https://cardpointers.com/pro/",
+        "pagerank": 0.03829,
+        "inlinks": 60
+      }
+    ],
+    "orphanPages": 0,
+    "deepPages": 1,
+    "depthHistogram": [
+      {
+        "depth": 0,
+        "pages": 1
+      },
+      {
+        "depth": 1,
+        "pages": 20
+      },
+      {
+        "depth": 2,
+        "pages": 32
+      },
+      {
+        "depth": 3,
+        "pages": 16
+      },
+      {
+        "depth": 4,
+        "pages": 1
+      }
+    ]
+  },
+  "offpage": {
+    "trancoRank": 365175,
+    "wikipediaLinkingPages": 0,
+    "wikipediaMentions": 0,
+    "commonCrawlPages": null,
+    "outboundDomains": [
+      {
+        "domain": "facebook.com",
+        "pages": 58
+      },
+      {
+        "domain": "impresskit.net",
+        "pages": 58
+      },
+      {
+        "domain": "instagram.com",
+        "pages": 58
+      },
+      {
+        "domain": "reddit.com",
+        "pages": 58
+      },
+      {
+        "domain": "twitter.com",
+        "pages": 58
+      },
+      {
+        "domain": "youtube.com",
+        "pages": 58
+      },
+      {
+        "domain": "apps.apple.com",
+        "pages": 11
+      },
+      {
+        "domain": "play.google.com",
+        "pages": 5
+      },
+      {
+        "domain": "chrome.google.com",
+        "pages": 4
+      },
+      {
+        "domain": "appleid.apple.com",
+        "pages": 3
+      },
+      {
+        "domain": "addons.mozilla.org",
+        "pages": 2
+      },
+      {
+        "domain": "c.clapu.com",
+        "pages": 1
+      }
+    ],
+    "evidenceIds": [
+      "E005",
+      "E001"
+    ]
+  },
+  "schema": [],
+  "aeo": {
+    "llmsTxt": {
+      "present": true,
+      "valid": true,
+      "links": 13
+    },
+    "llmsFullTxt": true,
+    "aiCrawlers": [
+      {
+        "token": "GPTBot",
+        "operator": "OpenAI",
+        "access": "allowed"
+      },
+      {
+        "token": "OAI-SearchBot",
+        "operator": "OpenAI",
+        "access": "allowed"
+      },
+      {
+        "token": "ChatGPT-User",
+        "operator": "OpenAI",
+        "access": "allowed"
+      },
+      {
+        "token": "ClaudeBot",
+        "operator": "Anthropic",
+        "access": "allowed"
+      },
+      {
+        "token": "Claude-SearchBot",
+        "operator": "Anthropic",
+        "access": "allowed"
+      },
+      {
+        "token": "PerplexityBot",
+        "operator": "Perplexity",
+        "access": "allowed"
+      },
+      {
+        "token": "Google-Extended",
+        "operator": "Google",
+        "access": "allowed"
+      },
+      {
+        "token": "Applebot-Extended",
+        "operator": "Apple",
+        "access": "allowed"
+      },
+      {
+        "token": "CCBot",
+        "operator": "Common Crawl",
+        "access": "allowed"
+      }
+    ],
+    "faqPages": 0,
+    "howToPages": 0,
+    "questionTitles": 0,
+    "rawHtmlReadableShare": 0.68,
+    "evidenceIds": [
+      "E002",
+      "E003",
+      "E004",
+      "E001"
+    ]
+  },
+  "cadence": {
+    "datedPages": 0,
+    "first": "",
+    "last": "",
+    "last90Days": 0,
+    "last365Days": 0,
+    "perMonth": [],
+    "medianGapDays": null,
+    "updatedLast90Days": 0
+  },
+  "tech": [
+    {
+      "name": "Nuxt",
+      "pages": 59
+    },
+    {
+      "name": "Vue",
+      "pages": 45
+    },
+    {
+      "name": "HubSpot",
+      "pages": 1
+    }
+  ],
+  "playbook": [
+    {
+      "step": "Build a /offers cluster of entity pages",
+      "why": "25 pages (42% of the site) sit there, linked from the hub /offers/.",
+      "effort": "L",
+      "impact": "high",
+      "evidenceIds": [
+        "E001"
+      ]
+    },
+    {
+      "step": "Template pages like /offers/*",
+      "why": "24 pages share the title pattern \"... 5% back\".",
+      "effort": "L",
+      "impact": "high",
+      "evidenceIds": [
+        "E001"
+      ]
+    },
+    {
+      "step": "Template pages like /cards/*",
+      "why": "13 pages share one layout.",
+      "effort": "L",
+      "impact": "high",
+      "evidenceIds": [
+        "E001"
+      ]
+    },
+    {
+      "step": "Publish /llms.txt",
+      "why": "They publish one with 13 links.",
+      "effort": "S",
+      "impact": "low",
+      "evidenceIds": [
+        "E002",
+        "E003",
+        "E004",
+        "E001"
+      ]
+    },
+    {
+      "step": "Create hub pages linked from the global navigation",
+      "why": "/apps/iphone/ has 60 internal inlinks and the highest internal PageRank after the home page.",
+      "effort": "S",
+      "impact": "medium",
+      "evidenceIds": [
+        "E001"
+      ]
+    }
+  ],
+  "unknowns": [
+    "Rankings and traffic: not measured (free mode does not query SERPs per page).",
+    "Backlinks: only free proxies (Tranco, Wikipedia, Common Crawl, outbound links); no link index.",
+    "JavaScript-rendered content is not seen; counts reflect raw HTML, like most AI crawlers.",
+    "No publish dates found in page metadata; cadence unknown."
+  ],
+  "evidenceIndex": "evidence/index.md"
+}
