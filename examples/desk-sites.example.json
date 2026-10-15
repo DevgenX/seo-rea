@@ -1,0 +1,12 @@
+{
+  "sites": [
+    { "name": "CardLab", "site": "getcardlab.app", "keyword": "credit card rewards app" },
+    { "name": "Vialie", "site": "TODO", "keyword": "TODO" },
+    { "name": "RemoteNurse", "site": "remotenurse.org", "keyword": "remote nursing jobs" },
+    { "name": "Soltura", "site": "TODO", "keyword": "TODO" },
+    { "name": "Pondoro", "site": "TODO", "keyword": "TODO" },
+    { "name": "WJBF", "site": "TODO", "keyword": "TODO" },
+    { "name": "Budgeteen", "site": "TODO", "keyword": "TODO" },
+    { "name": "Waymora", "site": "TODO", "keyword": "TODO" }
+  ]
+}
