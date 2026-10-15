@@ -3,12 +3,13 @@ name: seo-rea
 description: >-
   Reverse engineer why competitors and top-ranking pages win in search and AI
   answers, and check whether a site is ready for AI search. Use when given a
-  target domain, keyword, or SERP and asked for their keywords, ads, schema,
-  content structure, llms.txt, AI-crawler access or AI-citation strategy, or
-  "how the best SEO works" for a niche. Skip for generic SEO advice with no
+  target domain, keyword, or SERP and asked why a site leads, its strategy,
+  keywords, ads, schema, content clusters, llms.txt, AI-crawler access or
+  AI-citation strategy, how two sites compare, or "how the best SEO works" for
+  a niche. Skip for generic SEO advice with no
   site, keyword or competitor to look at.
 metadata:
-  version: "0.2.0"
+  version: "0.4.0"
   inspired_by: "morluto/rea reverse-engineer-anything skill (MIT), workflow pattern only"
 ---
 
@@ -26,6 +27,7 @@ CLI (`npx seo-rea ...`). Both write the same files.
 
 | Task                        | MCP tool                 | CLI                                                   |
 | --------------------------- | ------------------------ | ----------------------------------------------------- |
+| Why a site leads (strategy) | `seo_strategy`           | `seo-rea <domain> [--vs <domain>] --out .`            |
 | Full teardown               | `seo_teardown`           | `seo-rea teardown --keyword ... --target ... --out .` |
 | One page: on-page + schema  | `seo_audit_page`         | `seo-rea audit <url>`                                 |
 | Site AI-search readiness    | `seo_check_ai_readiness` | `seo-rea audit <domain>`                              |
@@ -34,9 +36,18 @@ CLI (`npx seo-rea ...`). Both write the same files.
 | Ad-library lookup URLs      | `seo_adlib_lookup`       | (part of `teardown`; `--adlib-capture` screenshots)   |
 | Read evidence               | `seo_read_evidence`      | open `evidence/index.md`                              |
 | What can run here           | -                        | `seo-rea doctor`                                      |
+| Many sites, weekly          | -                        | `seo-rea batch --sites sites.json --out out/<date>`   |
 
 Output in `<out>`: `evidence/` (E001.. files + `index.md`), `report/questions.md`,
-`report/ledger.md`, `report/teardown.md` (or `report/audit.md`), `data/run.json`.
+`report/ledger.md`, `report/teardown.md` (or `report/audit.md`),
+`report/dossier.json`, `data/run.json`.
+
+For machine use, read `report/dossier.json` (schema `docs/dossier-schema.json`,
+`schemaVersion: "1"`) instead of parsing Markdown. `--json` prints it to
+stdout. Its `topActions` (up to 10, ranked by impact then effort, each with
+evidence IDs, effort S/M/L, impact and an owner hint) are also the "Top 10
+actions" table at the top of the Markdown report. `batch` writes
+`<out>/summary.json` with the top 3 actions per site.
 
 ## 0. Budget and cache rules (read first)
 
@@ -53,6 +64,8 @@ Details: [references/budget-and-cache.md](references/budget-and-cache.md).
 
 ## 1. Route the target
 
+- Domain only, "why does X rank / what is their strategy / how do we beat X"
+  -> `seo_strategy` (`seo-rea <domain>`); add `vs` (`--vs`) for two sites.
 - Keyword + target domain -> `seo_teardown`.
 - Domain or URL only, "is my site ready for AI search" -> `seo_check_ai_readiness`.
 - One page -> `seo_audit_page`.
@@ -86,6 +99,24 @@ llms.txt, internal links, ad messaging. The keyword gap is ranked by how many
 competitors use a phrase, then TF-IDF weighted by phrase length; it has no
 search volume on the free tier.
 
+## 3b. Strategy dossier
+
+`report/strategy.md` and `report/strategy.json` (`kind: "strategy"`, schema
+`docs/strategy-schema.json`): Top 10 actions, then 1 snapshot, 2 site and
+cluster map (clusters, templates, hubs, programmatic patterns), 3 head terms
+and rankings, 4 co-ranking domains, 5 pillars (on-page, technical, off-page,
+AEO, paid, distribution), 6 ranked drivers with strength and how hard to copy,
+7 copyable playbook, 8 weaknesses and openings, 9 30/60/90-day plan, 10
+side-by-side with `--vs` (cluster gaps, keyword overlap and gaps, first moves).
+
+- Head terms are inferred from the site's own titles, H1s and slugs; there is
+  no search volume at $0. Say so when you quote them.
+- With `--vs`, `roles` says which site leads and why (SERP visibility, then
+  Tranco). `actionsFor` is the site the plan is written for.
+- Drivers and weaknesses carry `evidenceIds` and an observed/inferred basis.
+  Terms with status `unknown` were blocked, not missing; never report them as
+  "not ranking".
+
 ## 4. Finding ledger
 
 `report/ledger.md`: claim | Evidence IDs | observed/inferred | confidence |
@@ -93,7 +124,7 @@ search boundary | open unknowns. Extend it by hand for manual findings.
 
 ## 5. Teardown output
 
-`report/teardown.md`: 1 summary, 2 SERP map (what each engine did), 3
+`report/teardown.md`: Top 10 actions, then 1 summary, 2 SERP map (what each engine did), 3
 competitor cards, 4 schema validation, 5 AI-search readiness, 6 keyword gap,
 7 AI-citation table, 8 ads, 9 playbook, 10 unknowns and cost.
 

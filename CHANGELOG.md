@@ -6,6 +6,81 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-10-15
+
+Strategy Dossier: why a site leads, from free sources.
+
+### Added
+
+- `seo-rea <domain> [--vs <domain>]` (also `seo-rea strategy <domain>`) and
+  the MCP tool `seo_strategy`. Writes `report/strategy.md`,
+  `report/strategy.json` (`kind: "strategy"`, `schemaVersion: "1"`, validated
+  with zod; JSON Schema in `docs/strategy-schema.json`, `npm run
+strategy-schema` regenerates it), `evidence/` and `data/strategy-run.json`.
+  `--json` prints `strategy.json` to stdout.
+- Site and cluster map: robots.txt sitemaps, sitemap indexes (child sitemaps
+  picked across types), navigation and a few help or blog subdomains; up to
+  200 URLs mapped and about 30 pages fetched (`--crawl`). Clusters by path
+  and title words with URL counts, template type, hub pages, link density and
+  inlinks. Programmatic SEO detection from shared slug patterns, numeric ids
+  or identical heading sets; help centres are never flagged.
+- Head terms derived from the site's own titles, H1s, slugs and clusters
+  (`--terms`, default 10; split 6/4 with `--vs`) plus one brand query per
+  site, checked on free SERPs. An engine that returns a captcha, consent
+  wall, HTTP 403 or 429 is not asked again in the run; blocked terms are
+  listed as unknown. App Store and other owned listings count as rankings.
+- Co-ranking competitors with shared SERP counts; six pillars (on-page,
+  technical, off-page, AEO, paid, distribution); 5-8 ranked drivers with
+  strength, evidence and how hard each is to copy; a copyable playbook with
+  effort and impact; weaknesses with specific fixes; a 30/60/90-day plan and
+  a "Top 10 actions" table.
+- `--vs`: roles (leader and challenger) from head-term SERP visibility, then
+  Tranco rank; side-by-side table, cluster gaps, keyword overlap and gaps, and
+  the plan and actions written for the challenger.
+- Free off-page and distribution signals: Tranco rank, Wikipedia linking
+  articles and mentions, Common Crawl index size, App Store rating and rating
+  count (iTunes Lookup), app store, extension, social, community, newsletter
+  and press links found on the site.
+- Examples: `examples/strategy-cardpointers`, `examples/strategy-nerdwallet`,
+  `examples/strategy-cardlab-vs-cardpointers`.
+- Weekly strategy routine in `HANDOFF-for-desk.md`.
+
+## [0.3.0] - 2026-10-14
+
+Agent-friendly output for scheduled multi-site audits.
+
+### Added
+
+- `report/dossier.json` for every `teardown` and `audit`: versioned JSON
+  (`schemaVersion: "1"`) with inputs, timestamps, cost, SERP engine statuses
+  and results, competitors, target pages, schema validation, AI readiness,
+  performance, keyword gap, ads, citations, claims, unknowns and the evidence
+  index path. Validated with zod before it is written; JSON Schema in
+  `docs/dossier-schema.json` (`npm run dossier-schema` regenerates it).
+- Top actions: up to 10 ranked actions derived from the findings (blocked AI
+  search crawlers, missing or invalid schema, missing llms.txt or sitemap,
+  thin content vs the ranking median, keyword missing from the title,
+  FAQ/HowTo used by competitors, keyword gap, PageSpeed issues, competitor
+  ads, uncited in AI answers), each with evidence IDs, effort, impact and an
+  owner hint. Shown as a "Top 10 actions" table at the top of `teardown.md`
+  and `audit.md`.
+- `--json` on `teardown` prints the dossier to stdout; progress stays on
+  stderr.
+- `batch --sites <file.json|file.csv>`: audit (and teardown when a keyword is
+  given) for many sites in turn, with a pause between sites, writing
+  `<out>/<site>/...`, `summary.json` and `summary.md` (top 3 actions per site).
+  Entries with a `TODO` domain are skipped.
+- MCP `seo_teardown` and `seo_check_ai_readiness` results include
+  `dossierPath` and `topActions`.
+- README "Run on a box / server" section, `HANDOFF-for-desk.md` and
+  `examples/desk-sites.example.json`.
+
+### Changed
+
+- `audit --json` prints the dossier instead of `data/audit.json` (still
+  written to disk).
+- `cite` also refreshes `report/dossier.json`.
+
 ## [0.2.0] - 2026-10-14
 
 Rewrite in strict TypeScript as a CLI, an MCP server and an agent skill.

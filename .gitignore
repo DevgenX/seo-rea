@@ -21,3 +21,9 @@ examples/**/evidence/*.html
 examples/**/evidence/*.png
 
 .DS_Store
+
+# Keep committed example runs small: reports + evidence index only
+examples/strategy-*/evidence/E*
+examples/strategy-*/data/
+examples/desk-batch/**/evidence/E*
+examples/desk-batch/**/data/
