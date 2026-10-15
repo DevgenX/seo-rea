@@ -5,57 +5,89 @@ source failure as evidence and an open unknown; never fill the gap with a guess.
 
 ## SERPs
 
-| Source | Access | Notes |
-|---|---|---|
-| DuckDuckGo HTML (`html.duckduckgo.com/html/`) | automated, default first | Best free signal (Bing-backed index). Rate limits by IP: answers HTTP 202 with an "anomaly" bot challenge after repeated requests. Detected and recorded; never cached. Wait or use `--serp-html`. |
-| Bing HTML (`www.bing.com/search`) | automated | Often serves a degraded page to non-browser clients that only matches the first query word. seo-rea scores relevance (share of results containing 3/4 of the query terms) and refuses to use a SERP under 30%. |
-| Google HTML | automated attempt, usually blocked | Google requires JavaScript (`enablejs`), consent or a captcha for automated requests. Recorded as blocked. For Google rankings, search in a browser (incognito, `hl=en&gl=us`), save the page and pass `--serp-html`. |
-| Saved SERP page | `--serp-html <file>` (repeatable) | Engine detected from markup (DuckDuckGo, Bing, Google). Stored as `manual` evidence. |
-| Operator URL list | `--serp-urls "u1,u2,..."` | Ranking URLs in order as seen in a browser. Titles come from the fetched pages. |
-| DataForSEO SERP | paid, `--budget-usd > 0` | Used only when no free SERP is usable. Adds SERP feature types. |
+Tried in this order. The first usable SERP becomes the ranking list; every
+attempt is recorded in the SERP map with its evidence ID.
 
-Search boundary for any "X does not rank" claim: the engines that produced a
-usable SERP, the result depth, locale and date shown in the SERP map.
+| Source            | Access                             | Notes                                                                                                                                                                                                                                                                                                                          |
+| ----------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Operator URL list | `--serp-urls "u1,u2,..."`          | Ranking URLs in order as seen in a browser. Used as the primary list when given. Titles come from the fetched pages.                                                                                                                                                                                                           |
+| Saved SERP page   | `--serp-html <file>` (repeatable)  | Engine detected from markup (Google, Bing, DuckDuckGo).                                                                                                                                                                                                                                                                        |
+| Headless Chromium | needs `playwright-core` + Chromium | Google, Bing, DuckDuckGo in `--engines` order. Desktop user agent with the browser's real version, at least 3 s between requests to one host, cookie banners dismissed (reject first). Captcha, consent walls and challenge pages are detected and recorded; the next engine is tried. A screenshot is saved for each attempt. |
+| Plain HTML        | built in                           | DuckDuckGo HTML, Bing, Google. Used when the browser is missing or every browser attempt was blocked. Google almost always answers with a JavaScript wall. Bing may serve a degraded page; results under 30% query-term relevance are refused.                                                                                 |
+| DataForSEO SERP   | paid, `--budget-usd > 0`           | Only when no free SERP is usable.                                                                                                                                                                                                                                                                                              |
+
+Search boundary for any "X does not rank" claim: the engine that produced the
+list, result depth, locale and date shown in the SERP map.
 
 ## Pages and sites
 
-- Ranking pages: fetched once each with the seo-rea user agent after checking
-  robots.txt (`seo-rea` group, then `*`). Disallowed pages are skipped and
-  recorded.
+- Ranking pages are fetched once each with the `seo-rea` user agent after
+  checking robots.txt. Disallowed pages are skipped and recorded.
 - Parsed without JavaScript. Client-rendered pages show low word counts; the
-  report marks this as an inference, not a fact about the rendered page.
-- Target: robots.txt, sitemap.xml (or sitemaps declared in robots.txt, indexes
-  followed up to 5 files), homepage, then up to `--crawl` pages from the
-  sitemap and homepage links.
+  report marks this as an inference.
+- Target: robots.txt, sitemaps (from robots.txt or `/sitemap.xml`, indexes
+  followed up to 5 files), homepage, then up to `--crawl` pages.
+
+## Schema
+
+All `application/ld+json` blocks are parsed; `@graph` members and top-level
+nodes are checked. Rule sets (subtypes map to them, e.g. BlogPosting ->
+Article, MobileApplication -> SoftwareApplication):
+
+| Type                | Required                                                  | Recommended                                                |
+| ------------------- | --------------------------------------------------------- | ---------------------------------------------------------- |
+| Article             | headline                                                  | author, datePublished, dateModified, image, publisher      |
+| FAQPage             | mainEntity of Question with acceptedAnswer.text           | -                                                          |
+| Product             | name; one of offers, review, aggregateRating              | image, description, brand, sku                             |
+| SoftwareApplication | name, offers (with price); one of aggregateRating, review | operatingSystem, applicationCategory                       |
+| Organization        | name                                                      | url, logo, sameAs                                          |
+| BreadcrumbList      | itemListElement with position, name, item (except last)   | -                                                          |
+| HowTo               | name, step (each with text)                               | image, totalTime, supply, tool                             |
+| LocalBusiness       | name, address                                             | telephone, openingHoursSpecification, geo, url, priceRange |
+
+These follow the documented rich-result requirements; they are a lint, not a
+guarantee that a rich result will show.
+
+## AI readiness
+
+- robots.txt is evaluated per product token (exact group match, else `*`):
+  GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot,
+  PerplexityBot, Google-Extended, Applebot-Extended, CCBot. Result per bot:
+  allowed, partial (some paths disallowed) or blocked at `/`.
+- Bots may ignore robots.txt, and a CDN or firewall can block them anyway;
+  that is not tested.
+- `/llms.txt` is checked against llmstxt.org: H1 title first, optional `>`
+  summary, `##` sections of `- [name](url): notes` links. An HTML page served at
+  that path (app fallback) counts as absent. `/llms-full.txt` only needs an H1.
+
+## Speed
+
+PageSpeed Insights (mobile) with `PSI_API_KEY` if set (sent as a header, never
+stored). Without a key the shared quota often answers HTTP 429; the run records
+the skip. Local Lighthouse runs with `--lighthouse` when `lighthouse` and
+`chrome-launcher` are installed.
 
 ## Keywords
 
-- Free: 1-3 word phrases from title, meta description, H1-H3 (3x weight) and
-  body text. Gap = phrases used by 2+ ranking pages and absent from every
-  crawled target page. No search volume.
-- Manual: Google autocomplete, People Also Ask, Search Console, Keyword Planner.
+- Free: 1-3 word n-grams from title, meta description, H1-H3 (3x weight) and
+  body. Gap = phrases used by 2+ ranking pages and absent from every crawled
+  target page, ranked by competitor count then TF-IDF x phrase length.
 - Paid: DataForSEO Labs `ranked_keywords` for the target and top competitors.
 
 ## Ads
 
-Ad libraries need a browser and often a login, so seo-rea records lookup URLs
-as `manual-check` evidence for the target and top competitors:
+For the target and up to 3 competitors (product sites before publishers):
 
-- Google Ads Transparency Center: `adstransparency.google.com/?region=anywhere&domain=<domain>`
-- Meta Ad Library: keyword search on the brand name
-- LinkedIn Ad Library: keyword search on the brand name
+- Google Ads Transparency Center by domain (app-store listings have no domain,
+  so search the name by hand)
+- Meta Ad Library and LinkedIn Ad Library keyword search on the brand
 
-Ads seen in SERP HTML (DuckDuckGo `result--ad`, Bing `b_ad`) are recorded as
-observed.
+URL only by default (`manual-check` evidence). With `--adlib-capture` and a
+browser, each page is loaded once, screenshotted, and a visible result count is
+read when shown. Meta and LinkedIn counts are keyword matches, so other
+advertisers using the word are included.
 
 ## AI answers
 
 No engine exposes citations through a free API. Ask the prompt in each engine,
-copy the cited URLs and log them with `seo-rea cite`. Each entry is evidence
-with engine, prompt, URLs, domains and timestamp.
-
-## Backlinks and speed
-
-Not automated. Use Ahrefs free backlink checker, OpenLinkProfiler, Bing
-Webmaster Tools, Common Crawl index, PageSpeed Insights or CrUX by hand and add
-the findings to the ledger with new evidence files.
+copy the cited URLs and log them with `seo-rea cite` / `seo_log_citation`.
