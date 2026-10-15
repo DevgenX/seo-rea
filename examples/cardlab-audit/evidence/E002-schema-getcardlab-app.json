@@ -1,0 +1,40 @@
+{
+  "blocks": 1,
+  "parseErrors": [],
+  "types": [
+    "Answer",
+    "Country",
+    "FAQPage",
+    "Offer",
+    "Organization",
+    "Question",
+    "SoftwareApplication",
+    "UnitPriceSpecification",
+    "WebSite"
+  ],
+  "nodes": [
+    {
+      "type": "Organization",
+      "checkedAs": "Organization",
+      "errors": [],
+      "warnings": [],
+      "valid": true
+    },
+    {
+      "type": "SoftwareApplication",
+      "checkedAs": "SoftwareApplication",
+      "errors": [
+        "needs one of: aggregateRating, review"
+      ],
+      "warnings": [],
+      "valid": false
+    },
+    {
+      "type": "FAQPage",
+      "checkedAs": "FAQPage",
+      "errors": [],
+      "warnings": [],
+      "valid": true
+    }
+  ]
+}

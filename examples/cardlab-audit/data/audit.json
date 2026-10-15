@@ -1,0 +1,315 @@
+{
+  "tool": "seo-rea",
+  "version": "0.2.0",
+  "runId": "20261015T044655Z",
+  "createdAt": "2026-10-15T04:46:55.835Z",
+  "url": "https://getcardlab.app/",
+  "site": {
+    "domain": "getcardlab.app",
+    "origin": "https://getcardlab.app",
+    "robotsEvidenceId": "E003",
+    "robotsFound": true,
+    "robotsBlocksRoot": false,
+    "sitemap": {
+      "urlCount": 114,
+      "sources": [
+        {
+          "url": "https://getcardlab.app/sitemap.xml",
+          "kind": "urlset",
+          "locs": 114
+        }
+      ],
+      "evidenceId": "E004"
+    }
+  },
+  "page": {
+    "url": "https://getcardlab.app/",
+    "title": "CardLab: Track Cards & Rewards - No Bank Login",
+    "metaDescription": "Track your cards and rewards privately: statements, due dates, reward caps and which card to use for any purchase. Checked catalog, 38 countries, no bank login.",
+    "metaRobots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "ogTitle": "CardLab: Track Cards & Rewards - No Bank Login",
+    "canonical": "https://getcardlab.app/",
+    "hreflang": [],
+    "lang": "en",
+    "headings": {
+      "h1": [
+        "Track cards & rewards, and know which card to use."
+      ],
+      "h2": [
+        "The pages that answer the usual next question.",
+        "Sourced answers that lead into the tools.",
+        "Watch the answer appear.",
+        "Most people don't misunderstand credit cards. They misunderstand the timeline.",
+        "What does carrying a balance actually cost?",
+        "Run real scenarios, risk-free.",
+        "Modeled exactly, not hand-waved.",
+        "Every rate names its source, its sentence, and its date.",
+        "Free to learn. 3 days free, then $4.99 a month.",
+        "See what happens before you swipe."
+      ],
+      "h3": [
+        "Bank bonuses, read from the bank's own offer page.",
+        "See the cost of waiting.",
+        "Watch utilization move.",
+        "Know when rewards lose.",
+        "Which card do I use for this?"
+      ]
+    },
+    "wordCount": 2471,
+    "schemaTypes": [
+      "Answer",
+      "Country",
+      "FAQPage",
+      "Offer",
+      "Organization",
+      "Question",
+      "SoftwareApplication",
+      "UnitPriceSpecification",
+      "WebSite"
+    ],
+    "schema": {
+      "blocks": 1,
+      "parseErrors": [],
+      "types": [
+        "Answer",
+        "Country",
+        "FAQPage",
+        "Offer",
+        "Organization",
+        "Question",
+        "SoftwareApplication",
+        "UnitPriceSpecification",
+        "WebSite"
+      ],
+      "nodes": [
+        {
+          "type": "Organization",
+          "checkedAs": "Organization",
+          "errors": [],
+          "warnings": [],
+          "valid": true
+        },
+        {
+          "type": "SoftwareApplication",
+          "checkedAs": "SoftwareApplication",
+          "errors": [
+            "needs one of: aggregateRating, review"
+          ],
+          "warnings": [],
+          "valid": false
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "errors": [],
+          "warnings": [],
+          "valid": true
+        }
+      ]
+    },
+    "internalLinkCount": 58,
+    "externalLinkCount": 4,
+    "topAnchors": [
+      {
+        "anchor": "Calculators",
+        "count": 2
+      },
+      {
+        "anchor": "Guide",
+        "count": 2
+      },
+      {
+        "anchor": "Blog",
+        "count": 2
+      },
+      {
+        "anchor": "Try it in your browser",
+        "count": 2
+      },
+      {
+        "anchor": "Coverage",
+        "count": 1
+      },
+      {
+        "anchor": "credit card tracker",
+        "count": 1
+      },
+      {
+        "anchor": "credit card calculators",
+        "count": 1
+      },
+      {
+        "anchor": "bank bonus tracker",
+        "count": 1
+      },
+      {
+        "anchor": "credit card interest calculator",
+        "count": 1
+      },
+      {
+        "anchor": "grace period on a credit card",
+        "count": 1
+      },
+      {
+        "anchor": "what credit utilization gets reported",
+        "count": 1
+      },
+      {
+        "anchor": "Credit card trackerStatement dates, due dates, utilization and reward caps, with",
+        "count": 1
+      },
+      {
+        "anchor": "Which card to useRank the cards you hold for a purchase, using rates read from i",
+        "count": 1
+      },
+      {
+        "anchor": "Bank bonus trackerTrack a checking or savings sign-up bonus against the bank's o",
+        "count": 1
+      },
+      {
+        "anchor": "Credit card calculatorsPayoff time, daily interest, the minimum payment, and whe",
+        "count": 1
+      }
+    ]
+  },
+  "pageEvidenceId": "E001",
+  "pageError": "",
+  "aiReadiness": {
+    "crawlers": [
+      {
+        "token": "GPTBot",
+        "operator": "OpenAI",
+        "purpose": "model training",
+        "access": "allowed",
+        "explicit": true,
+        "rule": "own group: no disallow"
+      },
+      {
+        "token": "OAI-SearchBot",
+        "operator": "OpenAI",
+        "purpose": "ChatGPT search index",
+        "access": "allowed",
+        "explicit": true,
+        "rule": "own group: no disallow"
+      },
+      {
+        "token": "ChatGPT-User",
+        "operator": "OpenAI",
+        "purpose": "user-initiated fetches",
+        "access": "allowed",
+        "explicit": true,
+        "rule": "own group: no disallow"
+      },
+      {
+        "token": "ClaudeBot",
+        "operator": "Anthropic",
+        "purpose": "model training",
+        "access": "allowed",
+        "explicit": true,
+        "rule": "own group: no disallow"
+      },
+      {
+        "token": "Claude-SearchBot",
+        "operator": "Anthropic",
+        "purpose": "search index",
+        "access": "allowed",
+        "explicit": true,
+        "rule": "own group: no disallow"
+      },
+      {
+        "token": "PerplexityBot",
+        "operator": "Perplexity",
+        "purpose": "search index",
+        "access": "allowed",
+        "explicit": true,
+        "rule": "own group: no disallow"
+      },
+      {
+        "token": "Google-Extended",
+        "operator": "Google",
+        "purpose": "Gemini training and grounding (not Search)",
+        "access": "allowed",
+        "explicit": true,
+        "rule": "own group: no disallow"
+      },
+      {
+        "token": "Applebot-Extended",
+        "operator": "Apple",
+        "purpose": "Apple Intelligence training",
+        "access": "allowed",
+        "explicit": true,
+        "rule": "own group: no disallow"
+      },
+      {
+        "token": "CCBot",
+        "operator": "Common Crawl",
+        "purpose": "open crawl used for training",
+        "access": "allowed",
+        "explicit": true,
+        "rule": "own group: no disallow"
+      }
+    ],
+    "llmsTxt": {
+      "url": "https://getcardlab.app/llms.txt",
+      "status": 200,
+      "contentType": "text/plain",
+      "bytes": 52816,
+      "title": "CardLab",
+      "summary": "A private credit card and rewards tracker with a verified card catalog: track statements, due dates and reward caps, import a statement on the phone, and see which card to use - with no bank login.",
+      "sections": [
+        "Key facts",
+        "Answers to the questions this product exists for",
+        "Which card, by category",
+        "Coverage and sourcing",
+        "Calculators (free, no sign-up)",
+        "Guide",
+        "Blog",
+        "About",
+        "Optional"
+      ],
+      "errors": [],
+      "warnings": [],
+      "valid": true,
+      "present": true,
+      "linkCount": 129
+    },
+    "llmsFullTxt": {
+      "url": "https://getcardlab.app/llms-full.txt",
+      "status": 200,
+      "contentType": "text/plain",
+      "bytes": 586524,
+      "title": "CardLab - full text",
+      "summary": "",
+      "sections": [],
+      "errors": [],
+      "warnings": [],
+      "valid": true,
+      "present": true,
+      "linkCount": 0
+    },
+    "llmsEvidenceIds": [
+      "E005",
+      "E006"
+    ],
+    "crawlerEvidenceId": "E007",
+    "perf": [
+      {
+        "source": "psi",
+        "url": "https://getcardlab.app/",
+        "strategy": "mobile",
+        "ok": false,
+        "skipped": "PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key",
+        "scores": {},
+        "lab": {},
+        "field": {},
+        "fetchedAt": "2026-10-15T04:46:55.833Z",
+        "fromCache": false,
+        "evidenceId": "E008"
+      }
+    ]
+  },
+  "unknowns": [
+    "PageSpeed Insights skipped: PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key",
+    "Rendered (JavaScript) DOM not checked; checks use raw HTML"
+  ]
+}
