@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "1",
+  "tool": "seo-rea",
+  "toolVersion": "0.4.0",
+  "kind": "diff",
+  "sourceKind": "crawl",
+  "domain": "getcardlab.app",
+  "old": {
+    "runId": "20261015T221929Z",
+    "path": "runs/crawl-cardlab-1/report/crawl.json",
+    "at": "2026-10-15T22:20:41.137Z"
+  },
+  "new": {
+    "runId": "20261015T222631Z",
+    "path": "runs/crawl-cardlab-2/report/crawl.json",
+    "at": "2026-10-15T22:27:35.863Z"
+  },
+  "counts": {
+    "fixed": 0,
+    "new": 0,
+    "regressed": 0,
+    "improved": 0,
+    "unchanged": 3,
+    "notRechecked": 0
+  },
+  "metrics": [
+    {
+      "name": "pages crawled",
+      "old": 116,
+      "new": 116,
+      "delta": 0
+    },
+    {
+      "name": "indexable pages",
+      "old": 114,
+      "new": 114,
+      "delta": 0
+    },
+    {
+      "name": "issues (high)",
+      "old": 0,
+      "new": 0,
+      "delta": 0
+    },
+    {
+      "name": "issues (medium)",
+      "old": 1,
+      "new": 1,
+      "delta": 0
+    },
+    {
+      "name": "issues (low)",
+      "old": 2,
+      "new": 2,
+      "delta": 0
+    },
+    {
+      "name": "blocked by robots.txt",
+      "old": 0,
+      "new": 0,
+      "delta": 0
+    },
+    {
+      "name": "sitemap URLs",
+      "old": 114,
+      "new": 114,
+      "delta": 0
+    }
+  ],
+  "ruleDeltas": [],
+  "items": [
+    {
+      "status": "unchanged",
+      "id": "CRAWL-THIN-CONTENT:711e2b4d",
+      "rule": "CRAWL-THIN-CONTENT",
+      "severity": "medium",
+      "previousSeverity": "medium",
+      "title": "Fewer than 200 words in the raw HTML",
+      "url": "https://getcardlab.app/app/",
+      "detail": "still present"
+    },
+    {
+      "status": "unchanged",
+      "id": "CRAWL-NOINDEX:6b43a0b5",
+      "rule": "CRAWL-NOINDEX",
+      "severity": "low",
+      "previousSeverity": "low",
+      "title": "Page is noindex",
+      "url": "https://getcardlab.app/blog/topic/credit-unions",
+      "detail": "still present"
+    },
+    {
+      "status": "unchanged",
+      "id": "CRAWL-NOINDEX:c78089fc",
+      "rule": "CRAWL-NOINDEX",
+      "severity": "low",
+      "previousSeverity": "low",
+      "title": "Page is noindex",
+      "url": "https://getcardlab.app/blog/topic/taxes",
+      "detail": "still present"
+    }
+  ],
+  "notes": []
+}
