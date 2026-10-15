@@ -2,6 +2,8 @@
 
 import { mkdir, rm, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
+import { buildAuditDossier } from "../core/dossier-build.js";
+import type { Dossier } from "../core/dossier.js";
 import { EvidenceStore } from "../core/evidence.js";
 import { buildAuditClaims, buildAuditPlaybook, renderAudit } from "../core/report/audit.js";
 import { renderLedgerTable } from "../core/report/sections.js";
@@ -11,6 +13,7 @@ import { normalizeDomain, runIdFrom } from "../core/util.js";
 import { VERSION } from "../version.js";
 import { pageAdapter, summarizePage } from "../adapters/page.js";
 import { collectAiReadiness, collectSite } from "./collect.js";
+import { writeDossier } from "./reports.js";
 import { createRuntime } from "./runtime.js";
 
 export interface AuditOptions {
@@ -36,7 +39,7 @@ export function auditUrl(target: string): string {
   return `https://${normalizeDomain(t)}/`;
 }
 
-export async function runAudit(opts: AuditOptions): Promise<{ run: AuditRun; reportPath: string }> {
+export async function runAudit(opts: AuditOptions): Promise<{ run: AuditRun; reportPath: string; dossier: Dossier }> {
   const now = opts.now ?? (() => new Date());
   const url = auditUrl(opts.target);
   const domain = normalizeDomain(url);
@@ -87,14 +90,15 @@ export async function runAudit(opts: AuditOptions): Promise<{ run: AuditRun; rep
       unknowns: [...ai.unknowns, "Rendered (JavaScript) DOM not checked; checks use raw HTML"],
     };
     const claims = buildAuditClaims(run);
+    const dossier = await writeDossier(out, buildAuditDossier(run, claims, now()));
     await writeFile(join(out, "data", "audit.json"), JSON.stringify(run, null, 2));
     await writeFile(
       join(out, "report", "ledger.md"),
       [`# Finding ledger: ${url}`, "", ...renderLedgerTable(claims), ""].join("\n"),
     );
     const reportPath = join(out, "report", "audit.md");
-    await writeFile(reportPath, renderAudit(run, claims, buildAuditPlaybook(run)));
-    return { run, reportPath };
+    await writeFile(reportPath, renderAudit(run, claims, buildAuditPlaybook(run), dossier.topActions));
+    return { run, reportPath, dossier };
   } finally {
     await rt.close();
   }
