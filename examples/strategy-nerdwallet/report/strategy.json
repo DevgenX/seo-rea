@@ -26,6 +26,7 @@
   "actionsFor": "nerdwallet.com",
   "topActions": [
     {
+      "id": "STRATEGY-STEP:934a61d4",
       "rank": 1,
       "title": "Build a page that targets \"capital one business\" (closest page now: /business/credit-cards/best/capital-one)",
       "why": "nerdwallet.com is not in the 10 results Bing (headless Chromium) returned; #1 is capitalone.com/small-business/bank/. The phrase appears in 7 of the site's titles/H1s/slugs.",
@@ -38,6 +39,7 @@
       "owner": "content"
     },
     {
+      "id": "STRATEGY-STEP:7632fd74",
       "rank": 2,
       "title": "Build a page that targets \"credit score\" (closest page now: /free-credit-score)",
       "why": "nerdwallet.com is not in the 10 results Bing (headless Chromium) returned; #1 is creditkarma.com/. The phrase appears in 15 of the site's titles/H1s/slugs.",
@@ -50,6 +52,7 @@
       "owner": "content"
     },
     {
+      "id": "STRATEGY-STEP:fe104284",
       "rank": 3,
       "title": "Make /financial-advisors the target page for \"financial advisors\": exact phrase in its title and H1, linked from the 41 /financial-advisors URLs",
       "why": "nerdwallet.com is not in the 10 results Bing (headless Chromium) returned; #1 is yelp.com/search. The phrase appears in 42 of the site's titles/H1s/slugs.",
@@ -61,6 +64,7 @@
       "owner": "content"
     },
     {
+      "id": "STRATEGY-STEP:46eb696a",
       "rank": 4,
       "title": "Build a page that targets \"credit report\" (closest page now: /finance/learn/how-to-use-annualcreditreport-com)",
       "why": "nerdwallet.com is not in the 10 results Bing (headless Chromium) returned; #1 is annualcreditreport.com/index.action. The phrase appears in 9 of the site's titles/H1s/slugs.",
@@ -73,6 +77,7 @@
       "owner": "content"
     },
     {
+      "id": "STRATEGY-STEP:2696a0cc",
       "rank": 5,
       "title": "Build a page that targets \"credit union\"",
       "why": "nerdwallet.com is not in the 10 results Bing (headless Chromium) returned; #1 is lafcu.org/. The phrase appears in 34 of the site's titles/H1s/slugs.",
@@ -84,6 +89,7 @@
       "owner": "content"
     },
     {
+      "id": "STRATEGY-STEP:8e64646f",
       "rank": 6,
       "title": "Review whether blocking Google-Extended is intended",
       "why": "Blocks AI training crawlers: Google-Extended. Search-time bots are allowed; training bots are not (a policy choice).",
@@ -100,6 +106,7 @@
       "owner": "seo"
     },
     {
+      "id": "STRATEGY-STEP:b72fee5e",
       "rank": 7,
       "title": "Publish /llms.txt: H1 name, > summary, ## sections linking key pages",
       "why": "No /llms.txt. HTTP 404",
@@ -111,6 +118,7 @@
       "owner": "dev"
     },
     {
+      "id": "STRATEGY-STEP:83aaf949",
       "rank": 8,
       "title": "Cut inline payload below 200 KB (now 1160 KB median)",
       "why": "Heavy HTML: median 1160 KB per sampled page. Raw HTML only (scripts and images not counted).",
