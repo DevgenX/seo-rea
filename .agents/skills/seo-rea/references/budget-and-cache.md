@@ -4,7 +4,8 @@
 
 - Location: `--cache-dir` (default `.seo-rea/cache`), one JSON file per
   request at `<yyyy-mm>/<sha1(source + "\n" + query)>.json`.
-- TTL: SERPs 7 days, pages/robots/sitemaps 30 days, paid API results 30 days.
+- TTL: SERPs 7 days, pages/robots/sitemaps/llms.txt 30 days, PageSpeed
+  Insights 1 day, paid API results 30 days. Browser SERPs are not cached.
   Lookups check the current and previous month folder so a TTL can span a
   month end.
 - Only successful responses are cached. SERP responses that are blocked
@@ -37,9 +38,9 @@
 `--ledger` (default `.seo-rea/ledger.csv`):
 
 ```
-date,run_id,endpoint,query,usd
-"2026-10-14T03:00:00.000Z","20261014T030000Z","serp/google/organic/live/regular","{""keyword"":""...""}",0.0020
+date,run_id,source,query,usd
+"2026-10-14T03:00:00.000Z","20261014T030000Z","dataforseo:serp/google/organic/live/regular","{""keyword"":""...""}",0.0020
 ```
 
-The teardown reports spend for the run in its header and in section 8. Keep
+The teardown reports spend for the run in its header and in section 10. Keep
 the ledger out of version control; it records your account activity.
