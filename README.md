@@ -1,102 +1,218 @@
 # seo-rea
 
-Reverse engineer why pages rank. `seo-rea` is an agent skill plus a small CLI
-that builds an evidence-first SEO teardown for a keyword and a target domain:
-who ranks, what their pages have in common, which phrases the target is
-missing, where to check competitor ads, and which pages AI answers cite.
+**Reverse engineer why pages rank, and check if a site is ready for AI search. Evidence first, free sources first.**
 
-Free sources come first. Paid data (DataForSEO) is optional, capped and off by
-default.
+[![npm version](https://img.shields.io/npm/v/seo-rea.svg)](https://www.npmjs.com/package/seo-rea)
+[![CI](https://github.com/DevgenX/seo-rea/actions/workflows/ci.yml/badge.svg)](https://github.com/DevgenX/seo-rea/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![MCP server](https://img.shields.io/badge/MCP-stdio%20server-6f42c1.svg)](docs/mcp.md)
+[![Node](https://img.shields.io/badge/node-%3E%3D22-339933.svg)](.nvmrc)
 
-## Requirements
+`seo-rea` is a CLI, an MCP server and an agent skill. Give it a keyword and
+your domain. It finds who ranks, reads their pages, validates their structured
+data, checks whether AI crawlers and `llms.txt` let AI search engines read your
+site, computes the keyword gap, looks up competitor ads, and writes a report
+where every claim points to a saved piece of evidence (`E001`, `E002`, ...).
 
-Node 22 or later. No runtime dependencies.
+Paid data is optional and capped. At the default budget of 0 USD no paid call
+is ever made.
 
-```sh
-git clone <this repo> && cd seo-rea
-npm link            # optional: puts `seo-rea` on your PATH
-npm test            # offline unit tests
+![seo-rea teardown run](docs/assets/teardown-run.svg)
+
+## Sample output
+
+An excerpt of a real run against getcardlab.app
+([full report](examples/cardlab-teardown/report/teardown.md), [evidence index](examples/cardlab-teardown/evidence/index.md)):
+
+```markdown
+## 1. Summary: why the winners win
+
+- _(inferred)_ Search intent is comparison/roundup: 5/8 titles use "best", "top", a year or
+  review wording. Results for this query reward roundup and comparison content, not product
+  homepages. [E001, E003, E007, E010, E011, E012, E013]
+- getcardlab.app does not appear in the observed results (top 8 organic results from
+  Bing (headless Chromium) (en-US, logged out) on 2026-10-15). [E001, E003]
+- AI readiness: no AI crawler blocked; llms.txt valid. [E021, E019, E020]
+
+## 2. SERP map (what each engine did)
+
+| Path            | Engine                     | Status                                          | Organic | Evidence |
+| --------------- | -------------------------- | ----------------------------------------------- | ------- | -------- |
+| serp-playwright | Google (headless Chromium) | not used: Google captcha (unusual traffic page) | 0       | E001     |
+| serp-playwright | Bing (headless Chromium)   | used (HTTP 200, relevance 90%)                  | 10      | E003     |
+
+## 4. Schema validation
+
+| Page     | Type                | Result     | Errors                                |
+| -------- | ------------------- | ---------- | ------------------------------------- |
+| target / | SoftwareApplication | **errors** | needs one of: aggregateRating, review |
+
+## 8. Ads
+
+| Advertiser     | Platform                       | Status   | Visible count |
+| -------------- | ------------------------------ | -------- | ------------- |
+| joinkudos.com  | Google Ads Transparency Center | captured | 46            |
+| maxrewards.com | Meta Ad Library                | captured | 61            |
 ```
 
-## Usage
+## Quickstart
 
 ```sh
-seo-rea teardown --keyword "credit card rewards app" --target getcardlab.app \
-  --out ./examples/cardlab-teardown --budget-usd 0
+npx seo-rea teardown --keyword "credit card rewards app" --target getcardlab.app --out ./cardlab
+npx seo-rea audit getcardlab.app          # single-site AEO checks
+npx seo-rea doctor                        # which optional adapters can run here
 ```
 
-What it does:
-
-1. Fetches the SERP from DuckDuckGo HTML, Bing HTML and Google, in that order,
-   with an honest user agent and at most one request per host every 1.5 s.
-   Blocked pages (captcha, JavaScript wall) and bot-degraded results are
-   detected, recorded and not used.
-2. Fetches the top ranking pages (robots.txt respected) and parses title, meta
-   description, H1-H3, word count, JSON-LD types, canonical, hreflang, internal
-   links and anchors.
-3. Reads the target's robots.txt and sitemap, and crawls up to 10 pages.
-4. Computes a keyword gap: phrases used by 2+ ranking pages and absent from the
-   target.
-5. Records Google Ads Transparency, Meta Ad Library and LinkedIn Ad Library
-   lookups as manual-check evidence.
-6. Writes `evidence/` (E001.. + `index.md`), `report/questions.md`,
-   `report/ledger.md` and `report/teardown.md`.
-
-If no free SERP is usable, search in a browser and feed it in:
+Node 22 or later. The headless-browser SERP path and ad-library screenshots
+need the optional `playwright-core` package next to seo-rea, plus a Chromium
+download (once, into your user cache):
 
 ```sh
-seo-rea teardown ... --serp-html ~/Downloads/google-serp.html
-seo-rea teardown ... --serp-urls "https://a.com/x,https://b.com/y"
+npx playwright install chromium
+npx -p seo-rea -p playwright-core seo-rea teardown --keyword "..." --target example.com --out ./run
+# or in a project: npm i seo-rea playwright-core
 ```
 
-Log AI-answer citations (no network calls; the report updates):
+Without it, seo-rea falls back to plain HTML SERPs, then to URLs you paste
+(`--serp-urls`) or a results page you saved from your browser (`--serp-html`).
+
+## Use it from your agent (MCP)
+
+**Claude Code**
 
 ```sh
-seo-rea cite --out ./examples/cardlab-teardown --engine chatgpt \
-  --prompt "best credit card rewards app" --urls "https://a.com/x,https://b.com/y"
+claude mcp add seo-rea -- npx -y seo-rea mcp
 ```
 
-Run `seo-rea help` for all options.
+**Cursor** (`.cursor/mcp.json`)
 
-## Paid data (optional)
+```json
+{
+  "mcpServers": {
+    "seo-rea": { "command": "npx", "args": ["-y", "seo-rea", "mcp"] }
+  }
+}
+```
 
-Set `DATAFORSEO_LOGIN` and `DATAFORSEO_PASSWORD` in your environment and pass
-`--budget-usd` above 0. Every call is cached and logged to
-`.seo-rea/ledger.csv`; calls that would exceed the run budget or
-`--monthly-cap-usd` are refused before any money is spent. At budget 0 no paid
-call is made. Never commit credentials; `.env`, the cache and the ledger are
-git-ignored.
+**Codex** (`~/.codex/config.toml`)
 
-## Agent skill
+```toml
+[mcp_servers.seo-rea]
+command = "npx"
+args = ["-y", "seo-rea", "mcp"]
+```
 
-The skill lives in [.agents/skills/seo-rea/SKILL.md](.agents/skills/seo-rea/SKILL.md)
-with references for [sources](.agents/skills/seo-rea/references/sources.md),
-the [evidence workflow](.agents/skills/seo-rea/references/evidence-workflow.md)
-and [budget and cache](.agents/skills/seo-rea/references/budget-and-cache.md).
-Copy or symlink the folder into your agent's skills directory.
+**Grok Bot**: add a custom MCP server in its settings (connectors) with
+transport stdio, command `npx` and arguments `-y seo-rea mcp`. Menu names vary
+between versions.
 
-## Limits
+More clients, environment variables and troubleshooting:
+[docs/client-configuration.md](docs/client-configuration.md). Tool reference:
+[docs/mcp.md](docs/mcp.md).
 
-- Pages are parsed without running JavaScript.
-- Free SERP engines rate limit or degrade automated requests; results vary by
-  IP, time and locale. The SERP map states what was actually used.
-- No search volume, backlinks or AI Overview data on the free tier.
-- The tool writes drafts only. It never sends outreach, buys ads or publishes
-  changes.
+### Install the skill
 
-## Example
+The skill tells an agent how to run a teardown and read the evidence. Copy it
+into your agent's skills folder:
 
-[examples/cardlab-teardown](examples/cardlab-teardown/report/teardown.md) is a
-real run. Raw third-party HTML is not committed; parsed evidence and the
-reports are.
+```sh
+git clone https://github.com/DevgenX/seo-rea
+cp -r seo-rea/.agents/skills/seo-rea ~/.claude/skills/        # Claude Code
+cp -r seo-rea/.agents/skills/seo-rea ./.agents/skills/         # project-level agents
+```
 
-## Credits
+The npm package ships the same folder under `.agents/skills/seo-rea`.
 
-The structure (an agent skill with references, plus a CLI that produces
-evidence with IDs, a finding ledger and stated search boundaries) is modelled
-on [morluto/rea](https://github.com/morluto/rea), the reverse-engineer-anything
-skill and toolkit, released under the MIT License. seo-rea reuses the workflow
-pattern only, not its code.
+## Features
+
+| Area                | What you get                                                                                                                               | Source                                                     |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| SERP                | Ranking list with what every engine did (used, captcha, consent wall, degraded)                                                            | Headless Chromium -> plain HTML -> your URLs or saved page |
+| Competitor cards    | Title, meta, H1-H3, word count, canonical, internal links, top anchors                                                                     | Raw HTML, robots.txt respected                             |
+| Schema validation   | Required and recommended properties for Article, FAQPage, Product, SoftwareApplication, Organization, BreadcrumbList, HowTo, LocalBusiness | JSON-LD                                                    |
+| AI-search readiness | Access for GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, PerplexityBot, Google-Extended, Applebot-Extended, CCBot      | robots.txt                                                 |
+| llms.txt            | `/llms.txt` and `/llms-full.txt` checked against llmstxt.org                                                                               | Site files                                                 |
+| Page speed          | Performance, SEO, accessibility scores; LCP, CLS, TBT; CrUX field data                                                                     | PageSpeed Insights, optional local Lighthouse              |
+| Keyword gap         | Phrases two or more ranking pages use that your site does not                                                                              | n-grams + TF-IDF                                           |
+| Ads                 | Google Ads Transparency, Meta and LinkedIn ad-library lookups, optional screenshot and visible count                                       | Ad libraries                                               |
+| AI citations        | Table of which domains AI answers cite for your prompts                                                                                    | Logged with `cite`                                         |
+| Finding ledger      | Every claim with evidence IDs, observed vs inferred, confidence, search boundary, unknowns                                                 | All of the above                                           |
+
+## Free vs paid data
+
+| Data                       | Free (default)                         | Paid (optional)                              | Cost                      |
+| -------------------------- | -------------------------------------- | -------------------------------------------- | ------------------------- |
+| SERP                       | Headless browser, HTML, your URLs      | DataForSEO SERP, only if no free SERP worked | about 0.002 USD per query |
+| Ranked keywords and volume | Not available                          | DataForSEO Labs ranked keywords              | about 0.02 USD per domain |
+| Page speed                 | PageSpeed Insights (free key optional) | -                                            | 0                         |
+| Everything else            | Built in                               | -                                            | 0                         |
+
+Paid calls need `DATAFORSEO_LOGIN` and `DATAFORSEO_PASSWORD` in the
+environment and `--budget-usd` above 0. Each call is checked against the run
+budget and optional monthly cap before it is made, cached, and logged to
+`.seo-rea/ledger.csv`.
+
+## How it works
+
+1. **SERP.** Your URL list or saved page if given; then headless Chromium per
+   engine (at least 3 s between requests to one host, real desktop user agent,
+   cookie banners rejected, captchas detected and recorded); then plain HTML.
+2. **Ranking pages.** Each is fetched once (robots.txt respected) and parsed:
+   on-page facts and JSON-LD validation.
+3. **Your site.** robots.txt, sitemaps, homepage and up to `--crawl` pages; AI
+   crawler access; llms.txt; PageSpeed Insights.
+4. **Keyword gap.** Phrases used by two or more ranking pages and absent from
+   every crawled page of yours.
+5. **Ads.** Lookup URLs for your brand and up to three competitors (product
+   sites first), with screenshots when `--adlib-capture` is set.
+6. **Report.** `evidence/` (E001.. + index), `report/teardown.md`,
+   `report/ledger.md`, `report/questions.md`, `data/run.json`.
+
+More: [docs/cli.md](docs/cli.md), [docs/sources.md](docs/sources.md).
+
+## Prior art and credits
+
+- [morluto/rea](https://github.com/morluto/rea) (MIT): the evidence-first
+  workflow, project structure, CLI + MCP + skill layout and engineering bar
+  this project follows. No code was copied.
+- [Rachit8484/geoseo-mcp](https://github.com/Rachit8484/geoseo-mcp) (MIT):
+  ideas for LLM-citation logging and llms.txt tools.
+- [maxaeo/maxaeo-ai-visibility-mcp](https://github.com/maxaeo/maxaeo-ai-visibility-mcp)
+  and [maxaeo/llms-txt-validator](https://github.com/maxaeo/llms-txt-validator)
+  (MIT): the AI-crawler and llms.txt check list.
+- [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) (MIT):
+  how to split SEO work into skill steps.
+- [GoogleChrome/lighthouse](https://github.com/GoogleChrome/lighthouse)
+  (Apache-2.0, optional), [cheerio](https://github.com/cheeriojs/cheerio) (MIT),
+  [playwright](https://github.com/microsoft/playwright) (Apache-2.0, optional).
+
+All seo-rea code is original. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## FAQ
+
+**Does it scrape Google?** It tries once per run in a headless browser, at a
+polite pace, and records the result. Google usually shows a captcha to
+automated browsers; seo-rea notes that and moves on to Bing or DuckDuckGo. For
+Google rankings, search in your own browser and pass `--serp-urls` or
+`--serp-html`.
+
+**Will it spend money?** Not by default. The budget is 0 USD, and every paid
+call is refused at 0 before any request is made.
+
+**Why do some competitor pages say "Not analysed"?** Some sites return HTTP 403
+to non-browser clients or disallow crawling in robots.txt. The report records
+the reason.
+
+**Is "no AI crawler blocked" the whole story?** No. It reads robots.txt only.
+A CDN or firewall can still block bots; that is listed as an unknown.
+
+**Does it publish anything?** No. It writes local files. It never sends
+outreach, buys ads or changes a site.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) and [AGENTS.md](AGENTS.md). Security
+reports: [SECURITY.md](SECURITY.md).
 
 ## License
 
