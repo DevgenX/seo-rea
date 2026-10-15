@@ -24,7 +24,7 @@ export async function recordCitation(input: {
   let rerendered = false;
   try {
     const run = JSON.parse(await readFile(join(out, "data", "run.json"), "utf8")) as TeardownRun;
-    await writeTeardownReports(out, run, ev);
+    await writeTeardownReports(out, run, ev, now);
     rerendered = true;
   } catch (err) {
     if ((err as NodeJS.ErrnoException).code !== "ENOENT") throw err;
