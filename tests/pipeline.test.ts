@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
+import { validateDossier } from "../src/core/dossier.js";
 import { auditUrl, runAudit } from "../src/services/audit.js";
 import { recordCitation } from "../src/services/cite.js";
 import { runTeardown } from "../src/services/teardown.js";
@@ -120,6 +121,22 @@ describe("teardown (offline)", () => {
     expect(index[0]?.id).toBe("E001");
     expect(await readFile(join(opts.out, "report", "questions.md"), "utf8")).toMatch(/AI search/);
     expect(await readFile(join(opts.out, "report", "ledger.md"), "utf8")).toMatch(/\| C01 \|/);
+
+    const dossier = validateDossier(JSON.parse(await readFile(join(opts.out, "report", "dossier.json"), "utf8")));
+    expect(dossier).toMatchObject({
+      kind: "teardown",
+      runId: run.runId,
+      inputs: { keyword: "credit card rewards app" },
+    });
+    expect(dossier.claims).toHaveLength(claims.length);
+    expect(dossier.competitors[1]).toMatchObject({ analysed: false, error: "disallowed by robots.txt" });
+    expect(dossier.target.aiReadiness.crawlers.find((c) => c.token === "GPTBot")?.access).toBe("blocked");
+    expect(dossier.topActions.length).toBeGreaterThan(0);
+    expect(dossier.topActions.some((a) => /Fix JSON-LD errors/.test(a.title))).toBe(true);
+    const ids = new Set(index.map((e) => e.id));
+    for (const a of dossier.topActions) for (const id of a.evidenceIds) expect(ids.has(id)).toBe(true);
+    expect(td.indexOf("## Top 10 actions")).toBeGreaterThan(0);
+    expect(td.indexOf("## Top 10 actions")).toBeLessThan(td.indexOf("## 1. Summary"));
   });
 
   it("refuses to overwrite without --force and uses operator URLs first", async () => {
@@ -153,6 +170,8 @@ describe("teardown (offline)", () => {
       urls: "https://getcardlab.app/, https://www.alpha.com/x",
     });
     expect(r.rerendered).toBe(true);
+    const d = validateDossier(JSON.parse(await readFile(join(opts.out, "report", "dossier.json"), "utf8")));
+    expect(d.citations).toMatchObject([{ engine: "chatgpt", targetCited: true, evidenceId: r.item.id }]);
     expect(r.citation.domains).toEqual(["getcardlab.app", "alpha.com"]);
     const td = await readFile(join(opts.out, "report", "teardown.md"), "utf8");
     expect(td).toMatch(
@@ -197,6 +216,15 @@ describe("audit (offline)", () => {
     expect(run.unknowns).toContain("PageSpeed Insights not run (--no-psi)");
     const md = await readFile(reportPath, "utf8");
     expect(md).toContain("# AEO audit: https://getcardlab.app/");
+    expect(md.indexOf("## Top 10 actions")).toBeLessThan(md.indexOf("## 1. Page"));
+    const dossier = validateDossier(JSON.parse(await readFile(join(dir, "audit", "report", "dossier.json"), "utf8")));
+    expect(dossier).toMatchObject({
+      kind: "audit",
+      inputs: { keyword: null },
+      competitors: [],
+      serp: { collected: false },
+    });
+    expect(dossier.topActions.map((a) => a.title)).toContain("Publish /sitemap.xml and reference it in robots.txt");
     expect(md).toMatch(/Organization \| valid/);
     expect(md).toMatch(/llms-full.txt: absent/);
     const again = await runAudit({
