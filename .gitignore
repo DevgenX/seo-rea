@@ -1,0 +1,16 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Cache, paid-call ledger and local runs
+.seo-rea/
+cache/
+out/
+output/
+
+# Raw third-party HTML in example runs (parsed evidence is kept)
+examples/**/evidence/*.html
+
+node_modules/
+.DS_Store
