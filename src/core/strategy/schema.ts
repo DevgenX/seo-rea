@@ -2,6 +2,7 @@
 // The zod schema is the source of truth; docs/strategy-schema.json is
 // generated from it (`npm run strategy-schema`).
 
+import { SeoReaError } from "../errors.js";
 import { z } from "zod";
 import { TopActionSchema } from "../dossier.js";
 import { TEMPLATE_TYPES } from "./clusters.js";
@@ -309,7 +310,10 @@ export function validateStrategy(value: unknown): Strategy {
   const r = StrategySchema.safeParse(value);
   if (!r.success) {
     const problems = r.error.issues.map((i) => `${i.path.join(".") || "(root)"}: ${i.message}`);
-    throw new Error(`strategy does not match schema v${STRATEGY_SCHEMA_VERSION}: ${problems.slice(0, 10).join("; ")}`);
+    throw new SeoReaError(
+      "SCHEMA_INVALID",
+      `strategy does not match schema v${STRATEGY_SCHEMA_VERSION}: ${problems.slice(0, 10).join("; ")}`,
+    );
   }
   return r.data;
 }

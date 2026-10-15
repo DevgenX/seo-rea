@@ -1,5 +1,6 @@
 // Builds report/strategy.json content from the strategy run data. Pure.
 
+import { issueId } from "../issues.js";
 import type { TopAction } from "../dossier.js";
 import { actionScore } from "../report/actions.js";
 import { assignRoles, clusterGaps, coRankers, keywordOverlap, pillarRows } from "./compare.js";
@@ -120,15 +121,22 @@ const ownerOf = (s: string): TopAction["owner"] =>
   OWNER_DEV.test(s) ? "dev" : OWNER_CONTENT.test(s) ? "content" : "seo";
 
 function topActionsFrom(steps: Array<PlaybookStep & { owner?: TopAction["owner"] }>): TopAction[] {
-  return sortSteps(steps, 10).map((s, i) => ({
-    rank: i + 1,
-    title: s.step,
-    why: s.why,
-    evidenceIds: s.evidenceIds,
-    effort: s.effort,
-    impact: s.impact,
-    owner: (s as { owner?: TopAction["owner"] }).owner ?? ownerOf(s.step),
-  }));
+  const seen = new Map<string, number>();
+  return sortSteps(steps, 10).map((s, i) => {
+    const key = s.from || s.step;
+    const n = seen.get(key) ?? 0;
+    seen.set(key, n + 1);
+    return {
+      id: issueId("STRATEGY-STEP", n ? `${key}#${n}` : key),
+      rank: i + 1,
+      title: s.step,
+      why: s.why,
+      evidenceIds: s.evidenceIds,
+      effort: s.effort,
+      impact: s.impact,
+      owner: (s as { owner?: TopAction["owner"] }).owner ?? ownerOf(s.step),
+    };
+  });
 }
 
 const fixSteps = (w: SiteWork): Array<PlaybookStep & { owner: TopAction["owner"] }> =>

@@ -1,5 +1,6 @@
 // Derives the ranked "Top 10 actions" from a dossier and renders the table.
 
+import { issueId } from "../issues.js";
 import type { Dossier, TopAction } from "../dossier.js";
 import { cell, domainOf, ids, isDomainOrSub, median } from "../util.js";
 import { SEARCH_CRAWLERS, schemaFrequency, titleHasKeyword } from "./claims.js";
@@ -17,6 +18,7 @@ export function actionScore(a: Pick<TopAction, "impact" | "effort">): number {
   return IMPACT[a.impact] * 2 - EFFORT[a.effort];
 }
 
+const code = (s: string): string => `\u0060${s}\u0060`;
 const uniq = (list: string[]): string[] => [...new Set(list.filter(Boolean))];
 
 function siteActions(d: DossierFindings, add: (c: Candidate) => void): void {
@@ -25,6 +27,7 @@ function siteActions(d: DossierFindings, add: (c: Candidate) => void): void {
   const home = t.pages[0];
   if (!t.fetched)
     add({
+      id: "TECH-UNREACHABLE",
       title: `Make ${t.domain} reachable to crawlers`,
       why: `The page could not be fetched: ${t.error || "unknown error"}.`,
       evidenceIds: tIds,
@@ -34,6 +37,7 @@ function siteActions(d: DossierFindings, add: (c: Candidate) => void): void {
     });
   if (t.robots.blocksRoot)
     add({
+      id: "TECH-ROBOTS-BLOCKS-ALL",
       title: "Remove the site-wide Disallow: / from robots.txt",
       why: "robots.txt blocks every crawler from the whole site.",
       evidenceIds: [t.robots.evidenceId],
@@ -45,6 +49,7 @@ function siteActions(d: DossierFindings, add: (c: Candidate) => void): void {
   const blocked = ai.crawlers.filter((c) => c.access === "blocked" && SEARCH_CRAWLERS.has(c.token));
   if (blocked.length)
     add({
+      id: "AEO-AI-CRAWLER-BLOCKED",
       title: `Allow ${blocked.map((c) => c.token).join(", ")} in robots.txt`,
       why: "These bots fetch pages for AI search answers; blocking them keeps the site out of those answers.",
       evidenceIds: [t.robots.evidenceId, ...ai.evidenceIds],
@@ -54,6 +59,7 @@ function siteActions(d: DossierFindings, add: (c: Candidate) => void): void {
     });
   if (home && home.wordCount < 150)
     add({
+      id: "TECH-THIN-RAW-HTML",
       title: "Serve the main copy in the initial HTML (server-side render or prerender)",
       why: `Only ${home.wordCount} words in raw HTML; most AI crawlers do not run JavaScript.`,
       evidenceIds: tIds,
@@ -64,6 +70,7 @@ function siteActions(d: DossierFindings, add: (c: Candidate) => void): void {
   const sv = t.schemaValidation;
   if (t.fetched && !sv.blocks)
     add({
+      id: "SCHEMA-MISSING",
       title: "Add JSON-LD: Organization plus the type that matches the page (SoftwareApplication, Article, Product)",
       why: "No structured data was found on the target.",
       evidenceIds: sv.evidenceIds,
@@ -74,6 +81,7 @@ function siteActions(d: DossierFindings, add: (c: Candidate) => void): void {
   const bad = sv.checks.filter((c) => !c.valid);
   if (bad.length || sv.parseErrors.length)
     add({
+      id: "SCHEMA-INVALID",
       title: `Fix JSON-LD errors: ${uniq([
         ...bad.map((c) => `${c.type}: ${c.errors[0] ?? "invalid"}`),
         ...sv.parseErrors,
@@ -88,6 +96,7 @@ function siteActions(d: DossierFindings, add: (c: Candidate) => void): void {
     });
   if (!ai.llmsTxt.present)
     add({
+      id: "AEO-LLMS-TXT-MISSING",
       title: "Publish /llms.txt (title, one-line summary, sections of key page links)",
       why: "No llms.txt was found; it gives AI tools a short map of the site (llmstxt.org).",
       evidenceIds: ai.evidenceIds.slice(0, 1),
@@ -97,6 +106,7 @@ function siteActions(d: DossierFindings, add: (c: Candidate) => void): void {
     });
   else if (!ai.llmsTxt.valid)
     add({
+      id: "AEO-LLMS-TXT-INVALID",
       title: `Fix /llms.txt: ${ai.llmsTxt.errors.slice(0, 2).join("; ")}`,
       why: "The file exists but does not follow the llmstxt.org format.",
       evidenceIds: ai.evidenceIds.slice(0, 1),
@@ -106,6 +116,7 @@ function siteActions(d: DossierFindings, add: (c: Candidate) => void): void {
     });
   if (t.fetched && !t.sitemap.urlCount)
     add({
+      id: "TECH-SITEMAP-MISSING",
       title: "Publish /sitemap.xml and reference it in robots.txt",
       why: "No sitemap was found.",
       evidenceIds: [t.robots.evidenceId, t.sitemap.evidenceId],
@@ -121,6 +132,7 @@ function siteActions(d: DossierFindings, add: (c: Candidate) => void): void {
       .join(", ");
     if (perf !== undefined && perf !== null && perf < 90)
       add({
+        id: issueId("PERF-SCORE-LOW", p.strategy),
         title: `Improve ${p.strategy} page speed (PageSpeed performance ${perf})`,
         why: `Lab metrics: ${lab || "n/a"}. Slow pages lose rankings and users.`,
         evidenceIds: [p.evidenceId],
@@ -131,6 +143,7 @@ function siteActions(d: DossierFindings, add: (c: Candidate) => void): void {
     const seo = p.scores.seo;
     if (seo !== undefined && seo !== null && seo < 90)
       add({
+        id: issueId("PERF-SEO-SCORE-LOW", p.strategy),
         title: `Fix the PageSpeed SEO audit items (${p.strategy} SEO score ${seo})`,
         why: "Lighthouse SEO checks flag basics such as meta tags, link text and crawlability.",
         evidenceIds: [p.evidenceId],
@@ -142,6 +155,7 @@ function siteActions(d: DossierFindings, add: (c: Candidate) => void): void {
   }
   if (home && !home.metaDescription)
     add({
+      id: "ONPAGE-META-DESCRIPTION-MISSING",
       title: "Add a meta description (about 150 characters) that says what the page offers",
       why: "The target page has no meta description.",
       evidenceIds: tIds,
@@ -161,6 +175,7 @@ function competitorActions(d: DossierFindings, add: (c: Candidate) => void): voi
     const med = median(comps.map((c) => c.wordCount));
     if (med && home.wordCount < med / 2)
       add({
+        id: "CONTENT-DEPTH-GAP",
         title: kw
           ? `Publish a dedicated page for "${kw}" (about ${med} words, guide or comparison format)`
           : `Expand the main page copy towards ${med} words`,
@@ -174,6 +189,7 @@ function competitorActions(d: DossierFindings, add: (c: Candidate) => void): voi
   if (kw && home && !titleHasKeyword(home.title, kw)) {
     const inTitle = comps.filter((c) => titleHasKeyword(c.title, kw)).length;
     add({
+      id: "ONPAGE-TITLE-KEYWORD-MISSING",
       title: `Put "${kw}" (or close wording) in the title and H1 of the page meant to rank`,
       why: `The target title "${home.title || "(none)"}" lacks the keyword terms${comps.length ? `; ${inTitle}/${comps.length} ranking pages have them` : ""}.`,
       evidenceIds: both,
@@ -187,6 +203,7 @@ function competitorActions(d: DossierFindings, add: (c: Candidate) => void): voi
     const n = comps.filter((c) => c.schema.types.includes(type)).length;
     if (n && !t.schemaValidation.types.includes(type))
       add({
+        id: issueId("SCHEMA-RICH-TYPE-MISSING", type),
         title: `Add a ${type === "FAQPage" ? "FAQ section with FAQPage" : "step-by-step section with HowTo"} JSON-LD`,
         why: `${n}/${comps.length} ranking pages use ${type}; the target has none. Answer-style blocks are easy for AI answers to quote.`,
         evidenceIds: comps.filter((c) => c.schema.types.includes(type)).map((c) => c.evidenceId),
@@ -203,6 +220,7 @@ function competitorActions(d: DossierFindings, add: (c: Candidate) => void): voi
   );
   if (missing.length)
     add({
+      id: "SCHEMA-COMPETITOR-TYPES-MISSING",
       title: `Add JSON-LD types ranking pages share: ${missing
         .slice(0, 4)
         .map((m) => m.type)
@@ -215,6 +233,7 @@ function competitorActions(d: DossierFindings, add: (c: Candidate) => void): voi
     });
   if (d.keywordGap.length)
     add({
+      id: "CONTENT-KEYWORD-GAP",
       title: `Cover competitor phrases in headings and copy: ${d.keywordGap
         .slice(0, 8)
         .map((k) => k.phrase)
@@ -230,6 +249,7 @@ function competitorActions(d: DossierFindings, add: (c: Candidate) => void): voi
   const libAds = d.ads.filter((a) => a.status === "captured" && (a.visibleCount ?? 0) > 0 && !ownAd(a.domain));
   if (serpAds.length || libAds.length)
     add({
+      id: "PAID-COMPETITOR-ADS",
       title: "Review competitor ads (hooks, offers, landing pages) for messaging to reuse in copy",
       why: `${serpAds.length} search ad(s) on the SERP and ${libAds.length} ad-library listing(s) with visible ads.`,
       evidenceIds: uniq([
@@ -242,6 +262,7 @@ function competitorActions(d: DossierFindings, add: (c: Candidate) => void): voi
     });
   if (d.citations.length && !d.citations.some((c) => c.targetCited))
     add({
+      id: "AEO-NOT-CITED",
       title: "Write a citable comparison page aimed at the sources AI answers cite",
       why: `The target was not cited in any of ${d.citations.length} recorded AI answer(s).`,
       evidenceIds: d.citations.map((c) => c.evidenceId),
@@ -269,10 +290,10 @@ export function deriveTopActions(d: DossierFindings): TopAction[] {
 export function renderTopActions(actions: TopAction[]): string[] {
   const L = ["## Top 10 actions", ""];
   if (!actions.length) return [...L, "No actions derived from these checks.", ""];
-  L.push("| # | Action | Why | Impact | Effort | Owner | Evidence |", "|---|---|---|---|---|---|---|");
+  L.push("| # | ID | Action | Why | Impact | Effort | Owner | Evidence |", "|---|---|---|---|---|---|---|---|");
   for (const a of actions)
     L.push(
-      `| ${a.rank} | ${cell(a.title)} | ${cell(a.why)} | ${a.impact} | ${a.effort} | ${a.owner} | ${ids(a.evidenceIds) || "-"} |`,
+      `| ${a.rank} | ${code(a.id)} | ${cell(a.title)} | ${cell(a.why)} | ${a.impact} | ${a.effort} | ${a.owner} | ${ids(a.evidenceIds) || "-"} |`,
     );
   L.push("", "Ranked by impact, then effort. Full data: [dossier.json](dossier.json).", "");
   return L;
