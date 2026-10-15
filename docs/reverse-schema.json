@@ -1,0 +1,670 @@
+{
+  "$id": "https://github.com/DevgenX/seo-rea/blob/main/docs/reverse-schema.json",
+  "title": "seo-rea reverse v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1"
+    },
+    "tool": {
+      "type": "string",
+      "const": "seo-rea"
+    },
+    "toolVersion": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string",
+      "const": "reverse"
+    },
+    "runId": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "timestamps": {
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "type": "string"
+        },
+        "writtenAt": {
+          "type": "string"
+        }
+      },
+      "required": ["createdAt", "writtenAt"],
+      "additionalProperties": false
+    },
+    "cost": {
+      "type": "object",
+      "properties": {
+        "usd": {
+          "type": "number",
+          "minimum": 0
+        },
+        "paidCalls": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": ["usd", "paidCalls"],
+      "additionalProperties": false
+    },
+    "coverage": {
+      "type": "object",
+      "properties": {
+        "pagesCrawled": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "indexablePages": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "crawlComplete": {
+          "type": "boolean"
+        },
+        "crawlReport": {
+          "type": "string",
+          "description": "Path of the crawl.json this analysis used, relative to the run folder"
+        }
+      },
+      "required": ["pagesCrawled", "indexablePages", "crawlComplete", "crawlReport"],
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "claim": {
+            "type": "string"
+          },
+          "basis": {
+            "type": "string",
+            "enum": ["observed", "inferred"]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": ["high", "medium", "low"]
+          },
+          "evidenceIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^E\\d{3,}$"
+            },
+            "description": "Evidence ids in evidence/index.json"
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Example pages"
+          }
+        },
+        "required": ["claim", "basis", "confidence", "evidenceIds", "examples"],
+        "additionalProperties": false
+      },
+      "description": "The strategy in a few evidence-backed sentences"
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "term": {
+            "type": "string"
+          },
+          "pages": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "inTitles": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Example pages"
+          }
+        },
+        "required": ["term", "pages", "inTitles", "examples"],
+        "additionalProperties": false
+      }
+    },
+    "clusters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "pages": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "share": {
+            "type": "number"
+          },
+          "template": {
+            "type": "string",
+            "enum": ["home", "article", "comparison", "tool", "product", "entity", "category", "help", "legal", "other"]
+          },
+          "avgWords": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "schemaTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "topTerms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "hub": {
+            "type": ["string", "null"]
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Example pages"
+          }
+        },
+        "required": ["key", "pages", "share", "template", "avgWords", "schemaTypes", "topTerms", "hub", "examples"],
+        "additionalProperties": false
+      }
+    },
+    "templates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["home", "article", "comparison", "tool", "product", "entity", "category", "help", "legal", "other"]
+          },
+          "pages": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "avgWords": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Example pages"
+          }
+        },
+        "required": ["type", "pages", "avgWords", "examples"],
+        "additionalProperties": false
+      }
+    },
+    "programmatic": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "pattern": {
+            "type": "string"
+          },
+          "pages": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "titlePattern": {
+            "type": "string"
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Example pages"
+          }
+        },
+        "required": ["pattern", "pages", "titlePattern", "examples"],
+        "additionalProperties": false
+      }
+    },
+    "linking": {
+      "type": "object",
+      "properties": {
+        "avgInternalLinks": {
+          "type": "number"
+        },
+        "globalLinks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Internal links present on at least 80% of pages (nav, footer)"
+        },
+        "hubs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string"
+              },
+              "pagerank": {
+                "type": "number"
+              },
+              "inlinks": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": ["url", "pagerank", "inlinks"],
+            "additionalProperties": false
+          }
+        },
+        "orphanPages": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "deepPages": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "depthHistogram": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "depth": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "pages": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": ["depth", "pages"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["avgInternalLinks", "globalLinks", "hubs", "orphanPages", "deepPages", "depthHistogram"],
+      "additionalProperties": false
+    },
+    "offpage": {
+      "type": "object",
+      "properties": {
+        "trancoRank": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "wikipediaLinkingPages": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "wikipediaMentions": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "commonCrawlPages": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "outboundDomains": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "domain": {
+                "type": "string"
+              },
+              "pages": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": ["domain", "pages"],
+            "additionalProperties": false
+          }
+        },
+        "evidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^E\\d{3,}$"
+          },
+          "description": "Evidence ids in evidence/index.json"
+        }
+      },
+      "required": [
+        "trancoRank",
+        "wikipediaLinkingPages",
+        "wikipediaMentions",
+        "commonCrawlPages",
+        "outboundDomains",
+        "evidenceIds"
+      ],
+      "additionalProperties": false
+    },
+    "schema": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "pages": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "share": {
+            "type": "number"
+          }
+        },
+        "required": ["type", "pages", "share"],
+        "additionalProperties": false
+      }
+    },
+    "aeo": {
+      "type": "object",
+      "properties": {
+        "llmsTxt": {
+          "type": "object",
+          "properties": {
+            "present": {
+              "type": "boolean"
+            },
+            "valid": {
+              "type": "boolean"
+            },
+            "links": {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991
+            }
+          },
+          "required": ["present", "valid", "links"],
+          "additionalProperties": false
+        },
+        "llmsFullTxt": {
+          "type": "boolean"
+        },
+        "aiCrawlers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "token": {
+                "type": "string"
+              },
+              "operator": {
+                "type": "string"
+              },
+              "access": {
+                "type": "string",
+                "enum": ["allowed", "blocked", "partial"]
+              }
+            },
+            "required": ["token", "operator", "access"],
+            "additionalProperties": false
+          }
+        },
+        "faqPages": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "howToPages": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "questionTitles": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991,
+          "description": "Pages whose title or H1 is a question"
+        },
+        "rawHtmlReadableShare": {
+          "type": "number",
+          "description": "Share of indexable pages with 200+ words in raw HTML"
+        },
+        "evidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^E\\d{3,}$"
+          },
+          "description": "Evidence ids in evidence/index.json"
+        }
+      },
+      "required": [
+        "llmsTxt",
+        "llmsFullTxt",
+        "aiCrawlers",
+        "faqPages",
+        "howToPages",
+        "questionTitles",
+        "rawHtmlReadableShare",
+        "evidenceIds"
+      ],
+      "additionalProperties": false
+    },
+    "cadence": {
+      "type": "object",
+      "properties": {
+        "datedPages": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "first": {
+          "type": "string"
+        },
+        "last": {
+          "type": "string"
+        },
+        "last90Days": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "last365Days": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "perMonth": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "month": {
+                "type": "string"
+              },
+              "pages": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": ["month", "pages"],
+            "additionalProperties": false
+          }
+        },
+        "medianGapDays": {
+          "type": ["number", "null"]
+        },
+        "updatedLast90Days": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "datedPages",
+        "first",
+        "last",
+        "last90Days",
+        "last365Days",
+        "perMonth",
+        "medianGapDays",
+        "updatedLast90Days"
+      ],
+      "additionalProperties": false
+    },
+    "tech": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "pages": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          }
+        },
+        "required": ["name", "pages"],
+        "additionalProperties": false
+      }
+    },
+    "playbook": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "step": {
+            "type": "string"
+          },
+          "why": {
+            "type": "string"
+          },
+          "effort": {
+            "type": "string",
+            "enum": ["S", "M", "L"]
+          },
+          "impact": {
+            "type": "string",
+            "enum": ["high", "medium", "low"]
+          },
+          "evidenceIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^E\\d{3,}$"
+            },
+            "description": "Evidence ids in evidence/index.json"
+          }
+        },
+        "required": ["step", "why", "effort", "impact", "evidenceIds"],
+        "additionalProperties": false
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidenceIndex": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "tool",
+    "toolVersion",
+    "kind",
+    "runId",
+    "domain",
+    "timestamps",
+    "cost",
+    "coverage",
+    "summary",
+    "keywords",
+    "clusters",
+    "templates",
+    "programmatic",
+    "linking",
+    "offpage",
+    "schema",
+    "aeo",
+    "cadence",
+    "tech",
+    "playbook",
+    "unknowns",
+    "evidenceIndex"
+  ],
+  "additionalProperties": false
+}
