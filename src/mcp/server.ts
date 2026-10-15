@@ -16,6 +16,7 @@ import { ENGINE_NAMES } from "../adapters/serp.js";
 import { runAudit } from "../services/audit.js";
 import { recordCitation } from "../services/cite.js";
 import { createRuntime, type RuntimeOptions } from "../services/runtime.js";
+import { runStrategy } from "../services/strategy.js";
 import { runTeardown } from "../services/teardown.js";
 
 export interface ServerDeps {
@@ -55,6 +56,66 @@ export function createServer(deps: ServerDeps = {}): McpServer {
   const rtOpts = { log, ...deps.runtime };
 
   server.registerTool(
+    "seo_strategy",
+    {
+      title: "Strategy dossier (why a site leads)",
+      description:
+        "Explains why a domain leads: sitemap + nav cluster map with programmatic-SEO detection, head terms derived from the site and checked in free SERPs, co-ranking competitors, on-page/technical/off-page/AEO/paid/distribution pillars, ranked drivers with copy difficulty, weaknesses, a copyable playbook and a 30/60/90 plan. With `vs`, roles come from the evidence and a side-by-side comparison with cluster and keyword gaps is added. Free sources only unless budgetUsd > 0. Writes report/strategy.md, report/strategy.json and evidence/ (E001..).",
+      inputSchema: {
+        domain: z.string().min(1).describe("Domain to analyse, e.g. nerdwallet.com"),
+        vs: z.string().optional().describe("Second domain to compare against"),
+        out: z.string().optional().describe("Output folder (default ./seo-rea-runs/strategy-<domain>[-vs-<vs>])"),
+        budgetUsd: z
+          .number()
+          .min(0)
+          .max(50)
+          .default(0)
+          .describe("Paid API cap for this run. 0 refuses every paid call."),
+        crawl: z.number().int().min(1).max(100).default(30).describe("Pages fetched per site"),
+        terms: z.number().int().min(1).max(20).default(10).describe("Head terms checked in SERPs"),
+        engines: z
+          .array(z.enum(ENGINE_NAMES as [string, ...string[]]))
+          .optional()
+          .describe("Engines to try in order"),
+        browser: z.boolean().default(true).describe("Use headless Chromium if available"),
+        psi: z.boolean().default(true),
+        adlibCapture: z.boolean().default(false).describe("Screenshot ad libraries with the browser"),
+      },
+    },
+    (a) =>
+      guarded(async () => {
+        const name = `strategy-${normalizeDomain(a.domain)}${a.vs ? `-vs-${normalizeDomain(a.vs)}` : ""}`;
+        const out = outFor(a.out, name);
+        const { strategy, reportPath } = await runStrategy({
+          ...rtOpts,
+          domain: a.domain,
+          vs: a.vs ?? null,
+          out,
+          budgetUsd: a.budgetUsd,
+          crawl: a.crawl,
+          terms: a.terms,
+          engines: (a.engines ?? ["google", "bing", "duckduckgo"]) as typeof ENGINE_NAMES,
+          browser: a.browser,
+          psi: a.psi,
+          adlibCapture: a.adlibCapture,
+          force: true,
+        });
+        return {
+          reportPath,
+          strategyPath: join(out, "report", "strategy.json"),
+          evidenceIndex: join(out, "evidence", "index.md"),
+          roles: strategy.roles,
+          topActions: strategy.topActions,
+          drivers: strategy.sites.map((s) => ({ domain: s.domain, drivers: s.drivers })),
+          weaknesses: strategy.sites.map((s) => ({ domain: s.domain, weaknesses: s.weaknesses })),
+          competitors: strategy.competitors,
+          comparison: strategy.comparison,
+          unknowns: strategy.unknowns,
+        };
+      }),
+  );
+
+  server.registerTool(
     "seo_teardown",
     {
       title: "SEO teardown",
@@ -85,7 +146,7 @@ export function createServer(deps: ServerDeps = {}): McpServer {
     (a) =>
       guarded(async () => {
         const out = outFor(a.out, `${a.keyword}-${a.target}`);
-        const { run, claims } = await runTeardown({
+        const { run, claims, dossier } = await runTeardown({
           ...rtOpts,
           keyword: a.keyword,
           target: a.target,
@@ -102,6 +163,8 @@ export function createServer(deps: ServerDeps = {}): McpServer {
         });
         return {
           reportPath: join(out, "report", "teardown.md"),
+          dossierPath: join(out, "report", "dossier.json"),
+          topActions: dossier.topActions,
           evidenceIndex: join(out, "evidence", "index.md"),
           runId: run.runId,
           spentUsd: run.spentUsd,
@@ -170,9 +233,11 @@ export function createServer(deps: ServerDeps = {}): McpServer {
     (a) =>
       guarded(async () => {
         const out = outFor(a.out, `audit-${normalizeDomain(a.domain)}`);
-        const { run, reportPath } = await runAudit({ ...rtOpts, target: a.domain, out, psi: a.psi });
+        const { run, reportPath, dossier } = await runAudit({ ...rtOpts, target: a.domain, out, psi: a.psi });
         return {
           reportPath,
+          dossierPath: join(out, "report", "dossier.json"),
+          topActions: dossier.topActions,
           url: run.url,
           aiReadiness: run.aiReadiness,
           schema: run.page?.schema ?? null,
