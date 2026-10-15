@@ -19,6 +19,9 @@ adapters go through the budget guard before any request.
 | `adlib-urls`             | ads          | no   | -                                                         |
 | `adlib-playwright`       | ads          | no   | `playwright-core` + Chromium                              |
 | `keyword-gap`            | keywords     | no   | -                                                         |
+| `sitemap-walk`           | site         | no   | - (strategy: sitemap indexes, diverse child sitemaps)     |
+| `offpage-free`           | off-page     | no   | - (Tranco API, Wikipedia API, Common Crawl index)         |
+| `itunes-lookup`          | distribution | no   | - (iTunes Lookup API for App Store links on the site)     |
 | `cite`                   | citations    | no   | operator input                                            |
 | `dataforseo`             | paid         | yes  | `DATAFORSEO_LOGIN`, `DATAFORSEO_PASSWORD`, budget above 0 |
 

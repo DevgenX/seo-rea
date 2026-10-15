@@ -1,0 +1,1575 @@
+{
+  "$id": "https://github.com/DevgenX/seo-rea/blob/main/docs/strategy-schema.json",
+  "title": "seo-rea strategy dossier v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1"
+    },
+    "tool": {
+      "type": "string",
+      "const": "seo-rea"
+    },
+    "toolVersion": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string",
+      "const": "strategy"
+    },
+    "runId": {
+      "type": "string"
+    },
+    "inputs": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "type": "string"
+        },
+        "vs": {
+          "type": ["string", "null"]
+        },
+        "budgetUsd": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": ["domain", "vs", "budgetUsd"],
+      "additionalProperties": false
+    },
+    "timestamps": {
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "type": "string"
+        },
+        "writtenAt": {
+          "type": "string"
+        }
+      },
+      "required": ["createdAt", "writtenAt"],
+      "additionalProperties": false
+    },
+    "cost": {
+      "type": "object",
+      "properties": {
+        "spentUsd": {
+          "type": "number",
+          "minimum": 0
+        },
+        "budgetUsd": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": ["spentUsd", "budgetUsd"],
+      "additionalProperties": false
+    },
+    "roles": {
+      "type": "object",
+      "properties": {
+        "leader": {
+          "type": "string"
+        },
+        "challenger": {
+          "type": ["string", "null"]
+        },
+        "basis": {
+          "type": "string"
+        },
+        "evidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Evidence IDs (E001...) in evidence/index.json"
+        }
+      },
+      "required": ["leader", "challenger", "basis", "evidenceIds"],
+      "additionalProperties": false
+    },
+    "actionsFor": {
+      "type": "string",
+      "description": "Domain the top actions and plan are written for"
+    },
+    "topActions": {
+      "maxItems": 10,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9007199254740991
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "why": {
+            "type": "string"
+          },
+          "evidenceIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Evidence IDs (E001...) in evidence/index.json"
+          },
+          "effort": {
+            "type": "string",
+            "enum": ["S", "M", "L"]
+          },
+          "impact": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          },
+          "owner": {
+            "type": "string",
+            "enum": ["content", "dev", "seo"],
+            "description": "Owner hint"
+          }
+        },
+        "required": ["rank", "title", "why", "evidenceIds", "effort", "impact", "owner"],
+        "additionalProperties": false
+      }
+    },
+    "sites": {
+      "minItems": 1,
+      "maxItems": 2,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "domain": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string",
+            "enum": ["subject", "vs"]
+          },
+          "error": {
+            "type": "string"
+          },
+          "snapshot": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "h1": {
+                "type": "string"
+              },
+              "whatItIs": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  },
+                  "why": {
+                    "type": "string"
+                  },
+                  "basis": {
+                    "type": "string",
+                    "enum": ["observed", "inferred"],
+                    "description": "observed = read from a fetched source; inferred = derived"
+                  },
+                  "evidenceIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Evidence IDs (E001...) in evidence/index.json"
+                  }
+                },
+                "required": ["value", "why", "basis", "evidenceIds"],
+                "additionalProperties": false
+              },
+              "businessModel": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    },
+                    "why": {
+                      "type": "string"
+                    },
+                    "basis": {
+                      "type": "string",
+                      "enum": ["observed", "inferred"],
+                      "description": "observed = read from a fetched source; inferred = derived"
+                    },
+                    "evidenceIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "description": "Evidence IDs (E001...) in evidence/index.json"
+                    }
+                  },
+                  "required": ["value", "why", "basis", "evidenceIds"],
+                  "additionalProperties": false
+                }
+              },
+              "audiences": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    },
+                    "why": {
+                      "type": "string"
+                    },
+                    "basis": {
+                      "type": "string",
+                      "enum": ["observed", "inferred"],
+                      "description": "observed = read from a fetched source; inferred = derived"
+                    },
+                    "evidenceIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "description": "Evidence IDs (E001...) in evidence/index.json"
+                    }
+                  },
+                  "required": ["value", "why", "basis", "evidenceIds"],
+                  "additionalProperties": false
+                }
+              },
+              "evidenceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Evidence IDs (E001...) in evidence/index.json"
+              }
+            },
+            "required": ["title", "description", "h1", "whatItIs", "businessModel", "audiences", "evidenceIds"],
+            "additionalProperties": false
+          },
+          "map": {
+            "type": "object",
+            "properties": {
+              "sitemapFiles": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "indexChildren": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "childStems": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "stem": {
+                      "type": "string"
+                    },
+                    "files": {
+                      "type": "integer",
+                      "minimum": -9007199254740991,
+                      "maximum": 9007199254740991
+                    }
+                  },
+                  "required": ["stem", "files"],
+                  "additionalProperties": false
+                }
+              },
+              "knownUrls": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "mappedUrls": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "pagesFetched": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "robotsSkipped": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "clusters": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "key": {
+                      "type": "string",
+                      "description": "Path prefix, e.g. /blog/credit-cards"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "terms": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "urlCount": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 9007199254740991
+                    },
+                    "exampleUrls": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "template": {
+                      "type": "string",
+                      "enum": [
+                        "blog",
+                        "guide",
+                        "tool",
+                        "product",
+                        "category",
+                        "comparison",
+                        "review",
+                        "programmatic",
+                        "page"
+                      ]
+                    },
+                    "baseTemplate": {
+                      "type": "string",
+                      "enum": [
+                        "blog",
+                        "guide",
+                        "tool",
+                        "product",
+                        "category",
+                        "comparison",
+                        "review",
+                        "programmatic",
+                        "page"
+                      ]
+                    },
+                    "fetchedPages": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 9007199254740991
+                    },
+                    "medianWords": {
+                      "type": ["number", "null"]
+                    },
+                    "linkDensity": {
+                      "type": ["number", "null"]
+                    },
+                    "inlinks": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 9007199254740991
+                    },
+                    "hubs": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "url": {
+                            "type": "string"
+                          },
+                          "linksIntoCluster": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          }
+                        },
+                        "required": ["url", "linksIntoCluster"],
+                        "additionalProperties": false
+                      }
+                    },
+                    "programmatic": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "pattern": {
+                              "type": "string"
+                            },
+                            "share": {
+                              "type": "number"
+                            },
+                            "basis": {
+                              "type": "string",
+                              "enum": ["slug-affix", "numeric-id", "heading-template"]
+                            },
+                            "headingSimilarity": {
+                              "type": ["number", "null"]
+                            }
+                          },
+                          "required": ["pattern", "share", "basis", "headingSimilarity"],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "key",
+                    "name",
+                    "terms",
+                    "urlCount",
+                    "exampleUrls",
+                    "template",
+                    "baseTemplate",
+                    "fetchedPages",
+                    "medianWords",
+                    "linkDensity",
+                    "inlinks",
+                    "hubs",
+                    "programmatic"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "evidenceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Evidence IDs (E001...) in evidence/index.json"
+              }
+            },
+            "required": [
+              "sitemapFiles",
+              "indexChildren",
+              "childStems",
+              "knownUrls",
+              "mappedUrls",
+              "pagesFetched",
+              "robotsSkipped",
+              "clusters",
+              "evidenceIds"
+            ],
+            "additionalProperties": false
+          },
+          "keywords": {
+            "type": "object",
+            "properties": {
+              "terms": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "term": {
+                      "type": "string"
+                    },
+                    "docs": {
+                      "type": "integer",
+                      "minimum": -9007199254740991,
+                      "maximum": 9007199254740991
+                    },
+                    "sources": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "pages": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "check": {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": ["ranked", "not-in-results", "unknown"]
+                        },
+                        "position": {
+                          "anyOf": [
+                            {
+                              "type": "integer",
+                              "minimum": -9007199254740991,
+                              "maximum": 9007199254740991
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "engine": {
+                          "type": "string"
+                        },
+                        "evidenceId": {
+                          "type": "string"
+                        }
+                      },
+                      "required": ["status", "position", "url", "engine", "evidenceId"],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": ["term", "docs", "sources", "pages", "check"],
+                  "additionalProperties": false
+                }
+              },
+              "checked": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "rankedTop10": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "unknown": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "evidenceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Evidence IDs (E001...) in evidence/index.json"
+              }
+            },
+            "required": ["terms", "checked", "rankedTop10", "unknown", "evidenceIds"],
+            "additionalProperties": false
+          },
+          "pillars": {
+            "type": "object",
+            "properties": {
+              "onPage": {
+                "type": "object",
+                "properties": {
+                  "pagesFetched": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "medianTitleLength": {
+                    "type": ["number", "null"]
+                  },
+                  "h1Coverage": {
+                    "type": ["number", "null"]
+                  },
+                  "metaDescriptionCoverage": {
+                    "type": ["number", "null"]
+                  },
+                  "medianWords": {
+                    "type": ["number", "null"]
+                  },
+                  "medianH2": {
+                    "type": ["number", "null"]
+                  },
+                  "datedPages": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "medianAgeDays": {
+                    "type": ["number", "null"]
+                  },
+                  "updatedWithinYear": {
+                    "type": ["number", "null"]
+                  },
+                  "evidenceIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Evidence IDs (E001...) in evidence/index.json"
+                  }
+                },
+                "required": [
+                  "pagesFetched",
+                  "medianTitleLength",
+                  "h1Coverage",
+                  "metaDescriptionCoverage",
+                  "medianWords",
+                  "medianH2",
+                  "datedPages",
+                  "medianAgeDays",
+                  "updatedWithinYear",
+                  "evidenceIds"
+                ],
+                "additionalProperties": false
+              },
+              "technical": {
+                "type": "object",
+                "properties": {
+                  "schemaTypes": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        },
+                        "pages": {
+                          "type": "integer",
+                          "minimum": -9007199254740991,
+                          "maximum": 9007199254740991
+                        }
+                      },
+                      "required": ["type", "pages"],
+                      "additionalProperties": false
+                    }
+                  },
+                  "pagesWithSchema": {
+                    "type": ["number", "null"]
+                  },
+                  "pagesWithSchemaErrors": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "schemaErrorSamples": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "canonicalCoverage": {
+                    "type": ["number", "null"]
+                  },
+                  "selfCanonical": {
+                    "type": ["number", "null"]
+                  },
+                  "noindexPages": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "robotsFound": {
+                    "type": "boolean"
+                  },
+                  "sitemapFiles": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "sitemapUrls": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "hreflangPages": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "langs": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "psi": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "performance": {
+                            "type": ["number", "null"]
+                          },
+                          "seo": {
+                            "type": ["number", "null"]
+                          },
+                          "lcp": {
+                            "type": "string"
+                          },
+                          "evidenceId": {
+                            "type": "string"
+                          }
+                        },
+                        "required": ["performance", "seo", "lcp", "evidenceId"],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "psiProblem": {
+                    "type": "string"
+                  },
+                  "medianHtmlKb": {
+                    "type": ["number", "null"]
+                  },
+                  "evidenceIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Evidence IDs (E001...) in evidence/index.json"
+                  }
+                },
+                "required": [
+                  "schemaTypes",
+                  "pagesWithSchema",
+                  "pagesWithSchemaErrors",
+                  "schemaErrorSamples",
+                  "canonicalCoverage",
+                  "selfCanonical",
+                  "noindexPages",
+                  "robotsFound",
+                  "sitemapFiles",
+                  "sitemapUrls",
+                  "hreflangPages",
+                  "langs",
+                  "psi",
+                  "psiProblem",
+                  "medianHtmlKb",
+                  "evidenceIds"
+                ],
+                "additionalProperties": false
+              },
+              "offPage": {
+                "type": "object",
+                "properties": {
+                  "trancoRank": {
+                    "type": ["number", "null"]
+                  },
+                  "wikipediaLinkingArticles": {
+                    "type": ["number", "null"]
+                  },
+                  "wikipediaMentions": {
+                    "type": ["number", "null"]
+                  },
+                  "commonCrawlBlocks": {
+                    "type": ["number", "null"]
+                  },
+                  "brandSerpThirdParty": {
+                    "type": ["number", "null"]
+                  },
+                  "brandSerpDomains": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "pressLinksOnSite": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "unknowns": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "evidenceIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Evidence IDs (E001...) in evidence/index.json"
+                  }
+                },
+                "required": [
+                  "trancoRank",
+                  "wikipediaLinkingArticles",
+                  "wikipediaMentions",
+                  "commonCrawlBlocks",
+                  "brandSerpThirdParty",
+                  "brandSerpDomains",
+                  "pressLinksOnSite",
+                  "unknowns",
+                  "evidenceIds"
+                ],
+                "additionalProperties": false
+              },
+              "aeo": {
+                "type": "object",
+                "properties": {
+                  "llmsTxt": {
+                    "type": "string",
+                    "enum": ["valid", "invalid", "absent"]
+                  },
+                  "llmsFullTxt": {
+                    "type": "boolean"
+                  },
+                  "blockedCrawlers": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "blockedSearchCrawlers": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "faqSchemaPages": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "questionBlockPages": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "answerFirstShare": {
+                    "type": ["number", "null"]
+                  },
+                  "organizationSchema": {
+                    "type": "boolean"
+                  },
+                  "sameAsCount": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "citationsLogged": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "citedIn": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "evidenceIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Evidence IDs (E001...) in evidence/index.json"
+                  }
+                },
+                "required": [
+                  "llmsTxt",
+                  "llmsFullTxt",
+                  "blockedCrawlers",
+                  "blockedSearchCrawlers",
+                  "faqSchemaPages",
+                  "questionBlockPages",
+                  "answerFirstShare",
+                  "organizationSchema",
+                  "sameAsCount",
+                  "citationsLogged",
+                  "citedIn",
+                  "evidenceIds"
+                ],
+                "additionalProperties": false
+              },
+              "paid": {
+                "type": "object",
+                "properties": {
+                  "serpAdsByDomain": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "serpsWithAnyAds": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "serpsChecked": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "adLibraries": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "platform": {
+                          "type": "string"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "string"
+                        },
+                        "visibleCount": {
+                          "type": ["number", "null"]
+                        },
+                        "evidenceId": {
+                          "type": "string"
+                        }
+                      },
+                      "required": ["platform", "url", "status", "visibleCount", "evidenceId"],
+                      "additionalProperties": false
+                    }
+                  },
+                  "evidenceIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Evidence IDs (E001...) in evidence/index.json"
+                  }
+                },
+                "required": ["serpAdsByDomain", "serpsWithAnyAds", "serpsChecked", "adLibraries", "evidenceIds"],
+                "additionalProperties": false
+              },
+              "distribution": {
+                "type": "object",
+                "properties": {
+                  "channels": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "channel": {
+                          "type": "string"
+                        },
+                        "detail": {
+                          "type": "string"
+                        },
+                        "url": {
+                          "type": "string"
+                        }
+                      },
+                      "required": ["channel", "detail", "url"],
+                      "additionalProperties": false
+                    }
+                  },
+                  "app": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "rating": {
+                            "type": ["number", "null"]
+                          },
+                          "ratingCount": {
+                            "type": ["number", "null"]
+                          },
+                          "genre": {
+                            "type": "string"
+                          },
+                          "evidenceId": {
+                            "type": "string"
+                          }
+                        },
+                        "required": ["name", "rating", "ratingCount", "genre", "evidenceId"],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "description": "App Store listing linked from the site (iTunes Lookup API, US store)"
+                  },
+                  "affiliateDisclosure": {
+                    "type": "boolean"
+                  },
+                  "evidenceIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Evidence IDs (E001...) in evidence/index.json"
+                  }
+                },
+                "required": ["channels", "app", "affiliateDisclosure", "evidenceIds"],
+                "additionalProperties": false
+              }
+            },
+            "required": ["onPage", "technical", "offPage", "aeo", "paid", "distribution"],
+            "additionalProperties": false
+          },
+          "drivers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rank": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 9007199254740991
+                },
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "detail": {
+                  "type": "string"
+                },
+                "strength": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "copyDifficulty": {
+                  "type": "string",
+                  "enum": ["easy", "medium", "hard"]
+                },
+                "copyNote": {
+                  "type": "string"
+                },
+                "basis": {
+                  "type": "string",
+                  "enum": ["observed", "inferred"],
+                  "description": "observed = read from a fetched source; inferred = derived"
+                },
+                "evidenceIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Evidence IDs (E001...) in evidence/index.json"
+                }
+              },
+              "required": [
+                "rank",
+                "id",
+                "title",
+                "detail",
+                "strength",
+                "copyDifficulty",
+                "copyNote",
+                "basis",
+                "evidenceIds"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "weaknesses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "detail": {
+                  "type": "string"
+                },
+                "severity": {
+                  "type": "string",
+                  "enum": ["high", "medium", "low"]
+                },
+                "opening": {
+                  "type": "string",
+                  "description": "What a challenger can do with this gap"
+                },
+                "basis": {
+                  "type": "string",
+                  "enum": ["observed", "inferred"],
+                  "description": "observed = read from a fetched source; inferred = derived"
+                },
+                "evidenceIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Evidence IDs (E001...) in evidence/index.json"
+                }
+              },
+              "required": ["id", "title", "detail", "severity", "opening", "basis", "evidenceIds"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["domain", "role", "error", "snapshot", "map", "keywords", "pillars", "drivers", "weaknesses"],
+        "additionalProperties": false
+      }
+    },
+    "serp": {
+      "type": "object",
+      "properties": {
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "term": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string",
+                "enum": ["head-term", "brand"]
+              },
+              "from": {
+                "type": "string"
+              },
+              "engine": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": ["used", "blocked"]
+              },
+              "problem": {
+                "type": "string"
+              },
+              "evidenceId": {
+                "type": "string"
+              },
+              "results": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "position": {
+                      "type": "integer",
+                      "minimum": -9007199254740991,
+                      "maximum": 9007199254740991
+                    },
+                    "domain": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["position", "domain", "url"],
+                  "additionalProperties": false
+                }
+              },
+              "adDomains": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": ["term", "kind", "from", "engine", "status", "problem", "evidenceId", "results", "adDomains"],
+            "additionalProperties": false
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["checks", "notes"],
+      "additionalProperties": false
+    },
+    "competitors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "domain": {
+            "type": "string"
+          },
+          "serps": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "terms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "bestPosition": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "medianPosition": {
+            "type": "number"
+          },
+          "isVs": {
+            "type": "boolean"
+          },
+          "evidenceIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Evidence IDs (E001...) in evidence/index.json"
+          }
+        },
+        "required": ["domain", "serps", "terms", "bestPosition", "medianPosition", "isVs", "evidenceIds"],
+        "additionalProperties": false
+      }
+    },
+    "playbook": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "step": {
+            "type": "string",
+            "minLength": 1
+          },
+          "why": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string",
+            "description": "Driver, weakness or gap id this step comes from"
+          },
+          "effort": {
+            "type": "string",
+            "enum": ["S", "M", "L"]
+          },
+          "impact": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          },
+          "evidenceIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Evidence IDs (E001...) in evidence/index.json"
+          }
+        },
+        "required": ["step", "why", "from", "effort", "impact", "evidenceIds"],
+        "additionalProperties": false
+      }
+    },
+    "plan": {
+      "type": "object",
+      "properties": {
+        "for": {
+          "type": "string"
+        },
+        "days30": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "step": {
+                "type": "string",
+                "minLength": 1
+              },
+              "why": {
+                "type": "string"
+              },
+              "from": {
+                "type": "string",
+                "description": "Driver, weakness or gap id this step comes from"
+              },
+              "effort": {
+                "type": "string",
+                "enum": ["S", "M", "L"]
+              },
+              "impact": {
+                "type": "string",
+                "enum": ["low", "medium", "high"]
+              },
+              "evidenceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Evidence IDs (E001...) in evidence/index.json"
+              }
+            },
+            "required": ["step", "why", "from", "effort", "impact", "evidenceIds"],
+            "additionalProperties": false
+          }
+        },
+        "days60": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "step": {
+                "type": "string",
+                "minLength": 1
+              },
+              "why": {
+                "type": "string"
+              },
+              "from": {
+                "type": "string",
+                "description": "Driver, weakness or gap id this step comes from"
+              },
+              "effort": {
+                "type": "string",
+                "enum": ["S", "M", "L"]
+              },
+              "impact": {
+                "type": "string",
+                "enum": ["low", "medium", "high"]
+              },
+              "evidenceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Evidence IDs (E001...) in evidence/index.json"
+              }
+            },
+            "required": ["step", "why", "from", "effort", "impact", "evidenceIds"],
+            "additionalProperties": false
+          }
+        },
+        "days90": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "step": {
+                "type": "string",
+                "minLength": 1
+              },
+              "why": {
+                "type": "string"
+              },
+              "from": {
+                "type": "string",
+                "description": "Driver, weakness or gap id this step comes from"
+              },
+              "effort": {
+                "type": "string",
+                "enum": ["S", "M", "L"]
+              },
+              "impact": {
+                "type": "string",
+                "enum": ["low", "medium", "high"]
+              },
+              "evidenceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Evidence IDs (E001...) in evidence/index.json"
+              }
+            },
+            "required": ["step", "why", "from", "effort", "impact", "evidenceIds"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["for", "days30", "days60", "days90"],
+      "additionalProperties": false
+    },
+    "comparison": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "leader": {
+              "type": "string"
+            },
+            "challenger": {
+              "type": "string"
+            },
+            "rows": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "pillar": {
+                    "type": "string"
+                  },
+                  "metric": {
+                    "type": "string"
+                  },
+                  "leader": {
+                    "type": "string"
+                  },
+                  "challenger": {
+                    "type": "string"
+                  },
+                  "edge": {
+                    "type": "string",
+                    "enum": ["leader", "challenger", "even", "unknown"]
+                  }
+                },
+                "required": ["pillar", "metric", "leader", "challenger", "edge"],
+                "additionalProperties": false
+              }
+            },
+            "clusterGaps": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "cluster": {
+                    "type": "string"
+                  },
+                  "urlCount": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "template": {
+                    "type": "string"
+                  },
+                  "example": {
+                    "type": "string"
+                  },
+                  "terms": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "evidenceIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Evidence IDs (E001...) in evidence/index.json"
+                  }
+                },
+                "required": ["cluster", "urlCount", "template", "example", "terms", "evidenceIds"],
+                "additionalProperties": false
+              }
+            },
+            "keywords": {
+              "type": "object",
+              "properties": {
+                "both": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "leaderOnly": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "challengerOnly": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "neither": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "unknown": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "termGaps": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Leader head terms that appear nowhere in the challenger's titles or URLs"
+                }
+              },
+              "required": ["both", "leaderOnly", "challengerOnly", "neither", "unknown", "termGaps"],
+              "additionalProperties": false
+            },
+            "firstMoves": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "step": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "why": {
+                    "type": "string"
+                  },
+                  "from": {
+                    "type": "string",
+                    "description": "Driver, weakness or gap id this step comes from"
+                  },
+                  "effort": {
+                    "type": "string",
+                    "enum": ["S", "M", "L"]
+                  },
+                  "impact": {
+                    "type": "string",
+                    "enum": ["low", "medium", "high"]
+                  },
+                  "evidenceIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Evidence IDs (E001...) in evidence/index.json"
+                  }
+                },
+                "required": ["step", "why", "from", "effort", "impact", "evidenceIds"],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": ["leader", "challenger", "rows", "clusterGaps", "keywords", "firstMoves"],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidenceIndex": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "tool",
+    "toolVersion",
+    "kind",
+    "runId",
+    "inputs",
+    "timestamps",
+    "cost",
+    "roles",
+    "actionsFor",
+    "topActions",
+    "sites",
+    "serp",
+    "competitors",
+    "playbook",
+    "plan",
+    "comparison",
+    "unknowns",
+    "evidenceIndex"
+  ],
+  "additionalProperties": false
+}

@@ -1,7 +1,7 @@
 {
   "name": "seo-rea",
   "mcpName": "io.github.devgenx/seo-rea",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "description": "Evidence-first SEO and AI-search teardown CLI and MCP server: reverse engineer why pages rank, free sources first.",
   "license": "MIT",
   "author": "DevgenX",
@@ -67,6 +67,8 @@
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "start": "node dist/cli.js mcp",
+    "dossier-schema": "npm run build && node -e \"import('./dist/core/dossier.js').then((m) => process.stdout.write(JSON.stringify(m.dossierJsonSchema(), null, 2) + '\\n'))\" > docs/dossier-schema.json",
+    "strategy-schema": "npm run build && node -e \"import('./dist/core/strategy/schema.js').then((m) => process.stdout.write(JSON.stringify(m.strategyJsonSchema(), null, 2) + '\\n'))\" > docs/strategy-schema.json",
     "prepack": "npm run build"
   },
   "dependencies": {
