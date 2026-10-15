@@ -1,0 +1,212 @@
+[
+  {
+    "phrase": "maxrewards",
+    "words": 1,
+    "competitors": 3,
+    "tfidf": 0.03886,
+    "score": 63
+  },
+  {
+    "phrase": "recommendations",
+    "words": 1,
+    "competitors": 3,
+    "tfidf": 0.0183,
+    "score": 12
+  },
+  {
+    "phrase": "credits",
+    "words": 1,
+    "competitors": 3,
+    "tfidf": 0.01394,
+    "score": 24
+  },
+  {
+    "phrase": "chase sapphire",
+    "words": 2,
+    "competitors": 3,
+    "tfidf": 0.00681,
+    "score": 11
+  },
+  {
+    "phrase": "features",
+    "words": 1,
+    "competitors": 3,
+    "tfidf": 0.00956,
+    "score": 14
+  },
+  {
+    "phrase": "sapphire",
+    "words": 1,
+    "competitors": 3,
+    "tfidf": 0.00681,
+    "score": 11
+  },
+  {
+    "phrase": "gas ev",
+    "words": 2,
+    "competitors": 3,
+    "tfidf": 0.00232,
+    "score": 3
+  },
+  {
+    "phrase": "travel cards",
+    "words": 2,
+    "competitors": 3,
+    "tfidf": 0.00232,
+    "score": 3
+  },
+  {
+    "phrase": "capital",
+    "words": 1,
+    "competitors": 3,
+    "tfidf": 0.00369,
+    "score": 6
+  },
+  {
+    "phrase": "activate",
+    "words": 1,
+    "competitors": 3,
+    "tfidf": 0.00232,
+    "score": 3
+  },
+  {
+    "phrase": "everyday",
+    "words": 1,
+    "competitors": 3,
+    "tfidf": 0.00232,
+    "score": 3
+  },
+  {
+    "phrase": "kudos",
+    "words": 1,
+    "competitors": 2,
+    "tfidf": 0.16357,
+    "score": 20
+  },
+  {
+    "phrase": "partners",
+    "words": 1,
+    "competitors": 2,
+    "tfidf": 0.02724,
+    "score": 15
+  },
+  {
+    "phrase": "awardwallet",
+    "words": 1,
+    "competitors": 2,
+    "tfidf": 0.02624,
+    "score": 49
+  },
+  {
+    "phrase": "apps for tracking",
+    "words": 3,
+    "competitors": 2,
+    "tfidf": 0.00844,
+    "score": 16
+  },
+  {
+    "phrase": "maximize",
+    "words": 1,
+    "competitors": 2,
+    "tfidf": 0.01969,
+    "score": 8
+  },
+  {
+    "phrase": "chase sapphire preferred",
+    "words": 3,
+    "competitors": 2,
+    "tfidf": 0.00537,
+    "score": 8
+  },
+  {
+    "phrase": "sapphire preferred card",
+    "words": 3,
+    "competitors": 2,
+    "tfidf": 0.00537,
+    "score": 8
+  },
+  {
+    "phrase": "picks",
+    "words": 1,
+    "competitors": 2,
+    "tfidf": 0.01567,
+    "score": 12
+  },
+  {
+    "phrase": "management",
+    "words": 1,
+    "competitors": 2,
+    "tfidf": 0.01546,
+    "score": 7
+  },
+  {
+    "phrase": "programs",
+    "words": 1,
+    "competitors": 2,
+    "tfidf": 0.0125,
+    "score": 23
+  },
+  {
+    "phrase": "checkout",
+    "words": 1,
+    "competitors": 2,
+    "tfidf": 0.01076,
+    "score": 11
+  },
+  {
+    "phrase": "sapphire preferred",
+    "words": 2,
+    "competitors": 2,
+    "tfidf": 0.00537,
+    "score": 8
+  },
+  {
+    "phrase": "changelog",
+    "words": 1,
+    "competitors": 2,
+    "tfidf": 0.01049,
+    "score": 3
+  },
+  {
+    "phrase": "editorial",
+    "words": 1,
+    "competitors": 2,
+    "tfidf": 0.01006,
+    "score": 8
+  },
+  {
+    "phrase": "loyalty programs",
+    "words": 2,
+    "competitors": 2,
+    "tfidf": 0.00485,
+    "score": 9
+  },
+  {
+    "phrase": "extension",
+    "words": 1,
+    "competitors": 2,
+    "tfidf": 0.0085,
+    "score": 11
+  },
+  {
+    "phrase": "premium",
+    "words": 1,
+    "competitors": 2,
+    "tfidf": 0.0085,
+    "score": 11
+  },
+  {
+    "phrase": "chase sapphire reserve",
+    "words": 3,
+    "competitors": 2,
+    "tfidf": 0.00283,
+    "score": 3
+  },
+  {
+    "phrase": "choosing",
+    "words": 1,
+    "competitors": 2,
+    "tfidf": 0.00731,
+    "score": 5
+  }
+]
