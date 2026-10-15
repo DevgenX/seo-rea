@@ -1,0 +1,41 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you ran, what you expected and what you got.
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command or MCP tool call
+      description: Remove any keys or private URLs.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output or error
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: seo-rea version
+      placeholder: "seo-rea --version"
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: seo-rea doctor output
+      render: text
+  - type: input
+    id: env
+    attributes:
+      label: OS and Node version
+      placeholder: macOS 15, Node 22.12

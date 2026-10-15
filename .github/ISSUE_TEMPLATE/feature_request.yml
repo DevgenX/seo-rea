@@ -1,0 +1,31 @@
+name: Feature request
+description: Suggest a check, data source or report change
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to find out?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: New check, adapter, flag or report section.
+    validations:
+      required: true
+  - type: dropdown
+    id: cost
+    attributes:
+      label: Data source cost
+      options:
+        - Free, no key
+        - Free with a key
+        - Paid
+        - Not sure
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What evidence would back the result?
+      description: What should be saved so the report can cite it.
