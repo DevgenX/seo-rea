@@ -5,6 +5,7 @@ seo-rea <domain> [--vs <domain>] [--out <dir>] [--budget-usd 0] [options] [--jso
 seo-rea strategy <domain> [--vs <domain>] ...
 seo-rea teardown --keyword "<kw>" --target <domain> --out <dir> [options] [--json]
 seo-rea crawl <domain> [--out <dir>] [--max-pages 500] [--max-depth 10] [--delay-ms 500] [--force] [--json]
+seo-rea reverse <domain> [--out <dir>] [--max-pages 300] [--from-crawl <run>] [--no-offpage] [--force] [--json]
 seo-rea diff <older-run> <newer-run> [--out <dir>] [--json]
 seo-rea audit <domain|url> [--out <dir>] [--no-psi] [--lighthouse] [--json]
 seo-rea batch --sites <file.json|file.csv> [--out <dir>] [--site-delay-ms <n>] [options] [--json]
@@ -56,6 +57,23 @@ reference: [crawl.md](crawl.md).
 | `--delay-ms`  | `500`                         | Minimum gap between requests        |
 | `--force`     | off                           | Start over instead of resuming      |
 | `--json`      | off                           | Print `report/crawl.json` to stdout |
+
+## reverse
+
+Reverse engineers a domain's SEO / AEO strategy from free sources and writes
+`report/reverse.{md,json}` plus `evidence/`. Design and limits:
+[reverse-engineering.md](reverse-engineering.md).
+
+| Option         | Default                         | Meaning                                      |
+| -------------- | ------------------------------- | -------------------------------------------- |
+| `<domain>`     | required                        | Site to analyse                              |
+| `--out`        | `seo-rea-runs/reverse-<domain>` | Output folder (the crawl is stored here too) |
+| `--max-pages`  | `300`                           | Crawl page limit, 1-5000                     |
+| `--delay-ms`   | `500`                           | Minimum gap between requests                 |
+| `--from-crawl` | none                            | Reuse a crawl run folder or crawl.json       |
+| `--no-offpage` | off                             | Skip Tranco / Wikipedia / Common Crawl       |
+| `--force`      | off                             | Restart the crawl and the evidence folder    |
+| `--json`       | off                             | Print `report/reverse.json` to stdout        |
 
 ## diff
 
