@@ -1,0 +1,1954 @@
+{
+  "schemaVersion": "1",
+  "tool": "seo-rea",
+  "toolVersion": "0.3.0",
+  "kind": "teardown",
+  "runId": "20261015T051545Z",
+  "inputs": {
+    "target": "getcardlab.app",
+    "url": "https://getcardlab.app/",
+    "keyword": "credit card rewards app",
+    "budgetUsd": 0
+  },
+  "timestamps": {
+    "createdAt": "2026-10-15T05:15:45.652Z",
+    "writtenAt": "2026-10-15T05:16:15.334Z"
+  },
+  "cost": {
+    "spentUsd": 0,
+    "budgetUsd": 0
+  },
+  "serp": {
+    "collected": true,
+    "primary": "Bing (headless Chromium)",
+    "engines": [
+      {
+        "engine": "google",
+        "label": "Google (headless Chromium)",
+        "adapter": "serp-playwright",
+        "status": "not-used",
+        "problem": "Google captcha (unusual traffic page)",
+        "httpStatus": 200,
+        "organicCount": 0,
+        "adCount": 0,
+        "evidenceId": "E001"
+      },
+      {
+        "engine": "bing",
+        "label": "Bing (headless Chromium)",
+        "adapter": "serp-playwright",
+        "status": "used",
+        "problem": "",
+        "httpStatus": 200,
+        "organicCount": 10,
+        "adCount": 0,
+        "evidenceId": "E003"
+      }
+    ],
+    "results": [
+      {
+        "position": 1,
+        "url": "https://www.forbes.com/advisor/credit-cards/best-apps-to-track-credit-card-rewards/",
+        "domain": "forbes.com",
+        "title": "The Best 4 Apps For Tracking Credit Cards And Travel Rewards",
+        "isTarget": false
+      },
+      {
+        "position": 2,
+        "url": "https://www.cnbc.com/select/best-apps-for-tracking-your-credit-card-rewards/",
+        "domain": "cnbc.com",
+        "title": "Best Apps for Tracking Your Credit Card Rewards in …",
+        "isTarget": false
+      },
+      {
+        "position": 3,
+        "url": "https://money.usnews.com/credit-cards/articles/best-credit-card-apps-for-tracking-rewards",
+        "domain": "money.usnews.com",
+        "title": "Here Are the Best Apps for Tracking Your Credit Card …",
+        "isTarget": false
+      },
+      {
+        "position": 4,
+        "url": "https://appshunter.io/ios/topics/credit-card-rewards",
+        "domain": "appshunter.io",
+        "title": "247+ Best Credit Card Rewards Apps for iPhone (2026) | Free & Paid",
+        "isTarget": false
+      },
+      {
+        "position": 5,
+        "url": "https://www.rewardswise.app/",
+        "domain": "rewardswise.app",
+        "title": "RewardsWise - All in one Credit Card Manager",
+        "isTarget": false
+      },
+      {
+        "position": 6,
+        "url": "https://maxrewards.com/",
+        "domain": "maxrewards.com",
+        "title": "Find Your Next Credit Card | MaxRewards",
+        "isTarget": false
+      },
+      {
+        "position": 7,
+        "url": "https://www.joinkudos.com/",
+        "domain": "joinkudos.com",
+        "title": "Kudos: Put Your Cards to Work - Earn More Rewards",
+        "isTarget": false
+      },
+      {
+        "position": 8,
+        "url": "https://cardstack.money/articles/guides/credit-card-rewards-optimizer-apps-2026",
+        "domain": "cardstack.money",
+        "title": "Best Credit Card Rewards Apps in 2026 - cardstack.money",
+        "isTarget": false
+      }
+    ],
+    "ads": [],
+    "evidenceId": "E005"
+  },
+  "competitors": [
+    {
+      "position": 1,
+      "url": "https://www.forbes.com/advisor/credit-cards/best-apps-to-track-credit-card-rewards/",
+      "domain": "forbes.com",
+      "analysed": false,
+      "error": "HTTP 403 text/html;charset=utf-8",
+      "title": "",
+      "wordCount": 0,
+      "headings": {
+        "h1": [],
+        "h2": [],
+        "h3": []
+      },
+      "schema": {
+        "types": [],
+        "blocks": 0,
+        "parseErrors": [],
+        "validationErrors": []
+      },
+      "internalLinks": 0,
+      "evidenceId": "E006"
+    },
+    {
+      "position": 2,
+      "url": "https://www.cnbc.com/select/best-apps-for-tracking-your-credit-card-rewards/",
+      "domain": "cnbc.com",
+      "analysed": true,
+      "error": "",
+      "title": "Best Apps for Tracking Your Credit Card Rewards in 2026",
+      "wordCount": 2573,
+      "headings": {
+        "h1": [
+          "These are the best apps for tracking your credit card, airline and hotel rewards"
+        ],
+        "h2": [
+          "Our top picks of timely offers from our partners",
+          "Find the best credit card for you",
+          "AwardWallet and MaxRewards can help you stay on top of your credit card and travel rewards.",
+          "AwardWallet",
+          "Read more",
+          "MaxRewards",
+          "Spotlight",
+          "Highlights",
+          "Balance transfer fee",
+          "Bottom line",
+          "Why trust CNBC Select?",
+          "Read more",
+          "Best Apps for Tracking Your Credit Card Rewards in 2026",
+          "Best Apps for Tracking Your Credit Card Rewards in 2026"
+        ],
+        "h3": [
+          "Chase Sapphire Preferred® Card",
+          "Our expert take",
+          "Pros & cons",
+          "More details"
+        ]
+      },
+      "schema": {
+        "types": [
+          "BreadcrumbList",
+          "ImageObject",
+          "ItemList",
+          "ListItem",
+          "NewsArticle",
+          "NewsMediaOrganization",
+          "Person",
+          "Rating",
+          "Review",
+          "SpeakableSpecification"
+        ],
+        "blocks": 3,
+        "parseErrors": [],
+        "validationErrors": []
+      },
+      "internalLinks": 125,
+      "evidenceId": "E007"
+    },
+    {
+      "position": 3,
+      "url": "https://money.usnews.com/credit-cards/articles/best-credit-card-apps-for-tracking-rewards",
+      "domain": "money.usnews.com",
+      "analysed": false,
+      "error": "The operation was aborted due to timeout",
+      "title": "",
+      "wordCount": 0,
+      "headings": {
+        "h1": [],
+        "h2": [],
+        "h3": []
+      },
+      "schema": {
+        "types": [],
+        "blocks": 0,
+        "parseErrors": [],
+        "validationErrors": []
+      },
+      "internalLinks": 0,
+      "evidenceId": "E008"
+    },
+    {
+      "position": 4,
+      "url": "https://appshunter.io/ios/topics/credit-card-rewards",
+      "domain": "appshunter.io",
+      "analysed": false,
+      "error": "HTTP 403 text/html; charset=UTF-8",
+      "title": "",
+      "wordCount": 0,
+      "headings": {
+        "h1": [],
+        "h2": [],
+        "h3": []
+      },
+      "schema": {
+        "types": [],
+        "blocks": 0,
+        "parseErrors": [],
+        "validationErrors": []
+      },
+      "internalLinks": 0,
+      "evidenceId": "E009"
+    },
+    {
+      "position": 5,
+      "url": "https://www.rewardswise.app/",
+      "domain": "rewardswise.app",
+      "analysed": true,
+      "error": "",
+      "title": "X (Twitter)",
+      "wordCount": 144,
+      "headings": {
+        "h1": [
+          "All in One Credit Card Manager"
+        ],
+        "h2": [
+          "Your favorite companies are our partners",
+          "Effortlessly Connect Your Bank Accounts",
+          "FAQ"
+        ],
+        "h3": [
+          "Do you offer a free trial?",
+          "How do I cancel my subscription?",
+          "Can I change my plan?",
+          "Is it safe to link my bank account?",
+          "What do you do with my data?"
+        ]
+      },
+      "schema": {
+        "types": [],
+        "blocks": 0,
+        "parseErrors": [],
+        "validationErrors": []
+      },
+      "internalLinks": 14,
+      "evidenceId": "E010"
+    },
+    {
+      "position": 6,
+      "url": "https://maxrewards.com/",
+      "domain": "maxrewards.com",
+      "analysed": true,
+      "error": "",
+      "title": "Find Your Next Credit Card and Get More From Every Card | MaxRewards",
+      "wordCount": 586,
+      "headings": {
+        "h1": [
+          "Make every card in your wallet work harder."
+        ],
+        "h2": [
+          "Find your next credit card",
+          "Picks you can verify.",
+          "Choosing the card is step one."
+        ],
+        "h3": [
+          "Best Travel Credit Cards",
+          "Every card, measured the same way.",
+          "See what a card is worth to you — before you apply.",
+          "Compensation never reorders our lists.",
+          "One app for every card.",
+          "The best card, right at checkout."
+        ]
+      },
+      "schema": {
+        "types": [
+          "Organization"
+        ],
+        "blocks": 1,
+        "parseErrors": [],
+        "validationErrors": []
+      },
+      "internalLinks": 52,
+      "evidenceId": "E011"
+    },
+    {
+      "position": 7,
+      "url": "https://www.joinkudos.com/",
+      "domain": "joinkudos.com",
+      "analysed": true,
+      "error": "",
+      "title": "Kudos: Put Your Cards to Work - Earn More Rewards",
+      "wordCount": 0,
+      "headings": {
+        "h1": [],
+        "h2": [],
+        "h3": []
+      },
+      "schema": {
+        "types": [
+          "ImageObject",
+          "Organization",
+          "Person"
+        ],
+        "blocks": 1,
+        "parseErrors": [],
+        "validationErrors": []
+      },
+      "internalLinks": 0,
+      "evidenceId": "E012"
+    },
+    {
+      "position": 8,
+      "url": "https://cardstack.money/articles/guides/credit-card-rewards-optimizer-apps-2026",
+      "domain": "cardstack.money",
+      "analysed": true,
+      "error": "",
+      "title": "Best Credit Card Rewards Optimizer Apps (2026 Comparison) | CardStack",
+      "wordCount": 2056,
+      "headings": {
+        "h1": [
+          "Best Credit Card Rewards Apps in 2026"
+        ],
+        "h2": [
+          "Feature Comparison",
+          "CardStack",
+          "MaxRewards",
+          "Kudos",
+          "AwardWallet",
+          "How to Choose",
+          "The Case for Using More Than One",
+          "A Note on Privacy",
+          "Final Thoughts",
+          "Get $1000+ a year back from your premium cards.",
+          "CardStack Insiders",
+          "Related articles",
+          "Get more from every card automatically.",
+          "Product",
+          "Cards",
+          "Learn",
+          "Points & tools",
+          "Company & support"
+        ],
+        "h3": []
+      },
+      "schema": {
+        "types": [
+          "Article",
+          "BreadcrumbList",
+          "ImageObject",
+          "ListItem",
+          "Organization",
+          "WebPage"
+        ],
+        "blocks": 2,
+        "parseErrors": [],
+        "validationErrors": []
+      },
+      "internalLinks": 95,
+      "evidenceId": "E013"
+    }
+  ],
+  "target": {
+    "domain": "getcardlab.app",
+    "fetched": true,
+    "error": "",
+    "pages": [
+      {
+        "url": "https://getcardlab.app/",
+        "title": "CardLab: Track Cards & Rewards - No Bank Login",
+        "metaDescription": "Track your cards and rewards privately: statements, due dates, reward caps and which card to use for any purchase. Checked catalog, 38 countries, no bank login.",
+        "wordCount": 2471,
+        "headings": {
+          "h1": [
+            "Track cards & rewards, and know which card to use."
+          ],
+          "h2": [
+            "The pages that answer the usual next question.",
+            "Sourced answers that lead into the tools.",
+            "Watch the answer appear.",
+            "Most people don't misunderstand credit cards. They misunderstand the timeline.",
+            "What does carrying a balance actually cost?",
+            "Run real scenarios, risk-free.",
+            "Modeled exactly, not hand-waved.",
+            "Every rate names its source, its sentence, and its date.",
+            "Free to learn. 3 days free, then $4.99 a month.",
+            "See what happens before you swipe."
+          ],
+          "h3": [
+            "Bank bonuses, read from the bank's own offer page.",
+            "See the cost of waiting.",
+            "Watch utilization move.",
+            "Know when rewards lose.",
+            "Which card do I use for this?"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "Country",
+          "FAQPage",
+          "Offer",
+          "Organization",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification",
+          "WebSite"
+        ],
+        "internalLinks": 58
+      },
+      {
+        "url": "https://getcardlab.app/best-card",
+        "title": "Which Credit Card Should I Use? | CardLab",
+        "metaDescription": "How to decide which of your credit cards to use for a purchase: earn rate for the category, bonus caps, annual fee, and whether you are carrying a balance.",
+        "wordCount": 1493,
+        "headings": {
+          "h1": [
+            "Which credit card should I use for this purchase?"
+          ],
+          "h2": [
+            "The four things that decide the answer",
+            "Rewards only win while you are not paying interest",
+            "Why the answer changes during the month",
+            "By purchase category",
+            "How to judge any \"which card\" tool",
+            "Common questions",
+            "Keep reading"
+          ],
+          "h3": [
+            "Can it show you where the rate came from?",
+            "Does it know your caps, or just the headline rate?",
+            "Does it get paid by the cards it recommends?",
+            "Does it need your bank login?",
+            "Does it work where you live?",
+            "Does it show its working?",
+            "Which credit card should I use for groceries?",
+            "Should I use a rewards card if I carry a balance?",
+            "How do I compare two cards with different annual fees?",
+            "Does CardLab tell me which card to use?",
+            "Do I have to connect my bank for this?"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "Offer",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification"
+        ],
+        "internalLinks": 38
+      },
+      {
+        "url": "https://getcardlab.app/credit-card-tracker",
+        "title": "Credit Card Tracker With No Bank Login | CardLab",
+        "metaDescription": "A credit card tracker that never asks for a bank login. Track statement dates, due dates, balances, utilization and reward caps, kept on your own device.",
+        "wordCount": 1400,
+        "headings": {
+          "h1": [
+            "A credit card tracker that never asks for a bank login"
+          ],
+          "h2": [
+            "Why a tracker does not need your bank login",
+            "What a credit card tracker should actually track",
+            "What you give up, stated plainly",
+            "What CardLab tracks, and where it works",
+            "After you track the balances, run the math",
+            "How to judge a credit card tracker",
+            "Common questions",
+            "Keep reading"
+          ],
+          "h3": [
+            "Where does the data live?",
+            "What does it ask for to get started?",
+            "Does it sell or share what it sees?",
+            "Does it explain the numbers or just display them?",
+            "Does it handle your currency and your country?",
+            "Is there a credit card tracker that does not need a bank login?",
+            "How do I track multiple credit cards?",
+            "Is a manual credit card tracker safe?",
+            "Can CardLab read my statement so I do not have to type it?",
+            "Does tracking my cards in an app affect my credit score?"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "Offer",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification"
+        ],
+        "internalLinks": 39
+      },
+      {
+        "url": "https://getcardlab.app/credit-card-simulator",
+        "title": "Credit Card Simulator: Practice a Billing Cycle",
+        "metaDescription": "Practice a credit card billing cycle safely: purchases, payments, interest, minimum payments and utilization, on invented numbers, with no real card involved.",
+        "wordCount": 1103,
+        "headings": {
+          "h1": [
+            "Credit card simulator"
+          ],
+          "h2": [
+            "What there is to simulate",
+            "How the math is done",
+            "What a simulator cannot tell you",
+            "What to check in any credit card simulator",
+            "Common questions",
+            "Keep reading"
+          ],
+          "h3": [
+            "Does it model the grace period at all?",
+            "How does it compute interest?",
+            "Does it warn when the minimum payment is not enough?",
+            "What does it want before it runs?",
+            "Can you share the scenario?",
+            "What is a credit card simulator?",
+            "Can I practice using a credit card without a real card?",
+            "How is credit card interest actually calculated?",
+            "Does a credit card simulator affect my real credit score?",
+            "Do I need an account to use the CardLab simulator?"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "Offer",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification"
+        ],
+        "internalLinks": 33
+      },
+      {
+        "url": "https://getcardlab.app/bank-bonus-tracker",
+        "title": "Bank Bonus Tracker for Checking Account Bonuses",
+        "metaDescription": "Track checking and savings sign-up bonuses against each bank's own offer terms: the qualifying deposit, the window, the payout period and the early-close date.",
+        "wordCount": 1952,
+        "headings": {
+          "h1": [
+            "A bank bonus tracker that follows the offer, not the banner"
+          ],
+          "h2": [
+            "Why bonuses are missed on definitions, not on effort",
+            "The eight lines that decide the outcome",
+            "A bonus is a return on parked cash, not a free payment",
+            "What CardLab tracks, and what it takes no money to say",
+            "How to judge a bank bonus tracker",
+            "Common questions",
+            "Keep reading"
+          ],
+          "h3": [
+            "Does it get paid when you open an account?",
+            "Where did the terms come from?",
+            "Does it hold the deposit definition, or just the amount?",
+            "Does it know the first safe day to close?",
+            "Does it rank by return or by headline?",
+            "What does it ask for to get started?",
+            "What counts as a direct deposit for a bank bonus?",
+            "Is a bank bonus worth it?",
+            "Why has my bank bonus not posted yet?",
+            "Can I close the account after getting the bonus?",
+            "Do you pay taxes on bank bonuses?",
+            "Does opening bank accounts for bonuses hurt your credit?",
+            "Does CardLab need my bank login to track a bonus?"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "Offer",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification"
+        ],
+        "internalLinks": 36
+      },
+      {
+        "url": "https://getcardlab.app/best-card/groceries",
+        "title": "Which Credit Card for Groceries? | CardLab",
+        "metaDescription": "Amex Blue Cash Preferred: 6% at U.S. supermarkets on up to $6,000/yr; Amex Gold: 4X on up to $25,000/yr (as of Oct 2026). How caps flip the ranking.",
+        "wordCount": 1220,
+        "headings": {
+          "h1": [
+            "Which credit card should I use for groceries?"
+          ],
+          "h2": [
+            "Two published US grocery rates, as of 12 October 2026",
+            "The decision rule",
+            "What \"groceries\" usually means",
+            "How CardLab answers this on the phone",
+            "Common questions",
+            "Other purchase categories",
+            "Keep reading"
+          ],
+          "h3": [
+            "Which credit card should I use for groceries?",
+            "What if my top groceries card is already at its cap?",
+            "Does CardLab recommend a specific issuer's card for groceries?",
+            "Do I need to connect my bank?",
+            "Is this financial advice?"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "Offer",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification"
+        ],
+        "internalLinks": 40
+      },
+      {
+        "url": "https://getcardlab.app/best-card/dining",
+        "title": "Which Credit Card for Dining? | CardLab",
+        "metaDescription": "Pick the dining or restaurant earn rate that still has cap room, if you pay the statement in full. Caps and restaurant definitions vary by issuer.",
+        "wordCount": 947,
+        "headings": {
+          "h1": [
+            "Which credit card should I use for dining?"
+          ],
+          "h2": [
+            "The decision rule",
+            "What \"dining\" usually means",
+            "How CardLab answers this on the phone",
+            "Common questions",
+            "Other purchase categories",
+            "Keep reading"
+          ],
+          "h3": [
+            "Which credit card should I use for dining?",
+            "What if my top dining card is already at its cap?",
+            "Does CardLab recommend a specific issuer's card for dining?",
+            "Do I need to connect my bank?",
+            "Is this financial advice?"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "Offer",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification"
+        ],
+        "internalLinks": 39
+      },
+      {
+        "url": "https://getcardlab.app/best-card/gas",
+        "title": "Which Credit Card for Gas? | CardLab",
+        "metaDescription": "Use the highest gas or fuel earn rate still under its cap, if you clear the statement. After the cap, compare base rates across the cards you hold.",
+        "wordCount": 951,
+        "headings": {
+          "h1": [
+            "Which credit card should I use for gas or fuel?"
+          ],
+          "h2": [
+            "The decision rule",
+            "What \"gas\" and \"fuel\" usually mean",
+            "How CardLab answers this on the phone",
+            "Common questions",
+            "Other purchase categories",
+            "Keep reading"
+          ],
+          "h3": [
+            "Which credit card should I use for gas?",
+            "What if my top gas card is already at its cap?",
+            "Does CardLab recommend a specific issuer's card for gas?",
+            "Do I need to connect my bank?",
+            "Is this financial advice?"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "Offer",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification"
+        ],
+        "internalLinks": 39
+      },
+      {
+        "url": "https://getcardlab.app/best-card/travel",
+        "title": "Which Credit Card for Travel? | CardLab",
+        "metaDescription": "Travel earn rates often split airfare, hotels, and other travel. Use the rate that matches the purchase, and watch caps, if you pay in full.",
+        "wordCount": 987,
+        "headings": {
+          "h1": [
+            "Which credit card should I use for travel purchases?"
+          ],
+          "h2": [
+            "The decision rule",
+            "Travel is rarely one rate",
+            "How CardLab answers this on the phone",
+            "Common questions",
+            "Other purchase categories",
+            "Keep reading"
+          ],
+          "h3": [
+            "Which credit card should I use for travel?",
+            "What if my top travel card is already at its cap?",
+            "Does CardLab recommend a specific issuer's card for travel?",
+            "Do I need to connect my bank?",
+            "Is this financial advice?"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "Offer",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification"
+        ],
+        "internalLinks": 40
+      },
+      {
+        "url": "https://getcardlab.app/coverage",
+        "title": "CardLab Card Catalog Coverage by Country",
+        "metaDescription": "Which markets CardLab has verified credit cards for. 673 cards from 149 issuers, each rate carrying the issuer page, sentence and date it was read from.",
+        "wordCount": 1611,
+        "headings": {
+          "h1": [
+            "Which cards CardLab verifies, and where"
+          ],
+          "h2": [
+            "Markets, exactly as the app ships them",
+            "Markets with the tracker only",
+            "How a rate gets published",
+            "How CardLab reads issuer pages",
+            "What this does not cover",
+            "Common questions about CardLab's coverage"
+          ],
+          "h3": [
+            "Which countries does CardLab support?",
+            "Where do CardLab's credit card rates come from?",
+            "How current are CardLab's credit card rates?",
+            "Does CardLab list every credit card in a market?",
+            "Does CardLab work in a country with no card catalog?"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "BreadcrumbList",
+          "Country",
+          "Dataset",
+          "FAQPage",
+          "ListItem",
+          "Question"
+        ],
+        "internalLinks": 33
+      }
+    ],
+    "schemaValidation": {
+      "types": [
+        "Answer",
+        "Article",
+        "BreadcrumbList",
+        "Country",
+        "Dataset",
+        "FAQPage",
+        "ListItem",
+        "Offer",
+        "Organization",
+        "Question",
+        "SoftwareApplication",
+        "UnitPriceSpecification",
+        "WebSite"
+      ],
+      "blocks": 10,
+      "parseErrors": [],
+      "checks": [
+        {
+          "type": "Organization",
+          "checkedAs": "Organization",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/"
+        },
+        {
+          "type": "SoftwareApplication",
+          "checkedAs": "SoftwareApplication",
+          "valid": false,
+          "errors": [
+            "needs one of: aggregateRating, review"
+          ],
+          "warnings": [],
+          "url": "https://getcardlab.app/"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card"
+        },
+        {
+          "type": "Article",
+          "checkedAs": "Article",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card"
+        },
+        {
+          "type": "SoftwareApplication",
+          "checkedAs": "SoftwareApplication",
+          "valid": false,
+          "errors": [
+            "needs one of: aggregateRating, review"
+          ],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/credit-card-tracker"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/credit-card-tracker"
+        },
+        {
+          "type": "Article",
+          "checkedAs": "Article",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/credit-card-tracker"
+        },
+        {
+          "type": "SoftwareApplication",
+          "checkedAs": "SoftwareApplication",
+          "valid": false,
+          "errors": [
+            "needs one of: aggregateRating, review"
+          ],
+          "warnings": [],
+          "url": "https://getcardlab.app/credit-card-tracker"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/credit-card-simulator"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/credit-card-simulator"
+        },
+        {
+          "type": "Article",
+          "checkedAs": "Article",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/credit-card-simulator"
+        },
+        {
+          "type": "SoftwareApplication",
+          "checkedAs": "SoftwareApplication",
+          "valid": false,
+          "errors": [
+            "needs one of: aggregateRating, review"
+          ],
+          "warnings": [],
+          "url": "https://getcardlab.app/credit-card-simulator"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/bank-bonus-tracker"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/bank-bonus-tracker"
+        },
+        {
+          "type": "Article",
+          "checkedAs": "Article",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/bank-bonus-tracker"
+        },
+        {
+          "type": "SoftwareApplication",
+          "checkedAs": "SoftwareApplication",
+          "valid": false,
+          "errors": [
+            "needs one of: aggregateRating, review"
+          ],
+          "warnings": [],
+          "url": "https://getcardlab.app/bank-bonus-tracker"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card/groceries"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card/groceries"
+        },
+        {
+          "type": "Article",
+          "checkedAs": "Article",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card/groceries"
+        },
+        {
+          "type": "SoftwareApplication",
+          "checkedAs": "SoftwareApplication",
+          "valid": false,
+          "errors": [
+            "needs one of: aggregateRating, review"
+          ],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card/groceries"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card/dining"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card/dining"
+        },
+        {
+          "type": "Article",
+          "checkedAs": "Article",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card/dining"
+        },
+        {
+          "type": "SoftwareApplication",
+          "checkedAs": "SoftwareApplication",
+          "valid": false,
+          "errors": [
+            "needs one of: aggregateRating, review"
+          ],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card/dining"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card/gas"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card/gas"
+        },
+        {
+          "type": "Article",
+          "checkedAs": "Article",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card/gas"
+        },
+        {
+          "type": "SoftwareApplication",
+          "checkedAs": "SoftwareApplication",
+          "valid": false,
+          "errors": [
+            "needs one of: aggregateRating, review"
+          ],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card/gas"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card/travel"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card/travel"
+        },
+        {
+          "type": "Article",
+          "checkedAs": "Article",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card/travel"
+        },
+        {
+          "type": "SoftwareApplication",
+          "checkedAs": "SoftwareApplication",
+          "valid": false,
+          "errors": [
+            "needs one of: aggregateRating, review"
+          ],
+          "warnings": [],
+          "url": "https://getcardlab.app/best-card/travel"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/coverage"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/coverage"
+        }
+      ],
+      "evidenceIds": [
+        "E017",
+        "E018"
+      ]
+    },
+    "aiReadiness": {
+      "crawlers": [
+        {
+          "token": "GPTBot",
+          "operator": "OpenAI",
+          "purpose": "model training",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        },
+        {
+          "token": "OAI-SearchBot",
+          "operator": "OpenAI",
+          "purpose": "ChatGPT search index",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        },
+        {
+          "token": "ChatGPT-User",
+          "operator": "OpenAI",
+          "purpose": "user-initiated fetches",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        },
+        {
+          "token": "ClaudeBot",
+          "operator": "Anthropic",
+          "purpose": "model training",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        },
+        {
+          "token": "Claude-SearchBot",
+          "operator": "Anthropic",
+          "purpose": "search index",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        },
+        {
+          "token": "PerplexityBot",
+          "operator": "Perplexity",
+          "purpose": "search index",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        },
+        {
+          "token": "Google-Extended",
+          "operator": "Google",
+          "purpose": "Gemini training and grounding (not Search)",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        },
+        {
+          "token": "Applebot-Extended",
+          "operator": "Apple",
+          "purpose": "Apple Intelligence training",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        },
+        {
+          "token": "CCBot",
+          "operator": "Common Crawl",
+          "purpose": "open crawl used for training",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        }
+      ],
+      "llmsTxt": {
+        "present": true,
+        "valid": true,
+        "linkCount": 129,
+        "sections": [
+          "Key facts",
+          "Answers to the questions this product exists for",
+          "Which card, by category",
+          "Coverage and sourcing",
+          "Calculators (free, no sign-up)",
+          "Guide",
+          "Blog",
+          "About",
+          "Optional"
+        ],
+        "errors": [],
+        "warnings": []
+      },
+      "llmsFullTxt": {
+        "present": true,
+        "bytes": 586524
+      },
+      "evidenceIds": [
+        "E021",
+        "E019",
+        "E020"
+      ]
+    },
+    "performance": [
+      {
+        "source": "psi",
+        "strategy": "mobile",
+        "ok": false,
+        "skipped": "PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key",
+        "scores": {},
+        "lab": {},
+        "field": {},
+        "evidenceId": "E022"
+      }
+    ],
+    "robots": {
+      "found": true,
+      "blocksRoot": false,
+      "evidenceId": "E015"
+    },
+    "sitemap": {
+      "urlCount": 114,
+      "evidenceId": "E016"
+    },
+    "evidenceIds": [
+      "E017",
+      "E018",
+      "E015",
+      "E016"
+    ]
+  },
+  "keywordGap": [
+    {
+      "phrase": "maxrewards",
+      "words": 1,
+      "competitors": 3,
+      "tfidf": 0.03886,
+      "score": 63
+    },
+    {
+      "phrase": "recommendations",
+      "words": 1,
+      "competitors": 3,
+      "tfidf": 0.0183,
+      "score": 12
+    },
+    {
+      "phrase": "credits",
+      "words": 1,
+      "competitors": 3,
+      "tfidf": 0.01394,
+      "score": 24
+    },
+    {
+      "phrase": "chase sapphire",
+      "words": 2,
+      "competitors": 3,
+      "tfidf": 0.00681,
+      "score": 11
+    },
+    {
+      "phrase": "features",
+      "words": 1,
+      "competitors": 3,
+      "tfidf": 0.00956,
+      "score": 14
+    },
+    {
+      "phrase": "sapphire",
+      "words": 1,
+      "competitors": 3,
+      "tfidf": 0.00681,
+      "score": 11
+    },
+    {
+      "phrase": "gas ev",
+      "words": 2,
+      "competitors": 3,
+      "tfidf": 0.00232,
+      "score": 3
+    },
+    {
+      "phrase": "travel cards",
+      "words": 2,
+      "competitors": 3,
+      "tfidf": 0.00232,
+      "score": 3
+    },
+    {
+      "phrase": "capital",
+      "words": 1,
+      "competitors": 3,
+      "tfidf": 0.00369,
+      "score": 6
+    },
+    {
+      "phrase": "activate",
+      "words": 1,
+      "competitors": 3,
+      "tfidf": 0.00232,
+      "score": 3
+    },
+    {
+      "phrase": "everyday",
+      "words": 1,
+      "competitors": 3,
+      "tfidf": 0.00232,
+      "score": 3
+    },
+    {
+      "phrase": "kudos",
+      "words": 1,
+      "competitors": 2,
+      "tfidf": 0.16357,
+      "score": 20
+    },
+    {
+      "phrase": "partners",
+      "words": 1,
+      "competitors": 2,
+      "tfidf": 0.02724,
+      "score": 15
+    },
+    {
+      "phrase": "awardwallet",
+      "words": 1,
+      "competitors": 2,
+      "tfidf": 0.02624,
+      "score": 49
+    },
+    {
+      "phrase": "apps for tracking",
+      "words": 3,
+      "competitors": 2,
+      "tfidf": 0.00844,
+      "score": 16
+    },
+    {
+      "phrase": "maximize",
+      "words": 1,
+      "competitors": 2,
+      "tfidf": 0.01969,
+      "score": 8
+    },
+    {
+      "phrase": "chase sapphire preferred",
+      "words": 3,
+      "competitors": 2,
+      "tfidf": 0.00537,
+      "score": 8
+    },
+    {
+      "phrase": "sapphire preferred card",
+      "words": 3,
+      "competitors": 2,
+      "tfidf": 0.00537,
+      "score": 8
+    },
+    {
+      "phrase": "picks",
+      "words": 1,
+      "competitors": 2,
+      "tfidf": 0.01567,
+      "score": 12
+    },
+    {
+      "phrase": "management",
+      "words": 1,
+      "competitors": 2,
+      "tfidf": 0.01546,
+      "score": 7
+    },
+    {
+      "phrase": "programs",
+      "words": 1,
+      "competitors": 2,
+      "tfidf": 0.0125,
+      "score": 23
+    },
+    {
+      "phrase": "checkout",
+      "words": 1,
+      "competitors": 2,
+      "tfidf": 0.01076,
+      "score": 11
+    },
+    {
+      "phrase": "sapphire preferred",
+      "words": 2,
+      "competitors": 2,
+      "tfidf": 0.00537,
+      "score": 8
+    },
+    {
+      "phrase": "changelog",
+      "words": 1,
+      "competitors": 2,
+      "tfidf": 0.01049,
+      "score": 3
+    },
+    {
+      "phrase": "editorial",
+      "words": 1,
+      "competitors": 2,
+      "tfidf": 0.01006,
+      "score": 8
+    },
+    {
+      "phrase": "loyalty programs",
+      "words": 2,
+      "competitors": 2,
+      "tfidf": 0.00485,
+      "score": 9
+    },
+    {
+      "phrase": "extension",
+      "words": 1,
+      "competitors": 2,
+      "tfidf": 0.0085,
+      "score": 11
+    },
+    {
+      "phrase": "premium",
+      "words": 1,
+      "competitors": 2,
+      "tfidf": 0.0085,
+      "score": 11
+    },
+    {
+      "phrase": "chase sapphire reserve",
+      "words": 3,
+      "competitors": 2,
+      "tfidf": 0.00283,
+      "score": 3
+    },
+    {
+      "phrase": "choosing",
+      "words": 1,
+      "competitors": 2,
+      "tfidf": 0.00731,
+      "score": 5
+    }
+  ],
+  "ads": [
+    {
+      "domain": "getcardlab.app",
+      "brand": "cardlab",
+      "platform": "Google Ads Transparency Center",
+      "url": "https://adstransparency.google.com/?region=anywhere&domain=getcardlab.app",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E024"
+      ]
+    },
+    {
+      "domain": "getcardlab.app",
+      "brand": "cardlab",
+      "platform": "Meta Ad Library",
+      "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=cardlab&search_type=keyword_unordered&media_type=all",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E025"
+      ]
+    },
+    {
+      "domain": "getcardlab.app",
+      "brand": "cardlab",
+      "platform": "LinkedIn Ad Library",
+      "url": "https://www.linkedin.com/ad-library/search?keyword=cardlab",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E026"
+      ]
+    },
+    {
+      "domain": "rewardswise.app",
+      "brand": "rewardswise",
+      "platform": "Google Ads Transparency Center",
+      "url": "https://adstransparency.google.com/?region=anywhere&domain=rewardswise.app",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E027"
+      ]
+    },
+    {
+      "domain": "rewardswise.app",
+      "brand": "rewardswise",
+      "platform": "Meta Ad Library",
+      "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=rewardswise&search_type=keyword_unordered&media_type=all",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E028"
+      ]
+    },
+    {
+      "domain": "rewardswise.app",
+      "brand": "rewardswise",
+      "platform": "LinkedIn Ad Library",
+      "url": "https://www.linkedin.com/ad-library/search?keyword=rewardswise",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E029"
+      ]
+    },
+    {
+      "domain": "maxrewards.com",
+      "brand": "maxrewards",
+      "platform": "Google Ads Transparency Center",
+      "url": "https://adstransparency.google.com/?region=anywhere&domain=maxrewards.com",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E030"
+      ]
+    },
+    {
+      "domain": "maxrewards.com",
+      "brand": "maxrewards",
+      "platform": "Meta Ad Library",
+      "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=maxrewards&search_type=keyword_unordered&media_type=all",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E031"
+      ]
+    },
+    {
+      "domain": "maxrewards.com",
+      "brand": "maxrewards",
+      "platform": "LinkedIn Ad Library",
+      "url": "https://www.linkedin.com/ad-library/search?keyword=maxrewards",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E032"
+      ]
+    },
+    {
+      "domain": "joinkudos.com",
+      "brand": "joinkudos",
+      "platform": "Google Ads Transparency Center",
+      "url": "https://adstransparency.google.com/?region=anywhere&domain=joinkudos.com",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E033"
+      ]
+    },
+    {
+      "domain": "joinkudos.com",
+      "brand": "joinkudos",
+      "platform": "Meta Ad Library",
+      "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=joinkudos&search_type=keyword_unordered&media_type=all",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E034"
+      ]
+    },
+    {
+      "domain": "joinkudos.com",
+      "brand": "joinkudos",
+      "platform": "LinkedIn Ad Library",
+      "url": "https://www.linkedin.com/ad-library/search?keyword=joinkudos",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E035"
+      ]
+    }
+  ],
+  "citations": [],
+  "claims": [
+    {
+      "id": "C01",
+      "text": "Google (headless Chromium) was not used: Google captcha (unusual traffic page)",
+      "evidenceIds": [
+        "E001"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "single request",
+      "unknowns": "Google (headless Chromium) rankings not observed"
+    },
+    {
+      "id": "C02",
+      "text": "Top results: #1 forbes.com, #2 cnbc.com, #3 money.usnews.com, #4 appshunter.io, #5 rewardswise.app",
+      "evidenceIds": [
+        "E001",
+        "E003"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "top 8 organic results from Bing (headless Chromium) (en-US, logged out) on 2026-10-15",
+      "unknowns": ""
+    },
+    {
+      "id": "C03",
+      "text": "getcardlab.app does not appear in the observed results",
+      "evidenceIds": [
+        "E001",
+        "E003"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "top 8 organic results from Bing (headless Chromium) (en-US, logged out) on 2026-10-15",
+      "unknowns": "Personalised and other-location results not observed"
+    },
+    {
+      "id": "C04",
+      "text": "Search intent is comparison/roundup: 5/8 titles use \"best\", \"top\", a year or review wording",
+      "evidenceIds": [
+        "E001",
+        "E003",
+        "E007",
+        "E010",
+        "E011",
+        "E012",
+        "E013"
+      ],
+      "type": "inferred",
+      "confidence": "medium",
+      "boundary": "top 8 organic results from Bing (headless Chromium) (en-US, logged out) on 2026-10-15",
+      "unknowns": ""
+    },
+    {
+      "id": "C05",
+      "text": "Ranking pages median 586 words (range 0-2573); getcardlab.app homepage 2471 words",
+      "evidenceIds": [
+        "E007",
+        "E010",
+        "E011",
+        "E012",
+        "E013",
+        "E017",
+        "E018"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "5 fetched ranking pages, raw HTML without JavaScript",
+      "unknowns": ""
+    },
+    {
+      "id": "C06",
+      "text": "2/5 ranking pages contain every keyword term in <title>; target homepage: no",
+      "evidenceIds": [
+        "E007",
+        "E010",
+        "E011",
+        "E012",
+        "E013",
+        "E017",
+        "E018"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "5 fetched ranking pages",
+      "unknowns": ""
+    },
+    {
+      "id": "C07",
+      "text": "Ranking pages median 3 H2 headings; target homepage 10",
+      "evidenceIds": [
+        "E007",
+        "E010",
+        "E011",
+        "E012",
+        "E013",
+        "E017",
+        "E018"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "5 fetched ranking pages",
+      "unknowns": ""
+    },
+    {
+      "id": "C08",
+      "text": "Common schema types among ranking pages: Organization (3/5), BreadcrumbList (2/5), Article (1/5), ItemList (1/5), NewsArticle (1/5), NewsMediaOrganization (1/5); target: Answer, Article, BreadcrumbList, Country, Dataset, FAQPage, ListItem, Offer, Organization, Question, SoftwareApplication, UnitPriceSpecification, WebSite",
+      "evidenceIds": [
+        "E007",
+        "E010",
+        "E011",
+        "E012",
+        "E013",
+        "E017",
+        "E018"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "JSON-LD on 5 ranking pages and 10 target pages",
+      "unknowns": ""
+    },
+    {
+      "id": "C09",
+      "text": "Ranking pages median 52 internal links per page; target homepage 58",
+      "evidenceIds": [
+        "E007",
+        "E010",
+        "E011",
+        "E012",
+        "E013",
+        "E017",
+        "E018"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "links in raw HTML",
+      "unknowns": ""
+    },
+    {
+      "id": "C10",
+      "text": "Could not analyse https://www.forbes.com/advisor/credit-cards/best-apps-to-track-credit-card-rewards/: HTTP 403 text/html;charset=utf-8",
+      "evidenceIds": [
+        "E006"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "single request",
+      "unknowns": "On-page facts for forbes.com"
+    },
+    {
+      "id": "C11",
+      "text": "Could not analyse https://money.usnews.com/credit-cards/articles/best-credit-card-apps-for-tracking-rewards: The operation was aborted due to timeout",
+      "evidenceIds": [
+        "E008"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "single request",
+      "unknowns": "On-page facts for money.usnews.com"
+    },
+    {
+      "id": "C12",
+      "text": "Could not analyse https://appshunter.io/ios/topics/credit-card-rewards: HTTP 403 text/html; charset=UTF-8",
+      "evidenceIds": [
+        "E009"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "single request",
+      "unknowns": "On-page facts for appshunter.io"
+    },
+    {
+      "id": "C13",
+      "text": "9 page(s) carry JSON-LD with missing required properties or parse errors",
+      "evidenceIds": [
+        "E018"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "required-property checks for Article, FAQPage, Product, SoftwareApplication, Organization, BreadcrumbList, HowTo, LocalBusiness",
+      "unknowns": ""
+    },
+    {
+      "id": "C14",
+      "text": "getcardlab.app robots.txt lets all 9 checked AI crawlers fetch /",
+      "evidenceIds": [
+        "E015",
+        "E021"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "robots.txt rules for each product token; crawlers may ignore robots.txt or be blocked by a firewall",
+      "unknowns": "Server or CDN bot blocking not tested"
+    },
+    {
+      "id": "C15",
+      "text": "getcardlab.app/llms.txt follows the llmstxt.org format (9 sections, 129 links)",
+      "evidenceIds": [
+        "E019"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "single fetch of /llms.txt",
+      "unknowns": ""
+    },
+    {
+      "id": "C16",
+      "text": "getcardlab.app/llms-full.txt present (586524 bytes)",
+      "evidenceIds": [
+        "E020"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "single fetch of /llms-full.txt",
+      "unknowns": ""
+    },
+    {
+      "id": "C17",
+      "text": "getcardlab.app sitemap lists 114 URLs",
+      "evidenceIds": [
+        "E015",
+        "E016"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "robots.txt Sitemap lines and /sitemap.xml",
+      "unknowns": ""
+    },
+    {
+      "id": "C18",
+      "text": "0 search ads observed on the collected SERPs",
+      "evidenceIds": [
+        "E001",
+        "E003"
+      ],
+      "type": "observed",
+      "confidence": "medium",
+      "boundary": "top 8 organic results from Bing (headless Chromium) (en-US, logged out) on 2026-10-15",
+      "unknowns": "Ads shown to logged-in or other-location users"
+    },
+    {
+      "id": "C19",
+      "text": "12 ad-library lookup(s) need a manual check",
+      "evidenceIds": [
+        "E024",
+        "E025",
+        "E026",
+        "E027",
+        "E028",
+        "E029",
+        "E030",
+        "E031",
+        "E032",
+        "E033",
+        "E034",
+        "E035"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "lookup URLs (and screenshots where captured)",
+      "unknowns": "Ad counts, run dates, creatives"
+    },
+    {
+      "id": "C20",
+      "text": "Backlink profiles were not collected",
+      "evidenceIds": [],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "free automated pipeline",
+      "unknowns": "Referring domains, link velocity"
+    }
+  ],
+  "unknowns": [
+    "Google (headless Chromium) rankings not observed",
+    "Personalised and other-location results not observed",
+    "On-page facts for forbes.com",
+    "On-page facts for money.usnews.com",
+    "On-page facts for appshunter.io",
+    "Server or CDN bot blocking not tested",
+    "Ads shown to logged-in or other-location users",
+    "Ad counts, run dates, creatives",
+    "Referring domains, link velocity",
+    "PageSpeed Insights skipped: PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key",
+    "Paid keyword data (volume, ranked keywords) skipped: budget is 0"
+  ],
+  "topActions": [
+    {
+      "rank": 1,
+      "title": "Put \"credit card rewards app\" (or close wording) in the title and H1 of the page meant to rank",
+      "why": "The target title \"CardLab: Track Cards & Rewards - No Bank Login\" lacks the keyword terms; 2/5 ranking pages have them.",
+      "evidenceIds": [
+        "E007",
+        "E010",
+        "E011",
+        "E012",
+        "E013",
+        "E017",
+        "E018",
+        "E015",
+        "E016"
+      ],
+      "effort": "S",
+      "impact": "high",
+      "owner": "seo"
+    },
+    {
+      "rank": 2,
+      "title": "Fix JSON-LD errors: SoftwareApplication: needs one of: aggregateRating, review",
+      "why": "Invalid structured data is ignored for rich results.",
+      "evidenceIds": [
+        "E017",
+        "E018"
+      ],
+      "effort": "S",
+      "impact": "medium",
+      "owner": "dev"
+    },
+    {
+      "rank": 3,
+      "title": "Cover competitor phrases in headings and copy: maxrewards, recommendations, credits, chase sapphire, features, sapphire, gas ev, travel cards",
+      "why": "Used by two or more ranking pages and missing from the crawled target pages.",
+      "evidenceIds": [
+        "E007",
+        "E010",
+        "E011",
+        "E012",
+        "E013",
+        "E017",
+        "E018",
+        "E015",
+        "E016"
+      ],
+      "effort": "M",
+      "impact": "medium",
+      "owner": "content"
+    }
+  ],
+  "evidenceIndex": "evidence/index.json"
+}
