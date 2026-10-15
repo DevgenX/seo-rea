@@ -1,0 +1,781 @@
+[
+  {
+    "position": 1,
+    "url": "https://uscreditcardrewards.com/guides/best-credit-card-apps",
+    "domain": "uscreditcardrewards.com",
+    "robots": {
+      "status": 200,
+      "sitemaps": [
+        "https://uscreditcardrewards.com/sitemap-index.xml"
+      ]
+    },
+    "page": {
+      "url": "https://uscreditcardrewards.com/guides/best-credit-card-apps",
+      "title": "The best credit card tracking apps, compared | USCreditCardRewards",
+      "metaDescription": "CardPointers, MaxWorth, MaxRewards, kardfolio, AwardWallet, Travel Freely, Kudos and StackEasy compared on price, platforms, credential handling and what each actually tracks.",
+      "metaRobots": "",
+      "ogTitle": "The best credit card tracking apps, compared",
+      "canonical": "https://uscreditcardrewards.com/guides/best-credit-card-apps",
+      "hreflang": [],
+      "lang": "en",
+      "headings": {
+        "h1": [
+          "The best credit card tracking apps, compared"
+        ],
+        "h2": [
+          "Benefit trackers, ranked",
+          "How we scored them",
+          "“Credit card app” is four different jobs",
+          "Every app, every row",
+          "Head-to-head",
+          "Questions people ask"
+        ],
+        "h3": [
+          "CardPointers",
+          "MaxWorth",
+          "MaxRewards",
+          "kardfolio",
+          "Benefit & credit tracking",
+          "Points & miles balances",
+          "Welcome bonuses & application rules",
+          "Card choice at checkout",
+          "Balances, utilisation & 0% APR"
+        ]
+      },
+      "wordCount": 2134,
+      "schemaTypes": [
+        "Answer",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage",
+        "ItemList",
+        "ListItem",
+        "Organization",
+        "Question",
+        "WebSite"
+      ],
+      "jsonLdBlocks": 1,
+      "jsonLdErrors": 0,
+      "internalLinkCount": 40,
+      "externalLinkCount": 0,
+      "topAnchors": [
+        {
+          "anchor": "CardPointers",
+          "count": 3
+        },
+        {
+          "anchor": "MaxWorth",
+          "count": 3
+        },
+        {
+          "anchor": "MaxRewards",
+          "count": 3
+        },
+        {
+          "anchor": "kardfolio",
+          "count": 3
+        },
+        {
+          "anchor": "All cards",
+          "count": 2
+        },
+        {
+          "anchor": "Credit finder",
+          "count": 2
+        },
+        {
+          "anchor": "Best for…",
+          "count": 2
+        },
+        {
+          "anchor": "About",
+          "count": 2
+        },
+        {
+          "anchor": "AwardWallet",
+          "count": 2
+        },
+        {
+          "anchor": "Travel Freely",
+          "count": 2
+        },
+        {
+          "anchor": "Kudos",
+          "count": 2
+        },
+        {
+          "anchor": "StackEasy",
+          "count": 2
+        },
+        {
+          "anchor": "USCreditCard Rewards",
+          "count": 1
+        },
+        {
+          "anchor": "Guides",
+          "count": 1
+        },
+        {
+          "anchor": "How we source",
+          "count": 1
+        }
+      ]
+    },
+    "evidenceId": "E004"
+  },
+  {
+    "position": 2,
+    "url": "https://play.google.com/store/apps/details?hl=en_US&id=com.cardpointers.app",
+    "domain": "play.google.com",
+    "robots": {
+      "status": 200,
+      "sitemaps": [
+        "https://play.google.com/sitemaps/sitemaps-index-0.xml",
+        "https://play.google.com/sitemaps/sitemaps-index-1.xml"
+      ]
+    },
+    "page": {
+      "url": "https://play.google.com/store/apps/details?hl=en_US&id=com.cardpointers.app",
+      "title": "CardPointers: Maximize Rewards - Apps on Google Play",
+      "metaDescription": "Save money and earn more cash back, points, and miles from your credit cards.",
+      "metaRobots": "NOODP",
+      "ogTitle": "CardPointers: Maximize Rewards - Apps on Google Play",
+      "canonical": "https://play.google.com/store/apps/details?id=com.cardpointers.app&hl=en_US",
+      "hreflang": [
+        "x-default",
+        "en-US",
+        "af",
+        "am",
+        "ar",
+        "as",
+        "az",
+        "be",
+        "bg",
+        "bn",
+        "bs",
+        "ca",
+        "cs",
+        "da",
+        "de",
+        "de-AT",
+        "de-CH",
+        "el",
+        "en",
+        "en-AU",
+        "en-CA",
+        "en-GB",
+        "en-IE",
+        "en-IN",
+        "en-NZ",
+        "en-SG",
+        "en-ZA",
+        "es",
+        "es-419",
+        "es-AR",
+        "es-BO",
+        "es-CL",
+        "es-CO",
+        "es-CR",
+        "es-DO",
+        "es-EC",
+        "es-GT",
+        "es-HN",
+        "es-MX",
+        "es-NI",
+        "es-PA",
+        "es-PE",
+        "es-PR",
+        "es-PY",
+        "es-SV",
+        "es-US",
+        "es-UY",
+        "es-VE",
+        "et",
+        "eu",
+        "fa",
+        "fi",
+        "fil",
+        "fr",
+        "fr-CA",
+        "fr-CH",
+        "gl",
+        "gsw",
+        "gu",
+        "he",
+        "hi",
+        "hr",
+        "hu",
+        "hy",
+        "id",
+        "is",
+        "it",
+        "ja",
+        "ka",
+        "kk",
+        "km",
+        "kn",
+        "ko",
+        "ky",
+        "ln",
+        "lo",
+        "lt",
+        "lv",
+        "mk",
+        "ml",
+        "mn",
+        "mr",
+        "ms",
+        "my",
+        "no",
+        "ne",
+        "nl",
+        "or",
+        "pa",
+        "pl",
+        "pt",
+        "pt-BR",
+        "pt-PT",
+        "ro",
+        "ru",
+        "si",
+        "sk",
+        "sl",
+        "sq",
+        "sr",
+        "sr-Latn",
+        "sv",
+        "sw",
+        "ta",
+        "te",
+        "th",
+        "tr",
+        "uk",
+        "ur",
+        "uz",
+        "vi",
+        "zh",
+        "zh-CN",
+        "zh-HK",
+        "zh-TW",
+        "zu"
+      ],
+      "lang": "en-US",
+      "headings": {
+        "h1": [
+          "CardPointers: Maximize Rewards"
+        ],
+        "h2": [
+          "About this app",
+          "Data safety",
+          "Ratings and reviews",
+          "What’s new",
+          "App support",
+          "Similar apps"
+        ],
+        "h3": []
+      },
+      "wordCount": 1081,
+      "schemaTypes": [
+        "AggregateRating",
+        "Offer",
+        "Person",
+        "SoftwareApplication"
+      ],
+      "jsonLdBlocks": 1,
+      "jsonLdErrors": 0,
+      "internalLinkCount": 27,
+      "externalLinkCount": 16,
+      "topAnchors": [
+        {
+          "anchor": "Games",
+          "count": 2
+        },
+        {
+          "anchor": "Apps",
+          "count": 2
+        },
+        {
+          "anchor": "Movies & TV",
+          "count": 2
+        },
+        {
+          "anchor": "Books",
+          "count": 2
+        },
+        {
+          "anchor": "Kids",
+          "count": 2
+        },
+        {
+          "anchor": "google_logo Play",
+          "count": 1
+        },
+        {
+          "anchor": "CardPointers",
+          "count": 1
+        },
+        {
+          "anchor": "Finance",
+          "count": 1
+        },
+        {
+          "anchor": "See more information on Data safety",
+          "count": 1
+        },
+        {
+          "anchor": "See more details on data safety",
+          "count": 1
+        },
+        {
+          "anchor": "See more information on Similar apps",
+          "count": 1
+        },
+        {
+          "anchor": "Goldman Sachs Wellness Goldman Sachs 3.8 star",
+          "count": 1
+        },
+        {
+          "anchor": "Rocket Mortgage Rocket Mortgage 4.7 star",
+          "count": 1
+        },
+        {
+          "anchor": "Prosper Card Prosper Marketplace, Inc. 4.1 star",
+          "count": 1
+        },
+        {
+          "anchor": "Bartlett Arborist Supply Bartlett Arborist Supply 4.9 star",
+          "count": 1
+        }
+      ]
+    },
+    "evidenceId": "E005"
+  },
+  {
+    "position": 3,
+    "url": "https://apps.apple.com/us/app/maxrewards-credit-card-rewards/id1435710443",
+    "domain": "apps.apple.com",
+    "robots": {
+      "status": 200,
+      "sitemaps": [
+        "https://apps.apple.com/sitemaps_apps_index_chart_1.xml",
+        "https://apps.apple.com/sitemaps_apps_index_app_1.xml",
+        "https://apps.apple.com/sitemaps_apps_index_new-app_1.xml",
+        "https://apps.apple.com/sitemaps_apps_index_story_1.xml",
+        "https://apps.apple.com/sitemaps_apps_index_grouping_1.xml",
+        "https://apps.apple.com/sitemaps_apps_index_static-url_1.xml"
+      ]
+    },
+    "page": {
+      "url": "https://apps.apple.com/us/app/maxrewards-credit-card-rewards/id1435710443",
+      "title": "‎MaxRewards Credit Card Rewards App - App Store",
+      "metaDescription": "Download MaxRewards Credit Card Rewards by MaxRewards Inc on the App Store. See screenshots, ratings and reviews, user tips, and more apps like MaxRewards…",
+      "metaRobots": "",
+      "ogTitle": "MaxRewards Credit Card Rewards App - App Store",
+      "canonical": "https://apps.apple.com/us/app/maxrewards-credit-card-rewards/id1435710443",
+      "hreflang": [],
+      "lang": "en-US",
+      "headings": {
+        "h1": [
+          "MaxRewards Credit Card Rewards",
+          "Best card management app I’ve used!!! But can be a bit better.",
+          "New update puts broken app out of its misery",
+          "Absolutely top notch functionality and service",
+          "Terrible Customer Service",
+          "Version History",
+          "App Privacy"
+        ],
+        "h2": [
+          "Ratings & Reviews",
+          "What’s New",
+          "App Privacy",
+          "Accessibility",
+          "Information",
+          "Supports",
+          "You Might Also Like",
+          "Africa, Middle East, and India",
+          "Asia Pacific",
+          "Europe",
+          "Latin America and the Caribbean",
+          "The United States and Canada"
+        ],
+        "h3": [
+          "Best card management app I’ve used!!! But can be a bit better.",
+          "New update puts broken app out of its misery",
+          "Absolutely top notch functionality and service",
+          "Terrible Customer Service",
+          "Data Used to Track You",
+          "Data Linked to You",
+          "Data Used to Track You",
+          "Data Linked to You",
+          "Wallet"
+        ]
+      },
+      "wordCount": 4043,
+      "schemaTypes": [
+        "AggregateRating",
+        "BreadcrumbList",
+        "ListItem",
+        "Offer",
+        "Organization",
+        "SoftwareApplication"
+      ],
+      "jsonLdBlocks": 3,
+      "jsonLdErrors": 0,
+      "internalLinkCount": 228,
+      "externalLinkCount": 5,
+      "topAnchors": [
+        {
+          "anchor": "Learn More",
+          "count": 4
+        },
+        {
+          "anchor": "Armenia",
+          "count": 2
+        },
+        {
+          "anchor": "Turkmenistan",
+          "count": 2
+        },
+        {
+          "anchor": "Today",
+          "count": 1
+        },
+        {
+          "anchor": "Games",
+          "count": 1
+        },
+        {
+          "anchor": "Apps",
+          "count": 1
+        },
+        {
+          "anchor": "Arcade",
+          "count": 1
+        },
+        {
+          "anchor": "iPhone",
+          "count": 1
+        },
+        {
+          "anchor": "iPad",
+          "count": 1
+        },
+        {
+          "anchor": "Mac",
+          "count": 1
+        },
+        {
+          "anchor": "Vision",
+          "count": 1
+        },
+        {
+          "anchor": "Watch",
+          "count": 1
+        },
+        {
+          "anchor": "TV",
+          "count": 1
+        },
+        {
+          "anchor": "Developer MaxRewards Inc",
+          "count": 1
+        },
+        {
+          "anchor": "Ratings & Reviews",
+          "count": 1
+        }
+      ]
+    },
+    "evidenceId": "E006"
+  },
+  {
+    "position": 4,
+    "url": "https://www.businessinsider.com/personal-finance/credit-cards/best-credit-card-rewards-apps-track-points-miles-travel",
+    "domain": "businessinsider.com",
+    "robots": {
+      "status": 200,
+      "sitemaps": [
+        "https://www.businessinsider.com/sitemap/latest.xml",
+        "https://www.businessinsider.com/sitemap/google-news.xml",
+        "https://www.businessinsider.com/sitemap/index.xml",
+        "https://www.businessinsider.com/guides/sitemap/latest.xml",
+        "https://www.businessinsider.com/guides/sitemap/google-news.xml",
+        "https://www.businessinsider.com/guides/sitemap/index.xml",
+        "https://www.businessinsider.com/sitemap/landing-pages.xml"
+      ]
+    },
+    "page": {
+      "url": "https://www.businessinsider.com/personal-finance/credit-cards/best-credit-card-rewards-apps-track-points-miles-travel",
+      "title": "Best Credit Card Rewards Tracking Apps and Award Flight Search Tools",
+      "metaDescription": "These are the best apps for tracking credit card points, miles, and cash back, and these new award flight search tools help maximize your rewards.",
+      "metaRobots": "max-image-preview:large",
+      "ogTitle": "The best apps and tools for tracking your credit card rewards and booking the best award flights",
+      "canonical": "https://www.businessinsider.com/personal-finance/credit-cards/best-credit-card-rewards-apps-track-points-miles-travel",
+      "hreflang": [],
+      "lang": "en-US",
+      "headings": {
+        "h1": [
+          "The best apps and tools for tracking your credit card rewards and booking the best award flights"
+        ],
+        "h2": [
+          "Why use a credit card rewards tracking app?",
+          "Features to look for in a rewards tracking app",
+          "Comparing the best credit card rewards tracking apps",
+          "Tips for maximizing credit card rewards",
+          "The best search tools for booking flights on points and miles",
+          "Check for credit card offers",
+          "FAQs about r eward and credit card tracker apps",
+          "Read next"
+        ],
+        "h3": [
+          "Comprehensive rewards management",
+          "Security and privacy features",
+          "AwardWallet",
+          "CardPointers",
+          "Travel Freely",
+          "MaxRewards",
+          "Regularly monitor your rewards",
+          "Keep track of credit card bonus categories and limited-time offers",
+          "Learn how to effectively book award travel for the best value",
+          "point.me",
+          "Roame",
+          "seats.aero",
+          "Points Path",
+          "What makes a credit card rewards tracking app stand out?",
+          "Can I search for flights using points and miles?",
+          "How often should I check my rewards tracking app?",
+          "Can rewards-tracking apps help me find new credit cards?",
+          "Can credit card activity be tracked?",
+          "Business Insider tells the innovative stories you want to know",
+          "Business Insider tells the innovative stories you want to know",
+          "Business Insider tells the innovative stories you want to know",
+          "Business Insider tells the innovative stories you want to know"
+        ]
+      },
+      "wordCount": 3796,
+      "schemaTypes": [
+        "Answer",
+        "Article",
+        "Brand",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "NewsMediaOrganization",
+        "Organization",
+        "Person",
+        "Question",
+        "WebPage",
+        "WebPageElement"
+      ],
+      "jsonLdBlocks": 3,
+      "jsonLdErrors": 0,
+      "internalLinkCount": 139,
+      "externalLinkCount": 49,
+      "topAnchors": [
+        {
+          "anchor": "Subscribe",
+          "count": 2
+        },
+        {
+          "anchor": "Careers",
+          "count": 2
+        },
+        {
+          "anchor": "Small Business",
+          "count": 2
+        },
+        {
+          "anchor": "Personal Finance",
+          "count": 2
+        },
+        {
+          "anchor": "Tech",
+          "count": 2
+        },
+        {
+          "anchor": "Games",
+          "count": 2
+        },
+        {
+          "anchor": "Katherine Fan",
+          "count": 2
+        },
+        {
+          "anchor": "Gabriel Vito",
+          "count": 2
+        },
+        {
+          "anchor": "Amex Offers",
+          "count": 2
+        },
+        {
+          "anchor": "Terms of Service",
+          "count": 2
+        },
+        {
+          "anchor": "Privacy Policy",
+          "count": 2
+        },
+        {
+          "anchor": "Go to the search page.",
+          "count": 1
+        },
+        {
+          "anchor": "Business Insider",
+          "count": 1
+        },
+        {
+          "anchor": "Business",
+          "count": 1
+        },
+        {
+          "anchor": "Strategy",
+          "count": 1
+        }
+      ]
+    },
+    "evidenceId": "E007"
+  },
+  {
+    "position": 5,
+    "url": "https://awardwallet.com/",
+    "domain": "awardwallet.com",
+    "robots": {
+      "status": 200,
+      "sitemaps": [
+        "https://awardwallet.com/sitemap.xml",
+        "https://awardwallet.com/sitemap-blog-posts-0.xml",
+        "https://awardwallet.com/sitemap-blog-posts-1.xml",
+        "https://awardwallet.com/sitemap-blog-posts-2.xml",
+        "https://awardwallet.com/sitemap-blog-posts-3.xml",
+        "https://awardwallet.com/sitemap-blog-posts-4.xml",
+        "https://awardwallet.com/sitemap-blog-posts-5.xml",
+        "https://awardwallet.com/sitemap-blog-posts-6.xml",
+        "https://awardwallet.com/sitemap-blog-posts-7.xml",
+        "https://awardwallet.com/sitemap-blog-posts-8.xml",
+        "https://awardwallet.com/sitemap-blog-posts-9.xml",
+        "https://awardwallet.com/sitemap-blog-posts-10.xml",
+        "https://awardwallet.com/sitemap-blog-posts-11.xml",
+        "https://awardwallet.com/sitemap-blog-posts-12.xml",
+        "https://awardwallet.com/sitemap-blog-posts-13.xml",
+        "https://awardwallet.com/sitemap-blog-posts-14.xml",
+        "https://awardwallet.com/sitemap-site.xml",
+        "https://awardwallet.com/sitemap-blog-pages.xml",
+        "https://awardwallet.com/sitemap-blog-authors.xml",
+        "https://awardwallet.com/sitemap-blog-tags.xml",
+        "https://awardwallet.com/sitemap-blog-categories.xml",
+        "https://awardwallet.com/sitemap-blog-news.xml"
+      ]
+    },
+    "page": {
+      "url": "https://awardwallet.com/",
+      "title": "Track your rewards and travel plans in a convenient, secure place",
+      "metaDescription": "AwardWallet helps you track frequent flyer miles and hotel points as well as book reward tickets",
+      "metaRobots": "",
+      "ogTitle": "",
+      "canonical": "https://awardwallet.com/",
+      "hreflang": [
+        "ru",
+        "pt",
+        "es",
+        "de",
+        "zh-Hant",
+        "zh-Hans",
+        "fr"
+      ],
+      "lang": "en",
+      "headings": {
+        "h1": [
+          "All your Rewards & Travel in One Place"
+        ],
+        "h2": [
+          "Over 602 Loyalty Programs in Your Pocket",
+          "AwardWallet’s Free Service Tracks Over 226 Billion Points",
+          "Travel Better with Effortless Itinerary Organization",
+          "Bank Level Encryption",
+          "Find out your loyalty net worth"
+        ],
+        "h3": [
+          "Credit Cards",
+          "Airlines",
+          "Hotels",
+          "Maximize Your Points",
+          "Expiration Reminders",
+          "See Account Details",
+          "Looking for AwardWallet logos, banners or screenshots?"
+        ]
+      },
+      "wordCount": 334,
+      "schemaTypes": [],
+      "jsonLdBlocks": 0,
+      "jsonLdErrors": 0,
+      "internalLinkCount": 26,
+      "externalLinkCount": 11,
+      "topAnchors": [
+        {
+          "anchor": "Log In",
+          "count": 1
+        },
+        {
+          "anchor": "Sign Up",
+          "count": 1
+        },
+        {
+          "anchor": "Sign up for free",
+          "count": 1
+        },
+        {
+          "anchor": "Privacy Notice",
+          "count": 1
+        },
+        {
+          "anchor": "Terms of Service",
+          "count": 1
+        },
+        {
+          "anchor": "About Us",
+          "count": 1
+        },
+        {
+          "anchor": "Media",
+          "count": 1
+        },
+        {
+          "anchor": "Credit Card Offers",
+          "count": 1
+        },
+        {
+          "anchor": "Promos",
+          "count": 1
+        },
+        {
+          "anchor": "Supported Programs",
+          "count": 1
+        },
+        {
+          "anchor": "FAQs",
+          "count": 1
+        },
+        {
+          "anchor": "APIs",
+          "count": 1
+        },
+        {
+          "anchor": "Award Booking Service",
+          "count": 1
+        },
+        {
+          "anchor": "Contact Us",
+          "count": 1
+        },
+        {
+          "anchor": "AwardWallet Learn",
+          "count": 1
+        }
+      ]
+    },
+    "evidenceId": "E008"
+  }
+]

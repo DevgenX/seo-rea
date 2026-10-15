@@ -1,0 +1,2593 @@
+{
+  "runId": "20261015T033444Z",
+  "keyword": "credit card rewards app",
+  "target": {
+    "domain": "getcardlab.app",
+    "pages": [
+      {
+        "url": "https://getcardlab.app/",
+        "title": "CardLab: Track Cards & Rewards - No Bank Login",
+        "metaDescription": "Track your cards and rewards privately: statements, due dates, reward caps and which card to use for any purchase. Checked catalog, 38 countries, no bank login.",
+        "metaRobots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "ogTitle": "CardLab: Track Cards & Rewards - No Bank Login",
+        "canonical": "https://getcardlab.app/",
+        "hreflang": [],
+        "lang": "en",
+        "headings": {
+          "h1": [
+            "Track cards & rewards, and know which card to use."
+          ],
+          "h2": [
+            "The pages that answer the usual next question.",
+            "Sourced answers that lead into the tools.",
+            "Watch the answer appear.",
+            "Most people don't misunderstand credit cards. They misunderstand the timeline.",
+            "What does carrying a balance actually cost?",
+            "Run real scenarios, risk-free.",
+            "Modeled exactly, not hand-waved.",
+            "Every rate names its source, its sentence, and its date.",
+            "Free to learn. 3 days free, then $4.99 a month.",
+            "See what happens before you swipe."
+          ],
+          "h3": [
+            "Bank bonuses, read from the bank's own offer page.",
+            "See the cost of waiting.",
+            "Watch utilization move.",
+            "Know when rewards lose.",
+            "Which card do I use for this?"
+          ]
+        },
+        "wordCount": 2504,
+        "schemaTypes": [
+          "Answer",
+          "Country",
+          "FAQPage",
+          "Offer",
+          "Organization",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification",
+          "WebSite"
+        ],
+        "jsonLdBlocks": 1,
+        "jsonLdErrors": 0,
+        "internalLinkCount": 58,
+        "externalLinkCount": 4,
+        "topAnchors": [
+          {
+            "anchor": "Calculators",
+            "count": 2
+          },
+          {
+            "anchor": "Guide",
+            "count": 2
+          },
+          {
+            "anchor": "Blog",
+            "count": 2
+          },
+          {
+            "anchor": "Try it in your browser",
+            "count": 2
+          },
+          {
+            "anchor": "Coverage",
+            "count": 1
+          },
+          {
+            "anchor": "credit card tracker",
+            "count": 1
+          },
+          {
+            "anchor": "credit card calculators",
+            "count": 1
+          },
+          {
+            "anchor": "bank bonus tracker",
+            "count": 1
+          },
+          {
+            "anchor": "credit card interest calculator",
+            "count": 1
+          },
+          {
+            "anchor": "grace period on a credit card",
+            "count": 1
+          },
+          {
+            "anchor": "what credit utilization gets reported",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card tracker Statement dates, due dates, utilization and reward caps, wit",
+            "count": 1
+          },
+          {
+            "anchor": "Which card to use Rank the cards you hold for a purchase, using rates read from ",
+            "count": 1
+          },
+          {
+            "anchor": "Bank bonus tracker Track a checking or savings sign-up bonus against the bank's ",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card calculators Payoff time, daily interest, the minimum payment, and wh",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "url": "https://getcardlab.app/best-card",
+        "title": "Which Credit Card Should I Use? | CardLab",
+        "metaDescription": "How to decide which of your credit cards to use for a purchase: earn rate for the category, bonus caps, annual fee, and whether you are carrying a balance.",
+        "metaRobots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "ogTitle": "Which Credit Card Should I Use? | CardLab",
+        "canonical": "https://getcardlab.app/best-card",
+        "hreflang": [],
+        "lang": "en",
+        "headings": {
+          "h1": [
+            "Which credit card should I use for this purchase?"
+          ],
+          "h2": [
+            "The four things that decide the answer",
+            "Rewards only win while you are not paying interest",
+            "Why the answer changes during the month",
+            "By purchase category",
+            "How to judge any \"which card\" tool",
+            "Common questions",
+            "Keep reading"
+          ],
+          "h3": [
+            "Can it show you where the rate came from?",
+            "Does it know your caps, or just the headline rate?",
+            "Does it get paid by the cards it recommends?",
+            "Does it need your bank login?",
+            "Does it work where you live?",
+            "Does it show its working?",
+            "Which credit card should I use for groceries?",
+            "Should I use a rewards card if I carry a balance?",
+            "How do I compare two cards with different annual fees?",
+            "Does CardLab tell me which card to use?",
+            "Do I have to connect my bank for this?"
+          ]
+        },
+        "wordCount": 1505,
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "Offer",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification"
+        ],
+        "jsonLdBlocks": 1,
+        "jsonLdErrors": 0,
+        "internalLinkCount": 38,
+        "externalLinkCount": 1,
+        "topAnchors": [
+          {
+            "anchor": "← CardLab",
+            "count": 1
+          },
+          {
+            "anchor": "See which cards are covered where",
+            "count": 1
+          },
+          {
+            "anchor": "Groceries Which card to use at the supermarket, and what happens after the groce",
+            "count": 1
+          },
+          {
+            "anchor": "Dining Restaurant and dining rates, including the usual takeout exclusions. →",
+            "count": 1
+          },
+          {
+            "anchor": "Gas and fuel Gas, fuel and EV charging: follow the issuer category, then watch t",
+            "count": 1
+          },
+          {
+            "anchor": "Travel Airfare, hotels and other travel are often different rates on the same ca",
+            "count": 1
+          },
+          {
+            "anchor": "Bonus caps What happens after a monthly or quarterly bonus cap is spent. →",
+            "count": 1
+          },
+          {
+            "anchor": "How rates are verified Issuer page, verbatim sentence and date - or the claim do",
+            "count": 1
+          },
+          {
+            "anchor": "Rewards vs. interest The point where a carried balance costs more than the cashb",
+            "count": 1
+          },
+          {
+            "anchor": "Coverage by market Which markets have a verified catalog, and how each rate is c",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card tracker Tracking the cards, caps and dates the ranking depends on. →",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card calculators Payoff and interest math for a balance you already carry",
+            "count": 1
+          },
+          {
+            "anchor": "Bank bonus tracker",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card tracker",
+            "count": 1
+          },
+          {
+            "anchor": "Which card to use",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "url": "https://getcardlab.app/credit-card-tracker",
+        "title": "Credit Card Tracker With No Bank Login | CardLab",
+        "metaDescription": "A credit card tracker that never asks for a bank login. Track statement dates, due dates, balances, utilization and reward caps, kept on your own device.",
+        "metaRobots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "ogTitle": "Credit Card Tracker With No Bank Login | CardLab",
+        "canonical": "https://getcardlab.app/credit-card-tracker",
+        "hreflang": [],
+        "lang": "en",
+        "headings": {
+          "h1": [
+            "A credit card tracker that never asks for a bank login"
+          ],
+          "h2": [
+            "Why a tracker does not need your bank login",
+            "What a credit card tracker should actually track",
+            "What you give up, stated plainly",
+            "What CardLab tracks, and where it works",
+            "After you track the balances, run the math",
+            "How to judge a credit card tracker",
+            "Common questions",
+            "Keep reading"
+          ],
+          "h3": [
+            "Where does the data live?",
+            "What does it ask for to get started?",
+            "Does it sell or share what it sees?",
+            "Does it explain the numbers or just display them?",
+            "Does it handle your currency and your country?",
+            "Is there a credit card tracker that does not need a bank login?",
+            "How do I track multiple credit cards?",
+            "Is a manual credit card tracker safe?",
+            "Can CardLab read my statement so I do not have to type it?",
+            "Does tracking my cards in an app affect my credit score?"
+          ]
+        },
+        "wordCount": 1409,
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "Offer",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification"
+        ],
+        "jsonLdBlocks": 1,
+        "jsonLdErrors": 0,
+        "internalLinkCount": 39,
+        "externalLinkCount": 1,
+        "topAnchors": [
+          {
+            "anchor": "← CardLab",
+            "count": 1
+          },
+          {
+            "anchor": "statement date versus the due date",
+            "count": 1
+          },
+          {
+            "anchor": "grace period on a credit card",
+            "count": 1
+          },
+          {
+            "anchor": "what credit utilization gets reported",
+            "count": 1
+          },
+          {
+            "anchor": "CardLab, a private tracker for your cards, rewards and bank bonuses",
+            "count": 1
+          },
+          {
+            "anchor": "Open the free simulator",
+            "count": 1
+          },
+          {
+            "anchor": "Credit utilization Why the statement date, not the due date, sets the number tha",
+            "count": 1
+          },
+          {
+            "anchor": "Statement date The day the bill is calculated, and why it matters more than the ",
+            "count": 1
+          },
+          {
+            "anchor": "Which card to use What the tracked caps and rates are actually for. →",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card calculators Once balances are tracked, run the payoff and interest m",
+            "count": 1
+          },
+          {
+            "anchor": "Payoff calculator How long a tracked balance takes to clear, and what it costs. ",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card simulator Practice a billing cycle on invented numbers first. →",
+            "count": 1
+          },
+          {
+            "anchor": "CardLab Pricing, the billing-cycle timeline, and how to get the iPhone app. →",
+            "count": 1
+          },
+          {
+            "anchor": "Bank bonus tracker",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card tracker",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "url": "https://getcardlab.app/credit-card-simulator",
+        "title": "Credit Card Simulator: Practice a Billing Cycle",
+        "metaDescription": "Practice a credit card billing cycle safely: purchases, payments, interest, minimum payments and utilization, on invented numbers, with no real card involved.",
+        "metaRobots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "ogTitle": "Credit Card Simulator: Practice a Billing Cycle",
+        "canonical": "https://getcardlab.app/credit-card-simulator",
+        "hreflang": [],
+        "lang": "en",
+        "headings": {
+          "h1": [
+            "Credit card simulator"
+          ],
+          "h2": [
+            "What there is to simulate",
+            "How the math is done",
+            "What a simulator cannot tell you",
+            "What to check in any credit card simulator",
+            "Common questions",
+            "Keep reading"
+          ],
+          "h3": [
+            "Does it model the grace period at all?",
+            "How does it compute interest?",
+            "Does it warn when the minimum payment is not enough?",
+            "What does it want before it runs?",
+            "Can you share the scenario?",
+            "What is a credit card simulator?",
+            "Can I practice using a credit card without a real card?",
+            "How is credit card interest actually calculated?",
+            "Does a credit card simulator affect my real credit score?",
+            "Do I need an account to use the CardLab simulator?"
+          ]
+        },
+        "wordCount": 1110,
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "Offer",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification"
+        ],
+        "jsonLdBlocks": 1,
+        "jsonLdErrors": 0,
+        "internalLinkCount": 33,
+        "externalLinkCount": 1,
+        "topAnchors": [
+          {
+            "anchor": "← CardLab",
+            "count": 1
+          },
+          {
+            "anchor": "Open the simulator",
+            "count": 1
+          },
+          {
+            "anchor": "Payoff calculator How long a balance takes to clear, and what it costs. →",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card calculators Payoff, interest, minimum payment, and the two bank bonu",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card tracker Keep the real dates once you are done practicing on invented",
+            "count": 1
+          },
+          {
+            "anchor": "Grace period The interest-free window, how it is lost and how it comes back. →",
+            "count": 1
+          },
+          {
+            "anchor": "APR and interest How an APR becomes a daily charge on the average daily balance.",
+            "count": 1
+          },
+          {
+            "anchor": "Bank bonus tracker",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card tracker",
+            "count": 1
+          },
+          {
+            "anchor": "Which card to use",
+            "count": 1
+          },
+          {
+            "anchor": "Pricing",
+            "count": 1
+          },
+          {
+            "anchor": "About CardLab",
+            "count": 1
+          },
+          {
+            "anchor": "Bank bonus statistics",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card simulator",
+            "count": 1
+          },
+          {
+            "anchor": "The lab",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "url": "https://getcardlab.app/bank-bonus-tracker",
+        "title": "Bank Bonus Tracker for Checking Account Bonuses",
+        "metaDescription": "Track checking and savings sign-up bonuses against each bank's own offer terms: the qualifying deposit, the window, the payout period and the early-close date.",
+        "metaRobots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "ogTitle": "Bank Bonus Tracker for Checking Account Bonuses",
+        "canonical": "https://getcardlab.app/bank-bonus-tracker",
+        "hreflang": [],
+        "lang": "en",
+        "headings": {
+          "h1": [
+            "A bank bonus tracker that follows the offer, not the banner"
+          ],
+          "h2": [
+            "Why bonuses are missed on definitions, not on effort",
+            "The eight lines that decide the outcome",
+            "A bonus is a return on parked cash, not a free payment",
+            "What CardLab tracks, and what it takes no money to say",
+            "How to judge a bank bonus tracker",
+            "Common questions",
+            "Keep reading"
+          ],
+          "h3": [
+            "Does it get paid when you open an account?",
+            "Where did the terms come from?",
+            "Does it hold the deposit definition, or just the amount?",
+            "Does it know the first safe day to close?",
+            "Does it rank by return or by headline?",
+            "What does it ask for to get started?",
+            "What counts as a direct deposit for a bank bonus?",
+            "Is a bank bonus worth it?",
+            "Why has my bank bonus not posted yet?",
+            "Can I close the account after getting the bonus?",
+            "Do you pay taxes on bank bonuses?",
+            "Does opening bank accounts for bonuses hurt your credit?",
+            "Does CardLab need my bank login to track a bonus?"
+          ]
+        },
+        "wordCount": 1960,
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "Offer",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification"
+        ],
+        "jsonLdBlocks": 1,
+        "jsonLdErrors": 0,
+        "internalLinkCount": 36,
+        "externalLinkCount": 2,
+        "topAnchors": [
+          {
+            "anchor": "← CardLab",
+            "count": 1
+          },
+          {
+            "anchor": "Run the bonus ROI calculator",
+            "count": 1
+          },
+          {
+            "anchor": "Bonus ROI calculator What the parked cash returns, annualised, from the offer's ",
+            "count": 1
+          },
+          {
+            "anchor": "Bonus tax calculator What a cash bonus leaves after it is taxed as interest inco",
+            "count": 1
+          },
+          {
+            "anchor": "What counts as a direct deposit The definition that decides most bonuses, and wh",
+            "count": 1
+          },
+          {
+            "anchor": "How to read a bonus offer The eight lines to read before you open the account. →",
+            "count": 1
+          },
+          {
+            "anchor": "Huntington checking bonus Perks $400 and Platinum Perks $600, two separate offer",
+            "count": 1
+          },
+          {
+            "anchor": "Wells Fargo checking bonus The current new-checking offer, read from its terms, ",
+            "count": 1
+          },
+          {
+            "anchor": "Can you close after the bonus? When closing is safe, and what an early-close win",
+            "count": 1
+          },
+          {
+            "anchor": "Does opening accounts hurt your credit? Why a checking account is not a credit r",
+            "count": 1
+          },
+          {
+            "anchor": "Bank bonus tracker",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card tracker",
+            "count": 1
+          },
+          {
+            "anchor": "Which card to use",
+            "count": 1
+          },
+          {
+            "anchor": "Pricing",
+            "count": 1
+          },
+          {
+            "anchor": "About CardLab",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "url": "https://getcardlab.app/best-card/groceries",
+        "title": "Which Credit Card for Groceries? | CardLab",
+        "metaDescription": "Amex Blue Cash Preferred: 6% at U.S. supermarkets on up to $6,000/yr; Amex Gold: 4X on up to $25,000/yr (as of Oct 2026). How caps flip the ranking.",
+        "metaRobots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "ogTitle": "Which Credit Card for Groceries? | CardLab",
+        "canonical": "https://getcardlab.app/best-card/groceries",
+        "hreflang": [],
+        "lang": "en",
+        "headings": {
+          "h1": [
+            "Which credit card should I use for groceries?"
+          ],
+          "h2": [
+            "Two published US grocery rates, as of 12 October 2026",
+            "The decision rule",
+            "What \"groceries\" usually means",
+            "How CardLab answers this on the phone",
+            "Common questions",
+            "Other purchase categories",
+            "Keep reading"
+          ],
+          "h3": [
+            "Which credit card should I use for groceries?",
+            "What if my top groceries card is already at its cap?",
+            "Does CardLab recommend a specific issuer's card for groceries?",
+            "Do I need to connect my bank?",
+            "Is this financial advice?"
+          ]
+        },
+        "wordCount": 1233,
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "Offer",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification"
+        ],
+        "jsonLdBlocks": 1,
+        "jsonLdErrors": 0,
+        "internalLinkCount": 40,
+        "externalLinkCount": 1,
+        "topAnchors": [
+          {
+            "anchor": "← CardLab",
+            "count": 1
+          },
+          {
+            "anchor": "which card to use",
+            "count": 1
+          },
+          {
+            "anchor": "See which cards are covered where",
+            "count": 1
+          },
+          {
+            "anchor": "Best card for dining Restaurant rates, including the usual takeout exclusions. →",
+            "count": 1
+          },
+          {
+            "anchor": "Best card for gas and fuel Gas, fuel and EV charging, then the cap. →",
+            "count": 1
+          },
+          {
+            "anchor": "Best card for travel Airfare, hotels and other travel are often different rates.",
+            "count": 1
+          },
+          {
+            "anchor": "Which card to use The same four-fact rule, for any purchase. →",
+            "count": 1
+          },
+          {
+            "anchor": "Bonus caps What happens after a monthly or quarterly bonus cap is spent. →",
+            "count": 1
+          },
+          {
+            "anchor": "Coverage by market Which markets have a verified catalog, and how each rate is c",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card tracker Track caps and statement dates without a bank login. →",
+            "count": 1
+          },
+          {
+            "anchor": "Best card for groceries When a published grocery rate stops winning, and why the",
+            "count": 1
+          },
+          {
+            "anchor": "Does Walmart count as grocery Why Walmart, Target and warehouse clubs often miss",
+            "count": 1
+          },
+          {
+            "anchor": "Which card for this purchase The same question, worked through as a decision rat",
+            "count": 1
+          },
+          {
+            "anchor": "When a 3% card stops winning The cap flip, with sourced figures rather than a br",
+            "count": 1
+          },
+          {
+            "anchor": "Bank bonus tracker",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "url": "https://getcardlab.app/best-card/dining",
+        "title": "Which Credit Card for Dining? | CardLab",
+        "metaDescription": "Pick the dining or restaurant earn rate that still has cap room, if you pay the statement in full. Caps and restaurant definitions vary by issuer.",
+        "metaRobots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "ogTitle": "Which Credit Card for Dining? | CardLab",
+        "canonical": "https://getcardlab.app/best-card/dining",
+        "hreflang": [],
+        "lang": "en",
+        "headings": {
+          "h1": [
+            "Which credit card should I use for dining?"
+          ],
+          "h2": [
+            "The decision rule",
+            "What \"dining\" usually means",
+            "How CardLab answers this on the phone",
+            "Common questions",
+            "Other purchase categories",
+            "Keep reading"
+          ],
+          "h3": [
+            "Which credit card should I use for dining?",
+            "What if my top dining card is already at its cap?",
+            "Does CardLab recommend a specific issuer's card for dining?",
+            "Do I need to connect my bank?",
+            "Is this financial advice?"
+          ]
+        },
+        "wordCount": 959,
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "Offer",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification"
+        ],
+        "jsonLdBlocks": 1,
+        "jsonLdErrors": 0,
+        "internalLinkCount": 39,
+        "externalLinkCount": 1,
+        "topAnchors": [
+          {
+            "anchor": "← CardLab",
+            "count": 1
+          },
+          {
+            "anchor": "which card to use",
+            "count": 1
+          },
+          {
+            "anchor": "See which cards are covered where",
+            "count": 1
+          },
+          {
+            "anchor": "Best card for groceries Which grocery rate still has cap room. →",
+            "count": 1
+          },
+          {
+            "anchor": "Best card for gas and fuel Gas, fuel and EV charging, then the cap. →",
+            "count": 1
+          },
+          {
+            "anchor": "Best card for travel Airfare, hotels and other travel are often different rates.",
+            "count": 1
+          },
+          {
+            "anchor": "Which card to use The same four-fact rule, for any purchase. →",
+            "count": 1
+          },
+          {
+            "anchor": "Bonus caps What happens after a monthly or quarterly bonus cap is spent. →",
+            "count": 1
+          },
+          {
+            "anchor": "Coverage by market Which markets have a verified catalog, and how each rate is c",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card tracker Track caps and statement dates without a bank login. →",
+            "count": 1
+          },
+          {
+            "anchor": "Which card for this purchase The same four-fact rule, for any category rather th",
+            "count": 1
+          },
+          {
+            "anchor": "Miles vs cash back When a dining earn rate in points is worth less than a lower ",
+            "count": 1
+          },
+          {
+            "anchor": "Perks worth paying for When a dining credit or annual fee changes the net, not j",
+            "count": 1
+          },
+          {
+            "anchor": "Bank bonus tracker",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card tracker",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "url": "https://getcardlab.app/best-card/gas",
+        "title": "Which Credit Card for Gas? | CardLab",
+        "metaDescription": "Use the highest gas or fuel earn rate still under its cap, if you clear the statement. After the cap, compare base rates across the cards you hold.",
+        "metaRobots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "ogTitle": "Which Credit Card for Gas? | CardLab",
+        "canonical": "https://getcardlab.app/best-card/gas",
+        "hreflang": [],
+        "lang": "en",
+        "headings": {
+          "h1": [
+            "Which credit card should I use for gas or fuel?"
+          ],
+          "h2": [
+            "The decision rule",
+            "What \"gas\" and \"fuel\" usually mean",
+            "How CardLab answers this on the phone",
+            "Common questions",
+            "Other purchase categories",
+            "Keep reading"
+          ],
+          "h3": [
+            "Which credit card should I use for gas?",
+            "What if my top gas card is already at its cap?",
+            "Does CardLab recommend a specific issuer's card for gas?",
+            "Do I need to connect my bank?",
+            "Is this financial advice?"
+          ]
+        },
+        "wordCount": 963,
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "Offer",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification"
+        ],
+        "jsonLdBlocks": 1,
+        "jsonLdErrors": 0,
+        "internalLinkCount": 39,
+        "externalLinkCount": 1,
+        "topAnchors": [
+          {
+            "anchor": "← CardLab",
+            "count": 1
+          },
+          {
+            "anchor": "which card to use",
+            "count": 1
+          },
+          {
+            "anchor": "See which cards are covered where",
+            "count": 1
+          },
+          {
+            "anchor": "Best card for groceries Which grocery rate still has cap room. →",
+            "count": 1
+          },
+          {
+            "anchor": "Best card for dining Restaurant rates, including the usual takeout exclusions. →",
+            "count": 1
+          },
+          {
+            "anchor": "Best card for travel Airfare, hotels and other travel are often different rates.",
+            "count": 1
+          },
+          {
+            "anchor": "Which card to use The same four-fact rule, for any purchase. →",
+            "count": 1
+          },
+          {
+            "anchor": "Bonus caps What happens after a monthly or quarterly bonus cap is spent. →",
+            "count": 1
+          },
+          {
+            "anchor": "Coverage by market Which markets have a verified catalog, and how each rate is c",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card tracker Track caps and statement dates without a bank login. →",
+            "count": 1
+          },
+          {
+            "anchor": "Which card for this purchase The same four-fact rule, for any category rather th",
+            "count": 1
+          },
+          {
+            "anchor": "Miles vs cash back When a fuel earn rate in points is worth less than a lower ca",
+            "count": 1
+          },
+          {
+            "anchor": "Perks worth paying for When a fee or credit changes the net, not just the earn r",
+            "count": 1
+          },
+          {
+            "anchor": "Bank bonus tracker",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card tracker",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "url": "https://getcardlab.app/best-card/travel",
+        "title": "Which Credit Card for Travel? | CardLab",
+        "metaDescription": "Travel earn rates often split airfare, hotels, and other travel. Use the rate that matches the purchase, and watch caps, if you pay in full.",
+        "metaRobots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "ogTitle": "Which Credit Card for Travel? | CardLab",
+        "canonical": "https://getcardlab.app/best-card/travel",
+        "hreflang": [],
+        "lang": "en",
+        "headings": {
+          "h1": [
+            "Which credit card should I use for travel purchases?"
+          ],
+          "h2": [
+            "The decision rule",
+            "Travel is rarely one rate",
+            "How CardLab answers this on the phone",
+            "Common questions",
+            "Other purchase categories",
+            "Keep reading"
+          ],
+          "h3": [
+            "Which credit card should I use for travel?",
+            "What if my top travel card is already at its cap?",
+            "Does CardLab recommend a specific issuer's card for travel?",
+            "Do I need to connect my bank?",
+            "Is this financial advice?"
+          ]
+        },
+        "wordCount": 1000,
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "Offer",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification"
+        ],
+        "jsonLdBlocks": 1,
+        "jsonLdErrors": 0,
+        "internalLinkCount": 40,
+        "externalLinkCount": 1,
+        "topAnchors": [
+          {
+            "anchor": "← CardLab",
+            "count": 1
+          },
+          {
+            "anchor": "which card to use",
+            "count": 1
+          },
+          {
+            "anchor": "See which cards are covered where",
+            "count": 1
+          },
+          {
+            "anchor": "Best card for groceries Which grocery rate still has cap room. →",
+            "count": 1
+          },
+          {
+            "anchor": "Best card for dining Restaurant rates, including the usual takeout exclusions. →",
+            "count": 1
+          },
+          {
+            "anchor": "Best card for gas and fuel Gas, fuel and EV charging, then the cap. →",
+            "count": 1
+          },
+          {
+            "anchor": "Which card to use The same four-fact rule, for any purchase. →",
+            "count": 1
+          },
+          {
+            "anchor": "Bonus caps What happens after a monthly or quarterly bonus cap is spent. →",
+            "count": 1
+          },
+          {
+            "anchor": "Coverage by market Which markets have a verified catalog, and how each rate is c",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card tracker Track caps and statement dates without a bank login. →",
+            "count": 1
+          },
+          {
+            "anchor": "Which card for this purchase The same four-fact rule, for any category rather th",
+            "count": 1
+          },
+          {
+            "anchor": "Miles vs cash back When travel points are worth less than a lower cash-back rate",
+            "count": 1
+          },
+          {
+            "anchor": "Perks worth paying for When lounge access or a travel credit changes the net, no",
+            "count": 1
+          },
+          {
+            "anchor": "When to use a transfer bonus Transfer bonuses change redemption value. They do n",
+            "count": 1
+          },
+          {
+            "anchor": "Bank bonus tracker",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "url": "https://getcardlab.app/coverage",
+        "title": "CardLab Card Catalog Coverage by Country",
+        "metaDescription": "Which markets CardLab has verified credit cards for. 673 cards from 149 issuers, each rate carrying the issuer page, sentence and date it was read from.",
+        "metaRobots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        "ogTitle": "CardLab Card Catalog Coverage by Country",
+        "canonical": "https://getcardlab.app/coverage",
+        "hreflang": [],
+        "lang": "en",
+        "headings": {
+          "h1": [
+            "Which cards CardLab verifies, and where"
+          ],
+          "h2": [
+            "Markets, exactly as the app ships them",
+            "Markets with the tracker only",
+            "How a rate gets published",
+            "How CardLab reads issuer pages",
+            "What this does not cover",
+            "Common questions about CardLab's coverage"
+          ],
+          "h3": [
+            "Which countries does CardLab support?",
+            "Where do CardLab's credit card rates come from?",
+            "How current are CardLab's credit card rates?",
+            "Does CardLab list every credit card in a market?",
+            "Does CardLab work in a country with no card catalog?"
+          ]
+        },
+        "wordCount": 1619,
+        "schemaTypes": [
+          "Answer",
+          "BreadcrumbList",
+          "Country",
+          "Dataset",
+          "FAQPage",
+          "ListItem",
+          "Question"
+        ],
+        "jsonLdBlocks": 1,
+        "jsonLdErrors": 0,
+        "internalLinkCount": 33,
+        "externalLinkCount": 1,
+        "topAnchors": [
+          {
+            "anchor": "← CardLab",
+            "count": 1
+          },
+          {
+            "anchor": "How a credit card cycle works Statement dates, grace periods and interest, in pl",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card calculators Payoff, daily interest and the real cost of a minimum pa",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card tracker Use the verified catalog on the cards you actually hold. →",
+            "count": 1
+          },
+          {
+            "anchor": "Which card to use Rank those cards for a purchase, once the rates are checked. →",
+            "count": 1
+          },
+          {
+            "anchor": "Bank bonus tracker Track a deposit bonus next to the same issuer pages. →",
+            "count": 1
+          },
+          {
+            "anchor": "Open the simulator",
+            "count": 1
+          },
+          {
+            "anchor": "Bank bonus tracker",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card tracker",
+            "count": 1
+          },
+          {
+            "anchor": "Which card to use",
+            "count": 1
+          },
+          {
+            "anchor": "Pricing",
+            "count": 1
+          },
+          {
+            "anchor": "About CardLab",
+            "count": 1
+          },
+          {
+            "anchor": "Bank bonus statistics",
+            "count": 1
+          },
+          {
+            "anchor": "Credit card simulator",
+            "count": 1
+          },
+          {
+            "anchor": "The lab",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "schemaTypes": [
+      "Answer",
+      "Article",
+      "BreadcrumbList",
+      "Country",
+      "Dataset",
+      "FAQPage",
+      "ListItem",
+      "Offer",
+      "Organization",
+      "Question",
+      "SoftwareApplication",
+      "UnitPriceSpecification",
+      "WebSite"
+    ],
+    "sitemap": {
+      "urlCount": 114,
+      "sources": [
+        {
+          "url": "https://getcardlab.app/sitemap.xml",
+          "kind": "urlset",
+          "locs": 114
+        }
+      ],
+      "evidenceId": "E011"
+    },
+    "inlinks": [
+      {
+        "path": "/",
+        "count": 51,
+        "anchors": [
+          "The lab",
+          "Download",
+          "Timeline",
+          "FAQ",
+          "← CardLab"
+        ]
+      },
+      {
+        "path": "/coverage",
+        "count": 22,
+        "anchors": [
+          "Coverage",
+          "See coverage by market",
+          "Coverage by market",
+          "See which cards are covered where",
+          "Coverage by market Which markets have a verified catalog, an"
+        ]
+      },
+      {
+        "path": "/best-card",
+        "count": 21,
+        "anchors": [
+          "Which card to use Rank the cards you hold for a purchase, us",
+          "Which card to use",
+          "Which card to use What the tracked caps and rates are actual",
+          "which card to use",
+          "Which card to use The same four-fact rule, for any purchase."
+        ]
+      },
+      {
+        "path": "/credit-card-tracker",
+        "count": 19,
+        "anchors": [
+          "credit card tracker",
+          "Credit card tracker Statement dates, due dates, utilization ",
+          "Credit card tracker",
+          "Credit card tracker Tracking the cards, caps and dates the r",
+          "Credit card tracker Keep the real dates once you are done pr"
+        ]
+      },
+      {
+        "path": "/calculators",
+        "count": 17,
+        "anchors": [
+          "Calculators",
+          "credit card calculators",
+          "Credit card calculators Payoff time, daily interest, the min",
+          "Credit card calculators Payoff and interest math for a balan",
+          "Credit card calculators Once balances are tracked, run the p"
+        ]
+      },
+      {
+        "path": "/app/",
+        "count": 16,
+        "anchors": [
+          "Try it in your browser",
+          "Run it with your own numbers →",
+          "Web app",
+          "Open the free simulator",
+          "Open the simulator"
+        ]
+      },
+      {
+        "path": "/bank-bonus-tracker",
+        "count": 13,
+        "anchors": [
+          "bank bonus tracker",
+          "Bank bonus tracker Track a checking or savings sign-up bonus",
+          "Bank bonus tracker",
+          "Bank bonus tracker Track a deposit bonus next to the same is"
+        ]
+      },
+      {
+        "path": "/calculators/credit-card-payoff",
+        "count": 13,
+        "anchors": [
+          "Payoff calculator How long a balance takes to clear, and wha",
+          "Payoff calculator",
+          "Payoff calculator How long a tracked balance takes to clear,"
+        ]
+      },
+      {
+        "path": "/guide",
+        "count": 12,
+        "anchors": [
+          "Guide",
+          "How a credit card cycle works Statement dates, grace periods"
+        ]
+      },
+      {
+        "path": "/blog",
+        "count": 12,
+        "anchors": [
+          "Blog",
+          "CardLab blog"
+        ]
+      },
+      {
+        "path": "/credit-card-simulator",
+        "count": 12,
+        "anchors": [
+          "Credit card simulator Practice a billing cycle on invented n",
+          "Credit card simulator"
+        ]
+      },
+      {
+        "path": "/calculators/credit-card-interest",
+        "count": 11,
+        "anchors": [
+          "credit card interest calculator",
+          "Interest calculator"
+        ]
+      },
+      {
+        "path": "/pricing",
+        "count": 11,
+        "anchors": [
+          "Full pricing details and FAQ",
+          "Pricing"
+        ]
+      },
+      {
+        "path": "/guide/how-we-verify-rates",
+        "count": 11,
+        "anchors": [
+          "How rates are verified",
+          "How rates are verified Issuer page, verbatim sentence and da"
+        ]
+      },
+      {
+        "path": "/about",
+        "count": 10,
+        "anchors": [
+          "About CardLab"
+        ]
+      },
+      {
+        "path": "/blog/bank-bonus-statistics",
+        "count": 10,
+        "anchors": [
+          "Bank bonus statistics"
+        ]
+      },
+      {
+        "path": "/calculators/minimum-payment",
+        "count": 10,
+        "anchors": [
+          "Minimum payment calculator"
+        ]
+      },
+      {
+        "path": "/blog/topic/direct-deposit",
+        "count": 10,
+        "anchors": [
+          "Direct deposit rules"
+        ]
+      },
+      {
+        "path": "/blog/credit-card-rewards-statistics",
+        "count": 10,
+        "anchors": [
+          "Credit card rewards statistics"
+        ]
+      },
+      {
+        "path": "/privacy",
+        "count": 10,
+        "anchors": [
+          "Privacy"
+        ]
+      },
+      {
+        "path": "/terms",
+        "count": 10,
+        "anchors": [
+          "Terms"
+        ]
+      },
+      {
+        "path": "/support",
+        "count": 10,
+        "anchors": [
+          "Support"
+        ]
+      },
+      {
+        "path": "/is-cardlab-safe",
+        "count": 10,
+        "anchors": [
+          "Is CardLab safe?"
+        ]
+      },
+      {
+        "path": "/blog/which-credit-card-should-i-use-for-this-purchase",
+        "count": 5,
+        "anchors": [
+          "Which credit card should I use for this purchase? Four facts",
+          "Which card for this purchase The same question, worked throu",
+          "Which card for this purchase The same four-fact rule, for an"
+        ]
+      },
+      {
+        "path": "/guide/bonus-caps",
+        "count": 5,
+        "anchors": [
+          "Bonus caps What happens after a monthly or quarterly bonus c"
+        ]
+      },
+      {
+        "path": "/best-card/groceries",
+        "count": 4,
+        "anchors": [
+          "Groceries Which card to use at the supermarket, and what hap",
+          "Best card for groceries Which grocery rate still has cap roo"
+        ]
+      },
+      {
+        "path": "/best-card/dining",
+        "count": 4,
+        "anchors": [
+          "Dining Restaurant and dining rates, including the usual take",
+          "Best card for dining Restaurant rates, including the usual t"
+        ]
+      },
+      {
+        "path": "/best-card/gas",
+        "count": 4,
+        "anchors": [
+          "Gas and fuel Gas, fuel and EV charging: follow the issuer ca",
+          "Best card for gas and fuel Gas, fuel and EV charging, then t"
+        ]
+      },
+      {
+        "path": "/best-card/travel",
+        "count": 4,
+        "anchors": [
+          "Travel Airfare, hotels and other travel are often different ",
+          "Best card for travel Airfare, hotels and other travel are of"
+        ]
+      },
+      {
+        "path": "/blog/miles-vs-cash-back-which-wins",
+        "count": 3,
+        "anchors": [
+          "Miles vs cash back When a dining earn rate in points is wort",
+          "Miles vs cash back When a fuel earn rate in points is worth ",
+          "Miles vs cash back When travel points are worth less than a "
+        ]
+      }
+    ],
+    "topKeywords": [
+      {
+        "phrase": "card",
+        "score": 488
+      },
+      {
+        "phrase": "credit card",
+        "score": 189
+      },
+      {
+        "phrase": "credit",
+        "score": 306
+      },
+      {
+        "phrase": "cardlab",
+        "score": 240
+      },
+      {
+        "phrase": "bank",
+        "score": 194
+      },
+      {
+        "phrase": "bonus",
+        "score": 155
+      },
+      {
+        "phrase": "tracker",
+        "score": 154
+      },
+      {
+        "phrase": "cards",
+        "score": 149
+      },
+      {
+        "phrase": "credit card tracker",
+        "score": 49
+      },
+      {
+        "phrase": "rate",
+        "score": 131
+      },
+      {
+        "phrase": "bank bonus",
+        "score": 61
+      },
+      {
+        "phrase": "catalog and tracker",
+        "score": 38
+      },
+      {
+        "phrase": "card catalog",
+        "score": 56
+      },
+      {
+        "phrase": "issuer",
+        "score": 108
+      },
+      {
+        "phrase": "bank login",
+        "score": 51
+      }
+    ],
+    "robotsEvidenceId": "E010",
+    "robotsBlocksRoot": false,
+    "homeEvidenceId": "E012",
+    "crawlEvidenceId": "E013"
+  },
+  "createdAt": "2026-10-15T03:34:44.125Z",
+  "budgetUsd": 0,
+  "spentUsd": 0,
+  "serp": {
+    "engines": [
+      {
+        "engine": "manual",
+        "label": "Operator-supplied URL list",
+        "status": 200,
+        "fromCache": false,
+        "blocked": "",
+        "relevance": 1,
+        "organicCount": 5,
+        "adCount": 0,
+        "evidenceId": "E001"
+      },
+      {
+        "engine": "duckduckgo",
+        "label": "DuckDuckGo HTML",
+        "status": 202,
+        "fromCache": false,
+        "blocked": "captcha or anomaly page",
+        "relevance": 0,
+        "organicCount": 0,
+        "parsedCount": 0,
+        "adCount": 0,
+        "evidenceId": "E002"
+      },
+      {
+        "engine": "bing",
+        "label": "Bing HTML",
+        "status": 200,
+        "fromCache": false,
+        "blocked": "degraded: only 0% of results match the query terms (engine likely served a bot-degraded SERP)",
+        "relevance": 0,
+        "organicCount": 0,
+        "parsedCount": 10,
+        "adCount": 0,
+        "evidenceId": "E003"
+      }
+    ],
+    "organic": [
+      {
+        "position": 1,
+        "url": "https://uscreditcardrewards.com/guides/best-credit-card-apps",
+        "title": "",
+        "snippet": "",
+        "domain": "uscreditcardrewards.com"
+      },
+      {
+        "position": 2,
+        "url": "https://play.google.com/store/apps/details?hl=en_US&id=com.cardpointers.app",
+        "title": "",
+        "snippet": "",
+        "domain": "play.google.com"
+      },
+      {
+        "position": 3,
+        "url": "https://apps.apple.com/us/app/maxrewards-credit-card-rewards/id1435710443",
+        "title": "",
+        "snippet": "",
+        "domain": "apps.apple.com"
+      },
+      {
+        "position": 4,
+        "url": "https://www.businessinsider.com/personal-finance/credit-cards/best-credit-card-rewards-apps-track-points-miles-travel",
+        "title": "",
+        "snippet": "",
+        "domain": "businessinsider.com"
+      },
+      {
+        "position": 5,
+        "url": "https://awardwallet.com/",
+        "title": "",
+        "snippet": "",
+        "domain": "awardwallet.com"
+      }
+    ],
+    "ads": [],
+    "primary": "manual",
+    "primaryLabel": "Operator-supplied URL list"
+  },
+  "competitors": [
+    {
+      "position": 1,
+      "url": "https://uscreditcardrewards.com/guides/best-credit-card-apps",
+      "domain": "uscreditcardrewards.com",
+      "robots": {
+        "status": 200,
+        "sitemaps": [
+          "https://uscreditcardrewards.com/sitemap-index.xml"
+        ]
+      },
+      "page": {
+        "url": "https://uscreditcardrewards.com/guides/best-credit-card-apps",
+        "title": "The best credit card tracking apps, compared | USCreditCardRewards",
+        "metaDescription": "CardPointers, MaxWorth, MaxRewards, kardfolio, AwardWallet, Travel Freely, Kudos and StackEasy compared on price, platforms, credential handling and what each actually tracks.",
+        "metaRobots": "",
+        "ogTitle": "The best credit card tracking apps, compared",
+        "canonical": "https://uscreditcardrewards.com/guides/best-credit-card-apps",
+        "hreflang": [],
+        "lang": "en",
+        "headings": {
+          "h1": [
+            "The best credit card tracking apps, compared"
+          ],
+          "h2": [
+            "Benefit trackers, ranked",
+            "How we scored them",
+            "“Credit card app” is four different jobs",
+            "Every app, every row",
+            "Head-to-head",
+            "Questions people ask"
+          ],
+          "h3": [
+            "CardPointers",
+            "MaxWorth",
+            "MaxRewards",
+            "kardfolio",
+            "Benefit & credit tracking",
+            "Points & miles balances",
+            "Welcome bonuses & application rules",
+            "Card choice at checkout",
+            "Balances, utilisation & 0% APR"
+          ]
+        },
+        "wordCount": 2134,
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "FAQPage",
+          "ItemList",
+          "ListItem",
+          "Organization",
+          "Question",
+          "WebSite"
+        ],
+        "jsonLdBlocks": 1,
+        "jsonLdErrors": 0,
+        "internalLinkCount": 40,
+        "externalLinkCount": 0,
+        "topAnchors": [
+          {
+            "anchor": "CardPointers",
+            "count": 3
+          },
+          {
+            "anchor": "MaxWorth",
+            "count": 3
+          },
+          {
+            "anchor": "MaxRewards",
+            "count": 3
+          },
+          {
+            "anchor": "kardfolio",
+            "count": 3
+          },
+          {
+            "anchor": "All cards",
+            "count": 2
+          },
+          {
+            "anchor": "Credit finder",
+            "count": 2
+          },
+          {
+            "anchor": "Best for…",
+            "count": 2
+          },
+          {
+            "anchor": "About",
+            "count": 2
+          },
+          {
+            "anchor": "AwardWallet",
+            "count": 2
+          },
+          {
+            "anchor": "Travel Freely",
+            "count": 2
+          },
+          {
+            "anchor": "Kudos",
+            "count": 2
+          },
+          {
+            "anchor": "StackEasy",
+            "count": 2
+          },
+          {
+            "anchor": "USCreditCard Rewards",
+            "count": 1
+          },
+          {
+            "anchor": "Guides",
+            "count": 1
+          },
+          {
+            "anchor": "How we source",
+            "count": 1
+          }
+        ]
+      },
+      "evidenceId": "E004"
+    },
+    {
+      "position": 2,
+      "url": "https://play.google.com/store/apps/details?hl=en_US&id=com.cardpointers.app",
+      "domain": "play.google.com",
+      "robots": {
+        "status": 200,
+        "sitemaps": [
+          "https://play.google.com/sitemaps/sitemaps-index-0.xml",
+          "https://play.google.com/sitemaps/sitemaps-index-1.xml"
+        ]
+      },
+      "page": {
+        "url": "https://play.google.com/store/apps/details?hl=en_US&id=com.cardpointers.app",
+        "title": "CardPointers: Maximize Rewards - Apps on Google Play",
+        "metaDescription": "Save money and earn more cash back, points, and miles from your credit cards.",
+        "metaRobots": "NOODP",
+        "ogTitle": "CardPointers: Maximize Rewards - Apps on Google Play",
+        "canonical": "https://play.google.com/store/apps/details?id=com.cardpointers.app&hl=en_US",
+        "hreflang": [
+          "x-default",
+          "en-US",
+          "af",
+          "am",
+          "ar",
+          "as",
+          "az",
+          "be",
+          "bg",
+          "bn",
+          "bs",
+          "ca",
+          "cs",
+          "da",
+          "de",
+          "de-AT",
+          "de-CH",
+          "el",
+          "en",
+          "en-AU",
+          "en-CA",
+          "en-GB",
+          "en-IE",
+          "en-IN",
+          "en-NZ",
+          "en-SG",
+          "en-ZA",
+          "es",
+          "es-419",
+          "es-AR",
+          "es-BO",
+          "es-CL",
+          "es-CO",
+          "es-CR",
+          "es-DO",
+          "es-EC",
+          "es-GT",
+          "es-HN",
+          "es-MX",
+          "es-NI",
+          "es-PA",
+          "es-PE",
+          "es-PR",
+          "es-PY",
+          "es-SV",
+          "es-US",
+          "es-UY",
+          "es-VE",
+          "et",
+          "eu",
+          "fa",
+          "fi",
+          "fil",
+          "fr",
+          "fr-CA",
+          "fr-CH",
+          "gl",
+          "gsw",
+          "gu",
+          "he",
+          "hi",
+          "hr",
+          "hu",
+          "hy",
+          "id",
+          "is",
+          "it",
+          "ja",
+          "ka",
+          "kk",
+          "km",
+          "kn",
+          "ko",
+          "ky",
+          "ln",
+          "lo",
+          "lt",
+          "lv",
+          "mk",
+          "ml",
+          "mn",
+          "mr",
+          "ms",
+          "my",
+          "no",
+          "ne",
+          "nl",
+          "or",
+          "pa",
+          "pl",
+          "pt",
+          "pt-BR",
+          "pt-PT",
+          "ro",
+          "ru",
+          "si",
+          "sk",
+          "sl",
+          "sq",
+          "sr",
+          "sr-Latn",
+          "sv",
+          "sw",
+          "ta",
+          "te",
+          "th",
+          "tr",
+          "uk",
+          "ur",
+          "uz",
+          "vi",
+          "zh",
+          "zh-CN",
+          "zh-HK",
+          "zh-TW",
+          "zu"
+        ],
+        "lang": "en-US",
+        "headings": {
+          "h1": [
+            "CardPointers: Maximize Rewards"
+          ],
+          "h2": [
+            "About this app",
+            "Data safety",
+            "Ratings and reviews",
+            "What’s new",
+            "App support",
+            "Similar apps"
+          ],
+          "h3": []
+        },
+        "wordCount": 1081,
+        "schemaTypes": [
+          "AggregateRating",
+          "Offer",
+          "Person",
+          "SoftwareApplication"
+        ],
+        "jsonLdBlocks": 1,
+        "jsonLdErrors": 0,
+        "internalLinkCount": 27,
+        "externalLinkCount": 16,
+        "topAnchors": [
+          {
+            "anchor": "Games",
+            "count": 2
+          },
+          {
+            "anchor": "Apps",
+            "count": 2
+          },
+          {
+            "anchor": "Movies & TV",
+            "count": 2
+          },
+          {
+            "anchor": "Books",
+            "count": 2
+          },
+          {
+            "anchor": "Kids",
+            "count": 2
+          },
+          {
+            "anchor": "google_logo Play",
+            "count": 1
+          },
+          {
+            "anchor": "CardPointers",
+            "count": 1
+          },
+          {
+            "anchor": "Finance",
+            "count": 1
+          },
+          {
+            "anchor": "See more information on Data safety",
+            "count": 1
+          },
+          {
+            "anchor": "See more details on data safety",
+            "count": 1
+          },
+          {
+            "anchor": "See more information on Similar apps",
+            "count": 1
+          },
+          {
+            "anchor": "Goldman Sachs Wellness Goldman Sachs 3.8 star",
+            "count": 1
+          },
+          {
+            "anchor": "Rocket Mortgage Rocket Mortgage 4.7 star",
+            "count": 1
+          },
+          {
+            "anchor": "Prosper Card Prosper Marketplace, Inc. 4.1 star",
+            "count": 1
+          },
+          {
+            "anchor": "Bartlett Arborist Supply Bartlett Arborist Supply 4.9 star",
+            "count": 1
+          }
+        ]
+      },
+      "evidenceId": "E005"
+    },
+    {
+      "position": 3,
+      "url": "https://apps.apple.com/us/app/maxrewards-credit-card-rewards/id1435710443",
+      "domain": "apps.apple.com",
+      "robots": {
+        "status": 200,
+        "sitemaps": [
+          "https://apps.apple.com/sitemaps_apps_index_chart_1.xml",
+          "https://apps.apple.com/sitemaps_apps_index_app_1.xml",
+          "https://apps.apple.com/sitemaps_apps_index_new-app_1.xml",
+          "https://apps.apple.com/sitemaps_apps_index_story_1.xml",
+          "https://apps.apple.com/sitemaps_apps_index_grouping_1.xml",
+          "https://apps.apple.com/sitemaps_apps_index_static-url_1.xml"
+        ]
+      },
+      "page": {
+        "url": "https://apps.apple.com/us/app/maxrewards-credit-card-rewards/id1435710443",
+        "title": "‎MaxRewards Credit Card Rewards App - App Store",
+        "metaDescription": "Download MaxRewards Credit Card Rewards by MaxRewards Inc on the App Store. See screenshots, ratings and reviews, user tips, and more apps like MaxRewards…",
+        "metaRobots": "",
+        "ogTitle": "MaxRewards Credit Card Rewards App - App Store",
+        "canonical": "https://apps.apple.com/us/app/maxrewards-credit-card-rewards/id1435710443",
+        "hreflang": [],
+        "lang": "en-US",
+        "headings": {
+          "h1": [
+            "MaxRewards Credit Card Rewards",
+            "Best card management app I’ve used!!! But can be a bit better.",
+            "New update puts broken app out of its misery",
+            "Absolutely top notch functionality and service",
+            "Terrible Customer Service",
+            "Version History",
+            "App Privacy"
+          ],
+          "h2": [
+            "Ratings & Reviews",
+            "What’s New",
+            "App Privacy",
+            "Accessibility",
+            "Information",
+            "Supports",
+            "You Might Also Like",
+            "Africa, Middle East, and India",
+            "Asia Pacific",
+            "Europe",
+            "Latin America and the Caribbean",
+            "The United States and Canada"
+          ],
+          "h3": [
+            "Best card management app I’ve used!!! But can be a bit better.",
+            "New update puts broken app out of its misery",
+            "Absolutely top notch functionality and service",
+            "Terrible Customer Service",
+            "Data Used to Track You",
+            "Data Linked to You",
+            "Data Used to Track You",
+            "Data Linked to You",
+            "Wallet"
+          ]
+        },
+        "wordCount": 4043,
+        "schemaTypes": [
+          "AggregateRating",
+          "BreadcrumbList",
+          "ListItem",
+          "Offer",
+          "Organization",
+          "SoftwareApplication"
+        ],
+        "jsonLdBlocks": 3,
+        "jsonLdErrors": 0,
+        "internalLinkCount": 228,
+        "externalLinkCount": 5,
+        "topAnchors": [
+          {
+            "anchor": "Learn More",
+            "count": 4
+          },
+          {
+            "anchor": "Armenia",
+            "count": 2
+          },
+          {
+            "anchor": "Turkmenistan",
+            "count": 2
+          },
+          {
+            "anchor": "Today",
+            "count": 1
+          },
+          {
+            "anchor": "Games",
+            "count": 1
+          },
+          {
+            "anchor": "Apps",
+            "count": 1
+          },
+          {
+            "anchor": "Arcade",
+            "count": 1
+          },
+          {
+            "anchor": "iPhone",
+            "count": 1
+          },
+          {
+            "anchor": "iPad",
+            "count": 1
+          },
+          {
+            "anchor": "Mac",
+            "count": 1
+          },
+          {
+            "anchor": "Vision",
+            "count": 1
+          },
+          {
+            "anchor": "Watch",
+            "count": 1
+          },
+          {
+            "anchor": "TV",
+            "count": 1
+          },
+          {
+            "anchor": "Developer MaxRewards Inc",
+            "count": 1
+          },
+          {
+            "anchor": "Ratings & Reviews",
+            "count": 1
+          }
+        ]
+      },
+      "evidenceId": "E006"
+    },
+    {
+      "position": 4,
+      "url": "https://www.businessinsider.com/personal-finance/credit-cards/best-credit-card-rewards-apps-track-points-miles-travel",
+      "domain": "businessinsider.com",
+      "robots": {
+        "status": 200,
+        "sitemaps": [
+          "https://www.businessinsider.com/sitemap/latest.xml",
+          "https://www.businessinsider.com/sitemap/google-news.xml",
+          "https://www.businessinsider.com/sitemap/index.xml",
+          "https://www.businessinsider.com/guides/sitemap/latest.xml",
+          "https://www.businessinsider.com/guides/sitemap/google-news.xml",
+          "https://www.businessinsider.com/guides/sitemap/index.xml",
+          "https://www.businessinsider.com/sitemap/landing-pages.xml"
+        ]
+      },
+      "page": {
+        "url": "https://www.businessinsider.com/personal-finance/credit-cards/best-credit-card-rewards-apps-track-points-miles-travel",
+        "title": "Best Credit Card Rewards Tracking Apps and Award Flight Search Tools",
+        "metaDescription": "These are the best apps for tracking credit card points, miles, and cash back, and these new award flight search tools help maximize your rewards.",
+        "metaRobots": "max-image-preview:large",
+        "ogTitle": "The best apps and tools for tracking your credit card rewards and booking the best award flights",
+        "canonical": "https://www.businessinsider.com/personal-finance/credit-cards/best-credit-card-rewards-apps-track-points-miles-travel",
+        "hreflang": [],
+        "lang": "en-US",
+        "headings": {
+          "h1": [
+            "The best apps and tools for tracking your credit card rewards and booking the best award flights"
+          ],
+          "h2": [
+            "Why use a credit card rewards tracking app?",
+            "Features to look for in a rewards tracking app",
+            "Comparing the best credit card rewards tracking apps",
+            "Tips for maximizing credit card rewards",
+            "The best search tools for booking flights on points and miles",
+            "Check for credit card offers",
+            "FAQs about r eward and credit card tracker apps",
+            "Read next"
+          ],
+          "h3": [
+            "Comprehensive rewards management",
+            "Security and privacy features",
+            "AwardWallet",
+            "CardPointers",
+            "Travel Freely",
+            "MaxRewards",
+            "Regularly monitor your rewards",
+            "Keep track of credit card bonus categories and limited-time offers",
+            "Learn how to effectively book award travel for the best value",
+            "point.me",
+            "Roame",
+            "seats.aero",
+            "Points Path",
+            "What makes a credit card rewards tracking app stand out?",
+            "Can I search for flights using points and miles?",
+            "How often should I check my rewards tracking app?",
+            "Can rewards-tracking apps help me find new credit cards?",
+            "Can credit card activity be tracked?",
+            "Business Insider tells the innovative stories you want to know",
+            "Business Insider tells the innovative stories you want to know",
+            "Business Insider tells the innovative stories you want to know",
+            "Business Insider tells the innovative stories you want to know"
+          ]
+        },
+        "wordCount": 3796,
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "Brand",
+          "BreadcrumbList",
+          "ContactPoint",
+          "FAQPage",
+          "ImageObject",
+          "ListItem",
+          "NewsMediaOrganization",
+          "Organization",
+          "Person",
+          "Question",
+          "WebPage",
+          "WebPageElement"
+        ],
+        "jsonLdBlocks": 3,
+        "jsonLdErrors": 0,
+        "internalLinkCount": 139,
+        "externalLinkCount": 49,
+        "topAnchors": [
+          {
+            "anchor": "Subscribe",
+            "count": 2
+          },
+          {
+            "anchor": "Careers",
+            "count": 2
+          },
+          {
+            "anchor": "Small Business",
+            "count": 2
+          },
+          {
+            "anchor": "Personal Finance",
+            "count": 2
+          },
+          {
+            "anchor": "Tech",
+            "count": 2
+          },
+          {
+            "anchor": "Games",
+            "count": 2
+          },
+          {
+            "anchor": "Katherine Fan",
+            "count": 2
+          },
+          {
+            "anchor": "Gabriel Vito",
+            "count": 2
+          },
+          {
+            "anchor": "Amex Offers",
+            "count": 2
+          },
+          {
+            "anchor": "Terms of Service",
+            "count": 2
+          },
+          {
+            "anchor": "Privacy Policy",
+            "count": 2
+          },
+          {
+            "anchor": "Go to the search page.",
+            "count": 1
+          },
+          {
+            "anchor": "Business Insider",
+            "count": 1
+          },
+          {
+            "anchor": "Business",
+            "count": 1
+          },
+          {
+            "anchor": "Strategy",
+            "count": 1
+          }
+        ]
+      },
+      "evidenceId": "E007"
+    },
+    {
+      "position": 5,
+      "url": "https://awardwallet.com/",
+      "domain": "awardwallet.com",
+      "robots": {
+        "status": 200,
+        "sitemaps": [
+          "https://awardwallet.com/sitemap.xml",
+          "https://awardwallet.com/sitemap-blog-posts-0.xml",
+          "https://awardwallet.com/sitemap-blog-posts-1.xml",
+          "https://awardwallet.com/sitemap-blog-posts-2.xml",
+          "https://awardwallet.com/sitemap-blog-posts-3.xml",
+          "https://awardwallet.com/sitemap-blog-posts-4.xml",
+          "https://awardwallet.com/sitemap-blog-posts-5.xml",
+          "https://awardwallet.com/sitemap-blog-posts-6.xml",
+          "https://awardwallet.com/sitemap-blog-posts-7.xml",
+          "https://awardwallet.com/sitemap-blog-posts-8.xml",
+          "https://awardwallet.com/sitemap-blog-posts-9.xml",
+          "https://awardwallet.com/sitemap-blog-posts-10.xml",
+          "https://awardwallet.com/sitemap-blog-posts-11.xml",
+          "https://awardwallet.com/sitemap-blog-posts-12.xml",
+          "https://awardwallet.com/sitemap-blog-posts-13.xml",
+          "https://awardwallet.com/sitemap-blog-posts-14.xml",
+          "https://awardwallet.com/sitemap-site.xml",
+          "https://awardwallet.com/sitemap-blog-pages.xml",
+          "https://awardwallet.com/sitemap-blog-authors.xml",
+          "https://awardwallet.com/sitemap-blog-tags.xml",
+          "https://awardwallet.com/sitemap-blog-categories.xml",
+          "https://awardwallet.com/sitemap-blog-news.xml"
+        ]
+      },
+      "page": {
+        "url": "https://awardwallet.com/",
+        "title": "Track your rewards and travel plans in a convenient, secure place",
+        "metaDescription": "AwardWallet helps you track frequent flyer miles and hotel points as well as book reward tickets",
+        "metaRobots": "",
+        "ogTitle": "",
+        "canonical": "https://awardwallet.com/",
+        "hreflang": [
+          "ru",
+          "pt",
+          "es",
+          "de",
+          "zh-Hant",
+          "zh-Hans",
+          "fr"
+        ],
+        "lang": "en",
+        "headings": {
+          "h1": [
+            "All your Rewards & Travel in One Place"
+          ],
+          "h2": [
+            "Over 602 Loyalty Programs in Your Pocket",
+            "AwardWallet’s Free Service Tracks Over 226 Billion Points",
+            "Travel Better with Effortless Itinerary Organization",
+            "Bank Level Encryption",
+            "Find out your loyalty net worth"
+          ],
+          "h3": [
+            "Credit Cards",
+            "Airlines",
+            "Hotels",
+            "Maximize Your Points",
+            "Expiration Reminders",
+            "See Account Details",
+            "Looking for AwardWallet logos, banners or screenshots?"
+          ]
+        },
+        "wordCount": 334,
+        "schemaTypes": [],
+        "jsonLdBlocks": 0,
+        "jsonLdErrors": 0,
+        "internalLinkCount": 26,
+        "externalLinkCount": 11,
+        "topAnchors": [
+          {
+            "anchor": "Log In",
+            "count": 1
+          },
+          {
+            "anchor": "Sign Up",
+            "count": 1
+          },
+          {
+            "anchor": "Sign up for free",
+            "count": 1
+          },
+          {
+            "anchor": "Privacy Notice",
+            "count": 1
+          },
+          {
+            "anchor": "Terms of Service",
+            "count": 1
+          },
+          {
+            "anchor": "About Us",
+            "count": 1
+          },
+          {
+            "anchor": "Media",
+            "count": 1
+          },
+          {
+            "anchor": "Credit Card Offers",
+            "count": 1
+          },
+          {
+            "anchor": "Promos",
+            "count": 1
+          },
+          {
+            "anchor": "Supported Programs",
+            "count": 1
+          },
+          {
+            "anchor": "FAQs",
+            "count": 1
+          },
+          {
+            "anchor": "APIs",
+            "count": 1
+          },
+          {
+            "anchor": "Award Booking Service",
+            "count": 1
+          },
+          {
+            "anchor": "Contact Us",
+            "count": 1
+          },
+          {
+            "anchor": "AwardWallet Learn",
+            "count": 1
+          }
+        ]
+      },
+      "evidenceId": "E008"
+    }
+  ],
+  "keywordGap": [
+    {
+      "phrase": "english",
+      "competitors": 5,
+      "score": 21,
+      "words": 1
+    },
+    {
+      "phrase": "cardpointers",
+      "competitors": 4,
+      "score": 55,
+      "words": 1
+    },
+    {
+      "phrase": "service",
+      "competitors": 4,
+      "score": 43,
+      "words": 1
+    },
+    {
+      "phrase": "maximize",
+      "competitors": 4,
+      "score": 24,
+      "words": 1
+    },
+    {
+      "phrase": "points miles",
+      "competitors": 4,
+      "score": 9,
+      "words": 2
+    },
+    {
+      "phrase": "welcome",
+      "competitors": 4,
+      "score": 18,
+      "words": 1
+    },
+    {
+      "phrase": "credits",
+      "competitors": 4,
+      "score": 14,
+      "words": 1
+    },
+    {
+      "phrase": "america",
+      "competitors": 4,
+      "score": 12,
+      "words": 1
+    },
+    {
+      "phrase": "capital",
+      "competitors": 4,
+      "score": 8,
+      "words": 1
+    },
+    {
+      "phrase": "discover",
+      "competitors": 4,
+      "score": 6,
+      "words": 1
+    },
+    {
+      "phrase": "recommendations",
+      "competitors": 4,
+      "score": 6,
+      "words": 1
+    },
+    {
+      "phrase": "maxrewards",
+      "competitors": 3,
+      "score": 87,
+      "words": 1
+    },
+    {
+      "phrase": "points and miles",
+      "competitors": 3,
+      "score": 21,
+      "words": 3
+    },
+    {
+      "phrase": "awardwallet",
+      "competitors": 3,
+      "score": 35,
+      "words": 1
+    },
+    {
+      "phrase": "credit card offers",
+      "competitors": 3,
+      "score": 9,
+      "words": 3
+    },
+    {
+      "phrase": "features",
+      "competitors": 3,
+      "score": 23,
+      "words": 1
+    },
+    {
+      "phrase": "reviews",
+      "competitors": 3,
+      "score": 23,
+      "words": 1
+    },
+    {
+      "phrase": "bank of america",
+      "competitors": 3,
+      "score": 7,
+      "words": 3
+    },
+    {
+      "phrase": "loyalty",
+      "competitors": 3,
+      "score": 19,
+      "words": 1
+    },
+    {
+      "phrase": "card offers",
+      "competitors": 3,
+      "score": 9,
+      "words": 2
+    },
+    {
+      "phrase": "information",
+      "competitors": 3,
+      "score": 17,
+      "words": 1
+    },
+    {
+      "phrase": "management",
+      "competitors": 3,
+      "score": 17,
+      "words": 1
+    },
+    {
+      "phrase": "you're",
+      "competitors": 3,
+      "score": 16,
+      "words": 1
+    },
+    {
+      "phrase": "price",
+      "competitors": 3,
+      "score": 14,
+      "words": 1
+    },
+    {
+      "phrase": "chrome",
+      "competitors": 3,
+      "score": 13,
+      "words": 1
+    },
+    {
+      "phrase": "finance",
+      "competitors": 3,
+      "score": 13,
+      "words": 1
+    },
+    {
+      "phrase": "personal",
+      "competitors": 3,
+      "score": 13,
+      "words": 1
+    },
+    {
+      "phrase": "premium",
+      "competitors": 3,
+      "score": 13,
+      "words": 1
+    },
+    {
+      "phrase": "helps",
+      "competitors": 3,
+      "score": 12,
+      "words": 1
+    },
+    {
+      "phrase": "job",
+      "competitors": 3,
+      "score": 11,
+      "words": 1
+    }
+  ],
+  "ads": [
+    {
+      "domain": "getcardlab.app",
+      "platform": "Google Ads Transparency Center",
+      "url": "https://adstransparency.google.com/?region=anywhere&domain=getcardlab.app",
+      "evidenceId": "E015"
+    },
+    {
+      "domain": "getcardlab.app",
+      "platform": "Meta Ad Library",
+      "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=cardlab&search_type=keyword_unordered&media_type=all",
+      "evidenceId": "E016"
+    },
+    {
+      "domain": "getcardlab.app",
+      "platform": "LinkedIn Ad Library",
+      "url": "https://www.linkedin.com/ad-library/search?keyword=cardlab",
+      "evidenceId": "E017"
+    },
+    {
+      "domain": "uscreditcardrewards.com",
+      "platform": "Google Ads Transparency Center",
+      "url": "https://adstransparency.google.com/?region=anywhere&domain=uscreditcardrewards.com",
+      "evidenceId": "E018"
+    },
+    {
+      "domain": "uscreditcardrewards.com",
+      "platform": "Meta Ad Library",
+      "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=uscreditcardrewards&search_type=keyword_unordered&media_type=all",
+      "evidenceId": "E019"
+    },
+    {
+      "domain": "uscreditcardrewards.com",
+      "platform": "LinkedIn Ad Library",
+      "url": "https://www.linkedin.com/ad-library/search?keyword=uscreditcardrewards",
+      "evidenceId": "E020"
+    },
+    {
+      "domain": "play.google.com",
+      "platform": "Google Ads Transparency Center",
+      "url": "https://adstransparency.google.com/?region=anywhere&domain=play.google.com",
+      "evidenceId": "E021"
+    },
+    {
+      "domain": "play.google.com",
+      "platform": "Meta Ad Library",
+      "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=play&search_type=keyword_unordered&media_type=all",
+      "evidenceId": "E022"
+    },
+    {
+      "domain": "play.google.com",
+      "platform": "LinkedIn Ad Library",
+      "url": "https://www.linkedin.com/ad-library/search?keyword=play",
+      "evidenceId": "E023"
+    },
+    {
+      "domain": "apps.apple.com",
+      "platform": "Google Ads Transparency Center",
+      "url": "https://adstransparency.google.com/?region=anywhere&domain=apps.apple.com",
+      "evidenceId": "E024"
+    },
+    {
+      "domain": "apps.apple.com",
+      "platform": "Meta Ad Library",
+      "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=apps&search_type=keyword_unordered&media_type=all",
+      "evidenceId": "E025"
+    },
+    {
+      "domain": "apps.apple.com",
+      "platform": "LinkedIn Ad Library",
+      "url": "https://www.linkedin.com/ad-library/search?keyword=apps",
+      "evidenceId": "E026"
+    }
+  ],
+  "citations": [],
+  "unknowns": [
+    "Paid keyword data (volume, ranked keywords) skipped: budget is 0"
+  ],
+  "finished": true,
+  "paidKeywords": [],
+  "userAgent": "seo-rea/0.1 (+https://github.com/DevgenX/seo-rea; polite research bot)"
+}
