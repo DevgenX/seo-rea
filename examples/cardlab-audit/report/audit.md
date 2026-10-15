@@ -1,6 +1,14 @@
 # AEO audit: https://getcardlab.app/
 
-Run 20261015T044655Z on 2026-10-15T04:46:55.835Z with seo-rea 0.2.0. Free sources only. Evidence: [evidence/index.md](../evidence/index.md).
+Run 20261015T051615Z on 2026-10-15T05:16:15.920Z with seo-rea 0.3.0. Free sources only. Evidence: [evidence/index.md](../evidence/index.md).
+
+## Top 10 actions
+
+| # | Action | Why | Impact | Effort | Owner | Evidence |
+|---|---|---|---|---|---|---|
+| 1 | Fix JSON-LD errors: SoftwareApplication: needs one of: aggregateRating, review | Invalid structured data is ignored for rich results. | medium | S | dev | E001 |
+
+Ranked by impact, then effort. Full data: [dossier.json](dossier.json).
 
 ## 1. Page
 

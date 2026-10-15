@@ -1,0 +1,337 @@
+{
+  "schemaVersion": "1",
+  "tool": "seo-rea",
+  "toolVersion": "0.3.0",
+  "kind": "audit",
+  "runId": "20261015T051615Z",
+  "inputs": {
+    "target": "getcardlab.app",
+    "url": "https://getcardlab.app/",
+    "keyword": null,
+    "budgetUsd": 0
+  },
+  "timestamps": {
+    "createdAt": "2026-10-15T05:16:15.920Z",
+    "writtenAt": "2026-10-15T05:16:15.921Z"
+  },
+  "cost": {
+    "spentUsd": 0,
+    "budgetUsd": 0
+  },
+  "serp": {
+    "collected": false,
+    "primary": "",
+    "engines": [],
+    "results": [],
+    "ads": [],
+    "evidenceId": ""
+  },
+  "competitors": [],
+  "target": {
+    "domain": "getcardlab.app",
+    "fetched": true,
+    "error": "",
+    "pages": [
+      {
+        "url": "https://getcardlab.app/",
+        "title": "CardLab: Track Cards & Rewards - No Bank Login",
+        "metaDescription": "Track your cards and rewards privately: statements, due dates, reward caps and which card to use for any purchase. Checked catalog, 38 countries, no bank login.",
+        "wordCount": 2471,
+        "headings": {
+          "h1": [
+            "Track cards & rewards, and know which card to use."
+          ],
+          "h2": [
+            "The pages that answer the usual next question.",
+            "Sourced answers that lead into the tools.",
+            "Watch the answer appear.",
+            "Most people don't misunderstand credit cards. They misunderstand the timeline.",
+            "What does carrying a balance actually cost?",
+            "Run real scenarios, risk-free.",
+            "Modeled exactly, not hand-waved.",
+            "Every rate names its source, its sentence, and its date.",
+            "Free to learn. 3 days free, then $4.99 a month.",
+            "See what happens before you swipe."
+          ],
+          "h3": [
+            "Bank bonuses, read from the bank's own offer page.",
+            "See the cost of waiting.",
+            "Watch utilization move.",
+            "Know when rewards lose.",
+            "Which card do I use for this?"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "Country",
+          "FAQPage",
+          "Offer",
+          "Organization",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification",
+          "WebSite"
+        ],
+        "internalLinks": 58
+      }
+    ],
+    "schemaValidation": {
+      "types": [
+        "Answer",
+        "Country",
+        "FAQPage",
+        "Offer",
+        "Organization",
+        "Question",
+        "SoftwareApplication",
+        "UnitPriceSpecification",
+        "WebSite"
+      ],
+      "blocks": 1,
+      "parseErrors": [],
+      "checks": [
+        {
+          "type": "Organization",
+          "checkedAs": "Organization",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/"
+        },
+        {
+          "type": "SoftwareApplication",
+          "checkedAs": "SoftwareApplication",
+          "valid": false,
+          "errors": [
+            "needs one of: aggregateRating, review"
+          ],
+          "warnings": [],
+          "url": "https://getcardlab.app/"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://getcardlab.app/"
+        }
+      ],
+      "evidenceIds": [
+        "E001"
+      ]
+    },
+    "aiReadiness": {
+      "crawlers": [
+        {
+          "token": "GPTBot",
+          "operator": "OpenAI",
+          "purpose": "model training",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        },
+        {
+          "token": "OAI-SearchBot",
+          "operator": "OpenAI",
+          "purpose": "ChatGPT search index",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        },
+        {
+          "token": "ChatGPT-User",
+          "operator": "OpenAI",
+          "purpose": "user-initiated fetches",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        },
+        {
+          "token": "ClaudeBot",
+          "operator": "Anthropic",
+          "purpose": "model training",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        },
+        {
+          "token": "Claude-SearchBot",
+          "operator": "Anthropic",
+          "purpose": "search index",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        },
+        {
+          "token": "PerplexityBot",
+          "operator": "Perplexity",
+          "purpose": "search index",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        },
+        {
+          "token": "Google-Extended",
+          "operator": "Google",
+          "purpose": "Gemini training and grounding (not Search)",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        },
+        {
+          "token": "Applebot-Extended",
+          "operator": "Apple",
+          "purpose": "Apple Intelligence training",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        },
+        {
+          "token": "CCBot",
+          "operator": "Common Crawl",
+          "purpose": "open crawl used for training",
+          "access": "allowed",
+          "rule": "own group: no disallow"
+        }
+      ],
+      "llmsTxt": {
+        "present": true,
+        "valid": true,
+        "linkCount": 129,
+        "sections": [
+          "Key facts",
+          "Answers to the questions this product exists for",
+          "Which card, by category",
+          "Coverage and sourcing",
+          "Calculators (free, no sign-up)",
+          "Guide",
+          "Blog",
+          "About",
+          "Optional"
+        ],
+        "errors": [],
+        "warnings": []
+      },
+      "llmsFullTxt": {
+        "present": true,
+        "bytes": 586524
+      },
+      "evidenceIds": [
+        "E007",
+        "E005",
+        "E006"
+      ]
+    },
+    "performance": [
+      {
+        "source": "psi",
+        "strategy": "mobile",
+        "ok": false,
+        "skipped": "PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key",
+        "scores": {},
+        "lab": {},
+        "field": {},
+        "evidenceId": "E008"
+      }
+    ],
+    "robots": {
+      "found": true,
+      "blocksRoot": false,
+      "evidenceId": "E003"
+    },
+    "sitemap": {
+      "urlCount": 114,
+      "evidenceId": "E004"
+    },
+    "evidenceIds": [
+      "E001",
+      "E003",
+      "E004"
+    ]
+  },
+  "keywordGap": [],
+  "ads": [],
+  "citations": [],
+  "claims": [
+    {
+      "id": "C01",
+      "text": "https://getcardlab.app/ has 1 JSON-LD block(s) (Answer, Country, FAQPage, Offer, Organization, Question, SoftwareApplication, UnitPriceSpecification, WebSite); 1 checked node(s) with errors",
+      "evidenceIds": [
+        "E001"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "raw HTML without JavaScript",
+      "unknowns": ""
+    },
+    {
+      "id": "C02",
+      "text": "https://getcardlab.app/: 2471 words, 1 H1, 10 H2, title 46 chars, meta description present",
+      "evidenceIds": [
+        "E001"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "raw HTML without JavaScript",
+      "unknowns": ""
+    },
+    {
+      "id": "C03",
+      "text": "getcardlab.app sitemap lists 114 URLs",
+      "evidenceIds": [
+        "E003",
+        "E004"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "robots.txt Sitemap lines and /sitemap.xml",
+      "unknowns": ""
+    },
+    {
+      "id": "C04",
+      "text": "getcardlab.app robots.txt lets all 9 checked AI crawlers fetch /",
+      "evidenceIds": [
+        "E003",
+        "E007"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "robots.txt rules for each product token; crawlers may ignore robots.txt or be blocked by a firewall",
+      "unknowns": "Server or CDN bot blocking not tested"
+    },
+    {
+      "id": "C05",
+      "text": "getcardlab.app/llms.txt follows the llmstxt.org format (9 sections, 129 links)",
+      "evidenceIds": [
+        "E005"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "single fetch of /llms.txt",
+      "unknowns": ""
+    },
+    {
+      "id": "C06",
+      "text": "getcardlab.app/llms-full.txt present (586524 bytes)",
+      "evidenceIds": [
+        "E006"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "single fetch of /llms-full.txt",
+      "unknowns": ""
+    }
+  ],
+  "unknowns": [
+    "Server or CDN bot blocking not tested",
+    "PageSpeed Insights skipped: PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key",
+    "Rendered (JavaScript) DOM not checked; checks use raw HTML"
+  ],
+  "topActions": [
+    {
+      "rank": 1,
+      "title": "Fix JSON-LD errors: SoftwareApplication: needs one of: aggregateRating, review",
+      "why": "Invalid structured data is ignored for rich results.",
+      "evidenceIds": [
+        "E001"
+      ],
+      "effort": "S",
+      "impact": "medium",
+      "owner": "dev"
+    }
+  ],
+  "evidenceIndex": "evidence/index.json"
+}
