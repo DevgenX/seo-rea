@@ -1,167 +1,265 @@
 # SEO teardown: "credit card rewards app" vs getcardlab.app
 
-Run 20261015T033444Z on 2026-10-15T03:34:44.125Z. Paid budget 0 USD, spent 0.0000 USD. Evidence: [evidence/index.md](../evidence/index.md). Ledger: [ledger.md](ledger.md).
+Run 20261015T044454Z on 2026-10-15T04:44:54.629Z with seo-rea 0.2.0. Paid budget 0 USD, spent 0.0000 USD. Evidence: [evidence/index.md](../evidence/index.md). Ledger: [ledger.md](ledger.md).
 
 Observed facts cite Evidence IDs. Lines marked *(inferred)* are interpretations.
 
 ## 1. Summary: why the winners win
 
-- Depth: ranking pages run a median 2134 words vs 2504 on the getcardlab.app homepage. [E004, E005, E006, E007, E008]
-- Relevance: 3/5 ranking pages put every keyword term in the title. [E004, E005, E006, E007, E008]
-- Structured data: most common types are BreadcrumbList (3/5), ListItem (3/5), Organization (3/5). [E004, E005, E006, E007, E008]
-- getcardlab.app does not appear in the observed results (top 5 organic results from Operator-supplied URL list (en-US, logged-out bot request) on 2026-10-15). [E001, E002, E003]
+- *(inferred)* Search intent is comparison/roundup: 5/8 titles use "best", "top", a year or review wording. Results for this query reward roundup and comparison content, not product homepages. [E001, E003, E007, E010, E011, E012, E013]
+- Depth: ranking pages run a median 586 words vs 2471 on the getcardlab.app homepage. [E007, E010, E011, E012, E013]
+- Relevance: 2/5 ranking pages put every keyword term in the title. [E007, E010, E011, E012, E013]
+- Structured data: most common types are Organization (3/5), BreadcrumbList (2/5), Article (1/5). [E007, E010, E011, E012, E013]
+- getcardlab.app does not appear in the observed results (top 8 organic results from Bing (headless Chromium) (en-US, logged out) on 2026-10-15). [E001, E003]
+- AI readiness: no AI crawler blocked; llms.txt valid. [E021, E019, E020]
 
-## 2. SERP map
+## 2. SERP map (what each engine did)
 
-| Engine | Status | Organic | Ads | Evidence |
-|---|---|---|---|---|
-| Operator-supplied URL list | used (HTTP 200, relevance 100%) | 5 | 0 | E001 |
-| DuckDuckGo HTML | not used: captcha or anomaly page | 0 | 0 | E002 |
-| Bing HTML | not used: degraded: only 0% of results match the query terms (engine likely served a bot-degraded SERP) | 0 | 0 | E003 |
+| Path | Engine | Status | Consent | Organic | Ads | Evidence |
+|---|---|---|---|---|---|---|
+| serp-playwright | Google (headless Chromium) | not used: Google captcha (unusual traffic page) | none shown | 0 | 0 | E001 |
+| serp-playwright | Bing (headless Chromium) | used (HTTP 200, relevance 90%) | none shown | 10 | 0 | E003 |
 
-Primary ranking list from **Operator-supplied URL list**:
+- Headless Chromium user agent: `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36`; at least 3 s between requests to one host.
+
+Primary ranking list from **Bing (headless Chromium)** [E005]:
 
 | # | Domain | Title | URL |
 |---|---|---|---|
-| 1 | uscreditcardrewards.com |  | https://uscreditcardrewards.com/guides/best-credit-card-apps |
-| 2 | play.google.com |  | https://play.google.com/store/apps/details?hl=en_US&id=com.cardpointers.app |
-| 3 | apps.apple.com |  | https://apps.apple.com/us/app/maxrewards-credit-card-rewards/id1435710443 |
-| 4 | businessinsider.com |  | https://www.businessinsider.com/personal-finance/credit-cards/best-credit-card-rewards-apps-track-points-miles-travel |
-| 5 | awardwallet.com |  | https://awardwallet.com/ |
+| 1 | forbes.com | The Best 4 Apps For Tracking Credit Cards And Travel Rewards | https://www.forbes.com/advisor/credit-cards/best-apps-to-track-credit-card-rewards/ |
+| 2 | cnbc.com | Best Apps for Tracking Your Credit Card Rewards in 2026 - CNBC | https://www.cnbc.com/select/best-apps-for-tracking-your-credit-card-rewards/ |
+| 3 | money.usnews.com | Here Are the Best Apps for Tracking Your Credit Card Rewards | https://money.usnews.com/credit-cards/articles/best-credit-card-apps-for-tracking-rewards |
+| 4 | appshunter.io | 247+ Best Credit Card Rewards Apps for iPhone (2026) \| Free & Paid | https://appshunter.io/ios/topics/credit-card-rewards |
+| 5 | rewardswise.app | RewardsWise - All in one Credit Card Manager | https://www.rewardswise.app/ |
+| 6 | maxrewards.com | Find Your Next Credit Card \| MaxRewards | https://maxrewards.com/ |
+| 7 | joinkudos.com | Kudos: Put Your Cards to Work - Earn More Rewards | https://www.joinkudos.com/ |
+| 8 | cardstack.money | Best Credit Card Rewards Apps in 2026 - cardstack.money | https://cardstack.money/articles/guides/credit-card-rewards-optimizer-apps-2026 |
 
-AI Overview: not observable without a browser session; see section 5.
+AI Overviews and AI answers are not scraped; log them with `seo-rea cite` (section 7).
 
 ## 3. Competitor cards
 
-### #1 uscreditcardrewards.com
+### #1 forbes.com
 
-URL: https://uscreditcardrewards.com/guides/best-credit-card-apps | Evidence: E004
+URL: https://www.forbes.com/advisor/credit-cards/best-apps-to-track-credit-card-rewards/ | Evidence: E006
 
-- Title: The best credit card tracking apps, compared \| USCreditCardRewards (66 chars)
-- Meta description: CardPointers, MaxWorth, MaxRewards, kardfolio, AwardWallet, Travel Freely, Kudos and StackEasy compared on price, platforms, credential handling and what each actually tracks.
-- H1: The best credit card tracking apps, compared
-- Structure: 6 H2, 9 H3, 2134 words
-- Top H2s: Benefit trackers, ranked / How we scored them / “Credit card app” is four different jobs / Every app, every row / Head-to-head / Questions people ask
-- Schema (JSON-LD): Answer, Article, BreadcrumbList, FAQPage, ItemList, ListItem, Organization, Question, WebSite
-- Canonical: https://uscreditcardrewards.com/guides/best-credit-card-apps
-- Internal links: 40; external links: 0
-- Top internal anchors: "CardPointers" x3, "MaxWorth" x3, "MaxRewards" x3, "kardfolio" x3, "All cards" x2, "Credit finder" x2
-- robots.txt: 1 sitemap(s) declared
+Not analysed: HTTP 403 text/html;charset=utf-8
+
+### #2 cnbc.com
+
+URL: https://www.cnbc.com/select/best-apps-for-tracking-your-credit-card-rewards/ | Evidence: E007
+
+- Title: Best Apps for Tracking Your Credit Card Rewards in 2026 (55 chars)
+- Meta description: CNBC Select recommends AwardWallet and MaxRewards for easily keeping track of your credit card and travel rewards.
+- H1: These are the best apps for tracking your credit card, airline and hotel rewards
+- Structure: 14 H2, 4 H3, 2573 words
+- Top H2s: Our top picks of timely offers from our partners / Find the best credit card for you / AwardWallet and MaxRewards can help you stay on top of your credit card and travel rewards. / AwardWallet / Read more / MaxRewards
+- Schema (JSON-LD): BreadcrumbList, ImageObject, ItemList, ListItem, NewsArticle, NewsMediaOrganization, Person, Rating, Review, SpeakableSpecification - 2 checked, 0 with errors
+- Canonical: https://www.cnbc.com/select/best-apps-for-tracking-your-credit-card-rewards/
+- Internal links: 125; external links: 48
+- Top internal anchors: "Credit Cards" x2, "Loans" x1, "Best Personal Loans" x1, "Best Loans for Low Credit" x1, "Best Same Day Loans" x1, "Best Debt Consolidation Loans" x1
+- robots.txt: HTTP 200, 9 sitemap(s) declared
 - Backlinks: not collected (see unknowns)
 
-### #2 play.google.com
+### #3 money.usnews.com
 
-URL: https://play.google.com/store/apps/details?hl=en_US&id=com.cardpointers.app | Evidence: E005
+URL: https://money.usnews.com/credit-cards/articles/best-credit-card-apps-for-tracking-rewards | Evidence: E008
 
-- Title: CardPointers: Maximize Rewards - Apps on Google Play (52 chars)
-- Meta description: Save money and earn more cash back, points, and miles from your credit cards.
-- H1: CardPointers: Maximize Rewards
-- Structure: 6 H2, 0 H3, 1081 words
-- Top H2s: About this app / Data safety / Ratings and reviews / What’s new / App support / Similar apps
-- Schema (JSON-LD): AggregateRating, Offer, Person, SoftwareApplication
-- Canonical: https://play.google.com/store/apps/details?id=com.cardpointers.app&hl=en_US (differs from URL)
-- Internal links: 27; external links: 16
-- Top internal anchors: "Games" x2, "Apps" x2, "Movies & TV" x2, "Books" x2, "Kids" x2, "google_logo Play" x1
-- robots.txt: 2 sitemap(s) declared
-- Backlinks: not collected (see unknowns)
+Not analysed: The operation was aborted due to timeout
 
-### #3 apps.apple.com
+### #4 appshunter.io
 
-URL: https://apps.apple.com/us/app/maxrewards-credit-card-rewards/id1435710443 | Evidence: E006
+URL: https://appshunter.io/ios/topics/credit-card-rewards | Evidence: E009
 
-- Title: ‎MaxRewards Credit Card Rewards App - App Store (47 chars)
-- Meta description: Download MaxRewards Credit Card Rewards by MaxRewards Inc on the App Store. See screenshots, ratings and reviews, user tips, and more apps like MaxRewards…
-- H1: MaxRewards Credit Card Rewards / Best card management app I’ve used!!! But can be a bit better. / New update puts broken app out of its misery / Absolutely top notch functionality and service / Terrible Customer Service / Version History / App Privacy
-- Structure: 12 H2, 9 H3, 4043 words
-- Top H2s: Ratings & Reviews / What’s New / App Privacy / Accessibility / Information / Supports
-- Schema (JSON-LD): AggregateRating, BreadcrumbList, ListItem, Offer, Organization, SoftwareApplication
-- Canonical: https://apps.apple.com/us/app/maxrewards-credit-card-rewards/id1435710443
-- Internal links: 228; external links: 5
-- Top internal anchors: "Learn More" x4, "Armenia" x2, "Turkmenistan" x2, "Today" x1, "Games" x1, "Apps" x1
-- robots.txt: 6 sitemap(s) declared
-- Backlinks: not collected (see unknowns)
+Not analysed: HTTP 403 text/html; charset=UTF-8
 
-### #4 businessinsider.com
+### #5 rewardswise.app
 
-URL: https://www.businessinsider.com/personal-finance/credit-cards/best-credit-card-rewards-apps-track-points-miles-travel | Evidence: E007
+URL: https://www.rewardswise.app/ | Evidence: E010
 
-- Title: Best Credit Card Rewards Tracking Apps and Award Flight Search Tools (68 chars)
-- Meta description: These are the best apps for tracking credit card points, miles, and cash back, and these new award flight search tools help maximize your rewards.
-- H1: The best apps and tools for tracking your credit card rewards and booking the best award flights
-- Structure: 8 H2, 22 H3, 3796 words
-- Top H2s: Why use a credit card rewards tracking app? / Features to look for in a rewards tracking app / Comparing the best credit card rewards tracking apps / Tips for maximizing credit card rewards / The best search tools for booking flights on points and miles / Check for credit card offers
-- Schema (JSON-LD): Answer, Article, Brand, BreadcrumbList, ContactPoint, FAQPage, ImageObject, ListItem, NewsMediaOrganization, Organization, Person, Question, WebPage, WebPageElement
-- Canonical: https://www.businessinsider.com/personal-finance/credit-cards/best-credit-card-rewards-apps-track-points-miles-travel
-- Internal links: 139; external links: 49
-- Top internal anchors: "Subscribe" x2, "Careers" x2, "Small Business" x2, "Personal Finance" x2, "Tech" x2, "Games" x2
-- robots.txt: 7 sitemap(s) declared
-- Backlinks: not collected (see unknowns)
-
-### #5 awardwallet.com
-
-URL: https://awardwallet.com/ | Evidence: E008
-
-- Title: Track your rewards and travel plans in a convenient, secure place (65 chars)
-- Meta description: AwardWallet helps you track frequent flyer miles and hotel points as well as book reward tickets
-- H1: All your Rewards & Travel in One Place
-- Structure: 5 H2, 7 H3, 334 words
-- Top H2s: Over 602 Loyalty Programs in Your Pocket / AwardWallet’s Free Service Tracks Over 226 Billion Points / Travel Better with Effortless Itinerary Organization / Bank Level Encryption / Find out your loyalty net worth
+- Title: X (Twitter) (11 chars)
+- Meta description: RewardsWise is a credit card rewards manager that helps you maximize your credit card rewards and cashback. We provide personalized recommendations, tracking, and management tools to help you get the most out of your credit cards.
+- H1: All in One Credit Card Manager
+- Structure: 3 H2, 5 H3, 144 words
+- Top H2s: Your favorite companies are our partners / Effortlessly Connect Your Bank Accounts / FAQ
 - Schema (JSON-LD): none
-- Canonical: https://awardwallet.com/
-- Internal links: 26; external links: 11
-- Top internal anchors: "Log In" x1, "Sign Up" x1, "Sign up for free" x1, "Privacy Notice" x1, "Terms of Service" x1, "About Us" x1
-- robots.txt: 22 sitemap(s) declared
+- Canonical: https://www.rewardswise.app/
+- Internal links: 14; external links: 5
+- Top internal anchors: "Features" x2, "Blog" x2, "Changelog" x2, "About" x2, "RewardsWise" x1, "Get Started" x1
+- robots.txt: HTTP 200, 1 sitemap(s) declared
+- Backlinks: not collected (see unknowns)
+
+### #6 maxrewards.com
+
+URL: https://maxrewards.com/ | Evidence: E011
+
+- Title: Find Your Next Credit Card and Get More From Every Card \| MaxRewards (68 chars)
+- Meta description: Find credit cards with Smart Search, compare MaxRewards editorial picks, and see what each card could be worth for your spending.
+- H1: Make every card in your wallet work harder.
+- Structure: 3 H2, 6 H3, 586 words
+- Top H2s: Find your next credit card / Picks you can verify. / Choosing the card is step one.
+- Schema (JSON-LD): Organization - 1 checked, 0 with errors
+- Canonical: https://maxrewards.com/
+- Internal links: 52; external links: 13
+- Top internal anchors: "Read review" x4, "Estimate value" x4, "Home" x1, "Sign In" x1, "Sign Up" x1, "Get Started" x1
+- robots.txt: HTTP 200, 1 sitemap(s) declared
+- Backlinks: not collected (see unknowns)
+
+### #7 joinkudos.com
+
+URL: https://www.joinkudos.com/ | Evidence: E012
+
+- Title: Kudos: Put Your Cards to Work - Earn More Rewards (49 chars)
+- Meta description: (none)
+- H1: (none)
+- Structure: 0 H2, 0 H3, 0 words
+- Top H2s: (none)
+- Schema (JSON-LD): ImageObject, Organization, Person - 1 checked, 0 with errors
+- Canonical: (none)
+- Internal links: 0; external links: 0
+- Top internal anchors: (none)
+- robots.txt: HTTP 200, 4 sitemap(s) declared
+- Backlinks: not collected (see unknowns)
+
+### #8 cardstack.money
+
+URL: https://cardstack.money/articles/guides/credit-card-rewards-optimizer-apps-2026 | Evidence: E013
+
+- Title: Best Credit Card Rewards Optimizer Apps (2026 Comparison) \| CardStack (69 chars)
+- Meta description: Best credit card rewards apps in 2026 — compare CardStack, MaxRewards, Kudos, and more on features, pricing, and what each app does best.
+- H1: Best Credit Card Rewards Apps in 2026
+- Structure: 18 H2, 0 H3, 2056 words
+- Top H2s: Feature Comparison / CardStack / MaxRewards / Kudos / AwardWallet / How to Choose
+- Schema (JSON-LD): Article, BreadcrumbList, ImageObject, ListItem, Organization, WebPage - 2 checked, 0 with errors
+- Canonical: https://cardstack.money/articles/guides/credit-card-rewards-optimizer-apps-2026
+- Internal links: 95; external links: 19
+- Top internal anchors: "Sign In" x2, "Try for Free" x2, "Features" x2, "MCP for AI Agents" x2, "Browser extension" x2, "Articles" x2
+- robots.txt: HTTP 200, 2 sitemap(s) declared
 - Backlinks: not collected (see unknowns)
 
 ### Target: getcardlab.app
 
 - Homepage title: CardLab: Track Cards & Rewards - No Bank Login
 - Meta description: Track your cards and rewards privately: statements, due dates, reward caps and which card to use for any purchase. Checked catalog, 38 countries, no bank login.
-- H1: Track cards & rewards, and know which card to use.; 10 H2; 2504 words
+- H1: Track cards & rewards, and know which card to use.; 10 H2; 2471 words
 - Schema (all crawled pages): Answer, Article, BreadcrumbList, Country, Dataset, FAQPage, ListItem, Offer, Organization, Question, SoftwareApplication, UnitPriceSpecification, WebSite
 - Pages crawled: 10; sitemap URLs: 114
 - Most-linked internal pages: / (51), /coverage (22), /best-card (21), /credit-card-tracker (19), /calculators (17)
-- Top phrases: card, credit card, credit, cardlab, bank, bonus, tracker, cards, credit card tracker, rate
-- Evidence: E012, E013, E010, E011
+- Top phrases: card, credit card, credit, cardlab, bank, bonus, cards, tracker, rate, bank bonus
+- Evidence: E017, E018, E015, E016
 
-## 4. Keyword gap (top 30)
+## 4. Schema validation
 
-Phrases used by ranking pages and absent from 10 crawled getcardlab.app pages. Ranked by number of competitors using them, then prominence (title/meta/headings weigh 3x). No search volume on the free tier.
+Required-property checks for Article, FAQPage, Product, SoftwareApplication, Organization, BreadcrumbList, HowTo and LocalBusiness (and their common subtypes). Other types are listed but not checked.
 
-| # | Phrase | Competitors using | Prominence score |
-|---|---|---|---|
-| 1 | english | 5 | 21 |
-| 2 | cardpointers | 4 | 55 |
-| 3 | service | 4 | 43 |
-| 4 | maximize | 4 | 24 |
-| 5 | points miles | 4 | 9 |
-| 6 | welcome | 4 | 18 |
-| 7 | credits | 4 | 14 |
-| 8 | america | 4 | 12 |
-| 9 | capital | 4 | 8 |
-| 10 | discover | 4 | 6 |
-| 11 | recommendations | 4 | 6 |
-| 12 | maxrewards | 3 | 87 |
-| 13 | points and miles | 3 | 21 |
-| 14 | awardwallet | 3 | 35 |
-| 15 | credit card offers | 3 | 9 |
-| 16 | features | 3 | 23 |
-| 17 | reviews | 3 | 23 |
-| 18 | bank of america | 3 | 7 |
-| 19 | loyalty | 3 | 19 |
-| 20 | card offers | 3 | 9 |
-| 21 | information | 3 | 17 |
-| 22 | management | 3 | 17 |
-| 23 | you're | 3 | 16 |
-| 24 | price | 3 | 14 |
-| 25 | chrome | 3 | 13 |
-| 26 | finance | 3 | 13 |
-| 27 | personal | 3 | 13 |
-| 28 | premium | 3 | 13 |
-| 29 | helps | 3 | 12 |
-| 30 | job | 3 | 11 |
+| Page | Blocks | Type (checked as) | Result | Errors | Warnings | Evidence |
+|---|---|---|---|---|---|---|
+| #2 cnbc.com | 3 | NewsArticle (Article) | valid | - | - | E007 |
+| #2 cnbc.com | 3 | BreadcrumbList | valid | - | - | E007 |
+| #5 rewardswise.app | 0 | - | no JSON-LD | - | - | E010 |
+| #6 maxrewards.com | 1 | Organization | valid | - | - | E011 |
+| #7 joinkudos.com | 1 | Organization | valid | - | - | E012 |
+| #8 cardstack.money | 2 | Article | valid | - | - | E013 |
+| #8 cardstack.money | 2 | BreadcrumbList | valid | - | - | E013 |
+| target / | 1 | Organization | valid | - | - | E018 |
+| target / | 1 | SoftwareApplication | **errors** | needs one of: aggregateRating, review | - | E018 |
+| target / | 1 | FAQPage | valid | - | - | E018 |
+| target /best-card | 1 | BreadcrumbList | valid | - | - | E018 |
+| target /best-card | 1 | FAQPage | valid | - | - | E018 |
+| target /best-card | 1 | Article | valid | - | - | E018 |
+| target /best-card | 1 | SoftwareApplication | **errors** | needs one of: aggregateRating, review | - | E018 |
+| target /credit-card-tracker | 1 | BreadcrumbList | valid | - | - | E018 |
+| target /credit-card-tracker | 1 | FAQPage | valid | - | - | E018 |
+| target /credit-card-tracker | 1 | Article | valid | - | - | E018 |
+| target /credit-card-tracker | 1 | SoftwareApplication | **errors** | needs one of: aggregateRating, review | - | E018 |
+| target /credit-card-simulator | 1 | BreadcrumbList | valid | - | - | E018 |
+| target /credit-card-simulator | 1 | FAQPage | valid | - | - | E018 |
+| target /credit-card-simulator | 1 | Article | valid | - | - | E018 |
+| target /credit-card-simulator | 1 | SoftwareApplication | **errors** | needs one of: aggregateRating, review | - | E018 |
+| target /bank-bonus-tracker | 1 | BreadcrumbList | valid | - | - | E018 |
+| target /bank-bonus-tracker | 1 | FAQPage | valid | - | - | E018 |
+| target /bank-bonus-tracker | 1 | Article | valid | - | - | E018 |
+| target /bank-bonus-tracker | 1 | SoftwareApplication | **errors** | needs one of: aggregateRating, review | - | E018 |
+| target /best-card/groceries | 1 | BreadcrumbList | valid | - | - | E018 |
+| target /best-card/groceries | 1 | FAQPage | valid | - | - | E018 |
+| target /best-card/groceries | 1 | Article | valid | - | - | E018 |
+| target /best-card/groceries | 1 | SoftwareApplication | **errors** | needs one of: aggregateRating, review | - | E018 |
+| target /best-card/dining | 1 | BreadcrumbList | valid | - | - | E018 |
+| target /best-card/dining | 1 | FAQPage | valid | - | - | E018 |
+| target /best-card/dining | 1 | Article | valid | - | - | E018 |
+| target /best-card/dining | 1 | SoftwareApplication | **errors** | needs one of: aggregateRating, review | - | E018 |
+| target /best-card/gas | 1 | BreadcrumbList | valid | - | - | E018 |
+| target /best-card/gas | 1 | FAQPage | valid | - | - | E018 |
+| target /best-card/gas | 1 | Article | valid | - | - | E018 |
+| target /best-card/gas | 1 | SoftwareApplication | **errors** | needs one of: aggregateRating, review | - | E018 |
+| target /best-card/travel | 1 | BreadcrumbList | valid | - | - | E018 |
+| target /best-card/travel | 1 | FAQPage | valid | - | - | E018 |
+| target /best-card/travel | 1 | Article | valid | - | - | E018 |
+| target /best-card/travel | 1 | SoftwareApplication | **errors** | needs one of: aggregateRating, review | - | E018 |
+| target /coverage | 1 | BreadcrumbList | valid | - | - | E018 |
+| target /coverage | 1 | FAQPage | valid | - | - | E018 |
 
-## 5. AI-citation table
+## 5. AI-search readiness (target)
+
+AI crawler access to `https://getcardlab.app/` from robots.txt [E015, E021]:
+
+| Crawler | Operator | Purpose | Access | Rule |
+|---|---|---|---|---|
+| GPTBot | OpenAI | model training | allowed | own group: no disallow |
+| OAI-SearchBot | OpenAI | ChatGPT search index | allowed | own group: no disallow |
+| ChatGPT-User | OpenAI | user-initiated fetches | allowed | own group: no disallow |
+| ClaudeBot | Anthropic | model training | allowed | own group: no disallow |
+| Claude-SearchBot | Anthropic | search index | allowed | own group: no disallow |
+| PerplexityBot | Perplexity | search index | allowed | own group: no disallow |
+| Google-Extended | Google | Gemini training and grounding (not Search) | allowed | own group: no disallow |
+| Applebot-Extended | Apple | Apple Intelligence training | allowed | own group: no disallow |
+| CCBot | Common Crawl | open crawl used for training | allowed | own group: no disallow |
+
+- /llms.txt: valid - title "CardLab", summary present, 9 section(s), 129 link(s) [E019]
+- /llms-full.txt: valid - 586524 bytes, title "CardLab - full text" [E020]
+
+| Source | Strategy | Performance | Accessibility | Best practices | SEO | Lab metrics | Field (CrUX) | Evidence |
+|---|---|---|---|---|---|---|---|---|
+| psi | mobile | skipped: PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key | | | | | | E022 |
+
+## 6. Keyword gap (top 30)
+
+Phrases used by ranking pages and absent from 10 crawled getcardlab.app pages. Ranked by competitors using them, then TF-IDF weighted by phrase length (title/meta/headings count 3x). No search volume on the free tier.
+
+| # | Phrase | Competitors using | TF-IDF | Weighted count |
+|---|---|---|---|---|
+| 1 | maxrewards | 3 | 0.03886 | 63 |
+| 2 | recommendations | 3 | 0.0183 | 12 |
+| 3 | credits | 3 | 0.01394 | 24 |
+| 4 | chase sapphire | 3 | 0.00681 | 11 |
+| 5 | features | 3 | 0.00956 | 14 |
+| 6 | sapphire | 3 | 0.00681 | 11 |
+| 7 | gas ev | 3 | 0.00232 | 3 |
+| 8 | travel cards | 3 | 0.00232 | 3 |
+| 9 | capital | 3 | 0.00369 | 6 |
+| 10 | activate | 3 | 0.00232 | 3 |
+| 11 | everyday | 3 | 0.00232 | 3 |
+| 12 | kudos | 2 | 0.16357 | 20 |
+| 13 | partners | 2 | 0.02724 | 15 |
+| 14 | awardwallet | 2 | 0.02624 | 49 |
+| 15 | apps for tracking | 2 | 0.00844 | 16 |
+| 16 | maximize | 2 | 0.01969 | 8 |
+| 17 | chase sapphire preferred | 2 | 0.00537 | 8 |
+| 18 | sapphire preferred card | 2 | 0.00537 | 8 |
+| 19 | picks | 2 | 0.01567 | 12 |
+| 20 | management | 2 | 0.01546 | 7 |
+| 21 | programs | 2 | 0.0125 | 23 |
+| 22 | checkout | 2 | 0.01076 | 11 |
+| 23 | sapphire preferred | 2 | 0.00537 | 8 |
+| 24 | changelog | 2 | 0.01049 | 3 |
+| 25 | editorial | 2 | 0.01006 | 8 |
+| 26 | loyalty programs | 2 | 0.00485 | 9 |
+| 27 | extension | 2 | 0.0085 | 11 |
+| 28 | premium | 2 | 0.0085 | 11 |
+| 29 | chase sapphire reserve | 2 | 0.00283 | 3 |
+| 30 | choosing | 2 | 0.00731 | 5 |
+
+## 7. AI-citation table
 
 No AI answers recorded yet. Ask each engine and log the cited URLs, for example:
 
@@ -169,46 +267,50 @@ No AI answers recorded yet. Ask each engine and log the cited URLs, for example:
 seo-rea cite --out <this dir> --engine chatgpt --prompt "what is the best credit card rewards app" --urls "https://a.com/x,https://b.com/y"
 ```
 
-## 6. Ads
+## 8. Ads
 
-SERP ads observed: 0. Ad libraries (manual check, open in a browser):
+SERP ads observed: 0. Ad libraries:
 
-| Advertiser | Platform | Lookup | Evidence |
-|---|---|---|---|
-| getcardlab.app | Google Ads Transparency Center | https://adstransparency.google.com/?region=anywhere&domain=getcardlab.app | E015 |
-| getcardlab.app | Meta Ad Library | https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=cardlab&search_type=keyword_unordered&media_type=all | E016 |
-| getcardlab.app | LinkedIn Ad Library | https://www.linkedin.com/ad-library/search?keyword=cardlab | E017 |
-| uscreditcardrewards.com | Google Ads Transparency Center | https://adstransparency.google.com/?region=anywhere&domain=uscreditcardrewards.com | E018 |
-| uscreditcardrewards.com | Meta Ad Library | https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=uscreditcardrewards&search_type=keyword_unordered&media_type=all | E019 |
-| uscreditcardrewards.com | LinkedIn Ad Library | https://www.linkedin.com/ad-library/search?keyword=uscreditcardrewards | E020 |
-| play.google.com | Google Ads Transparency Center | https://adstransparency.google.com/?region=anywhere&domain=play.google.com | E021 |
-| play.google.com | Meta Ad Library | https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=play&search_type=keyword_unordered&media_type=all | E022 |
-| play.google.com | LinkedIn Ad Library | https://www.linkedin.com/ad-library/search?keyword=play | E023 |
-| apps.apple.com | Google Ads Transparency Center | https://adstransparency.google.com/?region=anywhere&domain=apps.apple.com | E024 |
-| apps.apple.com | Meta Ad Library | https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=apps&search_type=keyword_unordered&media_type=all | E025 |
-| apps.apple.com | LinkedIn Ad Library | https://www.linkedin.com/ad-library/search?keyword=apps | E026 |
+| Advertiser | Platform | Status | Visible count | Note | Lookup | Evidence |
+|---|---|---|---|---|---|---|
+| getcardlab.app | Google Ads Transparency Center | captured | 0 | visible count: no ads shown | https://adstransparency.google.com/?region=anywhere&domain=getcardlab.app | E025, E024 |
+| getcardlab.app | Meta Ad Library | captured | 95 | visible count: ~95 results | https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=cardlab&search_type=keyword_unordered&media_type=all | E027, E026 |
+| getcardlab.app | LinkedIn Ad Library | captured | 2 | visible count: 2 ads match | https://www.linkedin.com/ad-library/search?keyword=cardlab | E029, E028 |
+| rewardswise.app | Google Ads Transparency Center | captured | 0 | visible count: no ads shown | https://adstransparency.google.com/?region=anywhere&domain=rewardswise.app | E031, E030 |
+| rewardswise.app | Meta Ad Library | captured | 0 | visible count: no ads shown | https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=rewardswise&search_type=keyword_unordered&media_type=all | E033, E032 |
+| rewardswise.app | LinkedIn Ad Library | captured | 0 | visible count: no ads shown | https://www.linkedin.com/ad-library/search?keyword=rewardswise | E035, E034 |
+| maxrewards.com | Google Ads Transparency Center | captured | 0 | visible count: no ads shown | https://adstransparency.google.com/?region=anywhere&domain=maxrewards.com | E037, E036 |
+| maxrewards.com | Meta Ad Library | captured | 61 | visible count: ~61 results | https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=maxrewards&search_type=keyword_unordered&media_type=all | E039, E038 |
+| maxrewards.com | LinkedIn Ad Library | captured | 0 | visible count: no ads shown | https://www.linkedin.com/ad-library/search?keyword=maxrewards | E041, E040 |
+| joinkudos.com | Google Ads Transparency Center | captured | 46 | visible count: 46 ads | https://adstransparency.google.com/?region=anywhere&domain=joinkudos.com | E043, E042 |
+| joinkudos.com | Meta Ad Library | captured | 20 | visible count: ~20 results | https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=joinkudos&search_type=keyword_unordered&media_type=all | E045, E044 |
+| joinkudos.com | LinkedIn Ad Library | captured | 0 | visible count: no ads shown | https://www.linkedin.com/ad-library/search?keyword=joinkudos | E047, E046 |
 
 Record what you find (count, run dates, hooks, offers, landing pages) as notes next to the evidence ID.
 
-## 7. Playbook
+## 9. Playbook
 
-1. Put "credit card rewards app" (or close wording) in the title and H1 of the page meant to rank. Most ranking pages carry the keyword terms in their title; the target homepage does not. [E004, E005, E006, E007, E008, E012, E013]
-2. Add JSON-LD types used by ranking pages that the target lacks: AggregateRating, Person. Shared structured data among winners; also helps rich results. [E004, E005, E006, E007, E008, E012, E013]
-3. Cover these competitor phrases in H2s and copy where they fit the product: english, cardpointers, service, maximize, points miles, welcome, credits, america, capital, discover. Used by two or more ranking pages, missing from the target crawl. [E004, E005, E006, E007, E008, E012, E013]
-4. Ask ChatGPT, Perplexity and Gemini "credit card rewards app" style prompts and log answers with `seo-rea cite`. AI-answer citations have not been recorded yet.
-5. Open the ad-library links and note competitor ad hooks, offers and landing pages. Ad libraries need a browser and were recorded as manual checks. [E015, E016, E017, E018, E019, E020, E021, E022, E023, E024, E025, E026]
+1. Get listed in the roundups that already rank (forbes.com, cnbc.com, money.usnews.com, appshunter.io, cardstack.money): draft a short pitch with what the product does differently. Do not send from this tool. Most results are third-party roundups, so inclusion is the fastest way onto this SERP. [E001, E003]
+2. Put "credit card rewards app" (or close wording) in the title and H1 of the page meant to rank. Ranking pages carry the keyword terms in their title; the target homepage does not. [E007, E010, E011, E012, E013, E017, E018]
+3. Fix JSON-LD errors on the target: SoftwareApplication: needs one of: aggregateRating, review. Invalid structured data is ignored for rich results. [E017, E018]
+4. Cover these competitor phrases in H2s and copy where they fit the product: maxrewards, recommendations, credits, chase sapphire, features, sapphire, gas ev, travel cards, capital, activate. Used by two or more ranking pages, missing from the target crawl. [E007, E010, E011, E012, E013, E017, E018]
+5. Ask ChatGPT, Perplexity, Gemini and Grok "credit card rewards app" style prompts and log answers with `seo-rea cite`. AI-answer citations have not been recorded yet.
+6. Open the ad-library links and note competitor ad hooks, offers and landing pages. Ad libraries need a browser; counts alone do not show the creative. [E025, E027, E029, E031, E033, E035, E037, E039, E041, E043, E045, E047]
 
 Drafts only: this tool never sends outreach, buys ads or publishes changes.
 
-## 8. Unknowns and cost
+## 10. Unknowns and cost
 
-- DuckDuckGo HTML rankings not observed
-- Bing HTML rankings not observed
-- Google positions and personalised results not observed
-- Search volume and difficulty
+- Google (headless Chromium) rankings not observed
+- Personalised and other-location results not observed
+- On-page facts for forbes.com
+- On-page facts for money.usnews.com
+- On-page facts for appshunter.io
+- Server or CDN bot blocking not tested
 - Ads shown to logged-in or other-location users
-- Ad counts, run dates, creatives
+- Creatives, run dates, spend
 - Referring domains, link velocity
+- PageSpeed Insights skipped: PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key
 - Paid keyword data (volume, ranked keywords) skipped: budget is 0
 
 Paid API spend this run: 0.0000 USD (budget 0 USD).
