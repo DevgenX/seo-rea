@@ -97,7 +97,63 @@ describe("CLI parsing", () => {
   });
 
   it("documents every command", () => {
-    for (const c of ["teardown", "audit", "cite", "mcp", "doctor"]) expect(HELP).toContain(`seo-rea ${c}`);
+    for (const c of ["teardown", "audit", "cite", "mcp", "doctor", "strategy", "<domain>"])
+      expect(HELP).toContain(`seo-rea ${c}`);
+  });
+
+  it("routes a bare domain to strategy with defaults", () => {
+    const c = parseCli(["cardpointers.com"]);
+    expect(c.command).toBe("strategy");
+    if (c.command !== "strategy") return;
+    expect(c.options).toMatchObject({
+      domain: "cardpointers.com",
+      vs: null,
+      budgetUsd: 0,
+      crawl: 30,
+      terms: 10,
+      browser: true,
+      json: false,
+    });
+    expect(c.options.out).toMatch(/seo-rea-runs\/strategy-cardpointers\.com$/);
+  });
+
+  it("parses strategy flags, --vs and the explicit subcommand", () => {
+    const c = parseCli([
+      "https://www.getcardlab.app/",
+      "--vs",
+      "cardpointers.com",
+      "--out",
+      "o",
+      "--force",
+      "--json",
+      "--budget-usd",
+      "0",
+      "--crawl",
+      "12",
+      "--terms",
+      "6",
+      "--engines",
+      "bing",
+    ]);
+    expect(c.command === "strategy" && c.options).toMatchObject({
+      domain: "getcardlab.app",
+      vs: "cardpointers.com",
+      force: true,
+      json: true,
+      crawl: 12,
+      terms: 6,
+      engines: ["bing"],
+    });
+    const d = parseCli(["strategy", "nerdwallet.com", "--vs", "www.bankrate.com"]);
+    expect(d.command === "strategy" && d.options.out).toMatch(/strategy-nerdwallet\.com-vs-bankrate\.com$/);
+  });
+
+  it("rejects bad strategy input", () => {
+    expect(() => parseCli(["strategy"])).toThrow(/needs a domain/);
+    expect(() => parseCli(["a.com", "--vs", "a.com"])).toThrow(/different domain/);
+    expect(() => parseCli(["a.com", "b.com"])).toThrow(/unexpected argument/);
+    expect(() => parseCli(["a.com", "--keyword", "x"])).toThrow();
+    expect(() => parseCli(["a.com", "--vs", "nodot"])).toThrow(/--vs needs a domain/);
   });
 });
 
