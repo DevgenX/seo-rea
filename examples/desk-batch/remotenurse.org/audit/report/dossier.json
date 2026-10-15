@@ -1,0 +1,370 @@
+{
+  "schemaVersion": "1",
+  "tool": "seo-rea",
+  "toolVersion": "0.3.0",
+  "kind": "audit",
+  "runId": "20261015T051651Z",
+  "inputs": {
+    "target": "remotenurse.org",
+    "url": "https://remotenurse.org/",
+    "keyword": null,
+    "budgetUsd": 0
+  },
+  "timestamps": {
+    "createdAt": "2026-10-15T05:16:51.464Z",
+    "writtenAt": "2026-10-15T05:16:51.465Z"
+  },
+  "cost": {
+    "spentUsd": 0,
+    "budgetUsd": 0
+  },
+  "serp": {
+    "collected": false,
+    "primary": "",
+    "engines": [],
+    "results": [],
+    "ads": [],
+    "evidenceId": ""
+  },
+  "competitors": [],
+  "target": {
+    "domain": "remotenurse.org",
+    "fetched": true,
+    "error": "",
+    "pages": [
+      {
+        "url": "https://remotenurse.org/",
+        "title": "Medical VA training and NCLEX-RN prep | RemoteNurse",
+        "metaDescription": "Free training for remote medical VA work: 16 courses, 442 scored practice cases and job boards. NCLEX-RN prep with 2,600 questions.",
+        "wordCount": 2190,
+        "headings": {
+          "h1": [
+            "Medical VA training and NCLEX-RN prepWork the desk before the job. Sit the exam before the exam."
+          ],
+          "h2": [
+            "The tools in your account",
+            "RemoteNurse in numbers",
+            "Four tools. One account.",
+            "Read up before your first shift.",
+            "See your weak spots before test day",
+            "Start free. Add Plus when you need it.",
+            "Questions nurses ask",
+            "Guides and hubs",
+            "Free medical VA courses, one for each desk",
+            "Your first case takes 8 minutes."
+          ],
+          "h3": [
+            "Practice NCLEX-style questions",
+            "Learn the desk, work the case",
+            "Rehearse the call before it counts",
+            "Apply from the same account",
+            "Free",
+            "Plus monthly",
+            "Plus yearly",
+            "Team"
+          ]
+        },
+        "schemaTypes": [
+          "AggregateOffer",
+          "Answer",
+          "ContactPoint",
+          "Country",
+          "FAQPage",
+          "ImageObject",
+          "Offer",
+          "Organization",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification",
+          "WebApplication",
+          "WebSite"
+        ],
+        "internalLinks": 189
+      }
+    ],
+    "schemaValidation": {
+      "types": [
+        "AggregateOffer",
+        "Answer",
+        "ContactPoint",
+        "Country",
+        "FAQPage",
+        "ImageObject",
+        "Offer",
+        "Organization",
+        "Question",
+        "SoftwareApplication",
+        "UnitPriceSpecification",
+        "WebApplication",
+        "WebSite"
+      ],
+      "blocks": 1,
+      "parseErrors": [],
+      "checks": [
+        {
+          "type": "Organization",
+          "checkedAs": "Organization",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/"
+        },
+        {
+          "type": "SoftwareApplication",
+          "checkedAs": "SoftwareApplication",
+          "valid": false,
+          "errors": [
+            "needs one of: aggregateRating, review"
+          ],
+          "warnings": [],
+          "url": "https://remotenurse.org/"
+        },
+        {
+          "type": "WebApplication",
+          "checkedAs": "SoftwareApplication",
+          "valid": false,
+          "errors": [
+            "needs one of: aggregateRating, review"
+          ],
+          "warnings": [],
+          "url": "https://remotenurse.org/"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/"
+        }
+      ],
+      "evidenceIds": [
+        "E001"
+      ]
+    },
+    "aiReadiness": {
+      "crawlers": [
+        {
+          "token": "GPTBot",
+          "operator": "OpenAI",
+          "purpose": "model training",
+          "access": "partial",
+          "rule": "own group: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        },
+        {
+          "token": "OAI-SearchBot",
+          "operator": "OpenAI",
+          "purpose": "ChatGPT search index",
+          "access": "partial",
+          "rule": "own group: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        },
+        {
+          "token": "ChatGPT-User",
+          "operator": "OpenAI",
+          "purpose": "user-initiated fetches",
+          "access": "partial",
+          "rule": "own group: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        },
+        {
+          "token": "ClaudeBot",
+          "operator": "Anthropic",
+          "purpose": "model training",
+          "access": "partial",
+          "rule": "own group: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        },
+        {
+          "token": "Claude-SearchBot",
+          "operator": "Anthropic",
+          "purpose": "search index",
+          "access": "partial",
+          "rule": "own group: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        },
+        {
+          "token": "PerplexityBot",
+          "operator": "Perplexity",
+          "purpose": "search index",
+          "access": "partial",
+          "rule": "own group: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        },
+        {
+          "token": "Google-Extended",
+          "operator": "Google",
+          "purpose": "Gemini training and grounding (not Search)",
+          "access": "partial",
+          "rule": "own group: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        },
+        {
+          "token": "Applebot-Extended",
+          "operator": "Apple",
+          "purpose": "Apple Intelligence training",
+          "access": "partial",
+          "rule": "own group: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        },
+        {
+          "token": "CCBot",
+          "operator": "Common Crawl",
+          "purpose": "open crawl used for training",
+          "access": "partial",
+          "rule": "falls back to *: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        }
+      ],
+      "llmsTxt": {
+        "present": true,
+        "valid": true,
+        "linkCount": 91,
+        "sections": [
+          "Canonical facts",
+          "Hubs",
+          "From your country",
+          "Features",
+          "Roles",
+          "Guides",
+          "Reference",
+          "Practice",
+          "Jobs",
+          "About"
+        ],
+        "errors": [],
+        "warnings": [
+          "list item is not \"- [name](url): notes\": - Product: remotenurse.org. The iOS companion Medical VA Coach: RemoteNurse is p",
+          "list item is not \"- [name](url): notes\": - Audience: US bedside RNs moving into review work; nurses and healthcare BPO st",
+          "list item is not \"- [name](url): notes\": - NCLEX-RN prep: an original 2,600-question NCLEX-style bank written to the 2026",
+          "list item is not \"- [name](url): notes\": - Scope: sixteen remote healthcare desks, not a single role. Fifteen of the sixt",
+          "list item is not \"- [name](url): notes\": - Grading: the Case Judge is deterministic and is the only verdict; AI coaches a",
+          "list item is not \"- [name](url): notes\": - Nurse authority: program- and delegation-specific. Adverse medical-necessity d",
+          "list item is not \"- [name](url): notes\": - Pricing: Free; RemoteNurse Plus at $9.99 a month or $79.99 a year, or ₱499 a m",
+          "list item is not \"- [name](url): notes\": - Not to be confused with: RemoteNurse (remotenurse.org) is a separate company f",
+          "list item is not \"- [name](url): notes\": - Contact: hello@remotenurse.org",
+          "list item is not \"- [name](url): notes\": - Official profile: [Facebook](https://www.facebook.com/profile.php?id=615917890"
+        ]
+      },
+      "llmsFullTxt": {
+        "present": true,
+        "bytes": 80663
+      },
+      "evidenceIds": [
+        "E007",
+        "E005",
+        "E006"
+      ]
+    },
+    "performance": [
+      {
+        "source": "psi",
+        "strategy": "mobile",
+        "ok": false,
+        "skipped": "PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key",
+        "scores": {},
+        "lab": {},
+        "field": {},
+        "evidenceId": "E008"
+      }
+    ],
+    "robots": {
+      "found": true,
+      "blocksRoot": false,
+      "evidenceId": "E003"
+    },
+    "sitemap": {
+      "urlCount": 460,
+      "evidenceId": "E004"
+    },
+    "evidenceIds": [
+      "E001",
+      "E003",
+      "E004"
+    ]
+  },
+  "keywordGap": [],
+  "ads": [],
+  "citations": [],
+  "claims": [
+    {
+      "id": "C01",
+      "text": "https://remotenurse.org/ has 1 JSON-LD block(s) (AggregateOffer, Answer, ContactPoint, Country, FAQPage, ImageObject, Offer, Organization, Question, SoftwareApplication, UnitPriceSpecification, WebApplication, WebSite); 2 checked node(s) with errors",
+      "evidenceIds": [
+        "E001"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "raw HTML without JavaScript",
+      "unknowns": ""
+    },
+    {
+      "id": "C02",
+      "text": "https://remotenurse.org/: 2190 words, 1 H1, 10 H2, title 51 chars, meta description present",
+      "evidenceIds": [
+        "E001"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "raw HTML without JavaScript",
+      "unknowns": ""
+    },
+    {
+      "id": "C03",
+      "text": "remotenurse.org sitemap lists 460 URLs",
+      "evidenceIds": [
+        "E003",
+        "E004"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "robots.txt Sitemap lines and /sitemap.xml",
+      "unknowns": ""
+    },
+    {
+      "id": "C04",
+      "text": "remotenurse.org robots.txt lets all 9 checked AI crawlers fetch /",
+      "evidenceIds": [
+        "E003",
+        "E007"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "robots.txt rules for each product token; crawlers may ignore robots.txt or be blocked by a firewall",
+      "unknowns": "Server or CDN bot blocking not tested"
+    },
+    {
+      "id": "C05",
+      "text": "remotenurse.org/llms.txt follows the llmstxt.org format (10 sections, 91 links)",
+      "evidenceIds": [
+        "E005"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "single fetch of /llms.txt",
+      "unknowns": ""
+    },
+    {
+      "id": "C06",
+      "text": "remotenurse.org/llms-full.txt present (80663 bytes)",
+      "evidenceIds": [
+        "E006"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "single fetch of /llms-full.txt",
+      "unknowns": ""
+    }
+  ],
+  "unknowns": [
+    "Server or CDN bot blocking not tested",
+    "PageSpeed Insights skipped: PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key",
+    "Rendered (JavaScript) DOM not checked; checks use raw HTML"
+  ],
+  "topActions": [
+    {
+      "rank": 1,
+      "title": "Fix JSON-LD errors: SoftwareApplication: needs one of: aggregateRating, review; WebApplication: needs one of: aggregateRating, review",
+      "why": "Invalid structured data is ignored for rich results.",
+      "evidenceIds": [
+        "E001"
+      ],
+      "effort": "S",
+      "impact": "medium",
+      "owner": "dev"
+    }
+  ],
+  "evidenceIndex": "evidence/index.json"
+}
