@@ -1,8 +1,11 @@
 // Renders audit.md: single-site AEO checks.
 
+import { buildAuditDossier } from "../dossier-build.js";
+import type { TopAction } from "../dossier.js";
 import type { AuditRun } from "../run.js";
 import type { Claim } from "../types.js";
 import { cell, ids } from "../util.js";
+import { renderTopActions } from "./actions.js";
 import { aiClaims, aiPlaybook, type PlaybookItem } from "./claims.js";
 import { aiReadinessSection, renderLedgerTable, schemaTable } from "./sections.js";
 
@@ -98,6 +101,7 @@ export function renderAudit(
   run: AuditRun,
   claims: Claim[] = buildAuditClaims(run),
   playbook: PlaybookItem[] = buildAuditPlaybook(run),
+  actions: TopAction[] = buildAuditDossier(run, claims, new Date(run.createdAt)).topActions,
 ): string {
   const L: string[] = [];
   L.push(
@@ -106,6 +110,7 @@ export function renderAudit(
     `Run ${run.runId} on ${run.createdAt} with seo-rea ${run.version}. Free sources only. Evidence: [evidence/index.md](../evidence/index.md).`,
     "",
   );
+  L.push(...renderTopActions(actions));
   L.push("## 1. Page", "");
   if (run.page) {
     const p = run.page;

@@ -29,6 +29,7 @@ export function analysed(run: TeardownRun): Array<CompetitorCard & { page: NonNu
 
 /** Helper types that appear inside other entities; not worth recommending on their own. */
 const HELPER_TYPES = new Set([
+  "Thing",
   "ImageObject",
   "ListItem",
   "Person",
@@ -341,7 +342,7 @@ export function buildClaims(run: TeardownRun): Claim[] {
   return claims;
 }
 
-const SEARCH_CRAWLERS = new Set(["OAI-SearchBot", "ChatGPT-User", "PerplexityBot", "Claude-SearchBot"]);
+export const SEARCH_CRAWLERS = new Set(["OAI-SearchBot", "ChatGPT-User", "PerplexityBot", "Claude-SearchBot"]);
 
 export function aiPlaybook(ai: AiReadinessSummary, domain: string, robotsId: string): PlaybookItem[] {
   const out: PlaybookItem[] = [];
