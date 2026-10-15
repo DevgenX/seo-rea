@@ -1901,6 +1901,7 @@
   "topActions": [
     {
       "rank": 1,
+      "id": "ONPAGE-TITLE-KEYWORD-MISSING",
       "title": "Put \"credit card rewards app\" (or close wording) in the title and H1 of the page meant to rank",
       "why": "The target title \"CardLab: Track Cards & Rewards - No Bank Login\" lacks the keyword terms; 2/5 ranking pages have them.",
       "evidenceIds": [
@@ -1920,6 +1921,7 @@
     },
     {
       "rank": 2,
+      "id": "SCHEMA-INVALID",
       "title": "Fix JSON-LD errors: SoftwareApplication: needs one of: aggregateRating, review",
       "why": "Invalid structured data is ignored for rich results.",
       "evidenceIds": [
@@ -1932,6 +1934,7 @@
     },
     {
       "rank": 3,
+      "id": "CONTENT-KEYWORD-GAP",
       "title": "Cover competitor phrases in headings and copy: maxrewards, recommendations, credits, chase sapphire, features, sapphire, gas ev, travel cards",
       "why": "Used by two or more ranking pages and missing from the crawled target pages.",
       "evidenceIds": [
