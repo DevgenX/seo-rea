@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="344" viewBox="0 0 960 344" role="img" aria-label="seo-rea teardown terminal output">
+<rect width="960" height="344" rx="8" fill="#0d1117"/>
+<circle cx="20" cy="18" r="6" fill="#ff5f56"/><circle cx="40" cy="18" r="6" fill="#ffbd2e"/><circle cx="60" cy="18" r="6" fill="#27c93f"/>
+<text x="480" y="22" fill="#8b949e" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12" text-anchor="middle">seo-rea 0.2.0</text>
+<g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" xml:space="preserve">
+<text x="16" y="46" fill="#7ee787">$ npx seo-rea teardown --keyword "credit card rewards app" --target getcardlab.app --out ./cardlab --adlib-capture</text>
+<text x="16" y="66" fill="#8b949e">  serp: Google (headless Chromium)</text>
+<text x="16" y="86" fill="#8b949e">  serp: Bing (headless Chromium)</text>
+<text x="16" y="106" fill="#8b949e">  page: https://www.forbes.com/advisor/credit-cards/best-apps-to-track-credit-card-rewards/</text>
+<text x="16" y="126" fill="#8b949e">  page: https://www.cnbc.com/select/best-apps-for-tracking-your-credit-card-rewards/</text>
+<text x="16" y="146" fill="#8b949e">  ... 6 more pages</text>
+<text x="16" y="166" fill="#8b949e">  target: getcardlab.app</text>
+<text x="16" y="186" fill="#8b949e">  ai-readiness: getcardlab.app</text>
+<text x="16" y="206" fill="#8b949e">  adlib: Google Ads Transparency Center joinkudos.com</text>
+<text x="16" y="226" fill="#c9d1d9">Teardown written: ./cardlab/report/teardown.md</text>
+<text x="16" y="246" fill="#c9d1d9">  SERP: 8 results from Bing (headless Chromium)</text>
+<text x="16" y="266" fill="#f0883e">  Engines: Google (headless Chromium): not used (Google captcha (unusual traffic page)); Bing (headless Chromium): used</text>
+<text x="16" y="286" fill="#c9d1d9">  Pages analysed: 5/8; target pages: 10; keyword-gap phrases: 30</text>
+<text x="16" y="306" fill="#79c0ff">  Claims: 31; spent 0.0000 USD of 0</text>
+</g>
+</svg>
