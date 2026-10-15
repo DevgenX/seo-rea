@@ -1,6 +1,6 @@
 # Finding ledger: "credit card rewards app" vs getcardlab.app
 
-Run 20261015T044454Z. Evidence IDs refer to [../evidence/index.md](../evidence/index.md).
+Run 20261015T051545Z. Evidence IDs refer to [../evidence/index.md](../evidence/index.md).
 
 | # | Claim | Evidence | Observed/inferred | Confidence | Search boundary | Open unknowns |
 |---|---|---|---|---|---|---|
@@ -22,16 +22,5 @@ Run 20261015T044454Z. Evidence IDs refer to [../evidence/index.md](../evidence/i
 | C16 | getcardlab.app/llms-full.txt present (586524 bytes) | E020 | observed | high | single fetch of /llms-full.txt | - |
 | C17 | getcardlab.app sitemap lists 114 URLs | E015, E016 | observed | high | robots.txt Sitemap lines and /sitemap.xml | - |
 | C18 | 0 search ads observed on the collected SERPs | E001, E003 | observed | medium | top 8 organic results from Bing (headless Chromium) (en-US, logged out) on 2026-10-15 | Ads shown to logged-in or other-location users |
-| C19 | Google Ads Transparency Center shows 0 result(s) for "cardlab" | E025, E024 | observed | medium | one logged-out page load; ads pointing to this domain | Creatives, run dates, spend |
-| C20 | Meta Ad Library shows 95 result(s) for "cardlab" | E027, E026 | observed | medium | one logged-out page load; keyword search, so other advertisers using the word are included | Creatives, run dates, spend |
-| C21 | LinkedIn Ad Library shows 2 result(s) for "cardlab" | E029, E028 | observed | medium | one logged-out page load; keyword search, so other advertisers using the word are included | Creatives, run dates, spend |
-| C22 | Google Ads Transparency Center shows 0 result(s) for "rewardswise" | E031, E030 | observed | medium | one logged-out page load; ads pointing to this domain | Creatives, run dates, spend |
-| C23 | Meta Ad Library shows 0 result(s) for "rewardswise" | E033, E032 | observed | medium | one logged-out page load; keyword search, so other advertisers using the word are included | Creatives, run dates, spend |
-| C24 | LinkedIn Ad Library shows 0 result(s) for "rewardswise" | E035, E034 | observed | medium | one logged-out page load; keyword search, so other advertisers using the word are included | Creatives, run dates, spend |
-| C25 | Google Ads Transparency Center shows 0 result(s) for "maxrewards" | E037, E036 | observed | medium | one logged-out page load; ads pointing to this domain | Creatives, run dates, spend |
-| C26 | Meta Ad Library shows 61 result(s) for "maxrewards" | E039, E038 | observed | medium | one logged-out page load; keyword search, so other advertisers using the word are included | Creatives, run dates, spend |
-| C27 | LinkedIn Ad Library shows 0 result(s) for "maxrewards" | E041, E040 | observed | medium | one logged-out page load; keyword search, so other advertisers using the word are included | Creatives, run dates, spend |
-| C28 | Google Ads Transparency Center shows 46 result(s) for "joinkudos" | E043, E042 | observed | medium | one logged-out page load; ads pointing to this domain | Creatives, run dates, spend |
-| C29 | Meta Ad Library shows 20 result(s) for "joinkudos" | E045, E044 | observed | medium | one logged-out page load; keyword search, so other advertisers using the word are included | Creatives, run dates, spend |
-| C30 | LinkedIn Ad Library shows 0 result(s) for "joinkudos" | E047, E046 | observed | medium | one logged-out page load; keyword search, so other advertisers using the word are included | Creatives, run dates, spend |
-| C31 | Backlink profiles were not collected | - | observed | high | free automated pipeline | Referring domains, link velocity |
+| C19 | 12 ad-library lookup(s) need a manual check | E024, E025, E026, E027, E028, E029, E030, E031, E032, E033, E034, E035 | observed | high | lookup URLs (and screenshots where captured) | Ad counts, run dates, creatives |
+| C20 | Backlink profiles were not collected | - | observed | high | free automated pipeline | Referring domains, link velocity |
