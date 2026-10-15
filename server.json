@@ -1,0 +1,50 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.devgenx/seo-rea",
+  "title": "seo-rea",
+  "description": "Evidence-first SEO and AI-search teardown: SERP, competitor pages, schema, llms.txt, AI crawlers, keyword gap.",
+  "websiteUrl": "https://github.com/DevgenX/seo-rea",
+  "repository": {
+    "url": "https://github.com/DevgenX/seo-rea",
+    "source": "github"
+  },
+  "version": "0.2.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "seo-rea",
+      "version": "0.2.0",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "packageArguments": [
+        {
+          "type": "positional",
+          "value": "mcp"
+        }
+      ],
+      "environmentVariables": [
+        {
+          "name": "PSI_API_KEY",
+          "description": "Optional free PageSpeed Insights API key",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "DATAFORSEO_LOGIN",
+          "description": "Optional DataForSEO login (paid calls run only with budgetUsd > 0)",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "DATAFORSEO_PASSWORD",
+          "description": "Optional DataForSEO password",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
