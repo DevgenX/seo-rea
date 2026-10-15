@@ -12,6 +12,19 @@ When a tool takes an optional `out` and none is given, files go to
 
 ## Tools
 
+### seo_crawl
+
+Crawl a domain (robots.txt respected, resumable, 1-5000 pages) and return
+stats, the per-rule summary and the first 50 issues. See [crawl.md](crawl.md).
+
+| Input      | Type           | Default                         |
+| ---------- | -------------- | ------------------------------- |
+| `domain`   | string         | required                        |
+| `out`      | string         | `./seo-rea-runs/crawl-<domain>` |
+| `maxPages` | integer 1-5000 | 500                             |
+| `maxDepth` | integer >= 0   | 10                              |
+| `force`    | boolean        | false (resume if state exists)  |
+
 ### seo_strategy
 
 Strategy Dossier for a domain, optionally against a second one.
