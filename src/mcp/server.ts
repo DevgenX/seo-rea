@@ -187,6 +187,36 @@ export function createServer(deps: ServerDeps = {}): McpServer {
   );
 
   server.registerTool(
+    "seo_crawl",
+    {
+      title: "Crawl a site",
+      description:
+        "Crawl a domain breadth-first (robots.txt respected, resumable, 1-5000 pages) and return site-wide issues with stable ids, the internal link graph and the report path. Writes report/crawl.json and report/crawl.md.",
+      inputSchema: {
+        domain: z.string().min(3),
+        out: z.string().optional(),
+        maxPages: z.number().int().min(1).max(5000).optional(),
+        maxDepth: z.number().int().min(0).optional(),
+        force: z.boolean().optional(),
+      },
+    },
+    (a) =>
+      guarded(async () => {
+        const { runCrawl } = await import("../services/crawl.js");
+        const out = outFor(a.out, `crawl-${normalizeDomain(a.domain)}`);
+        const { report, reportPath } = await runCrawl({
+          domain: a.domain,
+          out,
+          ...(a.maxPages !== undefined ? { maxPages: a.maxPages } : {}),
+          ...(a.maxDepth !== undefined ? { maxDepth: a.maxDepth } : {}),
+          ...(a.force !== undefined ? { force: a.force } : {}),
+          log,
+        });
+        return { out, reportPath, stats: report.stats, summary: report.summary, issues: report.issues.slice(0, 50) };
+      }),
+  );
+
+  server.registerTool(
     "seo_audit_page",
     {
       title: "Audit one page",
