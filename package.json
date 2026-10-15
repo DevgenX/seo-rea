@@ -1,33 +1,94 @@
 {
   "name": "seo-rea",
-  "version": "0.1.0",
-  "description": "Evidence-first SEO teardown CLI and agent skill: reverse engineer why pages rank, free sources first.",
-  "type": "module",
+  "mcpName": "io.github.devgenx/seo-rea",
+  "version": "0.2.0",
+  "description": "Evidence-first SEO and AI-search teardown CLI and MCP server: reverse engineer why pages rank, free sources first.",
   "license": "MIT",
   "author": "DevgenX",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevgenX/seo-rea.git"
+  },
+  "homepage": "https://github.com/DevgenX/seo-rea#readme",
+  "bugs": {
+    "url": "https://github.com/DevgenX/seo-rea/issues"
+  },
+  "keywords": [
+    "seo",
+    "aeo",
+    "geo",
+    "serp",
+    "llms-txt",
+    "ai-crawlers",
+    "schema-org",
+    "competitor-analysis",
+    "keyword-gap",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "agent-skills",
+    "cli"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
   "bin": {
-    "seo-rea": "bin/seo-rea.js"
+    "seo-rea": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
   },
   "files": [
-    "bin",
-    "src",
-    ".agents",
+    "dist",
+    ".agents/skills/seo-rea",
+    "server.json",
+    "llms.txt",
     "README.md",
+    "CHANGELOG.md",
+    "THIRD_PARTY_NOTICES.md",
+    "SECURITY.md",
     "LICENSE"
   ],
   "engines": {
     "node": ">=22"
   },
   "scripts": {
-    "test": "node --test \"test/*.test.js\"",
-    "check": "node --check bin/seo-rea.js && for f in src/*.js; do node --check $f || exit 1; done"
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && chmod +x dist/cli.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint && oxfmt --check .",
+    "format": "oxfmt .",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "start": "node dist/cli.js mcp",
+    "prepack": "npm run build"
   },
-  "keywords": [
-    "seo",
-    "serp",
-    "competitor-analysis",
-    "keyword-gap",
-    "agent-skill",
-    "cli"
-  ]
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "cheerio": "^1.2.0",
+    "zod": "^4.6.7"
+  },
+  "peerDependencies": {
+    "playwright-core": ">=1.40.0"
+  },
+  "peerDependenciesMeta": {
+    "playwright-core": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@vitest/coverage-v8": "^5.0.4",
+    "oxfmt": "^0.73.0",
+    "oxlint": "^1.88.0",
+    "playwright-core": "^1.64.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.4"
+  }
 }

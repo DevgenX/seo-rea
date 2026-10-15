@@ -1,0 +1,23 @@
+# seo-rea
+
+> Evidence-first SEO and AI-search teardown CLI, MCP server and agent skill. Given a keyword and a domain it records who ranks, parses their pages, validates JSON-LD, checks AI-crawler access and llms.txt, computes a TF-IDF keyword gap, looks up competitor ads, and writes a report where every claim cites saved evidence (E001, E002, ...). Free sources first; paid calls are refused at the default budget of 0 USD.
+
+Install: `npx seo-rea teardown --keyword "<kw>" --target <domain> --out <dir>`. MCP: `npx -y seo-rea mcp` (stdio). Node 22+.
+
+## Docs
+
+- [README](https://github.com/DevgenX/seo-rea/blob/main/README.md): overview, quickstart, features, FAQ
+- [CLI reference](https://github.com/DevgenX/seo-rea/blob/main/docs/cli.md): teardown, audit, cite, mcp, doctor and every flag
+- [MCP tools](https://github.com/DevgenX/seo-rea/blob/main/docs/mcp.md): seo_teardown, seo_audit_page, seo_check_ai_readiness, seo_keyword_gap, seo_log_citation, seo_adlib_lookup, seo_read_evidence
+- [Client configuration](https://github.com/DevgenX/seo-rea/blob/main/docs/client-configuration.md): Claude Code, Claude Desktop, Cursor, Codex, VS Code, Grok Bot
+- [Sources](https://github.com/DevgenX/seo-rea/blob/main/docs/sources.md): adapters, politeness, adding a source
+
+## Skill
+
+- [SKILL.md](https://github.com/DevgenX/seo-rea/blob/main/.agents/skills/seo-rea/SKILL.md): how an agent should run a teardown and read evidence
+
+## Optional
+
+- [Example teardown](https://github.com/DevgenX/seo-rea/blob/main/examples/cardlab-teardown/report/teardown.md): real run for "credit card rewards app"
+- [Example audit](https://github.com/DevgenX/seo-rea/blob/main/examples/cardlab-audit/report/audit.md): single-site AEO checks
+- [CHANGELOG](https://github.com/DevgenX/seo-rea/blob/main/CHANGELOG.md)
