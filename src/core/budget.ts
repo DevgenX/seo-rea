@@ -1,12 +1,16 @@
 // Paid-call budget. Every paid call is checked before spending and logged to
 // ledger.csv (date,run_id,source,query,usd). A cap of 0 refuses every call.
 
+import { SeoReaError } from "./errors.js";
 import { appendFile, mkdir, readFile } from "node:fs/promises";
 import { dirname } from "node:path";
 import type { Budget, BudgetRow } from "./types.js";
 
-export class BudgetError extends Error {
+export class BudgetError extends SeoReaError {
   override name = "BudgetError";
+  constructor(message: string) {
+    super("BUDGET_REFUSED", message);
+  }
 }
 
 const csvCell = (s: unknown): string => `"${String(s ?? "").replace(/"/g, '""')}"`;
