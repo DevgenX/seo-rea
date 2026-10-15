@@ -1,0 +1,90 @@
+[
+  {
+    "id": "E001",
+    "source": "page-getcardlab.app",
+    "kind": "observed",
+    "url": "https://getcardlab.app/",
+    "note": "2471 words; schema Answer, Country, FAQPage, Offer, Organization, Question, SoftwareApplication, UnitPriceSpecification, WebSite",
+    "file": "E001-page-getcardlab-app.html",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-15T04:29:55.793Z",
+    "fromCache": true
+  },
+  {
+    "id": "E002",
+    "source": "schema-getcardlab.app",
+    "kind": "derived",
+    "url": "https://getcardlab.app/",
+    "note": "3 checked node(s)",
+    "file": "E002-schema-getcardlab-app.json",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-15T05:16:16.220Z",
+    "fromCache": false
+  },
+  {
+    "id": "E003",
+    "source": "robots-getcardlab.app",
+    "kind": "observed",
+    "url": "https://getcardlab.app/robots.txt",
+    "note": "16 group(s), 1 sitemap line(s)",
+    "file": "E003-robots-getcardlab-app.txt",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-15T04:29:49.482Z",
+    "fromCache": true
+  },
+  {
+    "id": "E004",
+    "source": "sitemap-getcardlab.app",
+    "kind": "observed",
+    "url": "https://getcardlab.app/sitemap.xml",
+    "note": "114 URLs",
+    "file": "E004-sitemap-getcardlab-app.json",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-15T05:16:16.225Z",
+    "fromCache": false
+  },
+  {
+    "id": "E005",
+    "source": "llms-txt-getcardlab.app",
+    "kind": "observed",
+    "url": "https://getcardlab.app/llms.txt",
+    "note": "valid; 0 error(s), 0 warning(s)",
+    "file": "E005-llms-txt-getcardlab-app.json",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-15T04:30:26.359Z",
+    "fromCache": true
+  },
+  {
+    "id": "E006",
+    "source": "llms-full-txt-getcardlab.app",
+    "kind": "observed",
+    "url": "https://getcardlab.app/llms-full.txt",
+    "note": "valid; 0 error(s), 0 warning(s)",
+    "file": "E006-llms-full-txt-getcardlab-app.json",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-15T04:30:29.562Z",
+    "fromCache": true
+  },
+  {
+    "id": "E007",
+    "source": "ai-crawlers-getcardlab.app",
+    "kind": "derived",
+    "url": "https://getcardlab.app/robots.txt",
+    "note": "0 of 9 AI crawlers blocked at /",
+    "file": "E007-ai-crawlers-getcardlab-app.json",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-15T05:16:16.232Z",
+    "fromCache": false
+  },
+  {
+    "id": "E008",
+    "source": "psi-getcardlab.app",
+    "kind": "observed",
+    "url": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fgetcardlab.app%2F",
+    "note": "skipped: PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key",
+    "file": "E008-psi-getcardlab-app.json",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-15T05:16:16.397Z",
+    "fromCache": false
+  }
+]

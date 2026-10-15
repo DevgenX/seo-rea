@@ -1,8 +1,18 @@
 # SEO teardown: "credit card rewards app" vs getcardlab.app
 
-Run 20261015T044454Z on 2026-10-15T04:44:54.629Z with seo-rea 0.2.0. Paid budget 0 USD, spent 0.0000 USD. Evidence: [evidence/index.md](../evidence/index.md). Ledger: [ledger.md](ledger.md).
+Run 20261015T051545Z on 2026-10-15T05:15:45.652Z with seo-rea 0.3.0. Paid budget 0 USD, spent 0.0000 USD. Evidence: [evidence/index.md](../evidence/index.md). Ledger: [ledger.md](ledger.md).
 
 Observed facts cite Evidence IDs. Lines marked *(inferred)* are interpretations.
+
+## Top 10 actions
+
+| # | Action | Why | Impact | Effort | Owner | Evidence |
+|---|---|---|---|---|---|---|
+| 1 | Put "credit card rewards app" (or close wording) in the title and H1 of the page meant to rank | The target title "CardLab: Track Cards & Rewards - No Bank Login" lacks the keyword terms; 2/5 ranking pages have them. | high | S | seo | E007, E010, E011, E012, E013, E017, E018, E015, E016 |
+| 2 | Fix JSON-LD errors: SoftwareApplication: needs one of: aggregateRating, review | Invalid structured data is ignored for rich results. | medium | S | dev | E017, E018 |
+| 3 | Cover competitor phrases in headings and copy: maxrewards, recommendations, credits, chase sapphire, features, sapphire, gas ev, travel cards | Used by two or more ranking pages and missing from the crawled target pages. | medium | M | content | E007, E010, E011, E012, E013, E017, E018, E015, E016 |
+
+Ranked by impact, then effort. Full data: [dossier.json](dossier.json).
 
 ## 1. Summary: why the winners win
 
@@ -27,8 +37,8 @@ Primary ranking list from **Bing (headless Chromium)** [E005]:
 | # | Domain | Title | URL |
 |---|---|---|---|
 | 1 | forbes.com | The Best 4 Apps For Tracking Credit Cards And Travel Rewards | https://www.forbes.com/advisor/credit-cards/best-apps-to-track-credit-card-rewards/ |
-| 2 | cnbc.com | Best Apps for Tracking Your Credit Card Rewards in 2026 - CNBC | https://www.cnbc.com/select/best-apps-for-tracking-your-credit-card-rewards/ |
-| 3 | money.usnews.com | Here Are the Best Apps for Tracking Your Credit Card Rewards | https://money.usnews.com/credit-cards/articles/best-credit-card-apps-for-tracking-rewards |
+| 2 | cnbc.com | Best Apps for Tracking Your Credit Card Rewards in … | https://www.cnbc.com/select/best-apps-for-tracking-your-credit-card-rewards/ |
+| 3 | money.usnews.com | Here Are the Best Apps for Tracking Your Credit Card … | https://money.usnews.com/credit-cards/articles/best-credit-card-apps-for-tracking-rewards |
 | 4 | appshunter.io | 247+ Best Credit Card Rewards Apps for iPhone (2026) \| Free & Paid | https://appshunter.io/ios/topics/credit-card-rewards |
 | 5 | rewardswise.app | RewardsWise - All in one Credit Card Manager | https://www.rewardswise.app/ |
 | 6 | maxrewards.com | Find Your Next Credit Card \| MaxRewards | https://maxrewards.com/ |
@@ -273,18 +283,18 @@ SERP ads observed: 0. Ad libraries:
 
 | Advertiser | Platform | Status | Visible count | Note | Lookup | Evidence |
 |---|---|---|---|---|---|---|
-| getcardlab.app | Google Ads Transparency Center | captured | 0 | visible count: no ads shown | https://adstransparency.google.com/?region=anywhere&domain=getcardlab.app | E025, E024 |
-| getcardlab.app | Meta Ad Library | captured | 95 | visible count: ~95 results | https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=cardlab&search_type=keyword_unordered&media_type=all | E027, E026 |
-| getcardlab.app | LinkedIn Ad Library | captured | 2 | visible count: 2 ads match | https://www.linkedin.com/ad-library/search?keyword=cardlab | E029, E028 |
-| rewardswise.app | Google Ads Transparency Center | captured | 0 | visible count: no ads shown | https://adstransparency.google.com/?region=anywhere&domain=rewardswise.app | E031, E030 |
-| rewardswise.app | Meta Ad Library | captured | 0 | visible count: no ads shown | https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=rewardswise&search_type=keyword_unordered&media_type=all | E033, E032 |
-| rewardswise.app | LinkedIn Ad Library | captured | 0 | visible count: no ads shown | https://www.linkedin.com/ad-library/search?keyword=rewardswise | E035, E034 |
-| maxrewards.com | Google Ads Transparency Center | captured | 0 | visible count: no ads shown | https://adstransparency.google.com/?region=anywhere&domain=maxrewards.com | E037, E036 |
-| maxrewards.com | Meta Ad Library | captured | 61 | visible count: ~61 results | https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=maxrewards&search_type=keyword_unordered&media_type=all | E039, E038 |
-| maxrewards.com | LinkedIn Ad Library | captured | 0 | visible count: no ads shown | https://www.linkedin.com/ad-library/search?keyword=maxrewards | E041, E040 |
-| joinkudos.com | Google Ads Transparency Center | captured | 46 | visible count: 46 ads | https://adstransparency.google.com/?region=anywhere&domain=joinkudos.com | E043, E042 |
-| joinkudos.com | Meta Ad Library | captured | 20 | visible count: ~20 results | https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=joinkudos&search_type=keyword_unordered&media_type=all | E045, E044 |
-| joinkudos.com | LinkedIn Ad Library | captured | 0 | visible count: no ads shown | https://www.linkedin.com/ad-library/search?keyword=joinkudos | E047, E046 |
+| getcardlab.app | Google Ads Transparency Center | manual-check | - | open in a browser; not fetched | https://adstransparency.google.com/?region=anywhere&domain=getcardlab.app | E024 |
+| getcardlab.app | Meta Ad Library | manual-check | - | open in a browser; not fetched | https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=cardlab&search_type=keyword_unordered&media_type=all | E025 |
+| getcardlab.app | LinkedIn Ad Library | manual-check | - | open in a browser; not fetched | https://www.linkedin.com/ad-library/search?keyword=cardlab | E026 |
+| rewardswise.app | Google Ads Transparency Center | manual-check | - | open in a browser; not fetched | https://adstransparency.google.com/?region=anywhere&domain=rewardswise.app | E027 |
+| rewardswise.app | Meta Ad Library | manual-check | - | open in a browser; not fetched | https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=rewardswise&search_type=keyword_unordered&media_type=all | E028 |
+| rewardswise.app | LinkedIn Ad Library | manual-check | - | open in a browser; not fetched | https://www.linkedin.com/ad-library/search?keyword=rewardswise | E029 |
+| maxrewards.com | Google Ads Transparency Center | manual-check | - | open in a browser; not fetched | https://adstransparency.google.com/?region=anywhere&domain=maxrewards.com | E030 |
+| maxrewards.com | Meta Ad Library | manual-check | - | open in a browser; not fetched | https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=maxrewards&search_type=keyword_unordered&media_type=all | E031 |
+| maxrewards.com | LinkedIn Ad Library | manual-check | - | open in a browser; not fetched | https://www.linkedin.com/ad-library/search?keyword=maxrewards | E032 |
+| joinkudos.com | Google Ads Transparency Center | manual-check | - | open in a browser; not fetched | https://adstransparency.google.com/?region=anywhere&domain=joinkudos.com | E033 |
+| joinkudos.com | Meta Ad Library | manual-check | - | open in a browser; not fetched | https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=joinkudos&search_type=keyword_unordered&media_type=all | E034 |
+| joinkudos.com | LinkedIn Ad Library | manual-check | - | open in a browser; not fetched | https://www.linkedin.com/ad-library/search?keyword=joinkudos | E035 |
 
 Record what you find (count, run dates, hooks, offers, landing pages) as notes next to the evidence ID.
 
@@ -295,7 +305,7 @@ Record what you find (count, run dates, hooks, offers, landing pages) as notes n
 3. Fix JSON-LD errors on the target: SoftwareApplication: needs one of: aggregateRating, review. Invalid structured data is ignored for rich results. [E017, E018]
 4. Cover these competitor phrases in H2s and copy where they fit the product: maxrewards, recommendations, credits, chase sapphire, features, sapphire, gas ev, travel cards, capital, activate. Used by two or more ranking pages, missing from the target crawl. [E007, E010, E011, E012, E013, E017, E018]
 5. Ask ChatGPT, Perplexity, Gemini and Grok "credit card rewards app" style prompts and log answers with `seo-rea cite`. AI-answer citations have not been recorded yet.
-6. Open the ad-library links and note competitor ad hooks, offers and landing pages. Ad libraries need a browser; counts alone do not show the creative. [E025, E027, E029, E031, E033, E035, E037, E039, E041, E043, E045, E047]
+6. Open the ad-library links and note competitor ad hooks, offers and landing pages. Ad libraries need a browser; counts alone do not show the creative. [E024, E025, E026, E027, E028, E029, E030, E031, E032, E033, E034, E035]
 
 Drafts only: this tool never sends outreach, buys ads or publishes changes.
 
@@ -308,7 +318,7 @@ Drafts only: this tool never sends outreach, buys ads or publishes changes.
 - On-page facts for appshunter.io
 - Server or CDN bot blocking not tested
 - Ads shown to logged-in or other-location users
-- Creatives, run dates, spend
+- Ad counts, run dates, creatives
 - Referring domains, link velocity
 - PageSpeed Insights skipped: PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key
 - Paid keyword data (volume, ranked keywords) skipped: budget is 0
