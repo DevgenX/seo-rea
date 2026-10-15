@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// seo-rea CLI: teardown, audit, cite, mcp, doctor.
+// seo-rea CLI: strategy (also the bare `seo-rea <domain>`), teardown, audit, batch, cite, mcp, doctor.
 
 import { realpathSync } from "node:fs";
 import { join, resolve } from "node:path";
@@ -14,8 +14,11 @@ import { isEngineName } from "./adapters/serp.js";
 export const HELP = `seo-rea ${VERSION} - reverse engineer why pages rank (evidence first, free first)
 
 Usage:
-  seo-rea teardown --keyword "<kw>" --target <domain> --out <dir> [options]
+  seo-rea <domain> [--vs <domain>] [--out <dir>] [--budget-usd 0] [options] [--json]
+  seo-rea strategy <domain> [--vs <domain>] ...   Same as above: why a site leads (Strategy Dossier)
+  seo-rea teardown --keyword "<kw>" --target <domain> --out <dir> [options] [--json]
   seo-rea audit <domain|url> [--out <dir>] [--no-psi] [--lighthouse] [--json]
+  seo-rea batch --sites <file.json|file.csv> [--out <dir>] [--site-delay-ms <n>] [options] [--json]
   seo-rea cite --out <dir> --engine <${AI_ENGINES.join("|")}>
                --prompt "<prompt>" --urls "<url1,url2,...>" [--note "<text>"]
   seo-rea mcp                       Start the MCP server on stdio
@@ -39,6 +42,22 @@ Teardown options:
   --ledger <file>        Paid-call ledger (default .seo-rea/ledger.csv)
   --no-cache             Ignore and do not write the cache
   --force                Replace an existing run in --out
+  --json                 Print report/dossier.json (strategy: strategy.json) to stdout; progress goes to stderr
+
+Strategy: maps sitemaps + nav into clusters, fetches a page sample, checks
+  SERPs for the site's own head terms and brand, reads free off-page signals
+  (Tranco, Wikipedia, Common Crawl, App Store) and writes report/strategy.md and
+  report/strategy.json. Takes the teardown options above, plus:
+  --vs <domain>          Second domain; roles (leader/challenger) come from the evidence
+  --crawl <n>            Pages fetched per site (default 30)
+  --terms <n>            Head terms checked in SERPs (default 10; split 6/4 with --vs)
+  --out defaults to seo-rea-runs/strategy-<domain>[-vs-<domain>].
+
+Batch: runs audit for every site, and teardown when the site has a keyword.
+  Takes the teardown options above (except --keyword, --target, --serp-*),
+  writes <out>/<site>/audit, <out>/<site>/teardown, <out>/summary.json and
+  <out>/summary.md. --out defaults to "out"; --site-delay-ms (default 5000) is
+  the pause between sites. Entries whose domain is TODO are skipped.
 
 Paid calls (DataForSEO) read DATAFORSEO_LOGIN and DATAFORSEO_PASSWORD from the environment only.
 `;
@@ -71,6 +90,8 @@ export type Command =
   | { command: "mcp" }
   | { command: "doctor"; json: boolean }
   | { command: "teardown"; options: TeardownCli }
+  | { command: "strategy"; options: StrategyCli }
+  | { command: "batch"; options: BatchCli }
   | {
       command: "audit";
       target: string;
@@ -103,6 +124,63 @@ export interface TeardownCli {
   ledgerPath: string;
   noCache: boolean;
   force: boolean;
+  json: boolean;
+}
+
+export interface StrategyCli extends Omit<TeardownCli, "keyword" | "target" | "serpHtml" | "serpUrls" | "top"> {
+  domain: string;
+  vs: string | null;
+  terms: number;
+}
+
+export interface BatchCli extends Omit<TeardownCli, "keyword" | "target" | "serpHtml" | "serpUrls"> {
+  sites: string;
+  siteDelayMs: number;
+}
+
+/** Options shared by teardown and batch. */
+const RUN_OPTIONS = {
+  "budget-usd": { type: "string", default: "0" },
+  "monthly-cap-usd": { type: "string" },
+  top: { type: "string", default: "8" },
+  crawl: { type: "string", default: "10" },
+  engines: { type: "string", default: "google,bing,duckduckgo" },
+  "no-browser": { type: "boolean", default: false },
+  "adlib-capture": { type: "boolean", default: false },
+  "no-psi": { type: "boolean", default: false },
+  lighthouse: { type: "boolean", default: false },
+  "delay-ms": { type: "string", default: "3000" },
+  "cache-dir": { type: "string", default: ".seo-rea/cache" },
+  ledger: { type: "string", default: ".seo-rea/ledger.csv" },
+  "no-cache": { type: "boolean", default: false },
+  force: { type: "boolean", default: false },
+  json: { type: "boolean", default: false },
+} as const;
+
+type RunCli = Omit<TeardownCli, "keyword" | "target" | "out" | "serpHtml" | "serpUrls">;
+
+type RunValues = {
+  [K in keyof typeof RUN_OPTIONS]?: (typeof RUN_OPTIONS)[K]["type"] extends "boolean" ? boolean : string;
+};
+
+function runOptions(v: RunValues): RunCli {
+  return {
+    budgetUsd: num(v["budget-usd"], "budget-usd") ?? 0,
+    monthlyCapUsd: num(v["monthly-cap-usd"], "monthly-cap-usd") ?? Infinity,
+    top: num(v.top, "top") ?? 8,
+    crawl: num(v.crawl, "crawl") ?? 10,
+    engines: parseEngines(v.engines ?? "google,bing,duckduckgo"),
+    browser: !v["no-browser"],
+    adlibCapture: v["adlib-capture"] ?? false,
+    psi: !v["no-psi"],
+    lighthouse: v.lighthouse ?? false,
+    delayMs: num(v["delay-ms"], "delay-ms") ?? 3000,
+    cacheDir: resolve(v["cache-dir"] ?? ".seo-rea/cache"),
+    ledgerPath: resolve(v.ledger ?? ".seo-rea/ledger.csv"),
+    noCache: v["no-cache"] ?? false,
+    force: v.force ?? false,
+    json: v.json ?? false,
+  };
 }
 
 function parseTeardown(rest: string[]): TeardownCli {
@@ -113,22 +191,9 @@ function parseTeardown(rest: string[]): TeardownCli {
       keyword: { type: "string" },
       target: { type: "string" },
       out: { type: "string" },
-      "budget-usd": { type: "string", default: "0" },
-      "monthly-cap-usd": { type: "string" },
-      top: { type: "string", default: "8" },
-      crawl: { type: "string", default: "10" },
-      engines: { type: "string", default: "google,bing,duckduckgo" },
-      "no-browser": { type: "boolean", default: false },
       "serp-html": { type: "string", multiple: true, default: [] },
       "serp-urls": { type: "string" },
-      "adlib-capture": { type: "boolean", default: false },
-      "no-psi": { type: "boolean", default: false },
-      lighthouse: { type: "boolean", default: false },
-      "delay-ms": { type: "string", default: "3000" },
-      "cache-dir": { type: "string", default: ".seo-rea/cache" },
-      ledger: { type: "string", default: ".seo-rea/ledger.csv" },
-      "no-cache": { type: "boolean", default: false },
-      force: { type: "boolean", default: false },
+      ...RUN_OPTIONS,
     },
   });
   if (!v.keyword || !v.target || !v.out) throw new UsageError("teardown needs --keyword, --target and --out");
@@ -138,22 +203,62 @@ function parseTeardown(rest: string[]): TeardownCli {
     keyword: v.keyword,
     target: v.target,
     out: resolve(v.out),
-    budgetUsd: num(v["budget-usd"], "budget-usd") ?? 0,
-    monthlyCapUsd: num(v["monthly-cap-usd"], "monthly-cap-usd") ?? Infinity,
-    top: num(v.top, "top") ?? 8,
-    crawl: num(v.crawl, "crawl") ?? 10,
-    engines: parseEngines(v.engines),
-    browser: !v["no-browser"],
     serpHtml: v["serp-html"].map((f) => resolve(f)),
     serpUrls,
-    adlibCapture: v["adlib-capture"],
-    psi: !v["no-psi"],
-    lighthouse: v.lighthouse,
-    delayMs: num(v["delay-ms"], "delay-ms") ?? 3000,
-    cacheDir: resolve(v["cache-dir"]),
-    ledgerPath: resolve(v.ledger),
-    noCache: v["no-cache"],
-    force: v.force,
+    ...runOptions(v),
+  };
+}
+
+const DOMAIN_LIKE = /^(https?:\/\/)?[a-z0-9-]+(\.[a-z0-9-]+)+(\/.*)?$/i;
+
+function parseStrategy(rest: string[]): StrategyCli {
+  const { values: v, positionals } = parseArgs({
+    args: rest,
+    strict: true,
+    allowPositionals: true,
+    options: {
+      out: { type: "string" },
+      vs: { type: "string" },
+      terms: { type: "string", default: "10" },
+      ...RUN_OPTIONS,
+      crawl: { type: "string", default: "30" },
+    },
+  });
+  const raw = positionals[0];
+  if (!raw || !DOMAIN_LIKE.test(raw)) throw new UsageError("strategy needs a domain, e.g. seo-rea example.com");
+  if (positionals.length > 1) throw new UsageError(`unexpected argument "${positionals[1]}"`);
+  const domain = normalizeDomain(raw);
+  const vs = v.vs ? normalizeDomain(v.vs) : null;
+  if (v.vs !== undefined && (!vs || !DOMAIN_LIKE.test(v.vs))) throw new UsageError("--vs needs a domain");
+  if (vs === domain) throw new UsageError("--vs must be a different domain");
+  const { top: _top, ...run } = runOptions(v);
+  return {
+    domain,
+    vs,
+    out: resolve(v.out ?? join("seo-rea-runs", `strategy-${domain}${vs ? `-vs-${vs}` : ""}`)),
+    terms: Math.max(1, num(v.terms, "terms") ?? 10),
+    ...run,
+    crawl: Math.max(1, num(v.crawl, "crawl") ?? 30),
+  };
+}
+
+function parseBatch(rest: string[]): BatchCli {
+  const { values: v } = parseArgs({
+    args: rest,
+    strict: true,
+    options: {
+      sites: { type: "string" },
+      out: { type: "string", default: "out" },
+      "site-delay-ms": { type: "string", default: "5000" },
+      ...RUN_OPTIONS,
+    },
+  });
+  if (!v.sites) throw new UsageError("batch needs --sites <file.json|file.csv>");
+  return {
+    sites: resolve(v.sites),
+    out: resolve(v.out),
+    siteDelayMs: num(v["site-delay-ms"], "site-delay-ms") ?? 5000,
+    ...runOptions(v),
   };
 }
 
@@ -168,6 +273,8 @@ export function parseCli(argv: string[]): Command {
     return { command: "doctor", json: values.json };
   }
   if (cmd === "teardown") return { command: "teardown", options: parseTeardown(rest) };
+  if (cmd === "strategy") return { command: "strategy", options: parseStrategy(rest) };
+  if (cmd === "batch") return { command: "batch", options: parseBatch(rest) };
   if (cmd === "audit") {
     const { values: v, positionals } = parseArgs({
       args: rest,
@@ -209,11 +316,16 @@ export function parseCli(argv: string[]): Command {
     if (!v.out || !v.engine || !v.prompt) throw new UsageError("cite needs --out, --engine and --prompt");
     return { command: "cite", out: resolve(v.out), engine: v.engine, prompt: v.prompt, urls: v.urls, note: v.note };
   }
+  if (DOMAIN_LIKE.test(cmd)) return { command: "strategy", options: parseStrategy([cmd, ...rest]) };
   throw new UsageError(`unknown command "${cmd}"`);
 }
 
 const err = (m: string): void => {
   process.stderr.write(`  ${m}\n`);
+};
+
+const printJson = (value: unknown): void => {
+  process.stdout.write(`${JSON.stringify(value, null, 2)}\n`);
 };
 
 export async function main(argv: string[]): Promise<number> {
@@ -245,7 +357,11 @@ export async function main(argv: string[]): Promise<number> {
     case "teardown": {
       const { runTeardown } = await import("./services/teardown.js");
       const o = cmd.options;
-      const { run, claims } = await runTeardown({ ...o, log: err });
+      const { run, claims, dossier } = await runTeardown({ ...o, log: err });
+      if (o.json) {
+        printJson(dossier);
+        return 0;
+      }
       const ok = run.competitors.filter((c) => c.page).length;
       const used = run.serp.attempts
         .map((a) => `${a.label}: ${a.problem ? `not used (${a.problem})` : "used"}`)
@@ -255,13 +371,54 @@ export async function main(argv: string[]): Promise<number> {
           `  SERP: ${run.serp.organic.length} results from ${run.serp.primaryLabel || "no engine"}\n` +
           `  Engines: ${used || "none"}\n` +
           `  Pages analysed: ${ok}/${run.competitors.length}; target pages: ${run.target.pages.length}; keyword-gap phrases: ${run.keywordGap.length}\n` +
-          `  Claims: ${claims.length}; spent ${run.spentUsd.toFixed(4)} USD of ${run.budgetUsd}\n`,
+          `  Claims: ${claims.length}; spent ${run.spentUsd.toFixed(4)} USD of ${run.budgetUsd}\n` +
+          `  Dossier: ${join(o.out, "report", "dossier.json")}; top actions: ${dossier.topActions.length}\n`,
       );
       return 0;
     }
+    case "strategy": {
+      const { runStrategy } = await import("./services/strategy.js");
+      const { json, ...o } = cmd.options;
+      const { strategy: d, reportPath } = await runStrategy({ ...o, log: err });
+      if (json) {
+        printJson(d);
+        return 0;
+      }
+      const lead = d.sites.find((s) => s.domain === d.roles.leader);
+      const used = d.serp.checks.filter((c) => c.status === "used").length;
+      process.stdout.write(
+        `Strategy written: ${reportPath}\n` +
+          `  ${d.roles.basis}\n` +
+          `  SERP checks usable: ${used}/${d.serp.checks.length}; co-ranking domains: ${d.competitors.length}\n` +
+          (lead?.drivers ?? [])
+            .slice(0, 5)
+            .map((x) => `  Driver ${x.rank} (${x.strength}): ${x.title}\n`)
+            .join("") +
+          `  Top actions for ${d.actionsFor}: ${d.topActions.length}; JSON: ${join(o.out, "report", "strategy.json")}\n`,
+      );
+      return 0;
+    }
+    case "batch": {
+      const { loadSites, runBatch } = await import("./services/batch.js");
+      const { sites: sitesFile, ...o } = cmd.options;
+      const sites = await loadSites(sitesFile);
+      const summary = await runBatch({ ...o, sites, sitesFile, log: err });
+      if (o.json) {
+        printJson(summary);
+        return 0;
+      }
+      process.stdout.write(
+        `Batch written: ${join(o.out, "summary.md")} and summary.json\n` +
+          summary.sites
+            .map((s) => `  ${s.site ?? `${s.name} (TODO)`}: ${s.status}${s.note ? ` (${s.note})` : ""}\n`)
+            .join("") +
+          `  Paid spend: ${summary.spentUsd.toFixed(4)} USD\n`,
+      );
+      return summary.sites.some((s) => s.status === "error") ? 1 : 0;
+    }
     case "audit": {
       const { runAudit } = await import("./services/audit.js");
-      const { run, reportPath } = await runAudit({
+      const { run, reportPath, dossier } = await runAudit({
         target: cmd.target,
         out: cmd.out,
         psi: cmd.psi,
@@ -271,7 +428,7 @@ export async function main(argv: string[]): Promise<number> {
         log: err,
       });
       if (cmd.json) {
-        process.stdout.write(`${JSON.stringify(run, null, 2)}\n`);
+        printJson(dossier);
         return 0;
       }
       const ai = run.aiReadiness;
