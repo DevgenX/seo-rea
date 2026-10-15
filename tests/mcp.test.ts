@@ -24,6 +24,7 @@ describe("MCP server", () => {
       "seo_keyword_gap",
       "seo_log_citation",
       "seo_read_evidence",
+      "seo_strategy",
       "seo_teardown",
     ]);
     const td = tools.find((t) => t.name === "seo_teardown");
