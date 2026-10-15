@@ -1,0 +1,12 @@
+{
+  "source": "psi",
+  "url": "https://getcardlab.app/",
+  "strategy": "mobile",
+  "ok": false,
+  "skipped": "PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key",
+  "scores": {},
+  "lab": {},
+  "field": {},
+  "fetchedAt": "2026-10-15T04:45:26.085Z",
+  "fromCache": false
+}
