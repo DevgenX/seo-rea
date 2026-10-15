@@ -7,7 +7,9 @@ import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 import type { EngineName } from "./core/types.js";
 import { normalizeDomain, parseUrlList } from "./core/util.js";
-import { SeoReaError, toErrorPayload } from "./core/errors.js";
+import { toErrorPayload } from "./core/errors.js";
+import { DOMAIN_LIKE, UsageError, num } from "./cli-args.js";
+import { parseCrawl, type CrawlCli } from "./cli-crawl.js";
 import { VERSION } from "./version.js";
 import { AI_ENGINES } from "./adapters/cite.js";
 import { isEngineName } from "./adapters/serp.js";
@@ -18,6 +20,7 @@ Usage:
   seo-rea <domain> [--vs <domain>] [--out <dir>] [--budget-usd 0] [options] [--json]
   seo-rea strategy <domain> [--vs <domain>] ...   Same as above: why a site leads (Strategy Dossier)
   seo-rea teardown --keyword "<kw>" --target <domain> --out <dir> [options] [--json]
+  seo-rea crawl <domain> [--out <dir>] [--max-pages 500] [--max-depth 10] [--delay-ms 500] [--force] [--json]
   seo-rea audit <domain|url> [--out <dir>] [--no-psi] [--lighthouse] [--json]
   seo-rea batch --sites <file.json|file.csv> [--out <dir>] [--site-delay-ms <n>] [options] [--json]
   seo-rea cite --out <dir> --engine <${AI_ENGINES.join("|")}>
@@ -60,22 +63,16 @@ Batch: runs audit for every site, and teardown when the site has a keyword.
   <out>/summary.md. --out defaults to "out"; --site-delay-ms (default 5000) is
   the pause between sites. Entries whose domain is TODO are skipped.
 
+Crawl: breadth-first from https://<domain>/ plus sitemap URLs, obeying
+  robots.txt for the "seo-rea" token. State is saved in <out>/data/ every 25
+  pages; rerunning the same command resumes (Ctrl-C is safe). --force starts
+  over. --max-pages is capped at 5000. Writes report/crawl.md and crawl.json.
+  --out defaults to seo-rea-runs/crawl-<domain>.
+
 Paid calls (DataForSEO) read DATAFORSEO_LOGIN and DATAFORSEO_PASSWORD from the environment only.
 `;
 
-export class UsageError extends SeoReaError {
-  override name = "UsageError";
-  constructor(message: string) {
-    super("USAGE", message);
-  }
-}
-
-const num = (v: string | undefined, name: string): number | undefined => {
-  if (v === undefined) return undefined;
-  const n = Number(v);
-  if (!Number.isFinite(n) || n < 0) throw new UsageError(`--${name} must be a non-negative number`);
-  return n;
-};
+export { UsageError };
 
 export function parseEngines(v: string): EngineName[] {
   if (v.trim() === "none") return [];
@@ -106,6 +103,7 @@ export type Command =
       noCache: boolean;
       cacheDir: string;
     }
+  | { command: "crawl"; options: CrawlCli }
   | { command: "cite"; out: string; engine: string; prompt: string; urls: string; note: string };
 
 export interface TeardownCli {
@@ -213,8 +211,6 @@ function parseTeardown(rest: string[]): TeardownCli {
   };
 }
 
-const DOMAIN_LIKE = /^(https?:\/\/)?[a-z0-9-]+(\.[a-z0-9-]+)+(\/.*)?$/i;
-
 function parseStrategy(rest: string[]): StrategyCli {
   const { values: v, positionals } = parseArgs({
     args: rest,
@@ -279,6 +275,7 @@ export function parseCli(argv: string[]): Command {
   if (cmd === "teardown") return { command: "teardown", options: parseTeardown(rest) };
   if (cmd === "strategy") return { command: "strategy", options: parseStrategy(rest) };
   if (cmd === "batch") return { command: "batch", options: parseBatch(rest) };
+  if (cmd === "crawl") return { command: "crawl", options: parseCrawl(rest) };
   if (cmd === "audit") {
     const { values: v, positionals } = parseArgs({
       args: rest,
@@ -459,6 +456,10 @@ async function dispatch(cmd: Command): Promise<number> {
           `  PageSpeed: ${perf ? `performance ${perf.scores.performance}, SEO ${perf.scores.seo}` : (ai.perf[0]?.skipped ?? "not run")}\n`,
       );
       return 0;
+    }
+    case "crawl": {
+      const { runCrawlCommand } = await import("./cli-crawl.js");
+      return runCrawlCommand(cmd.options, err, printJson);
     }
     case "cite": {
       const { recordCitation } = await import("./services/cite.js");
