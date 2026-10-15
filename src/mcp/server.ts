@@ -1,6 +1,7 @@
 // MCP server (stdio). Every tool returns structured JSON with evidence ids.
 // Logs go to stderr; stdout carries the protocol.
 
+import { toErrorPayload } from "../core/errors.js";
 import { join, resolve } from "node:path";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
@@ -39,8 +40,8 @@ async function guarded(fn: () => Promise<Record<string, unknown>>): Promise<Tool
   try {
     return ok(await fn());
   } catch (err) {
-    const error = err instanceof Error ? err.message : String(err);
-    return { ...ok({ error }), isError: true };
+    const { error } = toErrorPayload(err);
+    return { ...ok({ error: error.message, code: error.code, hint: error.hint }), isError: true };
   }
 }
 
