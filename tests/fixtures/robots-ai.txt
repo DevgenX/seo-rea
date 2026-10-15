@@ -1,0 +1,15 @@
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /private/
+
+User-agent: *
+Allow: /
+Disallow: /admin
+
+Sitemap: https://example.com/sitemap.xml

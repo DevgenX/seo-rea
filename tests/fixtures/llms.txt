@@ -1,0 +1,14 @@
+# CardLab
+
+> CardLab tells you which credit card earns the most at every store.
+
+CardLab is an iOS app. Prices are in USD.
+
+## Docs
+
+- [Features](https://getcardlab.app/features): what the app does
+- [Pricing](/pricing): plans and trial
+
+## Optional
+
+- [Press kit](https://getcardlab.app/press)
