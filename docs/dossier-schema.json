@@ -1,0 +1,865 @@
+{
+  "$id": "https://github.com/DevgenX/seo-rea/blob/main/docs/dossier-schema.json",
+  "title": "seo-rea dossier v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1"
+    },
+    "tool": {
+      "type": "string",
+      "const": "seo-rea"
+    },
+    "toolVersion": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string",
+      "enum": ["teardown", "audit"]
+    },
+    "runId": {
+      "type": "string"
+    },
+    "inputs": {
+      "type": "object",
+      "properties": {
+        "target": {
+          "type": "string",
+          "description": "Target domain"
+        },
+        "url": {
+          "type": "string",
+          "description": "Page audited, or the target homepage for a teardown"
+        },
+        "keyword": {
+          "type": ["string", "null"]
+        },
+        "budgetUsd": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": ["target", "url", "keyword", "budgetUsd"],
+      "additionalProperties": false
+    },
+    "timestamps": {
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "type": "string"
+        },
+        "writtenAt": {
+          "type": "string"
+        }
+      },
+      "required": ["createdAt", "writtenAt"],
+      "additionalProperties": false
+    },
+    "cost": {
+      "type": "object",
+      "properties": {
+        "spentUsd": {
+          "type": "number",
+          "minimum": 0
+        },
+        "budgetUsd": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": ["spentUsd", "budgetUsd"],
+      "additionalProperties": false
+    },
+    "serp": {
+      "type": "object",
+      "properties": {
+        "collected": {
+          "type": "boolean"
+        },
+        "primary": {
+          "type": "string"
+        },
+        "engines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "engine": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "adapter": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": ["used", "not-used"]
+              },
+              "problem": {
+                "type": "string"
+              },
+              "httpStatus": {
+                "type": "number"
+              },
+              "organicCount": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "adCount": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "evidenceId": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "engine",
+              "label",
+              "adapter",
+              "status",
+              "problem",
+              "httpStatus",
+              "organicCount",
+              "adCount",
+              "evidenceId"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "position": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "url": {
+                "type": "string"
+              },
+              "domain": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "isTarget": {
+                "type": "boolean"
+              }
+            },
+            "required": ["position", "url", "domain", "title", "isTarget"],
+            "additionalProperties": false
+          }
+        },
+        "ads": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "engine": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            },
+            "required": ["engine", "url", "title"],
+            "additionalProperties": false
+          }
+        },
+        "evidenceId": {
+          "type": "string"
+        }
+      },
+      "required": ["collected", "primary", "engines", "results", "ads", "evidenceId"],
+      "additionalProperties": false
+    },
+    "competitors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "position": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "url": {
+            "type": "string"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "analysed": {
+            "type": "boolean"
+          },
+          "error": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "wordCount": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "headings": {
+            "type": "object",
+            "properties": {
+              "h1": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "h2": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "h3": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": ["h1", "h2", "h3"],
+            "additionalProperties": false
+          },
+          "schema": {
+            "type": "object",
+            "properties": {
+              "types": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "blocks": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "parseErrors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validationErrors": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "required": ["type", "errors"],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": ["types", "blocks", "parseErrors", "validationErrors"],
+            "additionalProperties": false
+          },
+          "internalLinks": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "evidenceId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "position",
+          "url",
+          "domain",
+          "analysed",
+          "error",
+          "title",
+          "wordCount",
+          "headings",
+          "schema",
+          "internalLinks",
+          "evidenceId"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "target": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "type": "string"
+        },
+        "fetched": {
+          "type": "boolean"
+        },
+        "error": {
+          "type": "string"
+        },
+        "pages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "metaDescription": {
+                "type": "string"
+              },
+              "wordCount": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "headings": {
+                "type": "object",
+                "properties": {
+                  "h1": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "h2": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "h3": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": ["h1", "h2", "h3"],
+                "additionalProperties": false
+              },
+              "schemaTypes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "internalLinks": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": ["url", "title", "metaDescription", "wordCount", "headings", "schemaTypes", "internalLinks"],
+            "additionalProperties": false
+          }
+        },
+        "schemaValidation": {
+          "type": "object",
+          "properties": {
+            "types": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "blocks": {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991
+            },
+            "parseErrors": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "checks": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "checkedAs": {
+                    "type": "string"
+                  },
+                  "valid": {
+                    "type": "boolean"
+                  },
+                  "errors": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "url": {
+                    "type": "string"
+                  }
+                },
+                "required": ["type", "checkedAs", "valid", "errors", "warnings", "url"],
+                "additionalProperties": false
+              }
+            },
+            "evidenceIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Evidence IDs (E001...) in evidence/index.json"
+            }
+          },
+          "required": ["types", "blocks", "parseErrors", "checks", "evidenceIds"],
+          "additionalProperties": false
+        },
+        "aiReadiness": {
+          "type": "object",
+          "properties": {
+            "crawlers": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "token": {
+                    "type": "string"
+                  },
+                  "operator": {
+                    "type": "string"
+                  },
+                  "purpose": {
+                    "type": "string"
+                  },
+                  "access": {
+                    "type": "string",
+                    "enum": ["allowed", "blocked", "partial"]
+                  },
+                  "rule": {
+                    "type": "string"
+                  }
+                },
+                "required": ["token", "operator", "purpose", "access", "rule"],
+                "additionalProperties": false
+              }
+            },
+            "llmsTxt": {
+              "type": "object",
+              "properties": {
+                "present": {
+                  "type": "boolean"
+                },
+                "valid": {
+                  "type": "boolean"
+                },
+                "linkCount": {
+                  "type": "integer",
+                  "minimum": -9007199254740991,
+                  "maximum": 9007199254740991
+                },
+                "sections": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "errors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "warnings": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": ["present", "valid", "linkCount", "sections", "errors", "warnings"],
+              "additionalProperties": false
+            },
+            "llmsFullTxt": {
+              "type": "object",
+              "properties": {
+                "present": {
+                  "type": "boolean"
+                },
+                "bytes": {
+                  "type": "integer",
+                  "minimum": -9007199254740991,
+                  "maximum": 9007199254740991
+                }
+              },
+              "required": ["present", "bytes"],
+              "additionalProperties": false
+            },
+            "evidenceIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Evidence IDs (E001...) in evidence/index.json"
+            }
+          },
+          "required": ["crawlers", "llmsTxt", "llmsFullTxt", "evidenceIds"],
+          "additionalProperties": false
+        },
+        "performance": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "source": {
+                "type": "string",
+                "enum": ["psi", "lighthouse"]
+              },
+              "strategy": {
+                "type": "string",
+                "enum": ["mobile", "desktop"]
+              },
+              "ok": {
+                "type": "boolean"
+              },
+              "skipped": {
+                "type": "string"
+              },
+              "scores": {
+                "type": "object",
+                "propertyNames": {
+                  "type": "string"
+                },
+                "additionalProperties": {
+                  "type": ["number", "null"]
+                }
+              },
+              "lab": {
+                "type": "object",
+                "propertyNames": {
+                  "type": "string"
+                },
+                "additionalProperties": {
+                  "type": "string"
+                }
+              },
+              "field": {
+                "type": "object",
+                "propertyNames": {
+                  "type": "string"
+                },
+                "additionalProperties": {
+                  "type": "string"
+                }
+              },
+              "evidenceId": {
+                "type": "string"
+              }
+            },
+            "required": ["source", "strategy", "ok", "skipped", "scores", "lab", "field", "evidenceId"],
+            "additionalProperties": false
+          }
+        },
+        "robots": {
+          "type": "object",
+          "properties": {
+            "found": {
+              "type": "boolean"
+            },
+            "blocksRoot": {
+              "type": "boolean"
+            },
+            "evidenceId": {
+              "type": "string"
+            }
+          },
+          "required": ["found", "blocksRoot", "evidenceId"],
+          "additionalProperties": false
+        },
+        "sitemap": {
+          "type": "object",
+          "properties": {
+            "urlCount": {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991
+            },
+            "evidenceId": {
+              "type": "string"
+            }
+          },
+          "required": ["urlCount", "evidenceId"],
+          "additionalProperties": false
+        },
+        "evidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Evidence IDs (E001...) in evidence/index.json"
+        }
+      },
+      "required": [
+        "domain",
+        "fetched",
+        "error",
+        "pages",
+        "schemaValidation",
+        "aiReadiness",
+        "performance",
+        "robots",
+        "sitemap",
+        "evidenceIds"
+      ],
+      "additionalProperties": false
+    },
+    "keywordGap": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "phrase": {
+            "type": "string"
+          },
+          "words": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "competitors": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "tfidf": {
+            "type": "number"
+          },
+          "score": {
+            "type": "number"
+          }
+        },
+        "required": ["phrase", "words", "competitors", "tfidf", "score"],
+        "additionalProperties": false
+      }
+    },
+    "ads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "domain": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "platform": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["manual-check", "captured", "error"]
+          },
+          "visibleCount": {
+            "type": ["number", "null"]
+          },
+          "note": {
+            "type": "string"
+          },
+          "evidenceIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Evidence IDs (E001...) in evidence/index.json"
+          }
+        },
+        "required": ["domain", "brand", "platform", "url", "status", "visibleCount", "note", "evidenceIds"],
+        "additionalProperties": false
+      }
+    },
+    "citations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "engine": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "domains": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "targetCited": {
+            "type": "boolean"
+          },
+          "recordedAt": {
+            "type": "string"
+          },
+          "evidenceId": {
+            "type": "string"
+          }
+        },
+        "required": ["engine", "prompt", "urls", "domains", "targetCited", "recordedAt", "evidenceId"],
+        "additionalProperties": false
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^C\\d{2,}$"
+          },
+          "text": {
+            "type": "string"
+          },
+          "evidenceIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Evidence IDs (E001...) in evidence/index.json"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["observed", "inferred"]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": ["high", "medium", "low"]
+          },
+          "boundary": {
+            "type": "string"
+          },
+          "unknowns": {
+            "type": "string"
+          }
+        },
+        "required": ["id", "text", "evidenceIds", "type", "confidence", "boundary", "unknowns"],
+        "additionalProperties": false
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "topActions": {
+      "maxItems": 10,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9007199254740991
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "why": {
+            "type": "string"
+          },
+          "evidenceIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Evidence IDs (E001...) in evidence/index.json"
+          },
+          "effort": {
+            "type": "string",
+            "enum": ["S", "M", "L"]
+          },
+          "impact": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          },
+          "owner": {
+            "type": "string",
+            "enum": ["content", "dev", "seo"],
+            "description": "Owner hint"
+          }
+        },
+        "required": ["rank", "title", "why", "evidenceIds", "effort", "impact", "owner"],
+        "additionalProperties": false
+      }
+    },
+    "evidenceIndex": {
+      "type": "string",
+      "description": "Path of the evidence index, relative to the run folder"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "tool",
+    "toolVersion",
+    "kind",
+    "runId",
+    "inputs",
+    "timestamps",
+    "cost",
+    "serp",
+    "competitors",
+    "target",
+    "keywordGap",
+    "ads",
+    "citations",
+    "claims",
+    "unknowns",
+    "topActions",
+    "evidenceIndex"
+  ],
+  "additionalProperties": false
+}

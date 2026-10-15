@@ -12,6 +12,28 @@ When a tool takes an optional `out` and none is given, files go to
 
 ## Tools
 
+### seo_strategy
+
+Strategy Dossier for a domain, optionally against a second one.
+
+| Input          | Type                                  | Default                                      |
+| -------------- | ------------------------------------- | -------------------------------------------- |
+| `domain`       | string                                | required                                     |
+| `vs`           | string                                | none                                         |
+| `out`          | string                                | `./seo-rea-runs/strategy-<domain>[-vs-<vs>]` |
+| `budgetUsd`    | number 0-50                           | 0                                            |
+| `crawl`        | integer 1-100                         | 30                                           |
+| `terms`        | integer 1-20                          | 10                                           |
+| `engines`      | `google` \| `bing` \| `duckduckgo` [] | all three                                    |
+| `browser`      | boolean                               | true                                         |
+| `psi`          | boolean                               | true                                         |
+| `adlibCapture` | boolean                               | false                                        |
+
+Returns `reportPath`, `strategyPath`, `evidenceIndex`, `roles`, `topActions`,
+`drivers` and `weaknesses` per site, `competitors`, `comparison` (null without
+`vs`) and `unknowns`. Replaces a previous run in `out`. Runs take minutes
+because requests to one host are spaced at least 3 s apart.
+
 ### seo_teardown
 
 Full teardown for a keyword and target domain.
