@@ -20,6 +20,15 @@ All notable changes to this project are documented here. The format follows
   `code` and `hint`. JSON Schema in `docs/error-contract.schema.json`
   (`npm run error-schema`).
 
+- `seo-rea crawl <domain>` and the MCP tool `seo_crawl`: breadth-first site
+  crawler (1-5000 pages, `--max-pages`, `--max-depth`, `--delay-ms`) that
+  obeys robots.txt, reads sitemaps, persists its queue in `data/` and resumes
+  where it stopped (Ctrl-C safe, `--force` restarts). Writes
+  `report/crawl.json` (`kind: "crawl"`, schema `docs/crawl-schema.json`) and
+  `report/crawl.md`: per-page facts, internal inlinks, click depth, internal
+  PageRank and 22 site-wide rules (`CRAWL-*`) with stable issue ids. See
+  [docs/crawl.md](docs/crawl.md); sample in `examples/cardlab-crawl`.
+
 ### Changed
 
 - `dossier.json` and `strategy.json` `topActions[]` gain a required `id`;

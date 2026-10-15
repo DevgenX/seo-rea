@@ -4,6 +4,7 @@
 seo-rea <domain> [--vs <domain>] [--out <dir>] [--budget-usd 0] [options] [--json]
 seo-rea strategy <domain> [--vs <domain>] ...
 seo-rea teardown --keyword "<kw>" --target <domain> --out <dir> [options] [--json]
+seo-rea crawl <domain> [--out <dir>] [--max-pages 500] [--max-depth 10] [--delay-ms 500] [--force] [--json]
 seo-rea audit <domain|url> [--out <dir>] [--no-psi] [--lighthouse] [--json]
 seo-rea batch --sites <file.json|file.csv> [--out <dir>] [--site-delay-ms <n>] [options] [--json]
 seo-rea cite --out <dir> --engine <engine> --prompt "<prompt>" --urls "<url1,url2>" [--note "<text>"]
@@ -39,6 +40,21 @@ Writes `report/strategy.md`, `report/strategy.json` (schema
 regenerates it), `evidence/` and `data/strategy-run.json`. A search engine
 that answers with a captcha, consent wall, HTTP 403 or 429 is not asked again
 in the same run; terms it could not check are listed as unknown.
+
+## crawl
+
+Crawls a whole site (1-5000 pages), robots.txt respected, resumable. Full
+reference: [crawl.md](crawl.md).
+
+| Option        | Default                       | Meaning                             |
+| ------------- | ----------------------------- | ----------------------------------- |
+| `<domain>`    | required                      | Site to crawl                       |
+| `--out`       | `seo-rea-runs/crawl-<domain>` | Output folder (state in `data/`)    |
+| `--max-pages` | `500`                         | Page limit, 1-5000                  |
+| `--max-depth` | `10`                          | Link depth limit from the home page |
+| `--delay-ms`  | `500`                         | Minimum gap between requests        |
+| `--force`     | off                           | Start over instead of resuming      |
+| `--json`      | off                           | Print `report/crawl.json` to stdout |
 
 ## teardown
 
