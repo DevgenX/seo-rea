@@ -56,12 +56,12 @@ export interface TeardownOptions {
   log?: Logger;
 }
 
-async function prepareOut(out: string, force: boolean): Promise<void> {
+export async function prepareOut(out: string, force: boolean, marker = "run.json"): Promise<void> {
   if (force) {
     for (const d of ["evidence", "report", "data"]) await rm(join(out, d), { recursive: true, force: true });
   } else {
     try {
-      await readFile(join(out, "data", "run.json"));
+      await readFile(join(out, "data", marker));
       throw new Error(
         `${out} already has a run. Use --force to replace it (deletes evidence/, report/, data/ in that folder).`,
       );
@@ -111,7 +111,7 @@ function emptyRun(keyword: string, target: string, runId: string, now: Date, bud
 }
 
 /** Write evidence for one SERP attempt and return its record. */
-async function recordAttempt(f: SerpFetch, ev: EvidenceStore): Promise<SerpAttempt> {
+export async function recordAttempt(f: SerpFetch, ev: EvidenceStore): Promise<SerpAttempt> {
   const j = f.judgement;
   const isList = f.adapter === "serp-urls";
   const e = await ev.add({
@@ -501,7 +501,7 @@ export async function runTeardown(opts: TeardownOptions): Promise<Awaited<Return
     run.spentUsd = (await guard.spent()).run;
     run.finished = true;
     await writeFile(join(out, "data", "run.json"), JSON.stringify(run, null, 2));
-    return await writeTeardownReports(out, run, ev);
+    return await writeTeardownReports(out, run, ev, now);
   } finally {
     await rt.close();
   }
