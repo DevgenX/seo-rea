@@ -1,0 +1,5 @@
+Welcome to our site
+
+## Links
+- Features page https://example.com/features
+- [Docs](docs.html)
