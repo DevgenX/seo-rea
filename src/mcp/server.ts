@@ -217,6 +217,26 @@ export function createServer(deps: ServerDeps = {}): McpServer {
   );
 
   server.registerTool(
+    "seo_diff",
+    {
+      title: "Compare two runs",
+      description:
+        "Compare two runs of the same command (crawl, audit, teardown or strategy) for the same domain by stable issue id: fixed, new, regressed, improved, unchanged, plus metric deltas. Pass run folders or report JSON paths.",
+      inputSchema: { oldRun: z.string().min(1), newRun: z.string().min(1), out: z.string().optional() },
+    },
+    (a) =>
+      guarded(async () => {
+        const { runDiff } = await import("../services/diff.js");
+        const { diff, reportPath } = await runDiff({
+          oldRun: a.oldRun,
+          newRun: a.newRun,
+          ...(a.out ? { out: resolve(a.out) } : {}),
+        });
+        return { reportPath, ...diff };
+      }),
+  );
+
+  server.registerTool(
     "seo_audit_page",
     {
       title: "Audit one page",

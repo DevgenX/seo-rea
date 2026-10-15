@@ -116,9 +116,9 @@ export const isOkHtml = (p: CrawlPage): boolean => p.status >= 200 && p.status <
 const noindex = (p: CrawlPage): boolean => /\bnoindex\b/i.test(p.metaRobots);
 const selfUrl = (p: CrawlPage): string => normalizeUrl(p.finalUrl) ?? p.url;
 
-/** 200 HTML, not noindex, canonical absent or pointing to itself. */
+/** 200 HTML, not redirected, not noindex, canonical absent or pointing to itself. */
 export function isIndexable(p: CrawlPage): boolean {
-  return isOkHtml(p) && !noindex(p) && (!p.canonical || p.canonical === selfUrl(p) || p.canonical === p.url);
+  return isOkHtml(p) && selfUrl(p) === p.url && !noindex(p) && (!p.canonical || p.canonical === p.url);
 }
 
 export interface Graph {
@@ -241,14 +241,13 @@ export function analyzeCrawl(input: AnalyzeInput): Analysis {
       add("CRAWL-REDIRECTED-LINK", p.url, `redirects to ${final}; ${inl} internal link(s)`);
     if (sitemap.has(p.url) && (!isOkHtml(p) || final !== p.url))
       add("CRAWL-SITEMAP-NOT-OK", p.url, final !== p.url ? `redirects to ${final}` : `HTTP ${p.status}`);
-    if (!isOkHtml(p)) continue;
+    if (!isOkHtml(p) || final !== p.url) continue;
     if (noindex(p)) {
       if (sitemap.has(p.url)) add("CRAWL-NOINDEX-IN-SITEMAP", p.url, `meta robots "${p.metaRobots}"`);
       else add("CRAWL-NOINDEX", p.url, `meta robots "${p.metaRobots}"`);
       continue;
     }
-    if (p.canonical && p.canonical !== final && p.canonical !== p.url)
-      add("CRAWL-CANONICAL-ELSEWHERE", p.url, `canonical ${p.canonical}`);
+    if (p.canonical && p.canonical !== p.url) add("CRAWL-CANONICAL-ELSEWHERE", p.url, `canonical ${p.canonical}`);
     if (!isIndexable(p)) continue;
     if (!p.title) add("CRAWL-TITLE-MISSING", p.url, "no <title>");
     else if (p.title.length > 65) add("CRAWL-TITLE-LONG", p.url, `${p.title.length} characters`);
