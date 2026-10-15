@@ -5,6 +5,7 @@ seo-rea <domain> [--vs <domain>] [--out <dir>] [--budget-usd 0] [options] [--jso
 seo-rea strategy <domain> [--vs <domain>] ...
 seo-rea teardown --keyword "<kw>" --target <domain> --out <dir> [options] [--json]
 seo-rea crawl <domain> [--out <dir>] [--max-pages 500] [--max-depth 10] [--delay-ms 500] [--force] [--json]
+seo-rea diff <older-run> <newer-run> [--out <dir>] [--json]
 seo-rea audit <domain|url> [--out <dir>] [--no-psi] [--lighthouse] [--json]
 seo-rea batch --sites <file.json|file.csv> [--out <dir>] [--site-delay-ms <n>] [options] [--json]
 seo-rea cite --out <dir> --engine <engine> --prompt "<prompt>" --urls "<url1,url2>" [--note "<text>"]
@@ -55,6 +56,19 @@ reference: [crawl.md](crawl.md).
 | `--delay-ms`  | `500`                         | Minimum gap between requests        |
 | `--force`     | off                           | Start over instead of resuming      |
 | `--json`      | off                           | Print `report/crawl.json` to stdout |
+
+## diff
+
+Fixed / new / regressed / improved findings between two runs of the same
+command for the same domain, matched by stable issue id. Full reference:
+[diff.md](diff.md).
+
+| Option        | Default  | Meaning                                |
+| ------------- | -------- | -------------------------------------- |
+| `<older-run>` | required | Run folder or report JSON              |
+| `<newer-run>` | required | Run folder or report JSON              |
+| `--out`       | none     | Write `report/diff.md` and `diff.json` |
+| `--json`      | off      | Print the diff JSON to stdout          |
 
 ## teardown
 

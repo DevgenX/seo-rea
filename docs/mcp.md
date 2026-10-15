@@ -25,6 +25,17 @@ stats, the per-rule summary and the first 50 issues. See [crawl.md](crawl.md).
 | `maxDepth` | integer >= 0   | 10                              |
 | `force`    | boolean        | false (resume if state exists)  |
 
+### seo_diff
+
+Compare two runs (crawl, audit, teardown or strategy) by stable issue id. See
+[diff.md](diff.md).
+
+| Input    | Type   | Default                |
+| -------- | ------ | ---------------------- |
+| `oldRun` | string | required               |
+| `newRun` | string | required               |
+| `out`    | string | none (nothing written) |
+
 ### seo_strategy
 
 Strategy Dossier for a domain, optionally against a second one.
