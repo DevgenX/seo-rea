@@ -1,0 +1,225 @@
+{
+  "schemaVersion": "1",
+  "tool": "seo-rea",
+  "toolVersion": "0.3.0",
+  "createdAt": "2026-10-15T05:16:16.178Z",
+  "finishedAt": "2026-10-15T05:17:06.487Z",
+  "sitesFile": "examples/desk-sites.example.json",
+  "spentUsd": 0,
+  "sites": [
+    {
+      "name": "CardLab",
+      "site": "getcardlab.app",
+      "keyword": "credit card rewards app",
+      "status": "ok",
+      "note": "",
+      "audit": {
+        "report": "getcardlab.app/audit/report/audit.md",
+        "dossier": "getcardlab.app/audit/report/dossier.json",
+        "error": ""
+      },
+      "teardown": {
+        "report": "getcardlab.app/teardown/report/teardown.md",
+        "dossier": "getcardlab.app/teardown/report/dossier.json",
+        "error": ""
+      },
+      "spentUsd": 0,
+      "actionsFrom": "teardown",
+      "topActions": [
+        {
+          "rank": 1,
+          "title": "Put \"credit card rewards app\" (or close wording) in the title and H1 of the page meant to rank",
+          "why": "The target title \"CardLab: Track Cards & Rewards - No Bank Login\" lacks the keyword terms; 2/5 ranking pages have them.",
+          "evidenceIds": [
+            "E007",
+            "E010",
+            "E011",
+            "E012",
+            "E013",
+            "E017",
+            "E018",
+            "E015",
+            "E016"
+          ],
+          "effort": "S",
+          "impact": "high",
+          "owner": "seo"
+        },
+        {
+          "rank": 2,
+          "title": "Fix JSON-LD errors: SoftwareApplication: needs one of: aggregateRating, review",
+          "why": "Invalid structured data is ignored for rich results.",
+          "evidenceIds": [
+            "E017",
+            "E018"
+          ],
+          "effort": "S",
+          "impact": "medium",
+          "owner": "dev"
+        },
+        {
+          "rank": 3,
+          "title": "Cover competitor phrases in headings and copy: maxrewards, recommendations, credits, chase sapphire, features, sapphire, gas ev, travel cards",
+          "why": "Used by two or more ranking pages and missing from the crawled target pages.",
+          "evidenceIds": [
+            "E007",
+            "E010",
+            "E011",
+            "E012",
+            "E013",
+            "E017",
+            "E018",
+            "E015",
+            "E016"
+          ],
+          "effort": "M",
+          "impact": "medium",
+          "owner": "content"
+        }
+      ]
+    },
+    {
+      "name": "Vialie",
+      "site": null,
+      "keyword": null,
+      "status": "skipped",
+      "note": "domain not set (TODO)",
+      "audit": null,
+      "teardown": null,
+      "spentUsd": 0,
+      "actionsFrom": "",
+      "topActions": []
+    },
+    {
+      "name": "RemoteNurse",
+      "site": "remotenurse.org",
+      "keyword": "remote nursing jobs",
+      "status": "ok",
+      "note": "",
+      "audit": {
+        "report": "remotenurse.org/audit/report/audit.md",
+        "dossier": "remotenurse.org/audit/report/dossier.json",
+        "error": ""
+      },
+      "teardown": {
+        "report": "remotenurse.org/teardown/report/teardown.md",
+        "dossier": "remotenurse.org/teardown/report/dossier.json",
+        "error": ""
+      },
+      "spentUsd": 0,
+      "actionsFrom": "teardown",
+      "topActions": [
+        {
+          "rank": 1,
+          "title": "Put \"remote nursing jobs\" (or close wording) in the title and H1 of the page meant to rank",
+          "why": "The target title \"Medical VA training and NCLEX-RN prep | RemoteNurse\" lacks the keyword terms; 2/5 ranking pages have them.",
+          "evidenceIds": [
+            "E007",
+            "E008",
+            "E010",
+            "E012",
+            "E013",
+            "E017",
+            "E018",
+            "E015",
+            "E016"
+          ],
+          "effort": "S",
+          "impact": "high",
+          "owner": "seo"
+        },
+        {
+          "rank": 2,
+          "title": "Fix JSON-LD errors: SoftwareApplication: needs one of: aggregateRating, review; WebApplication: needs one of: aggregateRating, review",
+          "why": "Invalid structured data is ignored for rich results.",
+          "evidenceIds": [
+            "E017",
+            "E018"
+          ],
+          "effort": "S",
+          "impact": "medium",
+          "owner": "dev"
+        },
+        {
+          "rank": 3,
+          "title": "Cover competitor phrases in headings and copy: remote nursing jobs, jobs remote, case management, utilization management, curated, acute care, management utilization, nurse case manager",
+          "why": "Used by two or more ranking pages and missing from the crawled target pages.",
+          "evidenceIds": [
+            "E007",
+            "E008",
+            "E010",
+            "E012",
+            "E013",
+            "E017",
+            "E018",
+            "E015",
+            "E016"
+          ],
+          "effort": "M",
+          "impact": "medium",
+          "owner": "content"
+        }
+      ]
+    },
+    {
+      "name": "Soltura",
+      "site": null,
+      "keyword": null,
+      "status": "skipped",
+      "note": "domain not set (TODO)",
+      "audit": null,
+      "teardown": null,
+      "spentUsd": 0,
+      "actionsFrom": "",
+      "topActions": []
+    },
+    {
+      "name": "Pondoro",
+      "site": null,
+      "keyword": null,
+      "status": "skipped",
+      "note": "domain not set (TODO)",
+      "audit": null,
+      "teardown": null,
+      "spentUsd": 0,
+      "actionsFrom": "",
+      "topActions": []
+    },
+    {
+      "name": "WJBF",
+      "site": null,
+      "keyword": null,
+      "status": "skipped",
+      "note": "domain not set (TODO)",
+      "audit": null,
+      "teardown": null,
+      "spentUsd": 0,
+      "actionsFrom": "",
+      "topActions": []
+    },
+    {
+      "name": "Budgeteen",
+      "site": null,
+      "keyword": null,
+      "status": "skipped",
+      "note": "domain not set (TODO)",
+      "audit": null,
+      "teardown": null,
+      "spentUsd": 0,
+      "actionsFrom": "",
+      "topActions": []
+    },
+    {
+      "name": "Waymora",
+      "site": null,
+      "keyword": null,
+      "status": "skipped",
+      "note": "domain not set (TODO)",
+      "audit": null,
+      "teardown": null,
+      "spentUsd": 0,
+      "actionsFrom": "",
+      "topActions": []
+    }
+  ]
+}
