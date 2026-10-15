@@ -26,6 +26,7 @@ describe("MCP server", () => {
       "seo_keyword_gap",
       "seo_log_citation",
       "seo_read_evidence",
+      "seo_reverse",
       "seo_strategy",
       "seo_teardown",
     ]);

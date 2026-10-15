@@ -237,6 +237,38 @@ export function createServer(deps: ServerDeps = {}): McpServer {
   );
 
   server.registerTool(
+    "seo_reverse",
+    {
+      title: "Reverse engineer a domain's SEO/AEO strategy",
+      description:
+        "Crawl any domain (or reuse a crawl) and infer its strategy from free sources: target topics, content clusters and templates, programmatic patterns, internal linking hubs, free authority signals, schema usage, AEO tactics (llms.txt, AI crawler rules, FAQ/question formatting), publishing cadence and tech stack. Every claim cites evidence. Writes report/reverse.json and report/reverse.md. No paid calls.",
+      inputSchema: {
+        domain: z.string().min(3),
+        out: z.string().optional(),
+        maxPages: z.number().int().min(1).max(5000).optional(),
+        fromCrawl: z.string().optional(),
+        offpage: z.boolean().optional(),
+        force: z.boolean().optional(),
+      },
+    },
+    (a) =>
+      guarded(async () => {
+        const { runReverse } = await import("../services/reverse.js");
+        const out = outFor(a.out, `reverse-${normalizeDomain(a.domain)}`);
+        const { report, reportPath } = await runReverse({
+          domain: a.domain,
+          out,
+          log,
+          ...(a.maxPages !== undefined ? { maxPages: a.maxPages } : {}),
+          ...(a.fromCrawl ? { fromCrawl: resolve(a.fromCrawl) } : {}),
+          ...(a.offpage !== undefined ? { offpage: a.offpage } : {}),
+          ...(a.force !== undefined ? { force: a.force } : {}),
+        });
+        return { out, reportPath, summary: report.summary, playbook: report.playbook, coverage: report.coverage };
+      }),
+  );
+
+  server.registerTool(
     "seo_audit_page",
     {
       title: "Audit one page",

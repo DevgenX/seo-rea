@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { validateDossier } from "../src/core/dossier.js";
 import { validateCrawl } from "../src/core/crawl/schema.js";
+import { validateReverse } from "../src/core/reverse/schema.js";
 import { validateStrategy } from "../src/core/strategy/schema.js";
 
 function walk(dir: string): string[] {
@@ -12,7 +13,7 @@ function walk(dir: string): string[] {
   });
 }
 
-const files = walk("examples").filter((f) => /report[/\\](dossier|strategy|crawl)\.json$/.test(f));
+const files = walk("examples").filter((f) => /report[/\\](dossier|strategy|crawl|reverse)\.json$/.test(f));
 
 describe("committed examples match the published schemas", () => {
   it("finds examples", () => expect(files.length).toBeGreaterThan(0));
@@ -23,7 +24,9 @@ describe("committed examples match the published schemas", () => {
         ? validateDossier
         : f.endsWith("crawl.json")
           ? validateCrawl
-          : validateStrategy;
+          : f.endsWith("reverse.json")
+            ? validateReverse
+            : validateStrategy;
       expect(() => validate(data)).not.toThrow();
     });
 });
