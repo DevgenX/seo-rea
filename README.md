@@ -3,7 +3,6 @@
 **Reverse engineer why pages rank, and check if a site is ready for AI search. Evidence first, free sources first.**
 
 [![npm version](https://img.shields.io/npm/v/seo-rea.svg)](https://www.npmjs.com/package/seo-rea)
-[![CI](https://github.com/DevgenX/seo-rea/actions/workflows/ci.yml/badge.svg)](https://github.com/DevgenX/seo-rea/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![MCP server](https://img.shields.io/badge/MCP-stdio%20server-6f42c1.svg)](docs/mcp.md)
 [![Node](https://img.shields.io/badge/node-%3E%3D22-339933.svg)](.nvmrc)

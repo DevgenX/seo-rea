@@ -59,5 +59,5 @@ Draft:
 ## Before submitting
 
 - npm package published and `npx -y seo-rea mcp` works from a clean machine.
-- Repository public, CI badge green, example report linked.
+- Repository public, tests passing locally, example report linked.
 - One list per pull request; follow each list's format exactly.
