@@ -29,8 +29,17 @@ All notable changes to this project are documented here. The format follows
   PageRank and 22 site-wide rules (`CRAWL-*`) with stable issue ids. See
   [docs/crawl.md](docs/crawl.md); sample in `examples/cardlab-crawl`.
 
+- `seo-rea diff <older-run> <newer-run>` and the MCP tool `seo_diff`:
+  compares two crawl, audit, teardown or strategy runs by stable issue id and
+  lists fixed, new, regressed, improved and unchanged findings, plus metric
+  and per-rule deltas. Crawl issues on pages the newer crawl did not reach
+  are `not-rechecked`, not fixed. Writes `report/diff.{md,json}` with
+  `--out` (schema `docs/diff-schema.json`). See [docs/diff.md](docs/diff.md).
+
 ### Changed
 
+- Crawl: redirected URLs are no longer counted as indexable pages (they
+  inflated duplicate-title groups).
 - `dossier.json` and `strategy.json` `topActions[]` gain a required `id`;
   JSON Schemas regenerated.
 
