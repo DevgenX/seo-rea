@@ -1,8 +1,11 @@
 # CLI reference
 
 ```
-seo-rea teardown --keyword "<kw>" --target <domain> --out <dir> [options]
+seo-rea <domain> [--vs <domain>] [--out <dir>] [--budget-usd 0] [options] [--json]
+seo-rea strategy <domain> [--vs <domain>] ...
+seo-rea teardown --keyword "<kw>" --target <domain> --out <dir> [options] [--json]
 seo-rea audit <domain|url> [--out <dir>] [--no-psi] [--lighthouse] [--json]
+seo-rea batch --sites <file.json|file.csv> [--out <dir>] [--site-delay-ms <n>] [options] [--json]
 seo-rea cite --out <dir> --engine <engine> --prompt "<prompt>" --urls "<url1,url2>" [--note "<text>"]
 seo-rea mcp
 seo-rea doctor [--json]
@@ -10,6 +13,31 @@ seo-rea --version | help
 ```
 
 Exit codes: 0 success, 1 runtime error, 2 usage error.
+
+## strategy (also `seo-rea <domain>`)
+
+Builds the Strategy Dossier: why a site leads, from free sources. A bare
+domain as the first argument runs this command.
+
+| Option     | Default                                    | Meaning                                                                       |
+| ---------- | ------------------------------------------ | ----------------------------------------------------------------------------- |
+| `<domain>` | required                                   | Domain to analyse                                                             |
+| `--vs`     | none                                       | Second domain; roles (leader, challenger) come from the evidence              |
+| `--out`    | `seo-rea-runs/strategy-<domain>[-vs-<vs>]` | Output folder                                                                 |
+| `--crawl`  | `30`                                       | Pages fetched per site (up to 200 URLs are mapped from sitemaps and nav)      |
+| `--terms`  | `10`                                       | Head terms checked in SERPs; split 6/4 with `--vs`, plus one brand query each |
+| `--json`   | off                                        | Print `report/strategy.json` to stdout; progress goes to stderr               |
+
+It also takes the run options of `teardown` (`--budget-usd`,
+`--monthly-cap-usd`, `--engines`, `--no-browser`, `--no-psi`, `--lighthouse`,
+`--adlib-capture`, `--delay-ms`, `--cache-dir`, `--ledger`, `--no-cache`,
+`--force`).
+
+Writes `report/strategy.md`, `report/strategy.json` (schema
+[strategy-schema.json](strategy-schema.json), `npm run strategy-schema`
+regenerates it), `evidence/` and `data/strategy-run.json`. A search engine
+that answers with a captcha, consent wall, HTTP 403 or 429 is not asked again
+in the same run; terms it could not check are listed as unknown.
 
 ## teardown
 
@@ -36,6 +64,7 @@ Builds the full report for one keyword and one target domain.
 | `--ledger <file>`       | `.seo-rea/ledger.csv`    | Paid-call ledger                                                                              |
 | `--no-cache`            | off                      | Do not read or write the cache                                                                |
 | `--force`               | off                      | Replace an existing run in `--out`                                                            |
+| `--json`                | off                      | Print `report/dossier.json` to stdout; progress goes to stderr                                |
 
 Example from this repo:
 
@@ -48,22 +77,70 @@ Output:
 
 ```
 <out>/evidence/E001-... .. index.json, index.md
-<out>/report/teardown.md, ledger.md, questions.md
+<out>/report/teardown.md, dossier.json, ledger.md, questions.md
 <out>/data/run.json
 ```
+
+`report/dossier.json` follows [dossier-schema.json](dossier-schema.json)
+(`schemaVersion: "1"`) and is validated before it is written. `topActions`
+holds up to 10 actions ranked by impact, then effort, each with `why`,
+`evidenceIds`, `effort` (S/M/L), `impact` (low/medium/high) and an `owner`
+hint (content/dev/seo). After a schema change, regenerate the file with
+`npm run dossier-schema`.
 
 ## audit
 
 Single-site AEO checks: homepage (or the URL given) on-page facts and JSON-LD
 validation, robots.txt and sitemap, AI-crawler access, `/llms.txt`,
 `/llms-full.txt`, PageSpeed Insights. Writes `report/audit.md`,
-`report/ledger.md` and `data/audit.json`. Each run replaces the previous audit
+`report/dossier.json`, `report/ledger.md` and `data/audit.json`. `--json`
+prints the dossier (before 0.3.0 it printed `data/audit.json`). Each run replaces the previous audit
 in the folder. Default `--out`: `./seo-rea-runs/audit-<domain>`.
 
 ```sh
 seo-rea audit getcardlab.app --out examples/cardlab-audit
 seo-rea audit https://example.com/pricing --json
 ```
+
+## batch
+
+Runs `audit` for every site in a sites file and `teardown` for sites that have
+a keyword, one site at a time with a pause between sites. Takes the teardown
+options (budget, engines, `--no-browser`, `--no-psi`, `--delay-ms`, cache,
+ledger, `--force`) except `--keyword`, `--target` and the `--serp-*` flags.
+
+| Option                | Default  | Meaning                                     |
+| --------------------- | -------- | ------------------------------------------- |
+| `--sites <file>`      | required | `.json` list or `.csv` with a `site` column |
+| `--out <dir>`         | `out`    | Output folder                               |
+| `--site-delay-ms <n>` | `5000`   | Pause between sites                         |
+| `--json`              | off      | Print `summary.json` to stdout              |
+
+Sites file, JSON (`domain` works as an alias for `site`):
+
+```json
+{ "sites": [{ "name": "CardLab", "site": "getcardlab.app", "keyword": "credit card rewards app" }] }
+```
+
+CSV (header required, `keyword` and `name` optional):
+
+```csv
+site,keyword,name
+getcardlab.app,credit card rewards app,CardLab
+```
+
+A `site` of `TODO` (or empty) is skipped; a `keyword` of `TODO` runs the audit
+only. Output:
+
+```
+<out>/<site>/audit/...       report/audit.md, report/dossier.json
+<out>/<site>/teardown/...    report/teardown.md, report/dossier.json (sites with a keyword)
+<out>/summary.json           per-site status, report paths, top 3 actions, paid spend
+<out>/summary.md             the same as a table
+```
+
+`--budget-usd` applies to each teardown; use `--monthly-cap-usd` to cap the
+month across runs. Exit code 1 if any site failed completely.
 
 ## cite
 

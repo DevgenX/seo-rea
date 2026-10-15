@@ -57,6 +57,8 @@ An excerpt of a real run against getcardlab.app
 ## Quickstart
 
 ```sh
+npx seo-rea cardpointers.com                          # strategy dossier: why this site leads
+npx seo-rea getcardlab.app --vs cardpointers.com      # side by side, plan for the challenger
 npx seo-rea teardown --keyword "credit card rewards app" --target getcardlab.app --out ./cardlab
 npx seo-rea audit getcardlab.app          # single-site AEO checks
 npx seo-rea doctor                        # which optional adapters can run here
@@ -74,6 +76,85 @@ npx -p seo-rea -p playwright-core seo-rea teardown --keyword "..." --target exam
 
 Without it, seo-rea falls back to plain HTML SERPs, then to URLs you paste
 (`--serp-urls`) or a results page you saved from your browser (`--serp-html`).
+
+## Strategy dossier
+
+`seo-rea <domain>` (same as `seo-rea strategy <domain>`, MCP tool
+`seo_strategy`) explains why a site leads, from free sources:
+
+- Maps up to 200 URLs from sitemaps and navigation (robots.txt respected,
+  3 s between requests to one host) and fetches about 30 pages.
+- Groups them into clusters by path and title words, with page counts,
+  template type, hub pages and link density, and flags programmatic
+  templates (one slug pattern or one heading set across many URLs).
+- Derives about 10 head terms from the site's own titles, H1s and slugs and
+  checks them on free SERPs. Blocked engines are recorded and not asked again;
+  blocked terms are listed as unknown.
+- Lists co-ranking domains, scores six pillars (on-page, technical, off-page,
+  AEO, paid, distribution), and ranks 5-8 drivers by strength with how hard
+  each is to copy.
+- Writes a copyable playbook, weaknesses and openings, a 30/60/90-day plan and
+  a "Top 10 actions" table. With `--vs`, it adds a side-by-side table, cluster
+  gaps, keyword overlap and gaps, and writes the plan for whichever site the
+  evidence shows is behind.
+
+Off-page signals at $0: Tranco rank, Wikipedia links and mentions, Common
+Crawl index size, App Store ratings (iTunes Lookup) and brand-SERP coverage.
+Backlink counts and search volume need paid data and are listed as unknowns.
+
+```sh
+seo-rea nerdwallet.com --out ./nw --json > nw.json   # strategy.json on stdout
+```
+
+Files: `report/strategy.md`, `report/strategy.json` (`kind: "strategy"`,
+`schemaVersion: "1"`, schema in
+[docs/strategy-schema.json](docs/strategy-schema.json)), `evidence/` and
+`data/strategy-run.json`. Examples:
+[cardpointers.com](examples/strategy-cardpointers/report/strategy.md),
+[nerdwallet.com](examples/strategy-nerdwallet/report/strategy.md),
+[getcardlab.app vs cardpointers.com](examples/strategy-cardlab-vs-cardpointers/report/strategy.md).
+
+## Output for agents
+
+Every `teardown` and `audit` also writes `report/dossier.json`: a versioned
+JSON summary (`schemaVersion: "1"`) with inputs, cost, SERP engine statuses,
+competitors, target pages, schema validation, AI readiness, performance,
+keyword gap, ads, citations, claims with evidence IDs, unknowns and up to 10
+ranked `topActions`. It is validated against
+[docs/dossier-schema.json](docs/dossier-schema.json) before it is written.
+The same actions appear as a "Top 10 actions" table at the top of
+`teardown.md` and `audit.md`.
+
+```sh
+seo-rea audit getcardlab.app --json > cardlab.json      # dossier on stdout, progress on stderr
+seo-rea batch --sites sites.json --out out/2026-10-14   # many sites, plus summary.json and summary.md
+```
+
+`batch` reads a JSON list (`[{"name", "site", "keyword"}]`) or a CSV with a
+`site` column and optional `keyword` and `name` columns. It runs `audit` for
+every site and `teardown` for sites with a keyword, one site at a time, and
+skips entries whose domain is `TODO`. See
+[examples/desk-sites.example.json](examples/desk-sites.example.json).
+
+## Run on a box / server
+
+```sh
+git clone https://github.com/DevgenX/seo-rea /workspace/seo-rea && cd /workspace/seo-rea && npm ci && npm run build && node dist/cli.js doctor
+```
+
+Optional, for the headless-browser SERP path and ad-library screenshots:
+
+```sh
+npx playwright install chromium
+```
+
+Without Chromium, `teardown` and `batch` fall back to plain HTML SERPs; if
+those are blocked too, pass the ranking URLs with `--serp-urls`. Then run, for
+example:
+
+```sh
+node dist/cli.js batch --sites examples/desk-sites.example.json --out out/$(date +%F) --budget-usd 0
+```
 
 ## Use it from your agent (MCP)
 
@@ -165,7 +246,8 @@ budget and optional monthly cap before it is made, cached, and logged to
 5. **Ads.** Lookup URLs for your brand and up to three competitors (product
    sites first), with screenshots when `--adlib-capture` is set.
 6. **Report.** `evidence/` (E001.. + index), `report/teardown.md`,
-   `report/ledger.md`, `report/questions.md`, `data/run.json`.
+   `report/dossier.json`, `report/ledger.md`, `report/questions.md`,
+   `data/run.json`.
 
 More: [docs/cli.md](docs/cli.md), [docs/sources.md](docs/sources.md).
 
