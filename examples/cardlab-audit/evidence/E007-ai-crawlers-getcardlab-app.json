@@ -1,0 +1,74 @@
+[
+  {
+    "token": "GPTBot",
+    "operator": "OpenAI",
+    "purpose": "model training",
+    "access": "allowed",
+    "explicit": true,
+    "rule": "own group: no disallow"
+  },
+  {
+    "token": "OAI-SearchBot",
+    "operator": "OpenAI",
+    "purpose": "ChatGPT search index",
+    "access": "allowed",
+    "explicit": true,
+    "rule": "own group: no disallow"
+  },
+  {
+    "token": "ChatGPT-User",
+    "operator": "OpenAI",
+    "purpose": "user-initiated fetches",
+    "access": "allowed",
+    "explicit": true,
+    "rule": "own group: no disallow"
+  },
+  {
+    "token": "ClaudeBot",
+    "operator": "Anthropic",
+    "purpose": "model training",
+    "access": "allowed",
+    "explicit": true,
+    "rule": "own group: no disallow"
+  },
+  {
+    "token": "Claude-SearchBot",
+    "operator": "Anthropic",
+    "purpose": "search index",
+    "access": "allowed",
+    "explicit": true,
+    "rule": "own group: no disallow"
+  },
+  {
+    "token": "PerplexityBot",
+    "operator": "Perplexity",
+    "purpose": "search index",
+    "access": "allowed",
+    "explicit": true,
+    "rule": "own group: no disallow"
+  },
+  {
+    "token": "Google-Extended",
+    "operator": "Google",
+    "purpose": "Gemini training and grounding (not Search)",
+    "access": "allowed",
+    "explicit": true,
+    "rule": "own group: no disallow"
+  },
+  {
+    "token": "Applebot-Extended",
+    "operator": "Apple",
+    "purpose": "Apple Intelligence training",
+    "access": "allowed",
+    "explicit": true,
+    "rule": "own group: no disallow"
+  },
+  {
+    "token": "CCBot",
+    "operator": "Common Crawl",
+    "purpose": "open crawl used for training",
+    "access": "allowed",
+    "explicit": true,
+    "rule": "own group: no disallow"
+  }
+]

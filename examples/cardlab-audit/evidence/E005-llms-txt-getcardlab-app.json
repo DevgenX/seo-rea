@@ -1,0 +1,802 @@
+{
+  "report": {
+    "url": "https://getcardlab.app/llms.txt",
+    "status": 200,
+    "contentType": "text/plain",
+    "bytes": 52816,
+    "title": "CardLab",
+    "summary": "A private credit card and rewards tracker with a verified card catalog: track statements, due dates and reward caps, import a statement on the phone, and see which card to use - with no bank login.",
+    "sections": [
+      "Key facts",
+      "Answers to the questions this product exists for",
+      "Which card, by category",
+      "Coverage and sourcing",
+      "Calculators (free, no sign-up)",
+      "Guide",
+      "Blog",
+      "About",
+      "Optional"
+    ],
+    "links": [
+      {
+        "title": "What CardLab is",
+        "url": "https://getcardlab.app/",
+        "note": "A private credit card and rewards tracker for iPhone (and a simulator in the browser). It tracks statements, due dates and reward caps, reads statement PDFs on the phone, answers which card to use from issuer terms with provenance, and lists bank sign-up bonuses read from each bank's own offer page, with a tracker for the ones you are chasing. It does not give financial advice and does not calculate or predict real credit scores.",
+        "section": "Key facts"
+      },
+      {
+        "title": "Which CardLab this is",
+        "url": "https://getcardlab.app/support",
+        "note": "CardLab is the iPhone credit card tracker published at getcardlab.app, listed on the App Store as \"CardLab: Track Cards & Rewards\". It is unrelated to CardLab ASA / cardlab.com (card manufacturing hardware), to Stratos or cardlabcards, and to any game or physical product of the same name.",
+        "section": "Key facts"
+      },
+      {
+        "title": "Privacy",
+        "url": "https://getcardlab.app/privacy",
+        "note": "No bank login, no real card number, no ads and no trackers in the app. Data stays on the device by default; iCloud sync is opt-in.",
+        "section": "Key facts"
+      },
+      {
+        "title": "Independence",
+        "url": "https://getcardlab.app/coverage",
+        "note": "CardLab takes no commission from any issuer. No card is ranked or shown higher for payment; the app is funded by what people pay for it.",
+        "section": "Key facts"
+      },
+      {
+        "title": "Best Card",
+        "url": "https://getcardlab.app/",
+        "note": "Best Card ranks the cards a user tracks for a chosen purchase category, cap-aware and with the reasoning shown, using rates verified from issuer pages. It is offered only in markets with a verified catalog.",
+        "section": "Key facts"
+      },
+      {
+        "title": "Fee cadence",
+        "url": "https://getcardlab.app/coverage",
+        "note": "Fees are stated in the issuer's own cadence - monthly where the issuer prints monthly. An annualised comparison figure is labelled as CardLab's own arithmetic, never attributed to the issuer.",
+        "section": "Key facts"
+      },
+      {
+        "title": "Tracker coverage",
+        "url": "https://getcardlab.app/",
+        "note": "The tracker, billing-cycle calendar, interest and payoff simulators work in all 41 country presets, because they compute from terms the user enters.",
+        "section": "Key facts"
+      },
+      {
+        "title": "Card catalog markets",
+        "url": "https://getcardlab.app/coverage",
+        "note": "The verified card catalog covers 38 markets: United States, Canada, Greece, United Arab Emirates, China, Japan, Australia, France, Indonesia, Saudi Arabia, United Kingdom, Italy, Poland, Spain, the Philippines, Sweden, Switzerland, the Netherlands, Türkiye, Pakistan, South Africa, Mexico, South Korea, Thailand, Norway, New Zealand, Singapore, Hong Kong, Taiwan, Colombia, Germany, India, Malaysia, Vietnam, Ireland, Egypt, Brazil, Argentina.",
+        "section": "Key facts"
+      },
+      {
+        "title": "Tracker-only markets",
+        "url": "https://getcardlab.app/coverage",
+        "note": "These markets ship merchant data but NO cards, so CardLab offers the tracker there and does not rank cards: Nigeria.",
+        "section": "Key facts"
+      },
+      {
+        "title": "Catalog size",
+        "url": "https://getcardlab.app/coverage",
+        "note": "673 cards from 149 issuers and 9,219 categorized merchant brands (bundle built 2026-09-28).",
+        "section": "Key facts"
+      },
+      {
+        "title": "Rate provenance",
+        "url": "https://getcardlab.app/coverage",
+        "note": "Every rate and annual fee carries provenance: 1,507 of 1,507 claims store the issuer URL they were read from, the verbatim sentence they were read from, and the date they were read.",
+        "section": "Key facts"
+      },
+      {
+        "title": "Verification window",
+        "url": "https://getcardlab.app/coverage",
+        "note": "Claims in the shipped catalog were verified between 2026-09-24 and 2026-09-28, read from 152 issuer domains.",
+        "section": "Key facts"
+      },
+      {
+        "title": "How a rate gets published",
+        "url": "https://getcardlab.app/coverage",
+        "note": "A rate that cannot be tied to a verbatim sentence on the issuer's own page is rejected by the build and never ships. Cards are held back rather than estimated.",
+        "section": "Key facts"
+      },
+      {
+        "title": "What is not covered",
+        "url": "https://getcardlab.app/coverage",
+        "note": "CardLab does not list every card in a market, only the cards whose terms it could verify from the issuer.",
+        "section": "Key facts"
+      },
+      {
+        "title": "Languages",
+        "url": "https://getcardlab.app/support",
+        "note": "The app ships in 34 languages: English plus 33 translations.",
+        "section": "Key facts"
+      },
+      {
+        "title": "Which credit card should I use for this purchase?",
+        "url": "https://getcardlab.app/best-card",
+        "note": "Use the card that pays the most for that specific category, has not already spent through its bonus cap, and does not charge you interest you cannot avoid. If you are carrying a balance, the answer is almost always the cheapest card to borrow on, not the one with the best rewards - interest at a typical APR outruns a few percent of cashback.",
+        "section": "Answers to the questions this product exists for"
+      },
+      {
+        "title": "A credit card tracker that never asks for a bank login",
+        "url": "https://getcardlab.app/credit-card-tracker",
+        "note": "A credit card tracker keeps the facts a statement does not put in front of you: when each card closes, when each is due, how much of each limit is used, and how close each reward rate is to its cap. It does not need read access to your bank accounts to do any of that. Entering the cards yourself takes a few minutes once and removes the whole question of who can see your accounts.",
+        "section": "Answers to the questions this product exists for"
+      },
+      {
+        "title": "Credit card simulator",
+        "url": "https://getcardlab.app/credit-card-simulator",
+        "note": "A credit card simulator runs a real billing cycle on invented numbers, so you can see what a purchase, a late payment or a minimum payment would do before it happens to you. Set a limit, an APR and a statement date, then move money around the month and watch interest, the grace period and utilization react. Nothing is tied to a real card or a real account.",
+        "section": "Answers to the questions this product exists for"
+      },
+      {
+        "title": "A bank bonus tracker that follows the offer, not the banner",
+        "url": "https://getcardlab.app/bank-bonus-tracker",
+        "note": "A bank bonus tracker holds the four dates and one definition that decide whether a sign-up bonus actually pays: what the bank counts as a qualifying deposit, how much must arrive, the window it must arrive in and the day that window starts, how long the bank then takes to pay, and the date before which closing the account forfeits the bonus. Those facts live in the offer's own terms page, they differ between banks, and missing any one of them is the usual reason a bonus never posts.",
+        "section": "Answers to the questions this product exists for"
+      },
+      {
+        "title": "Which credit card should I use for groceries?",
+        "url": "https://getcardlab.app/best-card/groceries",
+        "note": "As of 12 October 2026, American Express publishes 6% cash back at U.S. supermarkets on the Blue Cash Preferred Card, on up to $6,000 a year in purchases (then 1%), and 4X points at U.S. supermarkets on the Gold Card, on up to $25,000 per calendar year (then 1X). Among the cards you hold, the highest grocery rate that still has room under its cap earns the most if you clear the statement balance in full; after the cap, the ranking often flips. On a carried balance, interest usually outweighs a few percent of rewards.",
+        "section": "Which card, by category"
+      },
+      {
+        "title": "Which credit card should I use for dining?",
+        "url": "https://getcardlab.app/best-card/dining",
+        "note": "Pick the dining or restaurant earn rate that still has room under its bonus cap, if you pay the statement balance in full. Caps and restaurant definitions vary by issuer. If you are carrying a balance, optimise borrowing cost first: interest at a typical purchase APR usually outruns a few percent of rewards in a single month.",
+        "section": "Which card, by category"
+      },
+      {
+        "title": "Which credit card should I use for gas or fuel?",
+        "url": "https://getcardlab.app/best-card/gas",
+        "note": "Use the highest gas or fuel earn rate that still has room under its bonus cap, if you clear the statement balance in full. Some cards fold EV charging into the same bonus; others do not. After the cap, compare base rates. If you are carrying a balance, optimise borrowing cost first.",
+        "section": "Which card, by category"
+      },
+      {
+        "title": "Which credit card should I use for travel purchases?",
+        "url": "https://getcardlab.app/best-card/travel",
+        "note": "Travel earn rates often split airfare, hotels and other travel. Use the rate that matches the purchase, and watch remaining bonus caps, if you pay the statement balance in full. If you are carrying a balance, optimise borrowing cost first: interest at a typical purchase APR usually outruns a few percent of rewards in a single month.",
+        "section": "Which card, by category"
+      },
+      {
+        "title": "Card catalog coverage by country",
+        "url": "https://getcardlab.app/coverage",
+        "note": "Which markets have verified cards, how many, from which issuers, and the method every rate must survive to be published.",
+        "section": "Coverage and sourcing"
+      },
+      {
+        "title": "Credit card calculators",
+        "url": "https://getcardlab.app/calculators",
+        "note": "The five calculators below: three for a card balance, which use the average daily balance method rather than dividing a balance by a payment, and two for a bank bonus, its return on parked cash and what it leaves after tax.",
+        "section": "Calculators (free, no sign-up)"
+      },
+      {
+        "title": "Credit card payoff calculator",
+        "url": "https://getcardlab.app/calculators/credit-card-payoff",
+        "note": "A credit card payoff calculator turns three numbers - balance, APR, and monthly payment - into two answers: how many months until the balance is clear, and how much interest you pay to get there. The gap between paying a fixed amount and paying only the minimum is usually measured in years, not months.",
+        "section": "Calculators (free, no sign-up)"
+      },
+      {
+        "title": "Credit card interest calculator",
+        "url": "https://getcardlab.app/calculators/credit-card-interest",
+        "note": "Enter a balance, an APR and a monthly payment. The calculator returns how many months until the balance is clear and the total interest you pay to get there. Monthly interest is the balance times the APR divided by 12, rounded to the cent. The daily cost of the same balance is the APR divided by 365. Neither charge hits new purchases while you pay the statement in full and keep the grace period.",
+        "section": "Calculators (free, no sign-up)"
+      },
+      {
+        "title": "Minimum payment calculator",
+        "url": "https://getcardlab.app/calculators/minimum-payment",
+        "note": "Most issuers set the minimum payment as the greater of a flat floor - often $25 to $35 - or a small percentage of the balance, typically 1% to 3%, plus that cycle's interest and fees. Because the percentage shrinks along with the balance, paying only the minimum gets slower the longer it goes on.",
+        "section": "Calculators (free, no sign-up)"
+      },
+      {
+        "title": "Bank bonus ROI calculator",
+        "url": "https://getcardlab.app/calculators/bank-bonus-roi",
+        "note": "A bank bonus ROI calculator turns the offer's own terms - the bonus, the cash you must park, the deposit window, the payout period and any early-close window - into an annualised return on that cash. A $300.00 bonus on $15,000.00 held for 180 days returns 4.1% a year, which is the number to compare with a savings rate.",
+        "section": "Calculators (free, no sign-up)"
+      },
+      {
+        "title": "Bank bonus tax calculator",
+        "url": "https://getcardlab.app/calculators/bank-bonus-tax",
+        "note": "A cash bank bonus is interest income, taxed at your ordinary marginal rate in the year it is credited, and reported on Form 1099-INT once your interest from that bank reaches $10. A $300.00 bonus at a combined 27% rate costs $81.00 in tax and leaves $219.00, so compare offers on the after-tax figure.",
+        "section": "Calculators (free, no sign-up)"
+      },
+      {
+        "title": "Web simulator",
+        "url": "https://getcardlab.app/app/",
+        "note": "The full simulator, free in the browser. Calculator and guide pages can prefill a scenario when you open them.",
+        "section": "Calculators (free, no sign-up)"
+      },
+      {
+        "title": "How a credit card cycle works",
+        "url": "https://getcardlab.app/guide",
+        "note": "Every term below, defined in one place.",
+        "section": "Guide"
+      },
+      {
+        "title": "Statement date",
+        "url": "https://getcardlab.app/guide/statement-date",
+        "note": "The bill generation date is this date: the day your bill is calculated, also called the closing or cutoff date. Everything up to this day is totaled into a “statement balance,” and your reported utilization is usually measured here too.",
+        "section": "Guide"
+      },
+      {
+        "title": "Due date",
+        "url": "https://getcardlab.app/guide/due-date",
+        "note": "The deadline to pay your statement. Pay at least the minimum to stay current; pay the full statement balance to keep your purchases interest-free.",
+        "section": "Guide"
+      },
+      {
+        "title": "Grace period",
+        "url": "https://getcardlab.app/guide/grace-period",
+        "note": "A credit card grace period is the interest-free window on new purchases. You keep it only if you paid your last statement balance in full by its due date.",
+        "section": "Guide"
+      },
+      {
+        "title": "Pay before statement close",
+        "url": "https://getcardlab.app/guide/pay-before-statement",
+        "note": "Paying before the statement date and paying by the due date solve different problems. A payment that posts before the statement closes can lower the balance that is typically used for reported utilization. Paying the statement balance in full by the due date is usually what keeps the interest-free grace period alive.",
+        "section": "Guide"
+      },
+      {
+        "title": "Statement balance vs. current balance",
+        "url": "https://getcardlab.app/guide/statement-vs-current",
+        "note": "Your current balance is everything you owe right now. Your statement balance is the amount frozen on the cutoff date, and it’s the number interest and “pay in full” are based on.",
+        "section": "Guide"
+      },
+      {
+        "title": "Minimum payment",
+        "url": "https://getcardlab.app/guide/minimum-payment",
+        "note": "The smallest amount you can pay to stay current. It’s designed to be small, often mostly interest and fees.",
+        "section": "Guide"
+      },
+      {
+        "title": "Credit limit & utilization",
+        "url": "https://getcardlab.app/guide/utilization",
+        "note": "Your limit is the most you can borrow. Utilization is your balance ÷ limit, usually measured at the cutoff. Lower is generally seen as healthier.",
+        "section": "Guide"
+      },
+      {
+        "title": "APR & interest",
+        "url": "https://getcardlab.app/guide/apr-interest",
+        "note": "APR is the yearly interest rate. CardLab applies it with the average daily balance method: a daily rate is charged on each day’s balance, then added up across the cycle.",
+        "section": "Guide"
+      },
+      {
+        "title": "Cash advance",
+        "url": "https://getcardlab.app/guide/cash-advance",
+        "note": "Borrowing cash against your card. It usually has an upfront fee, no grace period, and a higher APR, so interest starts on day one.",
+        "section": "Guide"
+      },
+      {
+        "title": "Rewards vs. interest",
+        "url": "https://getcardlab.app/guide/rewards",
+        "note": "Cashback, points, and miles are real value, but only if interest and fees don’t erase them.",
+        "section": "Guide"
+      },
+      {
+        "title": "Bonus caps",
+        "url": "https://getcardlab.app/guide/bonus-caps",
+        "note": "A bonus cap is a hard limit on how much spending earns the elevated rate in a category, or across rotating categories, for a period - often a month or a quarter. Once that spend is used up, further purchases in the same category usually earn the card's base rate, not the headline bonus.",
+        "section": "Guide"
+      },
+      {
+        "title": "How rates are verified",
+        "url": "https://getcardlab.app/guide/how-we-verify-rates",
+        "note": "CardLab does not copy rates from comparison sites. A figure reaches the app only if it can be tied to a sentence on the issuer's own public product page, with a link to that page and the date it was read. A claim that cannot clear that bar is rejected by the build and never ships.",
+        "section": "Guide"
+      },
+      {
+        "title": "Blog index",
+        "url": "https://getcardlab.app/blog",
+        "note": "Short, sourced answers on bank bonuses, direct deposits, which card to use, and the card rules in the fine print. Every figure names its source and the date it was read.",
+        "section": "Blog"
+      },
+      {
+        "title": "Bank bonuses",
+        "url": "https://getcardlab.app/blog/topic/bank-bonuses",
+        "note": "How checking and savings sign-up bonuses work, what qualifies, and what they cost you. 42 posts, each with its sources and the date they were read.",
+        "section": "Blog"
+      },
+      {
+        "title": "Direct deposit",
+        "url": "https://getcardlab.app/blog/topic/direct-deposit",
+        "note": "What banks count as a direct deposit, and what they quietly do not. 17 posts, each with its sources and the date they were read.",
+        "section": "Blog"
+      },
+      {
+        "title": "Which card",
+        "url": "https://getcardlab.app/blog/topic/which-card",
+        "note": "Which of your cards to use for a purchase, and why the answer moves during the month. 9 posts, each with its sources and the date they were read.",
+        "section": "Blog"
+      },
+      {
+        "title": "Card mechanics",
+        "url": "https://getcardlab.app/blog/topic/card-mechanics",
+        "note": "Statement dates, grace periods, utilization and the other rules printed in the fine print. 12 posts, each with its sources and the date they were read.",
+        "section": "Blog"
+      },
+      {
+        "title": "Card offers",
+        "url": "https://getcardlab.app/blog/topic/card-offers",
+        "note": "Sign-up bonuses, spend thresholds and annual fees, worked through with real numbers. 14 posts, each with its sources and the date they were read.",
+        "section": "Blog"
+      },
+      {
+        "title": "Strategy",
+        "url": "https://getcardlab.app/blog/topic/strategy",
+        "note": "Sequencing bonuses, parking cash, and deciding when an offer is worth the afternoon. 35 posts, each with its sources and the date they were read.",
+        "section": "Blog"
+      },
+      {
+        "title": "CardPointers alternatives: which card-rewards app fits you?",
+        "url": "https://getcardlab.app/blog/cardpointers-alternatives",
+        "note": "To track credit card sign-up bonuses without linking your bank, the common picks are CardLab, Travel Freely, CardPointers and a Google Sheets spreadsheet you build yourself. CardLab works without linking your bank or card accounts: it tracks statements, due dates, reward caps and sign-up bonuses from terms you enter. Travel Freely is a free U.S. credit card bonus organizer with deadline reminders, and CardPointers focuses on card choice and auto-added offers.",
+        "section": "Blog"
+      },
+      {
+        "title": "How bank bonuses differ from credit card sign-up offers",
+        "url": "https://getcardlab.app/blog/bank-bonus-vs-card-sign-up-offer",
+        "note": "A bank bonus pays cash after you meet deposit or balance rules on a checking or savings account. A credit card sign-up offer pays points or statement credit after you clear a minimum spend. They hit different constraints: cash and ChexSystems on one side, credit pulls and spend timing on the other. Stack them only when both schedules fit.",
+        "section": "Blog"
+      },
+      {
+        "title": "Bank promo APY vs a cash sign-up bonus",
+        "url": "https://getcardlab.app/blog/bank-promo-apy-vs-cash-bonus",
+        "note": "A promotional APY is a temporary interest rate on a balance. A cash bank bonus posts once after you meet deposit or balance rules. Put both on the same parked cash and the same number of days, after fees, then pick the larger net. Do not compare a headline APY to a headline bonus in isolation.",
+        "section": "Blog"
+      },
+      {
+        "title": "Bask Bank $300 Interest Checking bonus requirements",
+        "url": "https://getcardlab.app/blog/bask-bank-300-bonus-requirements",
+        "note": "Bask Bank's More Ways offer, read on 6 October 2026, pays $50 per qualifying statement period, up to $300, when you open new Interest Savings and Interest Checking between October 1 and December 31, 2026 and meet the $10,000 savings average, $2,500 Qualifying Automated Deposits by the 25th, and $100 checking Minimum Daily Balance in each of up to six periods.",
+        "section": "Blog"
+      },
+      {
+        "title": "BMO $600 checking bonus requirements (14 states)",
+        "url": "https://getcardlab.app/blog/bmo-600-checking-bonus-requirements",
+        "note": "BMO's checking offer, read on 6 October 2026, pays $100 a month for up to six months, up to $600, when a new personal checking client in an eligible state opens Smart Money, Smart Advantage or Relationship Checking between September 9 and December 15, 2026 with the promo code and posts $1,000 or more in qualifying direct deposits each month. Existing BMO personal checking clients and 12-month closures are excluded.",
+        "section": "Blog"
+      },
+      {
+        "title": "Navy Federal $400 new-member checking bonus requirements",
+        "url": "https://getcardlab.app/blog/navy-federal-checking-bonus-requirements",
+        "note": "Navy Federal's new-member checking offer, read on 6 October 2026, pays $400 when you join using promo code CHK26SRC between October 1 and December 31, 2026, open a checking account as primary owner by December 31, 2026, and complete qualifying direct deposit transactions by April 30, 2027. Membership is limited to the armed forces, DoD personnel, veterans, DoD civilians and contractors, and their immediate family. The bonus posts to Membership Savings by July 30, 2027.",
+        "section": "Blog"
+      },
+      {
+        "title": "Which credit card perks are worth an annual fee?",
+        "url": "https://getcardlab.app/blog/credit-card-perks-worth-paying-for",
+        "note": "A perk is worth the annual fee when the credits and access you actually use exceed the fee in a normal year. Count only the hotel, travel, or dining credits you redeem, and lounge visits you take. Ignore the brochure list you will not touch. If the leftovers are thin, a no-fee card is the quieter win.",
+        "section": "Blog"
+      },
+      {
+        "title": "When should you use a points transfer bonus?",
+        "url": "https://getcardlab.app/blog/when-to-use-a-points-transfer-bonus",
+        "note": "Use a points transfer bonus when you already have a trip that needs that partner's miles and the bonus raises your redemption value above what cash back would have paid. Do not transfer just because the email landed. Transfers are usually one-way, and orphan miles are expensive clutter.",
+        "section": "Blog"
+      },
+      {
+        "title": "Miles vs cash back: which wins for your spend?",
+        "url": "https://getcardlab.app/blog/miles-vs-cash-back-which-wins",
+        "note": "Miles beat cash back when the award you book is worth more per point than your cash-back card pays on the same spend. Cash back wins when you value simplicity, hate blackout risk, or redeem miles near a penny. Run both on one real trip and one real grocery month before you pick a lane.",
+        "section": "Blog"
+      },
+      {
+        "title": "Are credit card welcome bonuses worth it?",
+        "url": "https://getcardlab.app/blog/are-credit-card-welcome-bonuses-worth-it",
+        "note": "A welcome bonus is worth it when the points or cash you keep, minus the annual fee and any spend you force, still beat what your current cards would have earned on the same bills. Run that net over the first year, not the marketing headline. If the leftover is thin and the card is useless after month twelve, skip it.",
+        "section": "Blog"
+      },
+      {
+        "title": "Credit card sign-up bonus minimum spend, priced honestly",
+        "url": "https://getcardlab.app/blog/credit-card-sign-up-bonus-minimum-spend",
+        "note": "Treat a credit card sign-up bonus as net value after the purchases you would not have made, the annual fee in the first year, and any category you would otherwise run on a higher-earn card. Divide the bonus by the minimum spend only after you strip those costs. If the leftover cents per dollar beat your everyday card, the offer is still in play.",
+        "section": "Blog"
+      },
+      {
+        "title": "Bank bonus statistics: what current checking and savings offers actually require",
+        "url": "https://getcardlab.app/blog/bank-bonus-statistics",
+        "note": "As of 6 October 2026, the thirteen bank bonus tiers CardLab tracks paid a median of $300, ranging from $100 to $600. We read each tier on Chase, Wells Fargo, Capital One, Citi, Bank of America, Bask Bank, Navy Federal and BMO's own offer pages. Ten of the thirteen require direct or qualifying electronic deposits. Chase's two savings tiers ask for $5,000 or $10,000 of new money held 90 days.",
+        "section": "Blog"
+      },
+      {
+        "title": "Credit card rewards statistics (2026): what bonuses and rewards are worth, and what they cost",
+        "url": "https://getcardlab.app/blog/credit-card-rewards-statistics",
+        "note": "US cardholders earned $47.5 billion in credit card rewards in 2024, and the average sign-up bonus earned on general purpose cards was $311, down from $326 in 2022, according to the CFPB's 2025 credit card market report. Rewards averaged about 1.6% of purchase volume. In the same year, cardholders paid $160 billion in interest and $31.3 billion in fees.",
+        "section": "Blog"
+      },
+      {
+        "title": "What is a calculator card?",
+        "url": "https://getcardlab.app/blog/what-is-a-calculator-card",
+        "note": "A calculator card search is almost never a product name. It is someone looking for a card-related calculator: bonus ROI, tax on a cash bonus, interest, payoff, or minimum payment. CardLab ships those as free tools on the site, and the catalog is separate from the math.",
+        "section": "Blog"
+      },
+      {
+        "title": "Are annual fee credit cards worth it, and how do you check?",
+        "url": "https://getcardlab.app/blog/are-annual-fee-credit-cards-worth-it",
+        "note": "An annual fee is worth paying when the extra earn rate plus the credits you would genuinely use exceed the fee at your own spending. The test is arithmetic: divide the fee by the extra rate over a no-fee alternative to get the category spending needed to break even, then count only the credits you would have bought anyway.",
+        "section": "Blog"
+      },
+      {
+        "title": "Huntington checking bonus requirements: Perks $400 and Platinum Perks $600",
+        "url": "https://getcardlab.app/blog/huntington-checking-bonus-requirements",
+        "note": "Huntington's public checking offer, read on its own page on 29 and 30 September 2026, had two separate cards. Perks Checking paid $400 for $500 or more in qualifying direct deposits within 90 days. Platinum Perks Checking paid $600 for $25,000 or more in new money within 90 days. Both required opening a new account with the promotion code by September 30, 2026, in one of 21 listed states, and keeping it open 90 days.",
+        "section": "Blog"
+      },
+      {
+        "title": "Which card is best for groceries, and why does the answer change mid-year?",
+        "url": "https://getcardlab.app/blog/best-card-for-groceries",
+        "note": "The best grocery card is the highest published supermarket rate you still have room under, once its annual fee is repaid at your own grocery spending. Every headline grocery rate has an annual cap, so most of these cards revert to a base rate partway through the year, at which point a flat-rate card earns more on the same shopping.",
+        "section": "Blog"
+      },
+      {
+        "title": "Which credit card should I use for this purchase?",
+        "url": "https://getcardlab.app/blog/which-credit-card-should-i-use-for-this-purchase",
+        "note": "Check whether you are carrying a balance first, because interest outruns any reward. If you are not, use the card with the highest published rate for that category which still has room under its bonus cap, then confirm the annual fee is earned back at your real spending. Caps and promotions move the answer during the year.",
+        "section": "Blog"
+      },
+      {
+        "title": "What does paying only the minimum payment really cost?",
+        "url": "https://getcardlab.app/blog/minimum-payment-what-it-really-costs",
+        "note": "Every statement carries a box that answers this for your own balance and your own rate. It must warn that minimum payments cost more in interest and take longer, estimate how long the minimum would take, and show the monthly payment that clears the balance in three years together with the total cost and the saving. Read that box before any calculator.",
+        "section": "Blog"
+      },
+      {
+        "title": "What is a clawback window, and when is the first safe day to close?",
+        "url": "https://getcardlab.app/blog/what-is-a-clawback-window",
+        "note": "A clawback window is the period, counted from the day you opened the account, during which closing it lets the bank take back the bonus or charge an early-closure fee. The first safe day to close is the opening date plus that window, provided the bonus has already posted. Where the offer prints no window, the safe day is unknown, and the bank is the only one who can name it.",
+        "section": "Blog"
+      },
+      {
+        "title": "Foreign transaction fees, and the currency question you should always answer the same way",
+        "url": "https://getcardlab.app/blog/foreign-transaction-fees-and-dcc",
+        "note": "Paying abroad can cost you twice. Your issuer may add a foreign transaction fee, printed in the card terms and ranging across issuers from well under two per cent to three. Separately, a terminal may offer to bill you in your home currency at its own exchange rate, which is a second markup on top. Decline that offer every time.",
+        "section": "Blog"
+      },
+      {
+        "title": "Credit utilization: what actually gets reported, and on which day?",
+        "url": "https://getcardlab.app/blog/credit-utilization-what-actually-gets-reported",
+        "note": "Utilisation is the share of your revolving credit you are using, measured from the balance your issuer reports, which is usually the balance on the statement date. It is not measured from your average spending or from the balance after you pay. Paying in full every month can still report high utilisation if the payment lands after the cycle closes.",
+        "section": "Blog"
+      },
+      {
+        "title": "Is a bank bonus worth it? The arithmetic that answers it",
+        "url": "https://getcardlab.app/blog/is-a-bank-bonus-worth-it",
+        "note": "Judge a bank bonus as a return on the cash it makes you park, over the days it keeps that cash committed, after the fees you cannot waive. A $300 bonus on $15,000 held for 180 days is a 4.1% annualised return, which barely beats a 4% savings account. The same $300 for payroll alone parks nothing and is simply $2.50 a day of committed time.",
+        "section": "Blog"
+      },
+      {
+        "title": "What counts as a cash advance, and why does it cost so much more?",
+        "url": "https://getcardlab.app/blog/what-counts-as-a-cash-advance-on-a-credit-card",
+        "note": "A cash advance is any transaction your card agreement treats as borrowing cash rather than buying something. It covers ATM withdrawals, wire transfers, buying foreign currency, money orders, travellers cheques, lottery tickets, gambling chips and access cheques. Each carries an upfront fee, a separate and higher APR, and interest from the transaction date with no grace period.",
+        "section": "Blog"
+      },
+      {
+        "title": "Overdraft and NSF risk while you hold a bank bonus",
+        "url": "https://getcardlab.app/blog/bank-bonus-overdraft-risk-during-the-hold",
+        "note": "An overdraft is the bank paying a transaction you could not cover. The CFPB says deposits are not always available immediately, and that many banks charge $30 or more per overdraft. Moving a paycheck to a bonus account while bills still draft the old one creates that fee. An unpaid negative balance that leads the bank to close the account can be reported to a checking-account company. Capital One's 360 Checking page says that account has no overdraft fees.",
+        "section": "Blog"
+      },
+      {
+        "title": "Bank of America $100, $300 or $500 checking bonus requirements",
+        "url": "https://getcardlab.app/blog/bank-of-america-checking-fee-or-bonus",
+        "note": "Bank of America's public personal checking offer, read on 6 October 2026, pays $100, $300 or $500 when a new checking customer opens an eligible Advantage account through the offer page by January 31, 2027 and receives Qualifying Direct Deposits totaling $2,000, $5,000 or $10,000 or more within 90 days of opening. The bank attempts payout within 60 days after that window if the account stays open. A fee waiver is not this cash bonus.",
+        "section": "Blog"
+      },
+      {
+        "title": "How to bridge cash between two bank bonuses",
+        "url": "https://getcardlab.app/blog/bridge-cash-between-two-bank-bonuses",
+        "note": "If two offers each require a balance to stay put on the same days, you need both balances at once. A $5,000 hold and a $10,000 hold that overlap are $15,000 committed. Payroll-only offers can park no balance, and they still consume the paycheck. Map the start and end of each hold before you open the second account. Moving the same dollars out early is how the first bonus fails.",
+        "section": "Blog"
+      },
+      {
+        "title": "How a brokerage account bonus differs from a bank bonus",
+        "url": "https://getcardlab.app/blog/brokerage-bonus-vs-bank-bonus",
+        "note": "A bank bonus pays you for a checking or savings deposit. The IRS treats withdrawable interest as taxable when it becomes available, and Chase and Capital One say their checking bonuses go on Form 1099-INT. A brokerage bonus pays for funding a brokerage account. That cash is not a bank deposit, and SIPC protection is not FDIC insurance. Read the brokerage tax line before you assume the form. Do not reuse the bank checklist unchanged.",
+        "section": "Blog"
+      },
+      {
+        "title": "Capital One 360 Checking bonus requirements",
+        "url": "https://getcardlab.app/blog/capital-one-360-checking-bonus-requirements",
+        "note": "Capital One's 360 Checking offer, read on 3 October 2026, pays $250 if you open with code CHECKING250 and receive at least two qualifying direct deposits of $500 or more within 75 days. Owners of 360, Simply, or Total Control Checking on or after 1 January 2024 are ineligible, including secondary owners. Processing after day 75 can take up to 60 days. The account must be open and in good standing when the bonus is paid.",
+        "section": "Blog"
+      },
+      {
+        "title": "Chase Total Checking bonus requirements, line by line",
+        "url": "https://getcardlab.app/blog/chase-total-checking-bonus-requirements",
+        "note": "Chase's public Total Checking offer, last re-checked on 11 October 2026, pays $400 when a new Chase checking customer opens that account and has direct deposits totaling $1,000 or more within 90 days of offer enrollment. Chase deposits the bonus within 15 days after you finish, if the account is not closed or restricted at payout. Zelle, micro-deposits, external transfers, and tax refunds do not count as direct deposits.",
+        "section": "Blog"
+      },
+      {
+        "title": "Citi checking bonus: copy the terms before you rely on $325",
+        "url": "https://getcardlab.app/blog/citi-checking-bonus-terms-to-copy",
+        "note": "Yes, Citi's checking account bonus is live: its public offer page, read again in a browser on 7 October 2026, pays $325 to a new Citibank Regular Checking customer with at least two Enhanced Direct Deposits totaling $3,000 or more within 90 calendar days of account opening. Citi credits the bonus between the 90th and 120th calendar day after opening if the account stays open and in good standing. You must apply from the offer page, from 4/14/26 to 10/26/26.",
+        "section": "Blog"
+      },
+      {
+        "title": "What happens if you close a card before the welcome bonus posts?",
+        "url": "https://getcardlab.app/blog/closing-a-card-before-the-welcome-bonus-posts",
+        "note": "You are likely to lose a welcome bonus if you close the card before it posts. The offer pays after you meet its condition, and the issuer's terms say whether the account must still be open. The CFPB says a card application is a hard inquiry, and that rewards follow the issuer's program. Close only after the bonus is on the statement and any open-account sentence is still true. CardLab does not close the card.",
+        "section": "Blog"
+      },
+      {
+        "title": "How a credit union bonus differs from a national bank bonus",
+        "url": "https://getcardlab.app/blog/credit-union-bonus-vs-national-bank-bonus",
+        "note": "A national bank bonus asks whether you are a new customer under that bank's offer. A credit union bonus asks that, and also whether you are allowed to join. Credit unions are member-owned, with a field of membership. Banks are not. Deposits are insured to the same $250,000 federal limit, through the NCUA at a credit union and the FDIC at a bank. The bonus amount, the deposit test, and the close rule still come from that institution's own page.",
+        "section": "Blog"
+      },
+      {
+        "title": "Does Venmo count as a direct deposit for a bank bonus?",
+        "url": "https://getcardlab.app/blog/does-venmo-count-as-a-direct-deposit",
+        "note": "A Venmo payment you send or receive as person-to-person is not a qualifying direct deposit at Chase or Wells Fargo. Chase excludes person-to-person payments and names Zelle. Wells Fargo excludes Zelle by name. Payroll that your employer sends by ACH into the bank account can still qualify, even if you looked at the pay stub in an app. Money that stays inside Venmo never hits the bank's test.",
+        "section": "Blog"
+      },
+      {
+        "title": "Early-closure fee vs bonus clawback: two different clauses",
+        "url": "https://getcardlab.app/blog/early-closure-fee-vs-bonus-clawback",
+        "note": "An early-closure fee is a charge for closing an account before a stated number of days. A bonus clawback takes back, or refuses to pay, the promotional cash. One can leave the bonus in place and charge a fee. The other removes the bonus. Chase and Wells Fargo, on the offers we read, print no fixed window. They still require the account to be open at payout.",
+        "section": "Blog"
+      },
+      {
+        "title": "How to document a bank bonus for your tax return",
+        "url": "https://getcardlab.app/blog/how-to-document-a-bank-bonus-for-taxes",
+        "note": "Keep four records: the offer page dated when you enrolled, the enrollment confirmation, the account line that shows the bonus posting and its date, and Form 1099-INT when it arrives. The IRS taxes interest in the year it becomes available, and it says you report that interest even if no 1099-INT comes. Chase and Capital One both say the checking bonus is reported on Form 1099-INT. The posting date, not the day you qualified, is the year.",
+        "section": "Blog"
+      },
+      {
+        "title": "How to read a bank bonus offer before you open the account",
+        "url": "https://getcardlab.app/blog/how-to-read-a-bank-bonus-offer",
+        "note": "Read the offer terms, not the banner. Eight lines decide the outcome: how the bank defines a qualifying deposit, the amount, the window and the day it starts, how soon the bank pays, the monthly fee and its waiver, any early-close period, who is excluded, and the expiry date. Chase and Wells Fargo print all of them, and they differ on half.",
+        "section": "Blog"
+      },
+      {
+        "title": "Who qualifies for a bank bonus on a joint account?",
+        "url": "https://getcardlab.app/blog/joint-bank-bonus-who-qualifies",
+        "note": "The offer can look at every owner. Chase limits the checking bonus to one per account and one new checking bonus every two years from the last enrollment, and it says eligibility may be limited by ownership. Capital One bars the 360 Checking bonus if you were a primary or secondary owner of listed checking accounts on or after 1 January 2024. Add a co-owner only after you read that line.",
+        "section": "Blog"
+      },
+      {
+        "title": "Pending or posted: which deposit counts for a bank bonus?",
+        "url": "https://getcardlab.app/blog/pending-vs-posted-bank-bonus-deposit",
+        "note": "Use the date the deposit posts, not the date an app shows it early. Wells Fargo says an Early Pay Day ACH credit does not count toward the bonus until it posts and is no longer pending. The CFPB warns a deposit is not always available immediately. Chase requires the direct deposits within 90 days of enrollment. If the window ends while a credit is pending, do not assume you qualified.",
+        "section": "Blog"
+      },
+      {
+        "title": "Can a restricted account block a bank bonus?",
+        "url": "https://getcardlab.app/blog/restricted-account-can-block-a-bank-bonus",
+        "note": "Yes, when the offer requires the account to be open and unrestricted, or in good standing, on payout day. Chase says the enrolled Total Checking account must not be closed or restricted at payout. Capital One will not pay the 360 Checking bonus if the account is in default, closed, suspended, or not in good standing. Ask what the block is, in writing, before that date.",
+        "section": "Blog"
+      },
+      {
+        "title": "What a returned or reversed deposit does to a bank bonus",
+        "url": "https://getcardlab.app/blog/returned-deposit-can-miss-a-bank-bonus",
+        "note": "A deposit that later reverses should not be treated as still qualifying. Chase needs $1,000 in direct deposits inside 90 days of enrollment. Wells Fargo needs $1,000 posted inside 90 calendar days of opening. Capital One needs two qualifying deposits of at least $500. Replace a shortfall with another qualifying deposit before the window ends. A transfer you start is not that replacement.",
+        "section": "Blog"
+      },
+      {
+        "title": "Savings account bonus vs checking bonus",
+        "url": "https://getcardlab.app/blog/savings-bonus-vs-checking-bonus",
+        "note": "A checking bonus on the Chase and Wells Fargo pages pays after qualifying direct deposits post. Chase's savings offer pays after you deposit new money and keep it there. Chase checking is $400 for $1,000 of direct deposits within 90 days of enrollment. Chase savings is $100 or $200 from new money deposited within 30 days and maintained for 90 days. The savings side locks cash. The checking side redirects a paycheck.",
+        "section": "Blog"
+      },
+      {
+        "title": "Can a second-chance checking account earn a bank bonus?",
+        "url": "https://getcardlab.app/blog/second-chance-checking-and-bank-bonuses",
+        "note": "Usually you have to read two products, not one. The CFPB describes lower-risk checking and prepaid cards that block overdrafts for people who were denied a standard account. A bank bonus is an offer on a named product, often a standard checking account with its own approval rules. Chase Total Checking's $400 offer and Chase Secure Banking's separate transaction offer are not interchangeable. Approval for the second product is not enrollment in the first.",
+        "section": "Blog"
+      },
+      {
+        "title": "Soft pull vs hard pull when you open a bonus account",
+        "url": "https://getcardlab.app/blog/soft-pull-vs-hard-pull-on-a-bank-bonus",
+        "note": "A hard inquiry is a lender reviewing your credit report because you applied for credit, and the CFPB says it can affect your score. A soft inquiry is not an application for new credit, and it does not affect your score. A checking account is not a loan. Some banks still look at a credit report or a checking-account report. Ask if the application includes a credit product before you assume the pull is soft.",
+        "section": "Blog"
+      },
+      {
+        "title": "Do student checking accounts qualify for bank bonuses?",
+        "url": "https://getcardlab.app/blog/student-checking-and-bank-bonus-offers",
+        "note": "A student account qualifies only if the bonus offer names that account and you meet its age rules. Capital One's 360 Checking disclosures require age 18. Wells Fargo requires 18 to apply for Everyday Checking online, and a primary owner age 17 to 24 can avoid the monthly fee. That waiver is not the $325 bonus. A differently named campus account does not inherit another product's offer.",
+        "section": "Blog"
+      },
+      {
+        "title": "How to switch direct deposit for a bonus without missing payroll",
+        "url": "https://getcardlab.app/blog/switch-direct-deposit-without-missing-pay",
+        "note": "Change payroll only after you know the effective pay date, and keep the old account funded until a qualifying credit has posted at the new bank. Capital One says it may take two cycles for direct deposits to take effect. Chase and Wells Fargo give you 90 days, but a transfer you start yourself does not replace payroll. Split the paycheck if the employer allows it. Do not close the old account in the same week you submit the form.",
+        "section": "Blog"
+      },
+      {
+        "title": "Wells Fargo $325 checking bonus: requirements and what to check",
+        "url": "https://getcardlab.app/blog/wells-fargo-checking-bonus-requirements",
+        "note": "Wells Fargo's new-checking offer, read on its own page on 14 October 2026, pays $325 when you open a consumer checking account with the offer code by 13 January 2027 and receive $1,000 or more in posted qualifying electronic deposits within 90 calendar days. Zelle, transfers, and mobile deposits do not count. A Wells Fargo checking bonus in the past 12 months rules you out. The bonus posts within 30 calendar days and is reported as income.",
+        "section": "Blog"
+      },
+      {
+        "title": "What happens if you miss a bank bonus deadline?",
+        "url": "https://getcardlab.app/blog/what-if-you-miss-a-bank-bonus-deadline",
+        "note": "The offers we read do not pay a partial bonus for a late deposit. Chase counts 90 days from enrollment for $1,000 in direct deposits. Wells Fargo counts 90 calendar days from opening for $1,000 in qualifying electronic deposits. Capital One counts 75 days from opening for two deposits of at least $500. A late deposit does not restart the offer unless the bank extends it in writing.",
+        "section": "Blog"
+      },
+      {
+        "title": "What is a grace period, how do you lose it, and how does it come back?",
+        "url": "https://getcardlab.app/blog/what-is-a-grace-period-on-a-credit-card",
+        "note": "A grace period is the stretch between the end of a billing cycle and the payment due date during which new purchases do not accrue interest. You have it only while you pay each statement balance in full and on time. Miss that once and new purchases can start accruing interest from the day they post, until two full payments restore it.",
+        "section": "Blog"
+      },
+      {
+        "title": "What does new customer mean on a bank bonus?",
+        "url": "https://getcardlab.app/blog/what-new-customer-means-on-a-bank-bonus",
+        "note": "New customer means the exclusions on that offer. Chase bars existing checking customers, closures within 90 days, and negative-balance closures within 3 years, plus more than one new checking bonus inside two years. Capital One bars you if you held 360, Simply, or Total Control Checking as a primary or secondary owner on or after 1 January 2024. Another bank's definition does not transfer.",
+        "section": "Blog"
+      },
+      {
+        "title": "When is a bank bonus not worth taking?",
+        "url": "https://getcardlab.app/blog/when-a-bank-bonus-is-not-worth-taking",
+        "note": "Skip a bank bonus when you cannot produce the deposit it defines, when fees you will pay consume the cash, or when you need that cash before you can close. A $300 bonus minus a $12 monthly fee for six months with no waiver is $228 before tax. The same $300 on $15,000 held 180 days is a thin return beside a savings rate. CardLab does not open the account.",
+        "section": "Blog"
+      },
+      {
+        "title": "Statement date vs due date: which one actually runs your card?",
+        "url": "https://getcardlab.app/blog/statement-date-vs-due-date",
+        "note": "The statement date, also called the billing date or closing date, closes the billing cycle and fixes the balance you owe, the balance reported to the credit bureaus, and the start of the interest-free window. The due date is the deadline for paying that fixed balance. The statement date decides what you pay and what your credit file shows; the due date only decides when.",
+        "section": "Blog"
+      },
+      {
+        "title": "Does opening a checking account affect your credit score?",
+        "url": "https://getcardlab.app/blog/does-opening-bank-accounts-hurt-your-credit",
+        "note": "No. Opening a checking or savings account does not directly affect your credit score. Deposit accounts are not credit products, so banks typically use a soft inquiry or a deposit-history check that does not change FICO or VantageScore. Credit is only impacted under specific exceptions: a hard inquiry, an overdraft line of credit, or unpaid balances sent to collections.",
+        "section": "Blog"
+      },
+      {
+        "title": "Does Walmart count as grocery for credit card rewards?",
+        "url": "https://getcardlab.app/blog/does-walmart-count-as-grocery-for-credit-card-rewards",
+        "note": "Grocery bonus rates usually apply only when the merchant codes as a supermarket or grocery store at the card network. Big-box stores and wholesale clubs often code as superstore or warehouse, so the grocery bonus does not apply even if you buy food. Confirm the current issuer terms for any named exception; coding can also vary by outlet.",
+        "section": "Blog"
+      },
+      {
+        "title": "Why was my credit card declined, and what should I check first?",
+        "url": "https://getcardlab.app/blog/why-was-my-credit-card-declined",
+        "note": "A decline is the issuer answering one question with a no: authorise this amount, on this account, at this merchant, now. The usual causes are pending holds eating available credit, a charge that would pass the limit, a fraud rule, stale card data, a blocked merchant category, and a purchase the network read as a cash advance. Most are visible before you reach the till.",
+        "section": "Blog"
+      },
+      {
+        "title": "Do you pay taxes on bank bonuses?",
+        "url": "https://getcardlab.app/blog/do-you-pay-taxes-on-bank-bonuses",
+        "note": "Yes. A cash bonus for opening or funding a deposit account is treated as interest, and the IRS says interest credited to an account you can draw on is taxable in the year it becomes available to you. The bank normally reports it on Form 1099-INT once your interest for the year reaches $10, and you must report it even if no form arrives.",
+        "section": "Blog"
+      },
+      {
+        "title": "Which card is best for fuel, and where does the rate quietly change?",
+        "url": "https://getcardlab.app/blog/best-card-for-fuel",
+        "note": "The best fuel card is usually a capped bonus rate you stay under, not the highest headline number. Gas rewards are paid on a merchant category code rather than on gasoline itself, so pay-at-pump, warehouse fuel and a supermarket's own pumps can be coded differently and earn a different rate than the card's advertised gas category.",
+        "section": "Blog"
+      },
+      {
+        "title": "What is the best travel card if you are not chasing airline or hotel status?",
+        "url": "https://getcardlab.app/blog/best-card-for-travel-without-status",
+        "note": "For most travel, a flat-rate card with no foreign transaction fee earns more with less effort than a co-branded airline or hotel card. Status only pays off for someone who already flies one airline or stays at one hotel chain often enough to earn it, and a flat-rate card's points are usable on any airline, hotel or travel purchase without that commitment.",
+        "section": "Blog"
+      },
+      {
+        "title": "Checking bonus or high-yield savings: where does cash actually earn more?",
+        "url": "https://getcardlab.app/blog/checking-bonus-or-high-yield-savings",
+        "note": "A one-time bank bonus is worth comparing to a savings APY only after you convert it into a yield over a real holding period, because a bonus is a fixed dollar amount and an APY is an annual rate. Held for a short qualifying period, a bonus usually beats a high-yield savings rate; held over a full year on the same cash, an ongoing APY can catch up or pass it.",
+        "section": "Blog"
+      },
+      {
+        "title": "Credit union or big bank: what actually differs, and when is switching worth it?",
+        "url": "https://getcardlab.app/blog/credit-union-vs-big-bank",
+        "note": "A credit union is a member-owned, not-for-profit cooperative, while a bank is shareholder-owned and for-profit, and that difference drives most of the practical gaps between them: fees, membership eligibility and branch reach. Deposits at each are insured to the same federal limit through a different agency, so insurance is not the deciding factor. Switching is worth the afternoon when a credit union you qualify to join beats your bank on the specific fees or rates you pay today.",
+        "section": "Blog"
+      },
+      {
+        "title": "How many bank bonuses can you realistically earn in a year?",
+        "url": "https://getcardlab.app/blog/how-many-bank-bonuses-per-year",
+        "note": "The realistic count is set by each bank's own reuse rule rather than by how many banks exist. A bank that limits a new bonus to once every two years cannot be repeated in the same year, so the achievable count in a year is the number of different banks whose offers and requirements you can actually satisfy, not a fixed target.",
+        "section": "Blog"
+      },
+      {
+        "title": "Can you work on two bank bonuses at the same time?",
+        "url": "https://getcardlab.app/blog/multiple-bank-bonuses-at-the-same-time",
+        "note": "Yes, most bank bonus offers can run at the same time, because each bank checks its own requirement against your activity at that bank only. The real limit is not the banks noticing each other, since they generally do not, it is whether you can route a qualifying direct deposit and meet every other condition at each bank inside its own deadline.",
+        "section": "Blog"
+      },
+      {
+        "title": "How do you track rotating bonus categories without a spreadsheet?",
+        "url": "https://getcardlab.app/blog/rotating-bonus-categories-without-a-spreadsheet",
+        "note": "A rotating-category card pays its bonus rate only for the current quarter's named categories, only after you activate, and only up to that quarter's cap. Tracking that by memory means missing an activation window or overspending past the cap without noticing, and a spreadsheet only tells you what should have happened, not what card to use for the purchase in front of you today.",
+        "section": "Blog"
+      },
+      {
+        "title": "Can I close a Chase, Wells Fargo or Citi account after receiving a bonus?",
+        "url": "https://getcardlab.app/blog/can-you-close-a-bank-account-after-the-bonus",
+        "note": "Chase, Wells Fargo and Citi all require the account to stay open until they pay the bonus. Chase pays within 15 days of the requirements being met, Wells Fargo within 30 calendar days, and Citi between the 90th and 120th calendar day after opening, if the account stays open and in good standing. None of the three public offers names a day after payout when you may close, so check your current offer terms.",
+        "section": "Blog"
+      },
+      {
+        "title": "How is credit card interest actually calculated?",
+        "url": "https://getcardlab.app/blog/how-average-daily-balance-interest-works",
+        "note": "Most issuers divide your APR by 365 to get a daily periodic rate, apply that rate to your balance on each day of the billing cycle, and add the daily charges together at the end. The number that matters is therefore your average balance across the cycle, not the balance on any single day. This is why a payment made early in the cycle costs you less than the same payment made on the due date.",
+        "section": "Blog"
+      },
+      {
+        "title": "What does a credit card installment plan really cost?",
+        "url": "https://getcardlab.app/blog/installment-plans-real-cost-and-effective-apr",
+        "note": "A card installment plan replaces interest with a fixed monthly fee, so no annual percentage rate is printed on it anywhere. That fee still buys time, and converting it into an effective APR is the only way to compare the plan with carrying the balance normally. The conversion roughly doubles the annualised fee, because the fee is charged on the original amount while your actual balance falls each month.",
+        "section": "Blog"
+      },
+      {
+        "title": "Can you track your credit cards without linking a bank account?",
+        "url": "https://getcardlab.app/blog/track-cards-without-linking-a-bank",
+        "note": "Yes, and almost everything a card tracker does needs no bank connection at all. Statement dates, due dates, credit limits, APRs and reward terms are printed on your statement and your card agreement, they change rarely, and you can enter them once. A bank link buys automatic transaction import, and it costs a standing permission for a third party to read your accounts for as long as the link lives.",
+        "section": "Blog"
+      },
+      {
+        "title": "When does cashback lose to interest?",
+        "url": "https://getcardlab.app/blog/when-cashback-loses-to-interest",
+        "note": "Cashback is paid once on what you spend, and interest is charged every day on what you still owe. On a balance you carry for a full month, a purchase APR in the high teens or twenties costs more in that single month than a typical rewards rate pays on the same amount, and it keeps costing it every month after. While you are carrying a balance, the cheapest card to borrow on beats the card with the best rewards.",
+        "section": "Blog"
+      },
+      {
+        "title": "When does your bonus category card stop winning?",
+        "url": "https://getcardlab.app/blog/when-your-3-percent-card-stops-winning",
+        "note": "A bonus rate stops paying the moment its cap is spent, and from that moment the card earns its base rate on every further purchase in the category. Because the cap is usually counted per quarter or per year, the card you should reach for changes partway through the period, even though the card is still ahead on the running total. Compare the rate on the next dollar, not the rate printed on the card.",
+        "section": "Blog"
+      },
+      {
+        "title": "Why hasn't my bank bonus posted?",
+        "url": "https://getcardlab.app/blog/why-hasnt-my-bank-bonus-posted",
+        "note": "A bank bonus that has not posted has almost always failed one condition written into the offer: the deposit was not the kind the bank counts, the total fell short, the window was measured from a different day than you assumed, or the payout period has not run out yet. Check those four in that order before you call, because the bank will check them in the same order.",
+        "section": "Blog"
+      },
+      {
+        "title": "What counts as a direct deposit for a bank bonus?",
+        "url": "https://getcardlab.app/blog/what-counts-as-a-direct-deposit",
+        "note": "A direct deposit, for a bank bonus, is an electronic credit that the bank's offer terms name as qualifying, usually payroll, pension or government benefits sent through the ACH network. Transfers you start yourself, Zelle, mobile cheque deposits and ATM deposits are excluded almost everywhere. The definition is written into each offer, so read that page, not the bank's general help article.",
+        "section": "Blog"
+      },
+      {
+        "title": "CardLab",
+        "url": "https://getcardlab.app/",
+        "note": "What the app does, the simulation engine, and pricing.",
+        "section": "About"
+      },
+      {
+        "title": "About CardLab",
+        "url": "https://getcardlab.app/about",
+        "note": "What CardLab does, what makes it different, who uses it and who makes it.",
+        "section": "About"
+      },
+      {
+        "title": "Is CardLab safe?",
+        "url": "https://getcardlab.app/is-cardlab-safe",
+        "note": "No bank login, no real card number and no account; what stays on the device and the little CardLab does collect.",
+        "section": "About"
+      },
+      {
+        "title": "Pricing",
+        "url": "https://getcardlab.app/pricing",
+        "note": "The free plan, CardLab Pro, how the trial, billing and cancelling work, and what earlier lifetime unlock owners keep.",
+        "section": "About"
+      },
+      {
+        "title": "Support",
+        "url": "https://getcardlab.app/support",
+        "note": "Common questions and contact.",
+        "section": "About"
+      },
+      {
+        "title": "Privacy",
+        "url": "https://getcardlab.app/privacy",
+        "note": "What is collected (nothing on our servers; the website uses Ahrefs Web Analytics and Google Analytics 4) and what the optional cloud features do.",
+        "section": "Optional"
+      },
+      {
+        "title": "Terms",
+        "url": "https://getcardlab.app/terms",
+        "note": "Educational-use-only terms.",
+        "section": "Optional"
+      }
+    ],
+    "errors": [],
+    "warnings": [],
+    "valid": true,
+    "present": true
+  },
+  "body": "# CardLab\n\n> A private credit card and rewards tracker with a verified card catalog: track statements, due dates and reward caps, import a statement on the phone, and see which card to use - with no bank login.\n\nContent last reviewed: 2026-09-28. Free to use; CardLab Pro is an auto-renewable subscription - 3 days free, then $4.99 per month or $39.99 per year, cancellable anytime in the App Store. The free tier is two hand-entered cards in one country with the tracker, every published bank bonus and one tracked bonus; the checked card catalog, Best Card ranking, alerts, statement import, the transfer planner and the bank bonus ranking are Pro. Customers who bought the earlier one-time lifetime unlock keep the 1.4.x feature set it granted, permanently.\nContact: support@getcardlab.app\nFull text of the guide, calculators and coverage page in one file: https://getcardlab.app/llms-full.txt\n\n## Key facts\n\n- [What CardLab is](https://getcardlab.app/): A private credit card and rewards tracker for iPhone (and a simulator in the browser). It tracks statements, due dates and reward caps, reads statement PDFs on the phone, answers which card to use from issuer terms with provenance, and lists bank sign-up bonuses read from each bank's own offer page, with a tracker for the ones you are chasing. It does not give financial advice and does not calculate or predict real credit scores.\n- [Which CardLab this is](https://getcardlab.app/support): CardLab is the iPhone credit card tracker published at getcardlab.app, listed on the App Store as \"CardLab: Track Cards & Rewards\". It is unrelated to CardLab ASA / cardlab.com (card manufacturing hardware), to Stratos or cardlabcards, and to any game or physical product of the same name.\n- [Privacy](https://getcardlab.app/privacy): No bank login, no real card number, no ads and no trackers in the app. Data stays on the device by default; iCloud sync is opt-in.\n- [Independence](https://getcardlab.app/coverage): CardLab takes no commission from any issuer. No card is ranked or shown higher for payment; the app is funded by what people pay for it.\n- [Best Card](https://getcardlab.app/): Best Card ranks the cards a user tracks for a chosen purchase category, cap-aware and with the reasoning shown, using rates verified from issuer pages. It is offered only in markets with a verified catalog.\n- [Fee cadence](https://getcardlab.app/coverage): Fees are stated in the issuer's own cadence - monthly where the issuer prints monthly. An annualised comparison figure is labelled as CardLab's own arithmetic, never attributed to the issuer.\n- [Tracker coverage](https://getcardlab.app/): The tracker, billing-cycle calendar, interest and payoff simulators work in all 41 country presets, because they compute from terms the user enters.\n- [Card catalog markets](https://getcardlab.app/coverage): The verified card catalog covers 38 markets: United States, Canada, Greece, United Arab Emirates, China, Japan, Australia, France, Indonesia, Saudi Arabia, United Kingdom, Italy, Poland, Spain, the Philippines, Sweden, Switzerland, the Netherlands, Türkiye, Pakistan, South Africa, Mexico, South Korea, Thailand, Norway, New Zealand, Singapore, Hong Kong, Taiwan, Colombia, Germany, India, Malaysia, Vietnam, Ireland, Egypt, Brazil, Argentina.\n- [Tracker-only markets](https://getcardlab.app/coverage): These markets ship merchant data but NO cards, so CardLab offers the tracker there and does not rank cards: Nigeria.\n- [Catalog size](https://getcardlab.app/coverage): 673 cards from 149 issuers and 9,219 categorized merchant brands (bundle built 2026-09-28).\n- [Rate provenance](https://getcardlab.app/coverage): Every rate and annual fee carries provenance: 1,507 of 1,507 claims store the issuer URL they were read from, the verbatim sentence they were read from, and the date they were read.\n- [Verification window](https://getcardlab.app/coverage): Claims in the shipped catalog were verified between 2026-09-24 and 2026-09-28, read from 152 issuer domains.\n- [How a rate gets published](https://getcardlab.app/coverage): A rate that cannot be tied to a verbatim sentence on the issuer's own page is rejected by the build and never ships. Cards are held back rather than estimated.\n- [What is not covered](https://getcardlab.app/coverage): CardLab does not list every card in a market, only the cards whose terms it could verify from the issuer.\n- [Languages](https://getcardlab.app/support): The app ships in 34 languages: English plus 33 translations.\n\n## Answers to the questions this product exists for\n\n- [Which credit card should I use for this purchase?](https://getcardlab.app/best-card): Use the card that pays the most for that specific category, has not already spent through its bonus cap, and does not charge you interest you cannot avoid. If you are carrying a balance, the answer is almost always the cheapest card to borrow on, not the one with the best rewards - interest at a typical APR outruns a few percent of cashback.\n- [A credit card tracker that never asks for a bank login](https://getcardlab.app/credit-card-tracker): A credit card tracker keeps the facts a statement does not put in front of you: when each card closes, when each is due, how much of each limit is used, and how close each reward rate is to its cap. It does not need read access to your bank accounts to do any of that. Entering the cards yourself takes a few minutes once and removes the whole question of who can see your accounts.\n- [Credit card simulator](https://getcardlab.app/credit-card-simulator): A credit card simulator runs a real billing cycle on invented numbers, so you can see what a purchase, a late payment or a minimum payment would do before it happens to you. Set a limit, an APR and a statement date, then move money around the month and watch interest, the grace period and utilization react. Nothing is tied to a real card or a real account.\n- [A bank bonus tracker that follows the offer, not the banner](https://getcardlab.app/bank-bonus-tracker): A bank bonus tracker holds the four dates and one definition that decide whether a sign-up bonus actually pays: what the bank counts as a qualifying deposit, how much must arrive, the window it must arrive in and the day that window starts, how long the bank then takes to pay, and the date before which closing the account forfeits the bonus. Those facts live in the offer's own terms page, they differ between banks, and missing any one of them is the usual reason a bonus never posts.\n\n## Which card, by category\n\n- [Which credit card should I use for groceries?](https://getcardlab.app/best-card/groceries): As of 12 October 2026, American Express publishes 6% cash back at U.S. supermarkets on the Blue Cash Preferred Card, on up to $6,000 a year in purchases (then 1%), and 4X points at U.S. supermarkets on the Gold Card, on up to $25,000 per calendar year (then 1X). Among the cards you hold, the highest grocery rate that still has room under its cap earns the most if you clear the statement balance in full; after the cap, the ranking often flips. On a carried balance, interest usually outweighs a few percent of rewards.\n- [Which credit card should I use for dining?](https://getcardlab.app/best-card/dining): Pick the dining or restaurant earn rate that still has room under its bonus cap, if you pay the statement balance in full. Caps and restaurant definitions vary by issuer. If you are carrying a balance, optimise borrowing cost first: interest at a typical purchase APR usually outruns a few percent of rewards in a single month.\n- [Which credit card should I use for gas or fuel?](https://getcardlab.app/best-card/gas): Use the highest gas or fuel earn rate that still has room under its bonus cap, if you clear the statement balance in full. Some cards fold EV charging into the same bonus; others do not. After the cap, compare base rates. If you are carrying a balance, optimise borrowing cost first.\n- [Which credit card should I use for travel purchases?](https://getcardlab.app/best-card/travel): Travel earn rates often split airfare, hotels and other travel. Use the rate that matches the purchase, and watch remaining bonus caps, if you pay the statement balance in full. If you are carrying a balance, optimise borrowing cost first: interest at a typical purchase APR usually outruns a few percent of rewards in a single month.\n\n## Coverage and sourcing\n\n- [Card catalog coverage by country](https://getcardlab.app/coverage): Which markets have verified cards, how many, from which issuers, and the method every rate must survive to be published.\n\n## Calculators (free, no sign-up)\n\n- [Credit card calculators](https://getcardlab.app/calculators): The five calculators below: three for a card balance, which use the average daily balance method rather than dividing a balance by a payment, and two for a bank bonus, its return on parked cash and what it leaves after tax.\n- [Credit card payoff calculator](https://getcardlab.app/calculators/credit-card-payoff): A credit card payoff calculator turns three numbers - balance, APR, and monthly payment - into two answers: how many months until the balance is clear, and how much interest you pay to get there. The gap between paying a fixed amount and paying only the minimum is usually measured in years, not months.\n- [Credit card interest calculator](https://getcardlab.app/calculators/credit-card-interest): Enter a balance, an APR and a monthly payment. The calculator returns how many months until the balance is clear and the total interest you pay to get there. Monthly interest is the balance times the APR divided by 12, rounded to the cent. The daily cost of the same balance is the APR divided by 365. Neither charge hits new purchases while you pay the statement in full and keep the grace period.\n- [Minimum payment calculator](https://getcardlab.app/calculators/minimum-payment): Most issuers set the minimum payment as the greater of a flat floor - often $25 to $35 - or a small percentage of the balance, typically 1% to 3%, plus that cycle's interest and fees. Because the percentage shrinks along with the balance, paying only the minimum gets slower the longer it goes on.\n- [Bank bonus ROI calculator](https://getcardlab.app/calculators/bank-bonus-roi): A bank bonus ROI calculator turns the offer's own terms - the bonus, the cash you must park, the deposit window, the payout period and any early-close window - into an annualised return on that cash. A $300.00 bonus on $15,000.00 held for 180 days returns 4.1% a year, which is the number to compare with a savings rate.\n- [Bank bonus tax calculator](https://getcardlab.app/calculators/bank-bonus-tax): A cash bank bonus is interest income, taxed at your ordinary marginal rate in the year it is credited, and reported on Form 1099-INT once your interest from that bank reaches $10. A $300.00 bonus at a combined 27% rate costs $81.00 in tax and leaves $219.00, so compare offers on the after-tax figure.\n- [Web simulator](https://getcardlab.app/app/): The full simulator, free in the browser. Calculator and guide pages can prefill a scenario when you open them.\n\n## Guide\n\n- [How a credit card cycle works](https://getcardlab.app/guide): Every term below, defined in one place.\n- [Statement date](https://getcardlab.app/guide/statement-date): The bill generation date is this date: the day your bill is calculated, also called the closing or cutoff date. Everything up to this day is totaled into a “statement balance,” and your reported utilization is usually measured here too.\n- [Due date](https://getcardlab.app/guide/due-date): The deadline to pay your statement. Pay at least the minimum to stay current; pay the full statement balance to keep your purchases interest-free.\n- [Grace period](https://getcardlab.app/guide/grace-period): A credit card grace period is the interest-free window on new purchases. You keep it only if you paid your last statement balance in full by its due date.\n- [Pay before statement close](https://getcardlab.app/guide/pay-before-statement): Paying before the statement date and paying by the due date solve different problems. A payment that posts before the statement closes can lower the balance that is typically used for reported utilization. Paying the statement balance in full by the due date is usually what keeps the interest-free grace period alive.\n- [Statement balance vs. current balance](https://getcardlab.app/guide/statement-vs-current): Your current balance is everything you owe right now. Your statement balance is the amount frozen on the cutoff date, and it’s the number interest and “pay in full” are based on.\n- [Minimum payment](https://getcardlab.app/guide/minimum-payment): The smallest amount you can pay to stay current. It’s designed to be small, often mostly interest and fees.\n- [Credit limit & utilization](https://getcardlab.app/guide/utilization): Your limit is the most you can borrow. Utilization is your balance ÷ limit, usually measured at the cutoff. Lower is generally seen as healthier.\n- [APR & interest](https://getcardlab.app/guide/apr-interest): APR is the yearly interest rate. CardLab applies it with the average daily balance method: a daily rate is charged on each day’s balance, then added up across the cycle.\n- [Cash advance](https://getcardlab.app/guide/cash-advance): Borrowing cash against your card. It usually has an upfront fee, no grace period, and a higher APR, so interest starts on day one.\n- [Rewards vs. interest](https://getcardlab.app/guide/rewards): Cashback, points, and miles are real value, but only if interest and fees don’t erase them.\n- [Bonus caps](https://getcardlab.app/guide/bonus-caps): A bonus cap is a hard limit on how much spending earns the elevated rate in a category, or across rotating categories, for a period - often a month or a quarter. Once that spend is used up, further purchases in the same category usually earn the card's base rate, not the headline bonus.\n- [How rates are verified](https://getcardlab.app/guide/how-we-verify-rates): CardLab does not copy rates from comparison sites. A figure reaches the app only if it can be tied to a sentence on the issuer's own public product page, with a link to that page and the date it was read. A claim that cannot clear that bar is rejected by the build and never ships.\n\n## Blog\n\n- [Blog index](https://getcardlab.app/blog): Short, sourced answers on bank bonuses, direct deposits, which card to use, and the card rules in the fine print. Every figure names its source and the date it was read.\n- [Bank bonuses](https://getcardlab.app/blog/topic/bank-bonuses): How checking and savings sign-up bonuses work, what qualifies, and what they cost you. 42 posts, each with its sources and the date they were read.\n- [Direct deposit](https://getcardlab.app/blog/topic/direct-deposit): What banks count as a direct deposit, and what they quietly do not. 17 posts, each with its sources and the date they were read.\n- [Which card](https://getcardlab.app/blog/topic/which-card): Which of your cards to use for a purchase, and why the answer moves during the month. 9 posts, each with its sources and the date they were read.\n- [Card mechanics](https://getcardlab.app/blog/topic/card-mechanics): Statement dates, grace periods, utilization and the other rules printed in the fine print. 12 posts, each with its sources and the date they were read.\n- [Card offers](https://getcardlab.app/blog/topic/card-offers): Sign-up bonuses, spend thresholds and annual fees, worked through with real numbers. 14 posts, each with its sources and the date they were read.\n- [Strategy](https://getcardlab.app/blog/topic/strategy): Sequencing bonuses, parking cash, and deciding when an offer is worth the afternoon. 35 posts, each with its sources and the date they were read.\n- [CardPointers alternatives: which card-rewards app fits you?](https://getcardlab.app/blog/cardpointers-alternatives): To track credit card sign-up bonuses without linking your bank, the common picks are CardLab, Travel Freely, CardPointers and a Google Sheets spreadsheet you build yourself. CardLab works without linking your bank or card accounts: it tracks statements, due dates, reward caps and sign-up bonuses from terms you enter. Travel Freely is a free U.S. credit card bonus organizer with deadline reminders, and CardPointers focuses on card choice and auto-added offers.\n- [How bank bonuses differ from credit card sign-up offers](https://getcardlab.app/blog/bank-bonus-vs-card-sign-up-offer): A bank bonus pays cash after you meet deposit or balance rules on a checking or savings account. A credit card sign-up offer pays points or statement credit after you clear a minimum spend. They hit different constraints: cash and ChexSystems on one side, credit pulls and spend timing on the other. Stack them only when both schedules fit.\n- [Bank promo APY vs a cash sign-up bonus](https://getcardlab.app/blog/bank-promo-apy-vs-cash-bonus): A promotional APY is a temporary interest rate on a balance. A cash bank bonus posts once after you meet deposit or balance rules. Put both on the same parked cash and the same number of days, after fees, then pick the larger net. Do not compare a headline APY to a headline bonus in isolation.\n- [Bask Bank $300 Interest Checking bonus requirements](https://getcardlab.app/blog/bask-bank-300-bonus-requirements): Bask Bank's More Ways offer, read on 6 October 2026, pays $50 per qualifying statement period, up to $300, when you open new Interest Savings and Interest Checking between October 1 and December 31, 2026 and meet the $10,000 savings average, $2,500 Qualifying Automated Deposits by the 25th, and $100 checking Minimum Daily Balance in each of up to six periods.\n- [BMO $600 checking bonus requirements (14 states)](https://getcardlab.app/blog/bmo-600-checking-bonus-requirements): BMO's checking offer, read on 6 October 2026, pays $100 a month for up to six months, up to $600, when a new personal checking client in an eligible state opens Smart Money, Smart Advantage or Relationship Checking between September 9 and December 15, 2026 with the promo code and posts $1,000 or more in qualifying direct deposits each month. Existing BMO personal checking clients and 12-month closures are excluded.\n- [Navy Federal $400 new-member checking bonus requirements](https://getcardlab.app/blog/navy-federal-checking-bonus-requirements): Navy Federal's new-member checking offer, read on 6 October 2026, pays $400 when you join using promo code CHK26SRC between October 1 and December 31, 2026, open a checking account as primary owner by December 31, 2026, and complete qualifying direct deposit transactions by April 30, 2027. Membership is limited to the armed forces, DoD personnel, veterans, DoD civilians and contractors, and their immediate family. The bonus posts to Membership Savings by July 30, 2027.\n- [Which credit card perks are worth an annual fee?](https://getcardlab.app/blog/credit-card-perks-worth-paying-for): A perk is worth the annual fee when the credits and access you actually use exceed the fee in a normal year. Count only the hotel, travel, or dining credits you redeem, and lounge visits you take. Ignore the brochure list you will not touch. If the leftovers are thin, a no-fee card is the quieter win.\n- [When should you use a points transfer bonus?](https://getcardlab.app/blog/when-to-use-a-points-transfer-bonus): Use a points transfer bonus when you already have a trip that needs that partner's miles and the bonus raises your redemption value above what cash back would have paid. Do not transfer just because the email landed. Transfers are usually one-way, and orphan miles are expensive clutter.\n- [Miles vs cash back: which wins for your spend?](https://getcardlab.app/blog/miles-vs-cash-back-which-wins): Miles beat cash back when the award you book is worth more per point than your cash-back card pays on the same spend. Cash back wins when you value simplicity, hate blackout risk, or redeem miles near a penny. Run both on one real trip and one real grocery month before you pick a lane.\n- [Are credit card welcome bonuses worth it?](https://getcardlab.app/blog/are-credit-card-welcome-bonuses-worth-it): A welcome bonus is worth it when the points or cash you keep, minus the annual fee and any spend you force, still beat what your current cards would have earned on the same bills. Run that net over the first year, not the marketing headline. If the leftover is thin and the card is useless after month twelve, skip it.\n- [Credit card sign-up bonus minimum spend, priced honestly](https://getcardlab.app/blog/credit-card-sign-up-bonus-minimum-spend): Treat a credit card sign-up bonus as net value after the purchases you would not have made, the annual fee in the first year, and any category you would otherwise run on a higher-earn card. Divide the bonus by the minimum spend only after you strip those costs. If the leftover cents per dollar beat your everyday card, the offer is still in play.\n- [Bank bonus statistics: what current checking and savings offers actually require](https://getcardlab.app/blog/bank-bonus-statistics): As of 6 October 2026, the thirteen bank bonus tiers CardLab tracks paid a median of $300, ranging from $100 to $600. We read each tier on Chase, Wells Fargo, Capital One, Citi, Bank of America, Bask Bank, Navy Federal and BMO's own offer pages. Ten of the thirteen require direct or qualifying electronic deposits. Chase's two savings tiers ask for $5,000 or $10,000 of new money held 90 days.\n- [Credit card rewards statistics (2026): what bonuses and rewards are worth, and what they cost](https://getcardlab.app/blog/credit-card-rewards-statistics): US cardholders earned $47.5 billion in credit card rewards in 2024, and the average sign-up bonus earned on general purpose cards was $311, down from $326 in 2022, according to the CFPB's 2025 credit card market report. Rewards averaged about 1.6% of purchase volume. In the same year, cardholders paid $160 billion in interest and $31.3 billion in fees.\n- [What is a calculator card?](https://getcardlab.app/blog/what-is-a-calculator-card): A calculator card search is almost never a product name. It is someone looking for a card-related calculator: bonus ROI, tax on a cash bonus, interest, payoff, or minimum payment. CardLab ships those as free tools on the site, and the catalog is separate from the math.\n- [Are annual fee credit cards worth it, and how do you check?](https://getcardlab.app/blog/are-annual-fee-credit-cards-worth-it): An annual fee is worth paying when the extra earn rate plus the credits you would genuinely use exceed the fee at your own spending. The test is arithmetic: divide the fee by the extra rate over a no-fee alternative to get the category spending needed to break even, then count only the credits you would have bought anyway.\n- [Huntington checking bonus requirements: Perks $400 and Platinum Perks $600](https://getcardlab.app/blog/huntington-checking-bonus-requirements): Huntington's public checking offer, read on its own page on 29 and 30 September 2026, had two separate cards. Perks Checking paid $400 for $500 or more in qualifying direct deposits within 90 days. Platinum Perks Checking paid $600 for $25,000 or more in new money within 90 days. Both required opening a new account with the promotion code by September 30, 2026, in one of 21 listed states, and keeping it open 90 days.\n- [Which card is best for groceries, and why does the answer change mid-year?](https://getcardlab.app/blog/best-card-for-groceries): The best grocery card is the highest published supermarket rate you still have room under, once its annual fee is repaid at your own grocery spending. Every headline grocery rate has an annual cap, so most of these cards revert to a base rate partway through the year, at which point a flat-rate card earns more on the same shopping.\n- [Which credit card should I use for this purchase?](https://getcardlab.app/blog/which-credit-card-should-i-use-for-this-purchase): Check whether you are carrying a balance first, because interest outruns any reward. If you are not, use the card with the highest published rate for that category which still has room under its bonus cap, then confirm the annual fee is earned back at your real spending. Caps and promotions move the answer during the year.\n- [What does paying only the minimum payment really cost?](https://getcardlab.app/blog/minimum-payment-what-it-really-costs): Every statement carries a box that answers this for your own balance and your own rate. It must warn that minimum payments cost more in interest and take longer, estimate how long the minimum would take, and show the monthly payment that clears the balance in three years together with the total cost and the saving. Read that box before any calculator.\n- [What is a clawback window, and when is the first safe day to close?](https://getcardlab.app/blog/what-is-a-clawback-window): A clawback window is the period, counted from the day you opened the account, during which closing it lets the bank take back the bonus or charge an early-closure fee. The first safe day to close is the opening date plus that window, provided the bonus has already posted. Where the offer prints no window, the safe day is unknown, and the bank is the only one who can name it.\n- [Foreign transaction fees, and the currency question you should always answer the same way](https://getcardlab.app/blog/foreign-transaction-fees-and-dcc): Paying abroad can cost you twice. Your issuer may add a foreign transaction fee, printed in the card terms and ranging across issuers from well under two per cent to three. Separately, a terminal may offer to bill you in your home currency at its own exchange rate, which is a second markup on top. Decline that offer every time.\n- [Credit utilization: what actually gets reported, and on which day?](https://getcardlab.app/blog/credit-utilization-what-actually-gets-reported): Utilisation is the share of your revolving credit you are using, measured from the balance your issuer reports, which is usually the balance on the statement date. It is not measured from your average spending or from the balance after you pay. Paying in full every month can still report high utilisation if the payment lands after the cycle closes.\n- [Is a bank bonus worth it? The arithmetic that answers it](https://getcardlab.app/blog/is-a-bank-bonus-worth-it): Judge a bank bonus as a return on the cash it makes you park, over the days it keeps that cash committed, after the fees you cannot waive. A $300 bonus on $15,000 held for 180 days is a 4.1% annualised return, which barely beats a 4% savings account. The same $300 for payroll alone parks nothing and is simply $2.50 a day of committed time.\n- [What counts as a cash advance, and why does it cost so much more?](https://getcardlab.app/blog/what-counts-as-a-cash-advance-on-a-credit-card): A cash advance is any transaction your card agreement treats as borrowing cash rather than buying something. It covers ATM withdrawals, wire transfers, buying foreign currency, money orders, travellers cheques, lottery tickets, gambling chips and access cheques. Each carries an upfront fee, a separate and higher APR, and interest from the transaction date with no grace period.\n- [Overdraft and NSF risk while you hold a bank bonus](https://getcardlab.app/blog/bank-bonus-overdraft-risk-during-the-hold): An overdraft is the bank paying a transaction you could not cover. The CFPB says deposits are not always available immediately, and that many banks charge $30 or more per overdraft. Moving a paycheck to a bonus account while bills still draft the old one creates that fee. An unpaid negative balance that leads the bank to close the account can be reported to a checking-account company. Capital One's 360 Checking page says that account has no overdraft fees.\n- [Bank of America $100, $300 or $500 checking bonus requirements](https://getcardlab.app/blog/bank-of-america-checking-fee-or-bonus): Bank of America's public personal checking offer, read on 6 October 2026, pays $100, $300 or $500 when a new checking customer opens an eligible Advantage account through the offer page by January 31, 2027 and receives Qualifying Direct Deposits totaling $2,000, $5,000 or $10,000 or more within 90 days of opening. The bank attempts payout within 60 days after that window if the account stays open. A fee waiver is not this cash bonus.\n- [How to bridge cash between two bank bonuses](https://getcardlab.app/blog/bridge-cash-between-two-bank-bonuses): If two offers each require a balance to stay put on the same days, you need both balances at once. A $5,000 hold and a $10,000 hold that overlap are $15,000 committed. Payroll-only offers can park no balance, and they still consume the paycheck. Map the start and end of each hold before you open the second account. Moving the same dollars out early is how the first bonus fails.\n- [How a brokerage account bonus differs from a bank bonus](https://getcardlab.app/blog/brokerage-bonus-vs-bank-bonus): A bank bonus pays you for a checking or savings deposit. The IRS treats withdrawable interest as taxable when it becomes available, and Chase and Capital One say their checking bonuses go on Form 1099-INT. A brokerage bonus pays for funding a brokerage account. That cash is not a bank deposit, and SIPC protection is not FDIC insurance. Read the brokerage tax line before you assume the form. Do not reuse the bank checklist unchanged.\n- [Capital One 360 Checking bonus requirements](https://getcardlab.app/blog/capital-one-360-checking-bonus-requirements): Capital One's 360 Checking offer, read on 3 October 2026, pays $250 if you open with code CHECKING250 and receive at least two qualifying direct deposits of $500 or more within 75 days. Owners of 360, Simply, or Total Control Checking on or after 1 January 2024 are ineligible, including secondary owners. Processing after day 75 can take up to 60 days. The account must be open and in good standing when the bonus is paid.\n- [Chase Total Checking bonus requirements, line by line](https://getcardlab.app/blog/chase-total-checking-bonus-requirements): Chase's public Total Checking offer, last re-checked on 11 October 2026, pays $400 when a new Chase checking customer opens that account and has direct deposits totaling $1,000 or more within 90 days of offer enrollment. Chase deposits the bonus within 15 days after you finish, if the account is not closed or restricted at payout. Zelle, micro-deposits, external transfers, and tax refunds do not count as direct deposits.\n- [Citi checking bonus: copy the terms before you rely on $325](https://getcardlab.app/blog/citi-checking-bonus-terms-to-copy): Yes, Citi's checking account bonus is live: its public offer page, read again in a browser on 7 October 2026, pays $325 to a new Citibank Regular Checking customer with at least two Enhanced Direct Deposits totaling $3,000 or more within 90 calendar days of account opening. Citi credits the bonus between the 90th and 120th calendar day after opening if the account stays open and in good standing. You must apply from the offer page, from 4/14/26 to 10/26/26.\n- [What happens if you close a card before the welcome bonus posts?](https://getcardlab.app/blog/closing-a-card-before-the-welcome-bonus-posts): You are likely to lose a welcome bonus if you close the card before it posts. The offer pays after you meet its condition, and the issuer's terms say whether the account must still be open. The CFPB says a card application is a hard inquiry, and that rewards follow the issuer's program. Close only after the bonus is on the statement and any open-account sentence is still true. CardLab does not close the card.\n- [How a credit union bonus differs from a national bank bonus](https://getcardlab.app/blog/credit-union-bonus-vs-national-bank-bonus): A national bank bonus asks whether you are a new customer under that bank's offer. A credit union bonus asks that, and also whether you are allowed to join. Credit unions are member-owned, with a field of membership. Banks are not. Deposits are insured to the same $250,000 federal limit, through the NCUA at a credit union and the FDIC at a bank. The bonus amount, the deposit test, and the close rule still come from that institution's own page.\n- [Does Venmo count as a direct deposit for a bank bonus?](https://getcardlab.app/blog/does-venmo-count-as-a-direct-deposit): A Venmo payment you send or receive as person-to-person is not a qualifying direct deposit at Chase or Wells Fargo. Chase excludes person-to-person payments and names Zelle. Wells Fargo excludes Zelle by name. Payroll that your employer sends by ACH into the bank account can still qualify, even if you looked at the pay stub in an app. Money that stays inside Venmo never hits the bank's test.\n- [Early-closure fee vs bonus clawback: two different clauses](https://getcardlab.app/blog/early-closure-fee-vs-bonus-clawback): An early-closure fee is a charge for closing an account before a stated number of days. A bonus clawback takes back, or refuses to pay, the promotional cash. One can leave the bonus in place and charge a fee. The other removes the bonus. Chase and Wells Fargo, on the offers we read, print no fixed window. They still require the account to be open at payout.\n- [How to document a bank bonus for your tax return](https://getcardlab.app/blog/how-to-document-a-bank-bonus-for-taxes): Keep four records: the offer page dated when you enrolled, the enrollment confirmation, the account line that shows the bonus posting and its date, and Form 1099-INT when it arrives. The IRS taxes interest in the year it becomes available, and it says you report that interest even if no 1099-INT comes. Chase and Capital One both say the checking bonus is reported on Form 1099-INT. The posting date, not the day you qualified, is the year.\n- [How to read a bank bonus offer before you open the account](https://getcardlab.app/blog/how-to-read-a-bank-bonus-offer): Read the offer terms, not the banner. Eight lines decide the outcome: how the bank defines a qualifying deposit, the amount, the window and the day it starts, how soon the bank pays, the monthly fee and its waiver, any early-close period, who is excluded, and the expiry date. Chase and Wells Fargo print all of them, and they differ on half.\n- [Who qualifies for a bank bonus on a joint account?](https://getcardlab.app/blog/joint-bank-bonus-who-qualifies): The offer can look at every owner. Chase limits the checking bonus to one per account and one new checking bonus every two years from the last enrollment, and it says eligibility may be limited by ownership. Capital One bars the 360 Checking bonus if you were a primary or secondary owner of listed checking accounts on or after 1 January 2024. Add a co-owner only after you read that line.\n- [Pending or posted: which deposit counts for a bank bonus?](https://getcardlab.app/blog/pending-vs-posted-bank-bonus-deposit): Use the date the deposit posts, not the date an app shows it early. Wells Fargo says an Early Pay Day ACH credit does not count toward the bonus until it posts and is no longer pending. The CFPB warns a deposit is not always available immediately. Chase requires the direct deposits within 90 days of enrollment. If the window ends while a credit is pending, do not assume you qualified.\n- [Can a restricted account block a bank bonus?](https://getcardlab.app/blog/restricted-account-can-block-a-bank-bonus): Yes, when the offer requires the account to be open and unrestricted, or in good standing, on payout day. Chase says the enrolled Total Checking account must not be closed or restricted at payout. Capital One will not pay the 360 Checking bonus if the account is in default, closed, suspended, or not in good standing. Ask what the block is, in writing, before that date.\n- [What a returned or reversed deposit does to a bank bonus](https://getcardlab.app/blog/returned-deposit-can-miss-a-bank-bonus): A deposit that later reverses should not be treated as still qualifying. Chase needs $1,000 in direct deposits inside 90 days of enrollment. Wells Fargo needs $1,000 posted inside 90 calendar days of opening. Capital One needs two qualifying deposits of at least $500. Replace a shortfall with another qualifying deposit before the window ends. A transfer you start is not that replacement.\n- [Savings account bonus vs checking bonus](https://getcardlab.app/blog/savings-bonus-vs-checking-bonus): A checking bonus on the Chase and Wells Fargo pages pays after qualifying direct deposits post. Chase's savings offer pays after you deposit new money and keep it there. Chase checking is $400 for $1,000 of direct deposits within 90 days of enrollment. Chase savings is $100 or $200 from new money deposited within 30 days and maintained for 90 days. The savings side locks cash. The checking side redirects a paycheck.\n- [Can a second-chance checking account earn a bank bonus?](https://getcardlab.app/blog/second-chance-checking-and-bank-bonuses): Usually you have to read two products, not one. The CFPB describes lower-risk checking and prepaid cards that block overdrafts for people who were denied a standard account. A bank bonus is an offer on a named product, often a standard checking account with its own approval rules. Chase Total Checking's $400 offer and Chase Secure Banking's separate transaction offer are not interchangeable. Approval for the second product is not enrollment in the first.\n- [Soft pull vs hard pull when you open a bonus account](https://getcardlab.app/blog/soft-pull-vs-hard-pull-on-a-bank-bonus): A hard inquiry is a lender reviewing your credit report because you applied for credit, and the CFPB says it can affect your score. A soft inquiry is not an application for new credit, and it does not affect your score. A checking account is not a loan. Some banks still look at a credit report or a checking-account report. Ask if the application includes a credit product before you assume the pull is soft.\n- [Do student checking accounts qualify for bank bonuses?](https://getcardlab.app/blog/student-checking-and-bank-bonus-offers): A student account qualifies only if the bonus offer names that account and you meet its age rules. Capital One's 360 Checking disclosures require age 18. Wells Fargo requires 18 to apply for Everyday Checking online, and a primary owner age 17 to 24 can avoid the monthly fee. That waiver is not the $325 bonus. A differently named campus account does not inherit another product's offer.\n- [How to switch direct deposit for a bonus without missing payroll](https://getcardlab.app/blog/switch-direct-deposit-without-missing-pay): Change payroll only after you know the effective pay date, and keep the old account funded until a qualifying credit has posted at the new bank. Capital One says it may take two cycles for direct deposits to take effect. Chase and Wells Fargo give you 90 days, but a transfer you start yourself does not replace payroll. Split the paycheck if the employer allows it. Do not close the old account in the same week you submit the form.\n- [Wells Fargo $325 checking bonus: requirements and what to check](https://getcardlab.app/blog/wells-fargo-checking-bonus-requirements): Wells Fargo's new-checking offer, read on its own page on 14 October 2026, pays $325 when you open a consumer checking account with the offer code by 13 January 2027 and receive $1,000 or more in posted qualifying electronic deposits within 90 calendar days. Zelle, transfers, and mobile deposits do not count. A Wells Fargo checking bonus in the past 12 months rules you out. The bonus posts within 30 calendar days and is reported as income.\n- [What happens if you miss a bank bonus deadline?](https://getcardlab.app/blog/what-if-you-miss-a-bank-bonus-deadline): The offers we read do not pay a partial bonus for a late deposit. Chase counts 90 days from enrollment for $1,000 in direct deposits. Wells Fargo counts 90 calendar days from opening for $1,000 in qualifying electronic deposits. Capital One counts 75 days from opening for two deposits of at least $500. A late deposit does not restart the offer unless the bank extends it in writing.\n- [What is a grace period, how do you lose it, and how does it come back?](https://getcardlab.app/blog/what-is-a-grace-period-on-a-credit-card): A grace period is the stretch between the end of a billing cycle and the payment due date during which new purchases do not accrue interest. You have it only while you pay each statement balance in full and on time. Miss that once and new purchases can start accruing interest from the day they post, until two full payments restore it.\n- [What does new customer mean on a bank bonus?](https://getcardlab.app/blog/what-new-customer-means-on-a-bank-bonus): New customer means the exclusions on that offer. Chase bars existing checking customers, closures within 90 days, and negative-balance closures within 3 years, plus more than one new checking bonus inside two years. Capital One bars you if you held 360, Simply, or Total Control Checking as a primary or secondary owner on or after 1 January 2024. Another bank's definition does not transfer.\n- [When is a bank bonus not worth taking?](https://getcardlab.app/blog/when-a-bank-bonus-is-not-worth-taking): Skip a bank bonus when you cannot produce the deposit it defines, when fees you will pay consume the cash, or when you need that cash before you can close. A $300 bonus minus a $12 monthly fee for six months with no waiver is $228 before tax. The same $300 on $15,000 held 180 days is a thin return beside a savings rate. CardLab does not open the account.\n- [Statement date vs due date: which one actually runs your card?](https://getcardlab.app/blog/statement-date-vs-due-date): The statement date, also called the billing date or closing date, closes the billing cycle and fixes the balance you owe, the balance reported to the credit bureaus, and the start of the interest-free window. The due date is the deadline for paying that fixed balance. The statement date decides what you pay and what your credit file shows; the due date only decides when.\n- [Does opening a checking account affect your credit score?](https://getcardlab.app/blog/does-opening-bank-accounts-hurt-your-credit): No. Opening a checking or savings account does not directly affect your credit score. Deposit accounts are not credit products, so banks typically use a soft inquiry or a deposit-history check that does not change FICO or VantageScore. Credit is only impacted under specific exceptions: a hard inquiry, an overdraft line of credit, or unpaid balances sent to collections.\n- [Does Walmart count as grocery for credit card rewards?](https://getcardlab.app/blog/does-walmart-count-as-grocery-for-credit-card-rewards): Grocery bonus rates usually apply only when the merchant codes as a supermarket or grocery store at the card network. Big-box stores and wholesale clubs often code as superstore or warehouse, so the grocery bonus does not apply even if you buy food. Confirm the current issuer terms for any named exception; coding can also vary by outlet.\n- [Why was my credit card declined, and what should I check first?](https://getcardlab.app/blog/why-was-my-credit-card-declined): A decline is the issuer answering one question with a no: authorise this amount, on this account, at this merchant, now. The usual causes are pending holds eating available credit, a charge that would pass the limit, a fraud rule, stale card data, a blocked merchant category, and a purchase the network read as a cash advance. Most are visible before you reach the till.\n- [Do you pay taxes on bank bonuses?](https://getcardlab.app/blog/do-you-pay-taxes-on-bank-bonuses): Yes. A cash bonus for opening or funding a deposit account is treated as interest, and the IRS says interest credited to an account you can draw on is taxable in the year it becomes available to you. The bank normally reports it on Form 1099-INT once your interest for the year reaches $10, and you must report it even if no form arrives.\n- [Which card is best for fuel, and where does the rate quietly change?](https://getcardlab.app/blog/best-card-for-fuel): The best fuel card is usually a capped bonus rate you stay under, not the highest headline number. Gas rewards are paid on a merchant category code rather than on gasoline itself, so pay-at-pump, warehouse fuel and a supermarket's own pumps can be coded differently and earn a different rate than the card's advertised gas category.\n- [What is the best travel card if you are not chasing airline or hotel status?](https://getcardlab.app/blog/best-card-for-travel-without-status): For most travel, a flat-rate card with no foreign transaction fee earns more with less effort than a co-branded airline or hotel card. Status only pays off for someone who already flies one airline or stays at one hotel chain often enough to earn it, and a flat-rate card's points are usable on any airline, hotel or travel purchase without that commitment.\n- [Checking bonus or high-yield savings: where does cash actually earn more?](https://getcardlab.app/blog/checking-bonus-or-high-yield-savings): A one-time bank bonus is worth comparing to a savings APY only after you convert it into a yield over a real holding period, because a bonus is a fixed dollar amount and an APY is an annual rate. Held for a short qualifying period, a bonus usually beats a high-yield savings rate; held over a full year on the same cash, an ongoing APY can catch up or pass it.\n- [Credit union or big bank: what actually differs, and when is switching worth it?](https://getcardlab.app/blog/credit-union-vs-big-bank): A credit union is a member-owned, not-for-profit cooperative, while a bank is shareholder-owned and for-profit, and that difference drives most of the practical gaps between them: fees, membership eligibility and branch reach. Deposits at each are insured to the same federal limit through a different agency, so insurance is not the deciding factor. Switching is worth the afternoon when a credit union you qualify to join beats your bank on the specific fees or rates you pay today.\n- [How many bank bonuses can you realistically earn in a year?](https://getcardlab.app/blog/how-many-bank-bonuses-per-year): The realistic count is set by each bank's own reuse rule rather than by how many banks exist. A bank that limits a new bonus to once every two years cannot be repeated in the same year, so the achievable count in a year is the number of different banks whose offers and requirements you can actually satisfy, not a fixed target.\n- [Can you work on two bank bonuses at the same time?](https://getcardlab.app/blog/multiple-bank-bonuses-at-the-same-time): Yes, most bank bonus offers can run at the same time, because each bank checks its own requirement against your activity at that bank only. The real limit is not the banks noticing each other, since they generally do not, it is whether you can route a qualifying direct deposit and meet every other condition at each bank inside its own deadline.\n- [How do you track rotating bonus categories without a spreadsheet?](https://getcardlab.app/blog/rotating-bonus-categories-without-a-spreadsheet): A rotating-category card pays its bonus rate only for the current quarter's named categories, only after you activate, and only up to that quarter's cap. Tracking that by memory means missing an activation window or overspending past the cap without noticing, and a spreadsheet only tells you what should have happened, not what card to use for the purchase in front of you today.\n- [Can I close a Chase, Wells Fargo or Citi account after receiving a bonus?](https://getcardlab.app/blog/can-you-close-a-bank-account-after-the-bonus): Chase, Wells Fargo and Citi all require the account to stay open until they pay the bonus. Chase pays within 15 days of the requirements being met, Wells Fargo within 30 calendar days, and Citi between the 90th and 120th calendar day after opening, if the account stays open and in good standing. None of the three public offers names a day after payout when you may close, so check your current offer terms.\n- [How is credit card interest actually calculated?](https://getcardlab.app/blog/how-average-daily-balance-interest-works): Most issuers divide your APR by 365 to get a daily periodic rate, apply that rate to your balance on each day of the billing cycle, and add the daily charges together at the end. The number that matters is therefore your average balance across the cycle, not the balance on any single day. This is why a payment made early in the cycle costs you less than the same payment made on the due date.\n- [What does a credit card installment plan really cost?](https://getcardlab.app/blog/installment-plans-real-cost-and-effective-apr): A card installment plan replaces interest with a fixed monthly fee, so no annual percentage rate is printed on it anywhere. That fee still buys time, and converting it into an effective APR is the only way to compare the plan with carrying the balance normally. The conversion roughly doubles the annualised fee, because the fee is charged on the original amount while your actual balance falls each month.\n- [Can you track your credit cards without linking a bank account?](https://getcardlab.app/blog/track-cards-without-linking-a-bank): Yes, and almost everything a card tracker does needs no bank connection at all. Statement dates, due dates, credit limits, APRs and reward terms are printed on your statement and your card agreement, they change rarely, and you can enter them once. A bank link buys automatic transaction import, and it costs a standing permission for a third party to read your accounts for as long as the link lives.\n- [When does cashback lose to interest?](https://getcardlab.app/blog/when-cashback-loses-to-interest): Cashback is pai"
+}
