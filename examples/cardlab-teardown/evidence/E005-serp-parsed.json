@@ -1,0 +1,90 @@
+{
+  "attempts": [
+    {
+      "adapter": "serp-playwright",
+      "engine": "google",
+      "label": "Google (headless Chromium)",
+      "status": 200,
+      "fromCache": false,
+      "problem": "Google captcha (unusual traffic page)",
+      "relevance": 0,
+      "organicCount": 0,
+      "adCount": 0,
+      "evidenceId": "E001",
+      "consent": "none shown"
+    },
+    {
+      "adapter": "serp-playwright",
+      "engine": "bing",
+      "label": "Bing (headless Chromium)",
+      "status": 200,
+      "fromCache": false,
+      "problem": "",
+      "relevance": 0.9,
+      "organicCount": 10,
+      "adCount": 0,
+      "evidenceId": "E003",
+      "consent": "none shown"
+    }
+  ],
+  "notes": [],
+  "organic": [
+    {
+      "position": 1,
+      "url": "https://www.forbes.com/advisor/credit-cards/best-apps-to-track-credit-card-rewards/",
+      "title": "The Best 4 Apps For Tracking Credit Cards And Travel Rewards",
+      "snippet": "Jan 30, 2025 · It’s important to track your credit card rewards for a variety of reasons, so we’ve compiled a list of the best four apps …",
+      "domain": "forbes.com"
+    },
+    {
+      "position": 2,
+      "url": "https://www.cnbc.com/select/best-apps-for-tracking-your-credit-card-rewards/",
+      "title": "Best Apps for Tracking Your Credit Card Rewards in 2026 - CNBC",
+      "snippet": "Jul 31, 2026 · These are the best apps for tracking your credit card, airline and hotel rewards AwardWallet and MaxRewards can …",
+      "domain": "cnbc.com"
+    },
+    {
+      "position": 3,
+      "url": "https://money.usnews.com/credit-cards/articles/best-credit-card-apps-for-tracking-rewards",
+      "title": "Here Are the Best Apps for Tracking Your Credit Card Rewards",
+      "snippet": "Feb 24, 2026 · Credit card rewards apps can help solve this problem by making sure you stay on top of the rewards you have and …",
+      "domain": "money.usnews.com"
+    },
+    {
+      "position": 4,
+      "url": "https://appshunter.io/ios/topics/credit-card-rewards",
+      "title": "247+ Best Credit Card Rewards Apps for iPhone (2026) | Free & Paid",
+      "snippet": "Explore the best Credit Card Rewards available on the App Store. We've curated 247+ apps to help you find exactly what you need. …",
+      "domain": "appshunter.io"
+    },
+    {
+      "position": 5,
+      "url": "https://www.rewardswise.app/",
+      "title": "RewardsWise - All in one Credit Card Manager",
+      "snippet": "RewardsWise is a credit card rewards manager that helps you maximize your credit card rewards and cashback. We provide …",
+      "domain": "rewardswise.app"
+    },
+    {
+      "position": 6,
+      "url": "https://maxrewards.com/",
+      "title": "Find Your Next Credit Card | MaxRewards",
+      "snippet": "Keep rewards, benefits, and card-linked offers in one place. MaxRewards helps you use the right card, activate more card-linked …",
+      "domain": "maxrewards.com"
+    },
+    {
+      "position": 7,
+      "url": "https://www.joinkudos.com/",
+      "title": "Kudos: Put Your Cards to Work - Earn More Rewards",
+      "snippet": "Jan 12, 2026 · Activate offers, negotiate bills & use the best card. Watch your savings pile up and keep more of what you earn. …",
+      "domain": "joinkudos.com"
+    },
+    {
+      "position": 8,
+      "url": "https://cardstack.money/articles/guides/credit-card-rewards-optimizer-apps-2026",
+      "title": "Best Credit Card Rewards Apps in 2026 - cardstack.money",
+      "snippet": "Mar 10, 2026 · Best credit card rewards apps in 2026 — compare CardStack, MaxRewards, Kudos, and more on features, pricing, …",
+      "domain": "cardstack.money"
+    }
+  ],
+  "ads": []
+}
