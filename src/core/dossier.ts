@@ -2,6 +2,8 @@
 // The zod schema is the source of truth; docs/dossier-schema.json is generated
 // from it (`npm run dossier-schema`).
 
+import { SeoReaError } from "./errors.js";
+import { ISSUE_ID_RE } from "./issues.js";
 import { z } from "zod";
 
 export const DOSSIER_SCHEMA_VERSION = "1";
@@ -9,6 +11,10 @@ export const DOSSIER_SCHEMA_VERSION = "1";
 const evidenceIds = z.array(z.string()).describe("Evidence IDs (E001...) in evidence/index.json");
 
 export const TopActionSchema = z.object({
+  id: z
+    .string()
+    .regex(ISSUE_ID_RE)
+    .describe("Stable issue id (rule code plus optional subject hash); same problem, same id across runs"),
   rank: z.number().int().min(1),
   title: z.string().min(1),
   why: z.string(),
@@ -205,7 +211,10 @@ export function validateDossier(value: unknown): Dossier {
   const r = DossierSchema.safeParse(value);
   if (!r.success) {
     const problems = r.error.issues.map((i) => `${i.path.join(".") || "(root)"}: ${i.message}`);
-    throw new Error(`dossier does not match schema v${DOSSIER_SCHEMA_VERSION}: ${problems.slice(0, 10).join("; ")}`);
+    throw new SeoReaError(
+      "SCHEMA_INVALID",
+      `dossier does not match schema v${DOSSIER_SCHEMA_VERSION}: ${problems.slice(0, 10).join("; ")}`,
+    );
   }
   return r.data;
 }
