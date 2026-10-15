@@ -1,0 +1,636 @@
+[
+  {
+    "position": 1,
+    "url": "https://www.forbes.com/advisor/credit-cards/best-apps-to-track-credit-card-rewards/",
+    "domain": "forbes.com",
+    "evidenceId": "E006",
+    "robots": {
+      "status": 200,
+      "sitemaps": [
+        "https://www.forbes.com/news_sitemap.xml",
+        "https://www.forbes.com/video_sitemap.xml",
+        "https://www.forbes.com/companies_sitemap.xml",
+        "https://www.forbes.com/health/sitemap.xml",
+        "https://www.forbes.com/connect/events-sitemap.xml",
+        "https://www.forbes.com/advisor/sitemap.xml",
+        "https://www.forbes.com/home-improvement/sitemap.xml",
+        "https://www.forbes.com/digital-assets/sitemap.xml"
+      ]
+    },
+    "error": "HTTP 403 text/html;charset=utf-8"
+  },
+  {
+    "position": 2,
+    "url": "https://www.cnbc.com/select/best-apps-for-tracking-your-credit-card-rewards/",
+    "domain": "cnbc.com",
+    "evidenceId": "E007",
+    "robots": {
+      "status": 200,
+      "sitemaps": [
+        "https://www.cnbc.com/sitemapAll.xml",
+        "https://www.cnbc.com/sitemap_news.xml",
+        "https://www.cnbc.com/sitemapvideoAll.xml",
+        "https://www.cnbc.com/SitemapQuotes.xml",
+        "https://www.cnbc.com/sitemapSelectAll.xml",
+        "https://www.cnbc.com/sitemapproAll.xml",
+        "https://www.cnbc.com/sitemapprovideoAll.xml",
+        "https://www.cnbc.com/sitemapinvestingclubAll.xml",
+        "https://www.cnbc.com/sitemapicvideoprodAll.xml"
+      ]
+    },
+    "page": {
+      "url": "https://www.cnbc.com/select/best-apps-for-tracking-your-credit-card-rewards/",
+      "title": "Best Apps for Tracking Your Credit Card Rewards in 2026",
+      "metaDescription": "CNBC Select recommends AwardWallet and MaxRewards for easily keeping track of your credit card and travel rewards.",
+      "metaRobots": "max-image-preview:large",
+      "ogTitle": "These are the best apps for tracking your credit card, airline and hotel rewards",
+      "canonical": "https://www.cnbc.com/select/best-apps-for-tracking-your-credit-card-rewards/",
+      "hreflang": [],
+      "lang": "en",
+      "headings": {
+        "h1": [
+          "These are the best apps for tracking your credit card, airline and hotel rewards"
+        ],
+        "h2": [
+          "Our top picks of timely offers from our partners",
+          "Find the best credit card for you",
+          "AwardWallet and MaxRewards can help you stay on top of your credit card and travel rewards.",
+          "AwardWallet",
+          "Read more",
+          "MaxRewards",
+          "Spotlight",
+          "Highlights",
+          "Balance transfer fee",
+          "Bottom line",
+          "Why trust CNBC Select?",
+          "Read more",
+          "Best Apps for Tracking Your Credit Card Rewards in 2026",
+          "Best Apps for Tracking Your Credit Card Rewards in 2026"
+        ],
+        "h3": [
+          "Chase Sapphire Preferred® Card",
+          "Our expert take",
+          "Pros & cons",
+          "More details"
+        ]
+      },
+      "wordCount": 2573,
+      "schemaTypes": [
+        "BreadcrumbList",
+        "ImageObject",
+        "ItemList",
+        "ListItem",
+        "NewsArticle",
+        "NewsMediaOrganization",
+        "Person",
+        "Rating",
+        "Review",
+        "SpeakableSpecification"
+      ],
+      "schema": {
+        "blocks": 3,
+        "parseErrors": [],
+        "types": [
+          "BreadcrumbList",
+          "ImageObject",
+          "ItemList",
+          "ListItem",
+          "NewsArticle",
+          "NewsMediaOrganization",
+          "Person",
+          "Rating",
+          "Review",
+          "SpeakableSpecification"
+        ],
+        "nodes": [
+          {
+            "type": "NewsArticle",
+            "checkedAs": "Article",
+            "errors": [],
+            "warnings": [],
+            "valid": true
+          },
+          {
+            "type": "BreadcrumbList",
+            "checkedAs": "BreadcrumbList",
+            "errors": [],
+            "warnings": [],
+            "valid": true
+          }
+        ]
+      },
+      "internalLinkCount": 125,
+      "externalLinkCount": 48,
+      "topAnchors": [
+        {
+          "anchor": "Credit Cards",
+          "count": 2
+        },
+        {
+          "anchor": "Loans",
+          "count": 1
+        },
+        {
+          "anchor": "Best Personal Loans",
+          "count": 1
+        },
+        {
+          "anchor": "Best Loans for Low Credit",
+          "count": 1
+        },
+        {
+          "anchor": "Best Same Day Loans",
+          "count": 1
+        },
+        {
+          "anchor": "Best Debt Consolidation Loans",
+          "count": 1
+        },
+        {
+          "anchor": "Best Student Loan Refinance Companies",
+          "count": 1
+        },
+        {
+          "anchor": "Best Student Loans for Bad Credit",
+          "count": 1
+        },
+        {
+          "anchor": "Best Private Student Loans",
+          "count": 1
+        },
+        {
+          "anchor": "Best Peer to Peer Loans",
+          "count": 1
+        },
+        {
+          "anchor": "Best Auto Loans",
+          "count": 1
+        },
+        {
+          "anchor": "Best Buy Now, Pay Later Apps",
+          "count": 1
+        },
+        {
+          "anchor": "Compare Personal Loans",
+          "count": 1
+        },
+        {
+          "anchor": "Best Credit Cards",
+          "count": 1
+        },
+        {
+          "anchor": "Best Cash Back Cards",
+          "count": 1
+        }
+      ]
+    }
+  },
+  {
+    "position": 3,
+    "url": "https://money.usnews.com/credit-cards/articles/best-credit-card-apps-for-tracking-rewards",
+    "domain": "money.usnews.com",
+    "evidenceId": "E008",
+    "robots": {
+      "status": 200,
+      "sitemaps": [
+        "https://www.usnews.com/news/editorial-sitemap.xml",
+        "https://www.usnews.com/news-sitemap.xml",
+        "https://deals.usnews.com/sitemap.xml"
+      ]
+    },
+    "error": "The operation was aborted due to timeout"
+  },
+  {
+    "position": 4,
+    "url": "https://appshunter.io/ios/topics/credit-card-rewards",
+    "domain": "appshunter.io",
+    "evidenceId": "E009",
+    "robots": {
+      "status": 403,
+      "sitemaps": []
+    },
+    "error": "HTTP 403 text/html; charset=UTF-8"
+  },
+  {
+    "position": 5,
+    "url": "https://www.rewardswise.app/",
+    "domain": "rewardswise.app",
+    "evidenceId": "E010",
+    "robots": {
+      "status": 200,
+      "sitemaps": [
+        "https://www.rewardswise.app/sitemap.xml"
+      ]
+    },
+    "page": {
+      "url": "https://www.rewardswise.app/",
+      "title": "X (Twitter)",
+      "metaDescription": "RewardsWise is a credit card rewards manager that helps you maximize your credit card rewards and cashback. We provide personalized recommendations, tracking, and management tools to help you get the most out of your credit cards.",
+      "metaRobots": "",
+      "ogTitle": "RewardsWise - All in one Credit Card Manager",
+      "canonical": "https://www.rewardswise.app/",
+      "hreflang": [],
+      "lang": "en",
+      "headings": {
+        "h1": [
+          "All in One Credit Card Manager"
+        ],
+        "h2": [
+          "Your favorite companies are our partners",
+          "Effortlessly Connect Your Bank Accounts",
+          "FAQ"
+        ],
+        "h3": [
+          "Do you offer a free trial?",
+          "How do I cancel my subscription?",
+          "Can I change my plan?",
+          "Is it safe to link my bank account?",
+          "What do you do with my data?"
+        ]
+      },
+      "wordCount": 144,
+      "schemaTypes": [],
+      "schema": {
+        "blocks": 0,
+        "parseErrors": [],
+        "types": [],
+        "nodes": []
+      },
+      "internalLinkCount": 14,
+      "externalLinkCount": 5,
+      "topAnchors": [
+        {
+          "anchor": "Features",
+          "count": 2
+        },
+        {
+          "anchor": "Blog",
+          "count": 2
+        },
+        {
+          "anchor": "Changelog",
+          "count": 2
+        },
+        {
+          "anchor": "About",
+          "count": 2
+        },
+        {
+          "anchor": "RewardsWise",
+          "count": 1
+        },
+        {
+          "anchor": "Get Started",
+          "count": 1
+        },
+        {
+          "anchor": "FAQ",
+          "count": 1
+        },
+        {
+          "anchor": "Contact",
+          "count": 1
+        },
+        {
+          "anchor": "Privacy Policy",
+          "count": 1
+        },
+        {
+          "anchor": "Terms of Service",
+          "count": 1
+        }
+      ]
+    }
+  },
+  {
+    "position": 6,
+    "url": "https://maxrewards.com/",
+    "domain": "maxrewards.com",
+    "evidenceId": "E011",
+    "robots": {
+      "status": 200,
+      "sitemaps": [
+        "https://maxrewards.com/sitemap.xml"
+      ]
+    },
+    "page": {
+      "url": "https://maxrewards.com/",
+      "title": "Find Your Next Credit Card and Get More From Every Card | MaxRewards",
+      "metaDescription": "Find credit cards with Smart Search, compare MaxRewards editorial picks, and see what each card could be worth for your spending.",
+      "metaRobots": "",
+      "ogTitle": "Find Your Next Credit Card | MaxRewards",
+      "canonical": "https://maxrewards.com/",
+      "hreflang": [],
+      "lang": "en",
+      "headings": {
+        "h1": [
+          "Make every card in your wallet work harder."
+        ],
+        "h2": [
+          "Find your next credit card",
+          "Picks you can verify.",
+          "Choosing the card is step one."
+        ],
+        "h3": [
+          "Best Travel Credit Cards",
+          "Every card, measured the same way.",
+          "See what a card is worth to you — before you apply.",
+          "Compensation never reorders our lists.",
+          "One app for every card.",
+          "The best card, right at checkout."
+        ]
+      },
+      "wordCount": 586,
+      "schemaTypes": [
+        "Organization"
+      ],
+      "schema": {
+        "blocks": 1,
+        "parseErrors": [],
+        "types": [
+          "Organization"
+        ],
+        "nodes": [
+          {
+            "type": "Organization",
+            "checkedAs": "Organization",
+            "errors": [],
+            "warnings": [],
+            "valid": true
+          }
+        ]
+      },
+      "internalLinkCount": 52,
+      "externalLinkCount": 13,
+      "topAnchors": [
+        {
+          "anchor": "Read review",
+          "count": 4
+        },
+        {
+          "anchor": "Estimate value",
+          "count": 4
+        },
+        {
+          "anchor": "Home",
+          "count": 1
+        },
+        {
+          "anchor": "Sign In",
+          "count": 1
+        },
+        {
+          "anchor": "Sign Up",
+          "count": 1
+        },
+        {
+          "anchor": "Get Started",
+          "count": 1
+        },
+        {
+          "anchor": "See how the app works",
+          "count": 1
+        },
+        {
+          "anchor": "View all Best Travel Credit Cards",
+          "count": 1
+        },
+        {
+          "anchor": "Amex Platinum",
+          "count": 1
+        },
+        {
+          "anchor": "Chase Sapphire Reserve®",
+          "count": 1
+        },
+        {
+          "anchor": "Chase Sapphire Preferred® Card",
+          "count": 1
+        },
+        {
+          "anchor": "Capital One Venture Rewards Credit Card",
+          "count": 1
+        },
+        {
+          "anchor": "Browse every Best Cards Page",
+          "count": 1
+        },
+        {
+          "anchor": "browse credit cards",
+          "count": 1
+        },
+        {
+          "anchor": "I’m Feeling Lucky",
+          "count": 1
+        }
+      ]
+    }
+  },
+  {
+    "position": 7,
+    "url": "https://www.joinkudos.com/",
+    "domain": "joinkudos.com",
+    "evidenceId": "E012",
+    "robots": {
+      "status": 200,
+      "sitemaps": [
+        "https://www.joinkudos.com/sitemap.xml",
+        "https://www.joinkudos.com/sitemap-0.xml",
+        "https://www.joinkudos.com/sitemap-blog.xml",
+        "https://www.joinkudos.com/sitemap-sem.xml"
+      ]
+    },
+    "page": {
+      "url": "https://www.joinkudos.com/",
+      "title": "Kudos: Put Your Cards to Work - Earn More Rewards",
+      "metaDescription": "",
+      "metaRobots": "",
+      "ogTitle": "",
+      "canonical": "",
+      "hreflang": [],
+      "lang": "en",
+      "headings": {
+        "h1": [],
+        "h2": [],
+        "h3": []
+      },
+      "wordCount": 0,
+      "schemaTypes": [
+        "ImageObject",
+        "Organization",
+        "Person"
+      ],
+      "schema": {
+        "blocks": 1,
+        "parseErrors": [],
+        "types": [
+          "ImageObject",
+          "Organization",
+          "Person"
+        ],
+        "nodes": [
+          {
+            "type": "Organization",
+            "checkedAs": "Organization",
+            "errors": [],
+            "warnings": [],
+            "valid": true
+          }
+        ]
+      },
+      "internalLinkCount": 0,
+      "externalLinkCount": 0,
+      "topAnchors": []
+    }
+  },
+  {
+    "position": 8,
+    "url": "https://cardstack.money/articles/guides/credit-card-rewards-optimizer-apps-2026",
+    "domain": "cardstack.money",
+    "evidenceId": "E013",
+    "robots": {
+      "status": 200,
+      "sitemaps": [
+        "https://cardstack.money/sitemap-index.xml",
+        "https://cardstack.money/news-sitemap.xml"
+      ]
+    },
+    "page": {
+      "url": "https://cardstack.money/articles/guides/credit-card-rewards-optimizer-apps-2026",
+      "title": "Best Credit Card Rewards Optimizer Apps (2026 Comparison) | CardStack",
+      "metaDescription": "Best credit card rewards apps in 2026 — compare CardStack, MaxRewards, Kudos, and more on features, pricing, and what each app does best.",
+      "metaRobots": "index, follow, max-image-preview:large",
+      "ogTitle": "Best Credit Card Rewards Optimizer Apps (2026 Comparison) | CardStack",
+      "canonical": "https://cardstack.money/articles/guides/credit-card-rewards-optimizer-apps-2026",
+      "hreflang": [],
+      "lang": "en",
+      "headings": {
+        "h1": [
+          "Best Credit Card Rewards Apps in 2026"
+        ],
+        "h2": [
+          "Feature Comparison",
+          "CardStack",
+          "MaxRewards",
+          "Kudos",
+          "AwardWallet",
+          "How to Choose",
+          "The Case for Using More Than One",
+          "A Note on Privacy",
+          "Final Thoughts",
+          "Get $1000+ a year back from your premium cards.",
+          "CardStack Insiders",
+          "Related articles",
+          "Get more from every card automatically.",
+          "Product",
+          "Cards",
+          "Learn",
+          "Points & tools",
+          "Company & support"
+        ],
+        "h3": []
+      },
+      "wordCount": 2056,
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "WebPage"
+      ],
+      "schema": {
+        "blocks": 2,
+        "parseErrors": [],
+        "types": [
+          "Article",
+          "BreadcrumbList",
+          "ImageObject",
+          "ListItem",
+          "Organization",
+          "WebPage"
+        ],
+        "nodes": [
+          {
+            "type": "Article",
+            "checkedAs": "Article",
+            "errors": [],
+            "warnings": [],
+            "valid": true
+          },
+          {
+            "type": "BreadcrumbList",
+            "checkedAs": "BreadcrumbList",
+            "errors": [],
+            "warnings": [],
+            "valid": true
+          }
+        ]
+      },
+      "internalLinkCount": 95,
+      "externalLinkCount": 19,
+      "topAnchors": [
+        {
+          "anchor": "Sign In",
+          "count": 2
+        },
+        {
+          "anchor": "Try for Free",
+          "count": 2
+        },
+        {
+          "anchor": "Features",
+          "count": 2
+        },
+        {
+          "anchor": "MCP for AI Agents",
+          "count": 2
+        },
+        {
+          "anchor": "Browser extension",
+          "count": 2
+        },
+        {
+          "anchor": "Articles",
+          "count": 2
+        },
+        {
+          "anchor": "Guides",
+          "count": 2
+        },
+        {
+          "anchor": "CardStack",
+          "count": 2
+        },
+        {
+          "anchor": "Terms",
+          "count": 2
+        },
+        {
+          "anchor": "Features→",
+          "count": 1
+        },
+        {
+          "anchor": "MCP for AI Agents→",
+          "count": 1
+        },
+        {
+          "anchor": "Browser extension→",
+          "count": 1
+        },
+        {
+          "anchor": "Find a Card→",
+          "count": 1
+        },
+        {
+          "anchor": "Browse All Cards→",
+          "count": 1
+        },
+        {
+          "anchor": "Compare Cards→",
+          "count": 1
+        }
+      ]
+    }
+  }
+]
