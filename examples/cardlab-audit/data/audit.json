@@ -1,8 +1,8 @@
 {
   "tool": "seo-rea",
-  "version": "0.2.0",
-  "runId": "20261015T044655Z",
-  "createdAt": "2026-10-15T04:46:55.835Z",
+  "version": "0.3.0",
+  "runId": "20261015T051615Z",
+  "createdAt": "2026-10-15T05:16:15.920Z",
   "url": "https://getcardlab.app/",
   "site": {
     "domain": "getcardlab.app",
@@ -302,7 +302,7 @@
         "scores": {},
         "lab": {},
         "field": {},
-        "fetchedAt": "2026-10-15T04:46:55.833Z",
+        "fetchedAt": "2026-10-15T05:16:15.919Z",
         "fromCache": false,
         "evidenceId": "E008"
       }
