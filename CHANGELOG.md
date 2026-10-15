@@ -6,6 +6,25 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+
+- Stable issue ids: every entry in `topActions` (dossier and strategy) has an
+  `id` such as `TECH-ROBOTS-BLOCKS-ALL` or `PERF-SCORE-LOW:3f2a9c1e` (rule
+  code plus an optional hash of the subject). The same problem keeps the same
+  id across runs. Shown in the Top 10 actions table. See
+  [docs/error-codes.md](docs/error-codes.md#issue-ids).
+- Published error contract: failures carry a stable code (`USAGE`,
+  `RUN_EXISTS`, `BUDGET_REFUSED`, `SCHEMA_INVALID`, ...). The CLI prints
+  `seo-rea: [CODE] message` plus a hint, and with `--json` prints
+  `{ "error": { code, message, hint, exitCode } }` on stdout. MCP errors add
+  `code` and `hint`. JSON Schema in `docs/error-contract.schema.json`
+  (`npm run error-schema`).
+
+### Changed
+
+- `dossier.json` and `strategy.json` `topActions[]` gain a required `id`;
+  JSON Schemas regenerated.
+
 ## [0.4.0] - 2026-10-15
 
 Strategy Dossier: why a site leads, from free sources.
