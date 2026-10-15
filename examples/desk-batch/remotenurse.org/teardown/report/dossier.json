@@ -1,0 +1,2141 @@
+{
+  "schemaVersion": "1",
+  "tool": "seo-rea",
+  "toolVersion": "0.3.0",
+  "kind": "teardown",
+  "runId": "20261015T051651Z",
+  "inputs": {
+    "target": "remotenurse.org",
+    "url": "https://remotenurse.org/",
+    "keyword": "remote nursing jobs",
+    "budgetUsd": 0
+  },
+  "timestamps": {
+    "createdAt": "2026-10-15T05:16:51.498Z",
+    "writtenAt": "2026-10-15T05:17:06.367Z"
+  },
+  "cost": {
+    "spentUsd": 0,
+    "budgetUsd": 0
+  },
+  "serp": {
+    "collected": true,
+    "primary": "Bing (headless Chromium)",
+    "engines": [
+      {
+        "engine": "google",
+        "label": "Google (headless Chromium)",
+        "adapter": "serp-playwright",
+        "status": "not-used",
+        "problem": "Google captcha (unusual traffic page)",
+        "httpStatus": 200,
+        "organicCount": 0,
+        "adCount": 0,
+        "evidenceId": "E001"
+      },
+      {
+        "engine": "bing",
+        "label": "Bing (headless Chromium)",
+        "adapter": "serp-playwright",
+        "status": "used",
+        "problem": "",
+        "httpStatus": 200,
+        "organicCount": 10,
+        "adCount": 0,
+        "evidenceId": "E003"
+      }
+    ],
+    "results": [
+      {
+        "position": 1,
+        "url": "https://www.indeed.com/q-Remote-Nursing-jobs.html",
+        "domain": "indeed.com",
+        "title": "Remote Nursing jobs - Indeed",
+        "isTarget": false
+      },
+      {
+        "position": 2,
+        "url": "https://www.nurseremotely.com/jobs",
+        "domain": "nurseremotely.com",
+        "title": "All jobs - nurseremotely.com",
+        "isTarget": false
+      },
+      {
+        "position": 3,
+        "url": "https://remotenursingjobs.com/location/california/",
+        "domain": "remotenursingjobs.com",
+        "title": "399 Remote Nursing Jobs in California | Remote …",
+        "isTarget": false
+      },
+      {
+        "position": 4,
+        "url": "https://nurse.org/education/remote-nursing-jobs/",
+        "domain": "nurse.org",
+        "title": "Top 7 Companies With Remote Nursing Jobs in 2026 | Nurse.org",
+        "isTarget": false
+      },
+      {
+        "position": 5,
+        "url": "https://remotenursingjobs.com/location/anywhere/",
+        "domain": "remotenursingjobs.com",
+        "title": "1066 Remote Nursing Jobs in Anywhere | Remote Nursing Jobs",
+        "isTarget": false
+      },
+      {
+        "position": 6,
+        "url": "https://www.indeed.com/q-remote-registered-nurse-l-remote%e2%80%8b%e2%80%8b-work-from-home-jobs.html",
+        "domain": "indeed.com",
+        "title": "remote registered nurse jobs in Remote Work From Home",
+        "isTarget": false
+      },
+      {
+        "position": 7,
+        "url": "https://www.remoternjobs.com/remote-rn-jobs",
+        "domain": "remoternjobs.com",
+        "title": "Remote RN Jobs — 780 Live Roles · RemoteRN",
+        "isTarget": false
+      },
+      {
+        "position": 8,
+        "url": "https://app.nursefern.com/",
+        "domain": "app.nursefern.com",
+        "title": "Remote Nurse Jobs | Nurse Fern",
+        "isTarget": false
+      }
+    ],
+    "ads": [],
+    "evidenceId": "E005"
+  },
+  "competitors": [
+    {
+      "position": 1,
+      "url": "https://www.indeed.com/q-Remote-Nursing-jobs.html",
+      "domain": "indeed.com",
+      "analysed": false,
+      "error": "HTTP 403 text/html; charset=UTF-8",
+      "title": "",
+      "wordCount": 0,
+      "headings": {
+        "h1": [],
+        "h2": [],
+        "h3": []
+      },
+      "schema": {
+        "types": [],
+        "blocks": 0,
+        "parseErrors": [],
+        "validationErrors": []
+      },
+      "internalLinks": 0,
+      "evidenceId": "E006"
+    },
+    {
+      "position": 2,
+      "url": "https://www.nurseremotely.com/jobs",
+      "domain": "nurseremotely.com",
+      "analysed": true,
+      "error": "",
+      "title": "All jobs",
+      "wordCount": 1077,
+      "headings": {
+        "h1": [
+          "All jobs"
+        ],
+        "h2": [
+          "Footer"
+        ],
+        "h3": [
+          "Nurse Case Manager",
+          "Utilization Review RN",
+          "Family Nurse Practitioner (Hybrid Role with In-Person & Virtual Shifts) $7.5k Sign-on Bonus",
+          "Utilization Management Specialist III - MH/SU",
+          "Epic Analyst",
+          "Registered Nurse-Review Analys",
+          "Nurse Specialist - Fully Remote in the US",
+          "Remote Registered Nurse (RN) - Internal Medicine - NYS license required",
+          "Registered Nurse",
+          "Utilization Management RN - Prior Authorization",
+          "Legal Nurse Consultant (RN) - Contractor",
+          "Senior Nurse Reviewer",
+          "Nurse Practitioner",
+          "Registered Nurse | Remote - Contract",
+          "Utilization Management Administration Coordinator - SNF",
+          "Registered Nurse (RN) - Women's Care Nurse Access",
+          "Medical Virtual Assistant - Virtual Assistant",
+          "Registered Nurse II, Full-time, Evening Shift (8 Hours)",
+          "Utilization Review Nurse",
+          "Senior Nurse Reviewer"
+        ]
+      },
+      "schema": {
+        "types": [],
+        "blocks": 0,
+        "parseErrors": [],
+        "validationErrors": []
+      },
+      "internalLinks": 97,
+      "evidenceId": "E007"
+    },
+    {
+      "position": 3,
+      "url": "https://remotenursingjobs.com/location/california/",
+      "domain": "remotenursingjobs.com",
+      "analysed": true,
+      "error": "",
+      "title": "399 Remote Nursing Jobs in California | Remote Nursing Jobs",
+      "wordCount": 1182,
+      "headings": {
+        "h1": [
+          "Remote Nursing Jobs California"
+        ],
+        "h2": [
+          "Top Remote Nursing Jobs in California",
+          "Nurse Salaries in California",
+          "Explore Work-From-Home Nursing Jobs in Nearby States",
+          "Popular Online RN Jobs and Specialties in California",
+          "FAQs - Remote RN Jobs California",
+          "Explore Remote Nursing Jobs in Popular States",
+          "Find Remote RN, NP, and LPN Jobs by Skills and Specialties"
+        ],
+        "h3": [
+          "What is the employment outlook for Registered Nurses in California?",
+          "What are the annual employment projections for Registered Nurses in California?",
+          "Join now to unlock all jobs",
+          "Choose your membership",
+          "Frequently Asked Questions",
+          "Texas",
+          "California",
+          "Florida",
+          "Arizona",
+          "Ohio",
+          "Washington",
+          "New York",
+          "Georgia",
+          "Wisconsin",
+          "Case Management",
+          "Utilization Mgmt",
+          "Discharge Planning",
+          "Acute Care",
+          "Home Health",
+          "Behavioral Health"
+        ]
+      },
+      "schema": {
+        "types": [
+          "Answer",
+          "CollectionPage",
+          "FAQPage",
+          "ImageObject",
+          "Organization",
+          "Question",
+          "Thing"
+        ],
+        "blocks": 1,
+        "parseErrors": [],
+        "validationErrors": []
+      },
+      "internalLinks": 156,
+      "evidenceId": "E008"
+    },
+    {
+      "position": 4,
+      "url": "https://nurse.org/education/remote-nursing-jobs/",
+      "domain": "nurse.org",
+      "analysed": false,
+      "error": "HTTP 403 text/html",
+      "title": "",
+      "wordCount": 0,
+      "headings": {
+        "h1": [],
+        "h2": [],
+        "h3": []
+      },
+      "schema": {
+        "types": [],
+        "blocks": 0,
+        "parseErrors": [],
+        "validationErrors": []
+      },
+      "internalLinks": 0,
+      "evidenceId": "E009"
+    },
+    {
+      "position": 5,
+      "url": "https://remotenursingjobs.com/location/anywhere/",
+      "domain": "remotenursingjobs.com",
+      "analysed": true,
+      "error": "",
+      "title": "1066 Remote Nursing Jobs in Anywhere | Remote Nursing Jobs",
+      "wordCount": 892,
+      "headings": {
+        "h1": [
+          "Remote Nursing Jobs Anywhere"
+        ],
+        "h2": [
+          "Top Remote Nursing Jobs in Anywhere",
+          "Popular Online RN Jobs and Specialties in Anywhere",
+          "Explore Remote Nursing Jobs in Popular States",
+          "Find Remote RN, NP, and LPN Jobs by Skills and Specialties"
+        ],
+        "h3": [
+          "Join now to unlock all jobs",
+          "Choose your membership",
+          "Frequently Asked Questions",
+          "Texas",
+          "California",
+          "Florida",
+          "Arizona",
+          "Ohio",
+          "Washington",
+          "New York",
+          "Georgia",
+          "Wisconsin",
+          "Case Management",
+          "Utilization Mgmt",
+          "Discharge Planning",
+          "Acute Care",
+          "Home Health",
+          "Behavioral Health",
+          "Disease Management",
+          "Care Manager"
+        ]
+      },
+      "schema": {
+        "types": [
+          "CollectionPage",
+          "ImageObject",
+          "Organization",
+          "Thing"
+        ],
+        "blocks": 1,
+        "parseErrors": [],
+        "validationErrors": []
+      },
+      "internalLinks": 159,
+      "evidenceId": "E010"
+    },
+    {
+      "position": 6,
+      "url": "https://www.indeed.com/q-remote-registered-nurse-l-remote%e2%80%8b%e2%80%8b-work-from-home-jobs.html",
+      "domain": "indeed.com",
+      "analysed": false,
+      "error": "HTTP 403 text/html; charset=UTF-8",
+      "title": "",
+      "wordCount": 0,
+      "headings": {
+        "h1": [],
+        "h2": [],
+        "h3": []
+      },
+      "schema": {
+        "types": [],
+        "blocks": 0,
+        "parseErrors": [],
+        "validationErrors": []
+      },
+      "internalLinks": 0,
+      "evidenceId": "E011"
+    },
+    {
+      "position": 7,
+      "url": "https://www.remoternjobs.com/remote-rn-jobs",
+      "domain": "remoternjobs.com",
+      "analysed": true,
+      "error": "",
+      "title": "Remote RN Jobs — 776 Live Roles · RemoteRN",
+      "wordCount": 3039,
+      "headings": {
+        "h1": [
+          "Remote RN Jobs"
+        ],
+        "h2": [
+          "Open roles",
+          "Filters",
+          "Filters",
+          "New remote nursing jobs, as they post",
+          "Medical Field Case Manager",
+          "New remote Case Management jobs, as they post",
+          "Frequently asked"
+        ],
+        "h3": [
+          "Medical Field Case Manager",
+          "Hospice RN Case Manager",
+          "RN I, PCA/MDC/DSNP (Field Based - Camden County)",
+          "Care Management Clinician Team Lead",
+          "Care Management Clinician Team Lead",
+          "Care Management Clinician Team Lead",
+          "Care Management Clinician Team Lead",
+          "Registered Nurse - Alerts - Nights",
+          "Medical Review Nurse - CMS/RAC Auditor, Government Audits",
+          "RN Care Manager",
+          "Director Utilization Management",
+          "Utilization Review RN",
+          "Registered Nurse - Home Care Resource",
+          "RN Member Triage",
+          "Registered Nurse - Home Care Resource",
+          "Registered Nurse - Hospice Resource",
+          "Nurse Audit",
+          "Registered Nurse - Hospice Resource",
+          "Registered Nurse, Hospice Case Manager",
+          "RN Case Manager"
+        ]
+      },
+      "schema": {
+        "types": [
+          "Answer",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "Question"
+        ],
+        "blocks": 2,
+        "parseErrors": [],
+        "validationErrors": []
+      },
+      "internalLinks": 278,
+      "evidenceId": "E012"
+    },
+    {
+      "position": 8,
+      "url": "https://app.nursefern.com/",
+      "domain": "app.nursefern.com",
+      "analysed": true,
+      "error": "",
+      "title": "Remote Nurse Jobs | Nurse Fern",
+      "wordCount": 0,
+      "headings": {
+        "h1": [],
+        "h2": [],
+        "h3": []
+      },
+      "schema": {
+        "types": [],
+        "blocks": 0,
+        "parseErrors": [],
+        "validationErrors": []
+      },
+      "internalLinks": 0,
+      "evidenceId": "E013"
+    }
+  ],
+  "target": {
+    "domain": "remotenurse.org",
+    "fetched": true,
+    "error": "",
+    "pages": [
+      {
+        "url": "https://remotenurse.org/",
+        "title": "Medical VA training and NCLEX-RN prep | RemoteNurse",
+        "metaDescription": "Free training for remote medical VA work: 16 courses, 442 scored practice cases and job boards. NCLEX-RN prep with 2,600 questions.",
+        "wordCount": 2190,
+        "headings": {
+          "h1": [
+            "Medical VA training and NCLEX-RN prepWork the desk before the job. Sit the exam before the exam."
+          ],
+          "h2": [
+            "The tools in your account",
+            "RemoteNurse in numbers",
+            "Four tools. One account.",
+            "Read up before your first shift.",
+            "See your weak spots before test day",
+            "Start free. Add Plus when you need it.",
+            "Questions nurses ask",
+            "Guides and hubs",
+            "Free medical VA courses, one for each desk",
+            "Your first case takes 8 minutes."
+          ],
+          "h3": [
+            "Practice NCLEX-style questions",
+            "Learn the desk, work the case",
+            "Rehearse the call before it counts",
+            "Apply from the same account",
+            "Free",
+            "Plus monthly",
+            "Plus yearly",
+            "Team"
+          ]
+        },
+        "schemaTypes": [
+          "AggregateOffer",
+          "Answer",
+          "ContactPoint",
+          "Country",
+          "FAQPage",
+          "ImageObject",
+          "Offer",
+          "Organization",
+          "Question",
+          "SoftwareApplication",
+          "UnitPriceSpecification",
+          "WebApplication",
+          "WebSite"
+        ],
+        "internalLinks": 189
+      },
+      {
+        "url": "https://remotenurse.org/about",
+        "title": "About RemoteNurse and Our Editorial Policy | RemoteNurse",
+        "metaDescription": "RemoteNurse pairs free medical VA training and scored practice cases with NCLEX-RN prep. What it does, who uses it, and how its content is made.",
+        "wordCount": 1564,
+        "headings": {
+          "h1": [
+            "About RemoteNurse"
+          ],
+          "h2": [
+            "What RemoteNurse does",
+            "What makes RemoteNurse different",
+            "Who uses RemoteNurse",
+            "Who makes RemoteNurse",
+            "How the content is made",
+            "The research behind RemoteNurse"
+          ],
+          "h3": [
+            "Also from us",
+            "Content is drafted with AI",
+            "Cases are grounded in fictional patient data",
+            "Facts are grounded in cited authoritative sources",
+            "What we check before release",
+            "Proprietary criteria",
+            "Report a possible inaccuracy"
+          ]
+        },
+        "schemaTypes": [
+          "AboutPage",
+          "BreadcrumbList",
+          "ContactPoint",
+          "Country",
+          "ImageObject",
+          "ListItem",
+          "Organization",
+          "WebSite"
+        ],
+        "internalLinks": 135
+      },
+      {
+        "url": "https://remotenurse.org/nclex-rn-prep",
+        "title": "NCLEX-RN Prep 2026: Free Practice Questions, Study Plan",
+        "metaDescription": "Prepare for the NCLEX-RN free: adaptive practice with no sign-up, a 25-question bank sample, rationales and a study plan. Plus adds all 2,600 questions.",
+        "wordCount": 2617,
+        "headings": {
+          "h1": [
+            "NCLEX-RN prep for 2026: free practice questions and a study plan"
+          ],
+          "h2": [
+            "What does NCLEX Plus show you?",
+            "What is on the NCLEX-RN exam?",
+            "How many questions are on the NCLEX-RN?",
+            "How do you prepare for the NCLEX-RN, step by step?",
+            "Official NCSBN resources",
+            "Where should you start preparing?",
+            "How do you take the NCLEX-RN from abroad?",
+            "Preparing from another country?",
+            "Which NCLEX prep suits internationally educated nurses?",
+            "What a free account adds",
+            "Keep going from here",
+            "Sourced, not guessed",
+            "Common questions"
+          ],
+          "h3": [
+            "Try the fixed-length adaptive simulator",
+            "Work through practice questions one at a time",
+            "Build a study plan for 2026",
+            "Learn the NGN question types",
+            "Preparing for a retake",
+            "Print a blank study plan",
+            "NCLEX in Nigeria",
+            "NCLEX in India",
+            "NCLEX in Kenya",
+            "NCLEX in Mexico",
+            "NCLEX in the Philippines",
+            "NCLEX in Pakistan"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "CollectionPage",
+          "ContactPoint",
+          "Country",
+          "FAQPage",
+          "ImageObject",
+          "ListItem",
+          "Organization",
+          "Question",
+          "SpeakableSpecification",
+          "WebSite"
+        ],
+        "internalLinks": 145
+      },
+      {
+        "url": "https://remotenurse.org/nclex-rn-prep/study-plan",
+        "title": "Printable NCLEX-RN Study Plan (Free) | RemoteNurse",
+        "metaDescription": "A free printable NCLEX-RN study plan: your test date and weekly hours, a weekly rhythm, a tracker for the eight client-needs categories.",
+        "wordCount": 1012,
+        "headings": {
+          "h1": [
+            "Printable NCLEX-RN study plan"
+          ],
+          "h2": [
+            "Your plan",
+            "The weekly rhythm",
+            "Accuracy tracker",
+            "Booking checklist",
+            "Questions about this plan"
+          ],
+          "h3": []
+        },
+        "schemaTypes": [
+          "Answer",
+          "BreadcrumbList",
+          "ContactPoint",
+          "Country",
+          "FAQPage",
+          "ImageObject",
+          "ListItem",
+          "Organization",
+          "Question",
+          "WebPage",
+          "WebSite"
+        ],
+        "internalLinks": 120
+      },
+      {
+        "url": "https://remotenurse.org/nclex-rn-prep/nigeria",
+        "title": "NCLEX in Nigeria: Test Centres, Fees and Steps | RemoteNurse",
+        "metaDescription": "There is no NCLEX test centre in Nigeria. The centres Nigerian nurses can book, NCSBN fees in US dollars, NMCN verification, and free NCLEX practice.",
+        "wordCount": 2248,
+        "headings": {
+          "h1": [
+            "NCLEX in Nigeria: test centres, fees and the steps to a US licence"
+          ],
+          "h2": [
+            "Is there an NCLEX test centre in Nigeria?",
+            "What are the steps to take the NCLEX from Nigeria?",
+            "How much does the NCLEX cost from Nigeria?",
+            "How many nurses from Nigeria take the NCLEX?",
+            "How can you practise for the NCLEX from Nigeria for free?",
+            "What work can you do from Nigeria while you prepare?",
+            "NCLEX from other countries",
+            "Common questions",
+            "Sources"
+          ],
+          "h3": [
+            "Take the adaptive practice simulator",
+            "Print a blank NCLEX study plan",
+            "NCLEX in India",
+            "NCLEX in Kenya",
+            "NCLEX in Mexico",
+            "NCLEX in the Philippines",
+            "NCLEX in Pakistan"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "ContactPoint",
+          "Country",
+          "CreativeWork",
+          "FAQPage",
+          "HowTo",
+          "HowToStep",
+          "ImageObject",
+          "ListItem",
+          "Organization",
+          "Question",
+          "SpeakableSpecification",
+          "WebSite"
+        ],
+        "internalLinks": 136
+      },
+      {
+        "url": "https://remotenurse.org/nclex-rn-prep/india",
+        "title": "NCLEX Exam in India: Centres, Fees and Steps | RemoteNurse",
+        "metaDescription": "Where to take the NCLEX in India, what NCSBN charges in US and Canadian dollars, the Indian Nursing Council's role, and free NCLEX practice to start.",
+        "wordCount": 2232,
+        "headings": {
+          "h1": [
+            "NCLEX in India: test centres, fees and the routes to the US and Canada"
+          ],
+          "h2": [
+            "Is there an NCLEX test centre in India?",
+            "What are the steps to take the NCLEX from India?",
+            "How much does the NCLEX cost from India?",
+            "How many nurses from India take the NCLEX?",
+            "How can you practise for the NCLEX from India for free?",
+            "What work can you do from India while you prepare?",
+            "NCLEX from other countries",
+            "Common questions",
+            "Sources"
+          ],
+          "h3": [
+            "Take the adaptive practice simulator",
+            "Print a blank NCLEX study plan",
+            "NCLEX in Nigeria",
+            "NCLEX in Kenya",
+            "NCLEX in Mexico",
+            "NCLEX in the Philippines",
+            "NCLEX in Pakistan"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "ContactPoint",
+          "Country",
+          "CreativeWork",
+          "FAQPage",
+          "HowTo",
+          "HowToStep",
+          "ImageObject",
+          "ListItem",
+          "Organization",
+          "Question",
+          "SpeakableSpecification",
+          "WebSite"
+        ],
+        "internalLinks": 136
+      },
+      {
+        "url": "https://remotenurse.org/nclex-rn-prep/kenya",
+        "title": "NCLEX in Kenya: Nairobi Test Centre, Fees, Steps",
+        "metaDescription": "Kenya has an NCLEX test centre in Nairobi. What NCSBN charges, how the Nursing Council of Kenya fits the route, and free NCLEX practice to start.",
+        "wordCount": 2132,
+        "headings": {
+          "h1": [
+            "NCLEX in Kenya: the Nairobi test centre, fees and steps"
+          ],
+          "h2": [
+            "Is there an NCLEX test centre in Kenya?",
+            "What are the steps to take the NCLEX from Kenya?",
+            "How much does the NCLEX cost from Kenya?",
+            "How many nurses from Kenya take the NCLEX?",
+            "How can you practise for the NCLEX from Kenya for free?",
+            "What work can you do from Kenya while you prepare?",
+            "NCLEX from other countries",
+            "Common questions",
+            "Sources"
+          ],
+          "h3": [
+            "Take the adaptive practice simulator",
+            "Print a blank NCLEX study plan",
+            "NCLEX in Nigeria",
+            "NCLEX in India",
+            "NCLEX in Mexico",
+            "NCLEX in the Philippines",
+            "NCLEX in Pakistan"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "ContactPoint",
+          "Country",
+          "CreativeWork",
+          "FAQPage",
+          "HowTo",
+          "HowToStep",
+          "ImageObject",
+          "ListItem",
+          "Organization",
+          "Question",
+          "SpeakableSpecification",
+          "WebSite"
+        ],
+        "internalLinks": 136
+      },
+      {
+        "url": "https://remotenurse.org/nclex-rn-prep/mexico",
+        "title": "NCLEX in Mexico: Test Centre, Fees and Steps | RemoteNurse",
+        "metaDescription": "Mexico has an NCLEX test centre in Mexico City. What NCSBN charges in US dollars, how your cédula profesional fits, and free NCLEX practice in English.",
+        "wordCount": 2128,
+        "headings": {
+          "h1": [
+            "NCLEX in Mexico: the Mexico City test centre, fees and steps"
+          ],
+          "h2": [
+            "Is there an NCLEX test centre in Mexico?",
+            "What are the steps to take the NCLEX from Mexico?",
+            "How much does the NCLEX cost from Mexico?",
+            "How many nurses from Mexico take the NCLEX?",
+            "How can you practise for the NCLEX from Mexico for free?",
+            "What work can you do from Mexico while you prepare?",
+            "NCLEX from other countries",
+            "Common questions",
+            "Sources"
+          ],
+          "h3": [
+            "Take the adaptive practice simulator",
+            "Print a blank NCLEX study plan",
+            "NCLEX in Nigeria",
+            "NCLEX in India",
+            "NCLEX in Kenya",
+            "NCLEX in the Philippines",
+            "NCLEX in Pakistan"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "ContactPoint",
+          "Country",
+          "CreativeWork",
+          "FAQPage",
+          "HowTo",
+          "HowToStep",
+          "ImageObject",
+          "ListItem",
+          "Organization",
+          "Question",
+          "SpeakableSpecification",
+          "WebSite"
+        ],
+        "internalLinks": 136
+      },
+      {
+        "url": "https://remotenurse.org/nclex-rn-prep/philippines",
+        "title": "NCLEX in the Philippines: Test Centres, Fees and Steps",
+        "metaDescription": "The Philippines has two NCLEX test centres, in Makati and Alabang. What NCSBN charges in US dollars, the PRC's role, the Canada route, and free practice.",
+        "wordCount": 2315,
+        "headings": {
+          "h1": [
+            "NCLEX in the Philippines: test centres in Makati and Alabang, fees and steps"
+          ],
+          "h2": [
+            "Is there an NCLEX test centre in the Philippines?",
+            "What are the steps to take the NCLEX from the Philippines?",
+            "How much does the NCLEX cost from the Philippines?",
+            "How many nurses from the Philippines take the NCLEX?",
+            "How can you practise for the NCLEX from the Philippines for free?",
+            "What work can you do from the Philippines while you prepare?",
+            "NCLEX from other countries",
+            "Common questions",
+            "Sources"
+          ],
+          "h3": [
+            "Take the adaptive practice simulator",
+            "Print a blank NCLEX study plan",
+            "NCLEX in Nigeria",
+            "NCLEX in India",
+            "NCLEX in Kenya",
+            "NCLEX in Mexico",
+            "NCLEX in Pakistan"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "ContactPoint",
+          "Country",
+          "CreativeWork",
+          "FAQPage",
+          "HowTo",
+          "HowToStep",
+          "ImageObject",
+          "ListItem",
+          "Organization",
+          "Question",
+          "SpeakableSpecification",
+          "WebSite"
+        ],
+        "internalLinks": 136
+      },
+      {
+        "url": "https://remotenurse.org/nclex-rn-prep/pakistan",
+        "title": "NCLEX in Pakistan: Lahore Test Centre, Fees, Steps",
+        "metaDescription": "Pakistan has one NCLEX test centre, in Lahore. NCSBN fees in US dollars, PNMC verification and good standing letters, and free NCLEX practice to start.",
+        "wordCount": 2310,
+        "headings": {
+          "h1": [
+            "NCLEX in Pakistan: the Lahore test centre, fees and steps"
+          ],
+          "h2": [
+            "Is there an NCLEX test centre in Pakistan?",
+            "What are the steps to take the NCLEX from Pakistan?",
+            "How much does the NCLEX cost from Pakistan?",
+            "How many nurses from Pakistan take the NCLEX?",
+            "How can you practise for the NCLEX from Pakistan for free?",
+            "What work can you do from Pakistan while you prepare?",
+            "NCLEX from other countries",
+            "Common questions",
+            "Sources"
+          ],
+          "h3": [
+            "Take the adaptive practice simulator",
+            "Print a blank NCLEX study plan",
+            "NCLEX in Nigeria",
+            "NCLEX in India",
+            "NCLEX in Kenya",
+            "NCLEX in Mexico",
+            "NCLEX in the Philippines"
+          ]
+        },
+        "schemaTypes": [
+          "Answer",
+          "Article",
+          "BreadcrumbList",
+          "ContactPoint",
+          "Country",
+          "CreativeWork",
+          "FAQPage",
+          "HowTo",
+          "HowToStep",
+          "ImageObject",
+          "ListItem",
+          "Organization",
+          "Question",
+          "SpeakableSpecification",
+          "WebSite"
+        ],
+        "internalLinks": 136
+      }
+    ],
+    "schemaValidation": {
+      "types": [
+        "AboutPage",
+        "AggregateOffer",
+        "Answer",
+        "Article",
+        "BreadcrumbList",
+        "CollectionPage",
+        "ContactPoint",
+        "Country",
+        "CreativeWork",
+        "FAQPage",
+        "HowTo",
+        "HowToStep",
+        "ImageObject",
+        "ListItem",
+        "Offer",
+        "Organization",
+        "Question",
+        "SoftwareApplication",
+        "SpeakableSpecification",
+        "UnitPriceSpecification",
+        "WebApplication",
+        "WebPage",
+        "WebSite"
+      ],
+      "blocks": 10,
+      "parseErrors": [],
+      "checks": [
+        {
+          "type": "Organization",
+          "checkedAs": "Organization",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/"
+        },
+        {
+          "type": "SoftwareApplication",
+          "checkedAs": "SoftwareApplication",
+          "valid": false,
+          "errors": [
+            "needs one of: aggregateRating, review"
+          ],
+          "warnings": [],
+          "url": "https://remotenurse.org/"
+        },
+        {
+          "type": "WebApplication",
+          "checkedAs": "SoftwareApplication",
+          "valid": false,
+          "errors": [
+            "needs one of: aggregateRating, review"
+          ],
+          "warnings": [],
+          "url": "https://remotenurse.org/"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/"
+        },
+        {
+          "type": "Organization",
+          "checkedAs": "Organization",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/about"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/about"
+        },
+        {
+          "type": "Organization",
+          "checkedAs": "Organization",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep"
+        },
+        {
+          "type": "Article",
+          "checkedAs": "Article",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep"
+        },
+        {
+          "type": "Organization",
+          "checkedAs": "Organization",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/study-plan"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/study-plan"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/study-plan"
+        },
+        {
+          "type": "Organization",
+          "checkedAs": "Organization",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/nigeria"
+        },
+        {
+          "type": "Article",
+          "checkedAs": "Article",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/nigeria"
+        },
+        {
+          "type": "HowTo",
+          "checkedAs": "HowTo",
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "missing recommended \"image\"",
+            "missing recommended \"totalTime\"",
+            "missing recommended \"supply\"",
+            "missing recommended \"tool\""
+          ],
+          "url": "https://remotenurse.org/nclex-rn-prep/nigeria"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/nigeria"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/nigeria"
+        },
+        {
+          "type": "Organization",
+          "checkedAs": "Organization",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/india"
+        },
+        {
+          "type": "Article",
+          "checkedAs": "Article",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/india"
+        },
+        {
+          "type": "HowTo",
+          "checkedAs": "HowTo",
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "missing recommended \"image\"",
+            "missing recommended \"totalTime\"",
+            "missing recommended \"supply\"",
+            "missing recommended \"tool\""
+          ],
+          "url": "https://remotenurse.org/nclex-rn-prep/india"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/india"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/india"
+        },
+        {
+          "type": "Organization",
+          "checkedAs": "Organization",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/kenya"
+        },
+        {
+          "type": "Article",
+          "checkedAs": "Article",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/kenya"
+        },
+        {
+          "type": "HowTo",
+          "checkedAs": "HowTo",
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "missing recommended \"image\"",
+            "missing recommended \"totalTime\"",
+            "missing recommended \"supply\"",
+            "missing recommended \"tool\""
+          ],
+          "url": "https://remotenurse.org/nclex-rn-prep/kenya"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/kenya"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/kenya"
+        },
+        {
+          "type": "Organization",
+          "checkedAs": "Organization",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/mexico"
+        },
+        {
+          "type": "Article",
+          "checkedAs": "Article",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/mexico"
+        },
+        {
+          "type": "HowTo",
+          "checkedAs": "HowTo",
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "missing recommended \"image\"",
+            "missing recommended \"totalTime\"",
+            "missing recommended \"supply\"",
+            "missing recommended \"tool\""
+          ],
+          "url": "https://remotenurse.org/nclex-rn-prep/mexico"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/mexico"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/mexico"
+        },
+        {
+          "type": "Organization",
+          "checkedAs": "Organization",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/philippines"
+        },
+        {
+          "type": "Article",
+          "checkedAs": "Article",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/philippines"
+        },
+        {
+          "type": "HowTo",
+          "checkedAs": "HowTo",
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "missing recommended \"image\"",
+            "missing recommended \"totalTime\"",
+            "missing recommended \"supply\"",
+            "missing recommended \"tool\""
+          ],
+          "url": "https://remotenurse.org/nclex-rn-prep/philippines"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/philippines"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/philippines"
+        },
+        {
+          "type": "Organization",
+          "checkedAs": "Organization",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/pakistan"
+        },
+        {
+          "type": "Article",
+          "checkedAs": "Article",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/pakistan"
+        },
+        {
+          "type": "HowTo",
+          "checkedAs": "HowTo",
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "missing recommended \"image\"",
+            "missing recommended \"totalTime\"",
+            "missing recommended \"supply\"",
+            "missing recommended \"tool\""
+          ],
+          "url": "https://remotenurse.org/nclex-rn-prep/pakistan"
+        },
+        {
+          "type": "BreadcrumbList",
+          "checkedAs": "BreadcrumbList",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/pakistan"
+        },
+        {
+          "type": "FAQPage",
+          "checkedAs": "FAQPage",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "url": "https://remotenurse.org/nclex-rn-prep/pakistan"
+        }
+      ],
+      "evidenceIds": [
+        "E017",
+        "E018"
+      ]
+    },
+    "aiReadiness": {
+      "crawlers": [
+        {
+          "token": "GPTBot",
+          "operator": "OpenAI",
+          "purpose": "model training",
+          "access": "partial",
+          "rule": "own group: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        },
+        {
+          "token": "OAI-SearchBot",
+          "operator": "OpenAI",
+          "purpose": "ChatGPT search index",
+          "access": "partial",
+          "rule": "own group: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        },
+        {
+          "token": "ChatGPT-User",
+          "operator": "OpenAI",
+          "purpose": "user-initiated fetches",
+          "access": "partial",
+          "rule": "own group: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        },
+        {
+          "token": "ClaudeBot",
+          "operator": "Anthropic",
+          "purpose": "model training",
+          "access": "partial",
+          "rule": "own group: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        },
+        {
+          "token": "Claude-SearchBot",
+          "operator": "Anthropic",
+          "purpose": "search index",
+          "access": "partial",
+          "rule": "own group: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        },
+        {
+          "token": "PerplexityBot",
+          "operator": "Perplexity",
+          "purpose": "search index",
+          "access": "partial",
+          "rule": "own group: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        },
+        {
+          "token": "Google-Extended",
+          "operator": "Google",
+          "purpose": "Gemini training and grounding (not Search)",
+          "access": "partial",
+          "rule": "own group: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        },
+        {
+          "token": "Applebot-Extended",
+          "operator": "Apple",
+          "purpose": "Apple Intelligence training",
+          "access": "partial",
+          "rule": "own group: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        },
+        {
+          "token": "CCBot",
+          "operator": "Common Crawl",
+          "purpose": "open crawl used for training",
+          "access": "partial",
+          "rule": "falls back to *: Disallow /app/, Disallow /api/, Disallow /sign-in, Disallow /verify, Disallow /reset-password, Disallow /forgot-password, Disallow /desk-plan, Disallow /coming-soon"
+        }
+      ],
+      "llmsTxt": {
+        "present": true,
+        "valid": true,
+        "linkCount": 91,
+        "sections": [
+          "Canonical facts",
+          "Hubs",
+          "From your country",
+          "Features",
+          "Roles",
+          "Guides",
+          "Reference",
+          "Practice",
+          "Jobs",
+          "About"
+        ],
+        "errors": [],
+        "warnings": [
+          "list item is not \"- [name](url): notes\": - Product: remotenurse.org. The iOS companion Medical VA Coach: RemoteNurse is p",
+          "list item is not \"- [name](url): notes\": - Audience: US bedside RNs moving into review work; nurses and healthcare BPO st",
+          "list item is not \"- [name](url): notes\": - NCLEX-RN prep: an original 2,600-question NCLEX-style bank written to the 2026",
+          "list item is not \"- [name](url): notes\": - Scope: sixteen remote healthcare desks, not a single role. Fifteen of the sixt",
+          "list item is not \"- [name](url): notes\": - Grading: the Case Judge is deterministic and is the only verdict; AI coaches a",
+          "list item is not \"- [name](url): notes\": - Nurse authority: program- and delegation-specific. Adverse medical-necessity d",
+          "list item is not \"- [name](url): notes\": - Pricing: Free; RemoteNurse Plus at $9.99 a month or $79.99 a year, or ₱499 a m",
+          "list item is not \"- [name](url): notes\": - Not to be confused with: RemoteNurse (remotenurse.org) is a separate company f",
+          "list item is not \"- [name](url): notes\": - Contact: hello@remotenurse.org",
+          "list item is not \"- [name](url): notes\": - Official profile: [Facebook](https://www.facebook.com/profile.php?id=615917890"
+        ]
+      },
+      "llmsFullTxt": {
+        "present": true,
+        "bytes": 80663
+      },
+      "evidenceIds": [
+        "E021",
+        "E019",
+        "E020"
+      ]
+    },
+    "performance": [
+      {
+        "source": "psi",
+        "strategy": "mobile",
+        "ok": false,
+        "skipped": "PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key",
+        "scores": {},
+        "lab": {},
+        "field": {},
+        "evidenceId": "E022"
+      }
+    ],
+    "robots": {
+      "found": true,
+      "blocksRoot": false,
+      "evidenceId": "E015"
+    },
+    "sitemap": {
+      "urlCount": 460,
+      "evidenceId": "E016"
+    },
+    "evidenceIds": [
+      "E017",
+      "E018",
+      "E015",
+      "E016"
+    ]
+  },
+  "keywordGap": [
+    {
+      "phrase": "remote nursing jobs",
+      "words": 3,
+      "competitors": 4,
+      "tfidf": 0.02648,
+      "score": 61
+    },
+    {
+      "phrase": "jobs remote",
+      "words": 2,
+      "competitors": 4,
+      "tfidf": 0.01831,
+      "score": 40
+    },
+    {
+      "phrase": "case management",
+      "words": 2,
+      "competitors": 4,
+      "tfidf": 0.0132,
+      "score": 61
+    },
+    {
+      "phrase": "utilization management",
+      "words": 2,
+      "competitors": 4,
+      "tfidf": 0.01147,
+      "score": 42
+    },
+    {
+      "phrase": "curated",
+      "words": 1,
+      "competitors": 4,
+      "tfidf": 0.02253,
+      "score": 8
+    },
+    {
+      "phrase": "acute care",
+      "words": 2,
+      "competitors": 4,
+      "tfidf": 0.00679,
+      "score": 17
+    },
+    {
+      "phrase": "management utilization",
+      "words": 2,
+      "competitors": 4,
+      "tfidf": 0.00627,
+      "score": 16
+    },
+    {
+      "phrase": "nurse case manager",
+      "words": 3,
+      "competitors": 4,
+      "tfidf": 0.00356,
+      "score": 13
+    },
+    {
+      "phrase": "specialty",
+      "words": 1,
+      "competitors": 4,
+      "tfidf": 0.0093,
+      "score": 56
+    },
+    {
+      "phrase": "np",
+      "words": 1,
+      "competitors": 4,
+      "tfidf": 0.0091,
+      "score": 22
+    },
+    {
+      "phrase": "hybrid",
+      "words": 1,
+      "competitors": 4,
+      "tfidf": 0.00774,
+      "score": 33
+    },
+    {
+      "phrase": "triage",
+      "words": 1,
+      "competitors": 4,
+      "tfidf": 0.00719,
+      "score": 33
+    },
+    {
+      "phrase": "nurse case",
+      "words": 2,
+      "competitors": 4,
+      "tfidf": 0.00356,
+      "score": 13
+    },
+    {
+      "phrase": "management utilization review",
+      "words": 3,
+      "competitors": 4,
+      "tfidf": 0.00236,
+      "score": 8
+    },
+    {
+      "phrase": "acute",
+      "words": 1,
+      "competitors": 4,
+      "tfidf": 0.00679,
+      "score": 17
+    },
+    {
+      "phrase": "case manager utilization",
+      "words": 3,
+      "competitors": 4,
+      "tfidf": 0.00222,
+      "score": 8
+    },
+    {
+      "phrase": "senior",
+      "words": 1,
+      "competitors": 4,
+      "tfidf": 0.00602,
+      "score": 30
+    },
+    {
+      "phrase": "telephonic",
+      "words": 1,
+      "competitors": 4,
+      "tfidf": 0.00571,
+      "score": 17
+    },
+    {
+      "phrase": "manager utilization",
+      "words": 2,
+      "competitors": 4,
+      "tfidf": 0.00222,
+      "score": 8
+    },
+    {
+      "phrase": "cvs health",
+      "words": 2,
+      "competitors": 4,
+      "tfidf": 0.00139,
+      "score": 4
+    },
+    {
+      "phrase": "service",
+      "words": 1,
+      "competitors": 4,
+      "tfidf": 0.00241,
+      "score": 11
+    },
+    {
+      "phrase": "cvs",
+      "words": 1,
+      "competitors": 4,
+      "tfidf": 0.00139,
+      "score": 4
+    },
+    {
+      "phrase": "remote nurse",
+      "words": 2,
+      "competitors": 3,
+      "tfidf": 0.05104,
+      "score": 8
+    },
+    {
+      "phrase": "jobs nurse",
+      "words": 2,
+      "competitors": 3,
+      "tfidf": 0.02626,
+      "score": 6
+    },
+    {
+      "phrase": "posts",
+      "words": 1,
+      "competitors": 3,
+      "tfidf": 0.02626,
+      "score": 5
+    },
+    {
+      "phrase": "remote rn",
+      "words": 2,
+      "competitors": 3,
+      "tfidf": 0.01266,
+      "score": 32
+    },
+    {
+      "phrase": "rn jobs",
+      "words": 2,
+      "competitors": 3,
+      "tfidf": 0.01197,
+      "score": 28
+    },
+    {
+      "phrase": "remote rn jobs",
+      "words": 3,
+      "competitors": 3,
+      "tfidf": 0.00698,
+      "score": 18
+    },
+    {
+      "phrase": "nurse practitioner",
+      "words": 2,
+      "competitors": 3,
+      "tfidf": 0.00971,
+      "score": 29
+    },
+    {
+      "phrase": "care manager",
+      "words": 2,
+      "competitors": 3,
+      "tfidf": 0.00957,
+      "score": 25
+    }
+  ],
+  "ads": [
+    {
+      "domain": "remotenurse.org",
+      "brand": "remotenurse",
+      "platform": "Google Ads Transparency Center",
+      "url": "https://adstransparency.google.com/?region=anywhere&domain=remotenurse.org",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E024"
+      ]
+    },
+    {
+      "domain": "remotenurse.org",
+      "brand": "remotenurse",
+      "platform": "Meta Ad Library",
+      "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=remotenurse&search_type=keyword_unordered&media_type=all",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E025"
+      ]
+    },
+    {
+      "domain": "remotenurse.org",
+      "brand": "remotenurse",
+      "platform": "LinkedIn Ad Library",
+      "url": "https://www.linkedin.com/ad-library/search?keyword=remotenurse",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E026"
+      ]
+    },
+    {
+      "domain": "app.nursefern.com",
+      "brand": "nursefern",
+      "platform": "Google Ads Transparency Center",
+      "url": "https://adstransparency.google.com/?region=anywhere&domain=app.nursefern.com",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E027"
+      ]
+    },
+    {
+      "domain": "app.nursefern.com",
+      "brand": "nursefern",
+      "platform": "Meta Ad Library",
+      "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=nursefern&search_type=keyword_unordered&media_type=all",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E028"
+      ]
+    },
+    {
+      "domain": "app.nursefern.com",
+      "brand": "nursefern",
+      "platform": "LinkedIn Ad Library",
+      "url": "https://www.linkedin.com/ad-library/search?keyword=nursefern",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E029"
+      ]
+    },
+    {
+      "domain": "indeed.com",
+      "brand": "indeed",
+      "platform": "Google Ads Transparency Center",
+      "url": "https://adstransparency.google.com/?region=anywhere&domain=indeed.com",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E030"
+      ]
+    },
+    {
+      "domain": "indeed.com",
+      "brand": "indeed",
+      "platform": "Meta Ad Library",
+      "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=indeed&search_type=keyword_unordered&media_type=all",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E031"
+      ]
+    },
+    {
+      "domain": "indeed.com",
+      "brand": "indeed",
+      "platform": "LinkedIn Ad Library",
+      "url": "https://www.linkedin.com/ad-library/search?keyword=indeed",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E032"
+      ]
+    },
+    {
+      "domain": "nurseremotely.com",
+      "brand": "nurseremotely",
+      "platform": "Google Ads Transparency Center",
+      "url": "https://adstransparency.google.com/?region=anywhere&domain=nurseremotely.com",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E033"
+      ]
+    },
+    {
+      "domain": "nurseremotely.com",
+      "brand": "nurseremotely",
+      "platform": "Meta Ad Library",
+      "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=nurseremotely&search_type=keyword_unordered&media_type=all",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E034"
+      ]
+    },
+    {
+      "domain": "nurseremotely.com",
+      "brand": "nurseremotely",
+      "platform": "LinkedIn Ad Library",
+      "url": "https://www.linkedin.com/ad-library/search?keyword=nurseremotely",
+      "status": "manual-check",
+      "visibleCount": null,
+      "note": "open in a browser; not fetched",
+      "evidenceIds": [
+        "E035"
+      ]
+    }
+  ],
+  "citations": [],
+  "claims": [
+    {
+      "id": "C01",
+      "text": "Google (headless Chromium) was not used: Google captcha (unusual traffic page)",
+      "evidenceIds": [
+        "E001"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "single request",
+      "unknowns": "Google (headless Chromium) rankings not observed"
+    },
+    {
+      "id": "C02",
+      "text": "Top results: #1 indeed.com, #2 nurseremotely.com, #3 remotenursingjobs.com, #4 nurse.org, #5 remotenursingjobs.com",
+      "evidenceIds": [
+        "E001",
+        "E003"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "top 8 organic results from Bing (headless Chromium) (en-US, logged out) on 2026-10-15",
+      "unknowns": ""
+    },
+    {
+      "id": "C03",
+      "text": "remotenurse.org does not appear in the observed results",
+      "evidenceIds": [
+        "E001",
+        "E003"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "top 8 organic results from Bing (headless Chromium) (en-US, logged out) on 2026-10-15",
+      "unknowns": "Personalised and other-location results not observed"
+    },
+    {
+      "id": "C04",
+      "text": "Search intent is comparison/roundup: 4/8 titles use \"best\", \"top\", a year or review wording",
+      "evidenceIds": [
+        "E001",
+        "E003",
+        "E007",
+        "E008",
+        "E010",
+        "E012",
+        "E013"
+      ],
+      "type": "inferred",
+      "confidence": "medium",
+      "boundary": "top 8 organic results from Bing (headless Chromium) (en-US, logged out) on 2026-10-15",
+      "unknowns": ""
+    },
+    {
+      "id": "C05",
+      "text": "Ranking pages median 1077 words (range 0-3039); remotenurse.org homepage 2190 words",
+      "evidenceIds": [
+        "E007",
+        "E008",
+        "E010",
+        "E012",
+        "E013",
+        "E017",
+        "E018"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "5 fetched ranking pages, raw HTML without JavaScript",
+      "unknowns": ""
+    },
+    {
+      "id": "C06",
+      "text": "2/5 ranking pages contain every keyword term in <title>; target homepage: no",
+      "evidenceIds": [
+        "E007",
+        "E008",
+        "E010",
+        "E012",
+        "E013",
+        "E017",
+        "E018"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "5 fetched ranking pages",
+      "unknowns": ""
+    },
+    {
+      "id": "C07",
+      "text": "Ranking pages median 4 H2 headings; target homepage 10",
+      "evidenceIds": [
+        "E007",
+        "E008",
+        "E010",
+        "E012",
+        "E013",
+        "E017",
+        "E018"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "5 fetched ranking pages",
+      "unknowns": ""
+    },
+    {
+      "id": "C08",
+      "text": "Common schema types among ranking pages: CollectionPage (2/5), FAQPage (2/5), Organization (2/5), BreadcrumbList (1/5); target: AboutPage, AggregateOffer, Answer, Article, BreadcrumbList, CollectionPage, ContactPoint, Country, CreativeWork, FAQPage, HowTo, HowToStep, ImageObject, ListItem, Offer, Organization, Question, SoftwareApplication, SpeakableSpecification, UnitPriceSpecification, WebApplication, WebPage, WebSite",
+      "evidenceIds": [
+        "E007",
+        "E008",
+        "E010",
+        "E012",
+        "E013",
+        "E017",
+        "E018"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "JSON-LD on 5 ranking pages and 10 target pages",
+      "unknowns": ""
+    },
+    {
+      "id": "C09",
+      "text": "Ranking pages median 156 internal links per page; target homepage 189",
+      "evidenceIds": [
+        "E007",
+        "E008",
+        "E010",
+        "E012",
+        "E013",
+        "E017",
+        "E018"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "links in raw HTML",
+      "unknowns": ""
+    },
+    {
+      "id": "C10",
+      "text": "Could not analyse https://www.indeed.com/q-Remote-Nursing-jobs.html: HTTP 403 text/html; charset=UTF-8",
+      "evidenceIds": [
+        "E006"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "single request",
+      "unknowns": "On-page facts for indeed.com"
+    },
+    {
+      "id": "C11",
+      "text": "Could not analyse https://nurse.org/education/remote-nursing-jobs/: HTTP 403 text/html",
+      "evidenceIds": [
+        "E009"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "single request",
+      "unknowns": "On-page facts for nurse.org"
+    },
+    {
+      "id": "C12",
+      "text": "Could not analyse https://www.indeed.com/q-remote-registered-nurse-l-remote%e2%80%8b%e2%80%8b-work-from-home-jobs.html: HTTP 403 text/html; charset=UTF-8",
+      "evidenceIds": [
+        "E011"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "single request",
+      "unknowns": "On-page facts for indeed.com"
+    },
+    {
+      "id": "C13",
+      "text": "1 page(s) carry JSON-LD with missing required properties or parse errors",
+      "evidenceIds": [
+        "E018"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "required-property checks for Article, FAQPage, Product, SoftwareApplication, Organization, BreadcrumbList, HowTo, LocalBusiness",
+      "unknowns": ""
+    },
+    {
+      "id": "C14",
+      "text": "remotenurse.org robots.txt lets all 9 checked AI crawlers fetch /",
+      "evidenceIds": [
+        "E015",
+        "E021"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "robots.txt rules for each product token; crawlers may ignore robots.txt or be blocked by a firewall",
+      "unknowns": "Server or CDN bot blocking not tested"
+    },
+    {
+      "id": "C15",
+      "text": "remotenurse.org/llms.txt follows the llmstxt.org format (10 sections, 91 links)",
+      "evidenceIds": [
+        "E019"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "single fetch of /llms.txt",
+      "unknowns": ""
+    },
+    {
+      "id": "C16",
+      "text": "remotenurse.org/llms-full.txt present (80663 bytes)",
+      "evidenceIds": [
+        "E020"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "single fetch of /llms-full.txt",
+      "unknowns": ""
+    },
+    {
+      "id": "C17",
+      "text": "remotenurse.org sitemap lists 460 URLs",
+      "evidenceIds": [
+        "E015",
+        "E016"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "robots.txt Sitemap lines and /sitemap.xml",
+      "unknowns": ""
+    },
+    {
+      "id": "C18",
+      "text": "0 search ads observed on the collected SERPs",
+      "evidenceIds": [
+        "E001",
+        "E003"
+      ],
+      "type": "observed",
+      "confidence": "medium",
+      "boundary": "top 8 organic results from Bing (headless Chromium) (en-US, logged out) on 2026-10-15",
+      "unknowns": "Ads shown to logged-in or other-location users"
+    },
+    {
+      "id": "C19",
+      "text": "12 ad-library lookup(s) need a manual check",
+      "evidenceIds": [
+        "E024",
+        "E025",
+        "E026",
+        "E027",
+        "E028",
+        "E029",
+        "E030",
+        "E031",
+        "E032",
+        "E033",
+        "E034",
+        "E035"
+      ],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "lookup URLs (and screenshots where captured)",
+      "unknowns": "Ad counts, run dates, creatives"
+    },
+    {
+      "id": "C20",
+      "text": "Backlink profiles were not collected",
+      "evidenceIds": [],
+      "type": "observed",
+      "confidence": "high",
+      "boundary": "free automated pipeline",
+      "unknowns": "Referring domains, link velocity"
+    }
+  ],
+  "unknowns": [
+    "Google (headless Chromium) rankings not observed",
+    "Personalised and other-location results not observed",
+    "On-page facts for indeed.com",
+    "On-page facts for nurse.org",
+    "Server or CDN bot blocking not tested",
+    "Ads shown to logged-in or other-location users",
+    "Ad counts, run dates, creatives",
+    "Referring domains, link velocity",
+    "PageSpeed Insights skipped: PSI quota exceeded (HTTP 429); set PSI_API_KEY for a free key",
+    "Paid keyword data (volume, ranked keywords) skipped: budget is 0"
+  ],
+  "topActions": [
+    {
+      "rank": 1,
+      "title": "Put \"remote nursing jobs\" (or close wording) in the title and H1 of the page meant to rank",
+      "why": "The target title \"Medical VA training and NCLEX-RN prep | RemoteNurse\" lacks the keyword terms; 2/5 ranking pages have them.",
+      "evidenceIds": [
+        "E007",
+        "E008",
+        "E010",
+        "E012",
+        "E013",
+        "E017",
+        "E018",
+        "E015",
+        "E016"
+      ],
+      "effort": "S",
+      "impact": "high",
+      "owner": "seo"
+    },
+    {
+      "rank": 2,
+      "title": "Fix JSON-LD errors: SoftwareApplication: needs one of: aggregateRating, review; WebApplication: needs one of: aggregateRating, review",
+      "why": "Invalid structured data is ignored for rich results.",
+      "evidenceIds": [
+        "E017",
+        "E018"
+      ],
+      "effort": "S",
+      "impact": "medium",
+      "owner": "dev"
+    },
+    {
+      "rank": 3,
+      "title": "Cover competitor phrases in headings and copy: remote nursing jobs, jobs remote, case management, utilization management, curated, acute care, management utilization, nurse case manager",
+      "why": "Used by two or more ranking pages and missing from the crawled target pages.",
+      "evidenceIds": [
+        "E007",
+        "E008",
+        "E010",
+        "E012",
+        "E013",
+        "E017",
+        "E018",
+        "E015",
+        "E016"
+      ],
+      "effort": "M",
+      "impact": "medium",
+      "owner": "content"
+    }
+  ],
+  "evidenceIndex": "evidence/index.json"
+}
