@@ -1,8 +1,11 @@
 // Renders teardown.md, ledger.md and questions.md from a teardown run.
 
+import { buildTeardownDossier } from "../dossier-build.js";
+import type { TopAction } from "../dossier.js";
 import type { TeardownRun } from "../run.js";
 import type { Claim } from "../types.js";
 import { cell, ids, isDomainOrSub, median } from "../util.js";
+import { renderTopActions } from "./actions.js";
 import { analysed, buildClaims, buildPlaybook, schemaFrequency, titleHasKeyword, type PlaybookItem } from "./claims.js";
 import { aiReadinessSection, renderLedgerTable, schemaTable, type SchemaRow } from "./sections.js";
 
@@ -244,6 +247,7 @@ export function renderTeardown(
   run: TeardownRun,
   claims: Claim[] = buildClaims(run),
   playbook: PlaybookItem[] = buildPlaybook(run),
+  actions: TopAction[] = buildTeardownDossier(run, claims, new Date(run.createdAt)).topActions,
 ): string {
   const L: string[] = [];
   L.push(`# SEO teardown: "${run.keyword}" vs ${run.target.domain}`, "");
@@ -252,6 +256,7 @@ export function renderTeardown(
     "",
   );
   L.push("Observed facts cite Evidence IDs. Lines marked *(inferred)* are interpretations.", "");
+  L.push(...renderTopActions(actions));
   L.push("## 1. Summary: why the winners win", "", ...summary(run, claims), "");
   L.push("## 2. SERP map (what each engine did)", "", ...serpMap(run));
   L.push("## 3. Competitor cards", "", ...competitorCards(run));
