@@ -104,12 +104,12 @@ async function reverse(extra: Partial<Parameters<typeof runReverse>[0]> = {}, ca
 
 describe("cost estimates", () => {
   it("prices Labs per item and plans tight calls", () => {
-    expect(estimateCost("dataforseo_labs/google/ranked_keywords/live", 100)).toBe(0.02);
-    expect(estimateCost("dataforseo_labs/google/competitors_domain/live", 10)).toBe(0.011);
+    expect(estimateCost("dataforseo_labs/google/ranked_keywords/live", 100)).toBe(0.027);
+    expect(estimateCost("dataforseo_labs/google/competitors_domain/live", 10)).toBe(0.0135);
     expect(estimateCost("backlinks/summary/live")).toBe(0.02);
     const plan = planCalls({ domain: "x.com", keywordsLimit: 100, competitorsLimit: 10, backlinks: false });
     expect(plan.map((p) => p.key)).toEqual(["ranked", "competitors"]);
-    expect(plan.reduce((s, p) => s + p.estimateUsd, 0)).toBeCloseTo(0.031, 5);
+    expect(plan.reduce((s, p) => s + p.estimateUsd, 0)).toBeCloseTo(0.0405, 5);
   });
 });
 
@@ -155,9 +155,9 @@ describe("reverse with paid rankings", () => {
     const { report, reportPath } = await reverse({ budgetUsd: 0.05, ledgerPath, log: (m) => logs.push(m) }, calls);
     expect(() => validateReverse(report)).not.toThrow();
     expect(calls).toHaveLength(2);
-    expect(logs.find((l) => l.startsWith("DataForSEO estimate: $0.0310"))).toBeDefined();
+    expect(logs.find((l) => l.startsWith("DataForSEO estimate: $0.0405"))).toBeDefined();
     const r = report.rankings;
-    expect(r?.cost).toEqual({ estimateUsd: 0.031, actualUsd: 0.0204, calls: 2, fromCache: 0 });
+    expect(r?.cost).toEqual({ estimateUsd: 0.0405, actualUsd: 0.0204, calls: 2, fromCache: 0 });
     expect(report.cost).toEqual({ usd: 0.0204, paidCalls: 2 });
     expect(r?.competitors[0]?.domain).toBe("rival.com");
     expect(report.summary[0]?.claim).toMatch(/Ranks for 412 Google keywords/);
@@ -176,11 +176,12 @@ describe("reverse with paid rankings", () => {
     const { report } = await reverse(shared, calls);
     expect(calls).toEqual([]);
     expect(report.rankings?.cost).toEqual({ estimateUsd: 0, actualUsd: 0, calls: 0, fromCache: 2 });
+    expect(report.rankings?.notes.join(" ")).toMatch(/originally billed \$0\.0204/);
   });
 
   it("refuses before calling when the estimate does not fit the run or month cap", async () => {
     const calls: string[] = [];
-    const { report } = await reverse({ budgetUsd: 0.02 }, calls);
+    const { report } = await reverse({ budgetUsd: 0.03 }, calls);
     expect(calls).toEqual([]);
     expect(report.rankings).toBeNull();
     expect(report.unknowns.join(" ")).toMatch(/does not fit the budget/);

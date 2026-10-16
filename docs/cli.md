@@ -6,6 +6,7 @@ seo-rea strategy <domain> [--vs <domain>] ...
 seo-rea teardown --keyword "<kw>" --target <domain> --out <dir> [options] [--json]
 seo-rea crawl <domain> [--out <dir>] [--max-pages 500] [--max-depth 10] [--delay-ms 500] [--force] [--json]
 seo-rea reverse <domain> [--out <dir>] [--max-pages 300] [--from-crawl <run>] [--no-offpage] [--force] [--json]
+                [--budget-usd 0.05] [--monthly-cap-usd 1.5] [--keywords-limit 100] [--competitors-limit 10] [--backlinks] [--no-cache]
 seo-rea diff <older-run> <newer-run> [--out <dir>] [--json]
 seo-rea audit <domain|url> [--out <dir>] [--no-psi] [--lighthouse] [--json]
 seo-rea batch --sites <file.json|file.csv> [--out <dir>] [--site-delay-ms <n>] [options] [--json]
@@ -61,19 +62,25 @@ reference: [crawl.md](crawl.md).
 ## reverse
 
 Reverse engineers a domain's SEO / AEO strategy from free sources and writes
-`report/reverse.{md,json}` plus `evidence/`. Design and limits:
+`report/reverse.{md,json}` plus `evidence/`. Design, limits and paid-ranking costs:
 [reverse-engineering.md](reverse-engineering.md).
 
-| Option         | Default                         | Meaning                                      |
-| -------------- | ------------------------------- | -------------------------------------------- |
-| `<domain>`     | required                        | Site to analyse                              |
-| `--out`        | `seo-rea-runs/reverse-<domain>` | Output folder (the crawl is stored here too) |
-| `--max-pages`  | `300`                           | Crawl page limit, 1-5000                     |
-| `--delay-ms`   | `500`                           | Minimum gap between requests                 |
-| `--from-crawl` | none                            | Reuse a crawl run folder or crawl.json       |
-| `--no-offpage` | off                             | Skip Tranco / Wikipedia / Common Crawl       |
-| `--force`      | off                             | Restart the crawl and the evidence folder    |
-| `--json`       | off                             | Print `report/reverse.json` to stdout        |
+| Option                | Default                         | Meaning                                                   |
+| --------------------- | ------------------------------- | --------------------------------------------------------- |
+| `<domain>`            | required                        | Site to analyse                                           |
+| `--out`               | `seo-rea-runs/reverse-<domain>` | Output folder (the crawl is stored here too)              |
+| `--max-pages`         | `300`                           | Crawl page limit, 1-5000                                  |
+| `--delay-ms`          | `500`                           | Minimum gap between requests                              |
+| `--from-crawl`        | none                            | Reuse a crawl run folder or crawl.json                    |
+| `--no-offpage`        | off                             | Skip Tranco / Wikipedia / Common Crawl                    |
+| `--budget-usd`        | `0` (off)                       | Enable paid DataForSEO rankings; run cap in USD (max 5)   |
+| `--monthly-cap-usd`   | `1.5`                           | Monthly cap summed from `.seo-rea/ledger.csv`             |
+| `--keywords-limit`    | `100`                           | Ranked keywords to fetch (1-1000; $0.0001 each)           |
+| `--competitors-limit` | `10`                            | Organic competitors to fetch (0 skips the call)           |
+| `--backlinks`         | off                             | Add the backlink summary (~$0.02, needs a Backlinks plan) |
+| `--no-cache`          | off                             | Ignore cached API responses (cached repeats cost $0)      |
+| `--force`             | off                             | Restart the crawl and the evidence folder                 |
+| `--json`              | off                             | Print `report/reverse.json` to stdout                     |
 
 ## diff
 
