@@ -1,0 +1,975 @@
+{
+  "crawlReport": "report/crawl.json",
+  "stats": {
+    "pagesCrawled": 70,
+    "htmlPages": 65,
+    "indexable": 59,
+    "queuedLeft": 0,
+    "blockedByRobots": 0,
+    "sitemapUrls": 15,
+    "resumed": false,
+    "complete": true
+  },
+  "pages": [
+    {
+      "url": "https://cardpointers.com/",
+      "status": 200,
+      "template": "home",
+      "title": "CardPointers: Credit card rewards made easy",
+      "h1": "Earn more from your credit cards every day.",
+      "words": 483,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/apps/iphone/",
+      "status": 200,
+      "template": "other",
+      "title": "CardPointers for iPhone",
+      "h1": "",
+      "words": 884,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/apps/ipad/",
+      "status": 200,
+      "template": "other",
+      "title": "CardPointers for iPad",
+      "h1": "",
+      "words": 228,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/apps/watch/",
+      "status": 200,
+      "template": "other",
+      "title": "CardPointers for Apple Watch",
+      "h1": "",
+      "words": 414,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/apps/vision/",
+      "status": 200,
+      "template": "other",
+      "title": "CardPointers for Apple Vision Pro",
+      "h1": "",
+      "words": 465,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/apps/mac/",
+      "status": 200,
+      "template": "other",
+      "title": "CardPointers for Mac",
+      "h1": "",
+      "words": 226,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/apps/android/",
+      "status": 200,
+      "template": "other",
+      "title": "CardPointers for Android",
+      "h1": "",
+      "words": 203,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/extension/",
+      "status": 200,
+      "template": "other",
+      "title": "Extension for Safari, Chrome, Firefox, Amex Offers | CardPointers",
+      "h1": "",
+      "words": 337,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/pro/",
+      "status": 200,
+      "template": "other",
+      "title": "CardPointers+ Features | CardPointers",
+      "h1": "",
+      "words": 1934,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/",
+      "status": 200,
+      "template": "other",
+      "title": "Newest Amex, Chase, BoA, Citi, Wells Fargo & US Bank Offers | CardPointers",
+      "h1": "",
+      "words": 229,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/cards/",
+      "status": 200,
+      "template": "comparison",
+      "title": "Top 10 Credit Card Offers for October 2026 | CardPointers",
+      "h1": "",
+      "words": 536,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/app/",
+      "status": 200,
+      "template": "product",
+      "title": "App | CardPointers",
+      "h1": "",
+      "words": 24,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue",
+        "HubSpot"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/login/",
+      "status": 200,
+      "template": "other",
+      "title": "Log In | CardPointers",
+      "h1": "",
+      "words": 140,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/signup/",
+      "status": 200,
+      "template": "other",
+      "title": "Sign Up | CardPointers",
+      "h1": "",
+      "words": 131,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/privacy/",
+      "status": 200,
+      "template": "legal",
+      "title": "CardPointers",
+      "h1": "",
+      "words": 1176,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/partner/prime/",
+      "status": 200,
+      "template": "other",
+      "title": "CardPointers Offer | CardPointers",
+      "h1": "Prime Big Deal Day Sale for CardPointers",
+      "words": 607,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/search/",
+      "status": 200,
+      "template": "other",
+      "title": "Search | CardPointers",
+      "h1": "",
+      "words": 124,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/apps/carplay/",
+      "status": 200,
+      "template": "other",
+      "title": "CardPointers for CarPlay",
+      "h1": "",
+      "words": 181,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/ai/",
+      "status": 200,
+      "template": "other",
+      "title": "AI - CardPointers",
+      "h1": "",
+      "words": 270,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/account/",
+      "status": 200,
+      "template": "other",
+      "title": "CardPointers",
+      "h1": "",
+      "words": 525,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/gift/",
+      "status": 200,
+      "template": "other",
+      "title": "Gift Card | CardPointers",
+      "h1": "Give the Gift of CardPointers+",
+      "words": 320,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/menchies-frozen-yogurt-lake-nona-5-back-48/",
+      "status": 200,
+      "template": "entity",
+      "title": "Menchie's Frozen Yogurt - Lake Nona: 5% Back | CardPointers",
+      "h1": "",
+      "words": 215,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/tsuki-sushi-grill-5-back-50/",
+      "status": 200,
+      "template": "entity",
+      "title": "Tsuki Sushi & Grill: 5% Back | CardPointers",
+      "h1": "",
+      "words": 209,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/handels-homemade-ice-cream-oviedo-5-back/",
+      "status": 200,
+      "template": "entity",
+      "title": "Handel's Homemade Ice Cream Oviedo: 5% Back | CardPointers",
+      "h1": "",
+      "words": 215,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/city-pho-ucf-5-back-73/",
+      "status": 200,
+      "template": "entity",
+      "title": "City Pho - UCF: 5% Back | CardPointers",
+      "h1": "",
+      "words": 209,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/tat-ristorante-di-famiglia-5-back-67/",
+      "status": 200,
+      "template": "entity",
+      "title": "Tat Ristorante Di Famiglia: 5% Back | CardPointers",
+      "h1": "",
+      "words": 238,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/tee-jayes-country-place-whitehall-5-back-85/",
+      "status": 200,
+      "template": "entity",
+      "title": "Tee Jaye's Country Place - Whitehall: 5% Back | CardPointers",
+      "h1": "",
+      "words": 275,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/signature-spice-indian-cuisine-5-back-22/",
+      "status": 200,
+      "template": "entity",
+      "title": "Signature Spice Indian Cuisine: 5% Back | CardPointers",
+      "h1": "",
+      "words": 212,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/hot-head-burritos-groveport-5-back-55/",
+      "status": 200,
+      "template": "entity",
+      "title": "Hot Head Burritos - Groveport: 5% Back | CardPointers",
+      "h1": "",
+      "words": 227,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/mi-tradicion-5-back-33/",
+      "status": 200,
+      "template": "entity",
+      "title": "Mi Tradicion: 5% Back | CardPointers",
+      "h1": "",
+      "words": 206,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/jimmy-johns-canal-winchester-5-back-46/",
+      "status": 200,
+      "template": "entity",
+      "title": "Jimmy John's Canal Winchester: 5% Back | CardPointers",
+      "h1": "",
+      "words": 243,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/cards/chase-sapphire-reserve-new/",
+      "status": 200,
+      "template": "entity",
+      "title": "Chase Sapphire Reserve | CardPointers",
+      "h1": "",
+      "words": 1293,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/cards/american-express-gold-card/",
+      "status": 200,
+      "template": "entity",
+      "title": "American Express® Gold Card | CardPointers",
+      "h1": "",
+      "words": 800,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/cards/capital-one-venture-x-rewards-credit-card/",
+      "status": 200,
+      "template": "entity",
+      "title": "Capital One Venture X Rewards Credit Card | CardPointers",
+      "h1": "",
+      "words": 536,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/cards/blue-cash-preferred-card-from-american-express/",
+      "status": 200,
+      "template": "entity",
+      "title": "Blue Cash Preferred® Card from American Express | CardPointers",
+      "h1": "",
+      "words": 575,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/cards/chase-freedom-flex/",
+      "status": 200,
+      "template": "entity",
+      "title": "Chase Freedom Flex | CardPointers",
+      "h1": "",
+      "words": 598,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/cards/amex-platinum-personal/",
+      "status": 200,
+      "template": "entity",
+      "title": "American Express Platinum Card® | CardPointers",
+      "h1": "",
+      "words": 991,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/cards/chase-ink-business-preferred/",
+      "status": 200,
+      "template": "entity",
+      "title": "Chase Ink Business Preferred | CardPointers",
+      "h1": "",
+      "words": 348,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/cards/chase-sapphire-preferred/",
+      "status": 200,
+      "template": "entity",
+      "title": "Chase Sapphire Preferred | CardPointers",
+      "h1": "",
+      "words": 612,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/cards/citi-premier-card/",
+      "status": 200,
+      "template": "entity",
+      "title": "Citi Strata Premier® Card | CardPointers",
+      "h1": "",
+      "words": 364,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/cards/chase-ink-business-cash-credit-card/",
+      "status": 200,
+      "template": "entity",
+      "title": "Chase Ink Business Cash Credit Card | CardPointers",
+      "h1": "",
+      "words": 373,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/cards/citi-aadvantage-platinum-select-mastercard/",
+      "status": 200,
+      "template": "entity",
+      "title": "Citi® / AAdvantage® Platinum Select® MasterCard® | CardPointers",
+      "h1": "",
+      "words": 398,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/forgot/",
+      "status": 200,
+      "template": "other",
+      "title": "Reset Password | CardPointers",
+      "h1": "",
+      "words": 122,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/help/extension/safari",
+      "status": 200,
+      "template": "help",
+      "title": "How to Install on Safari and Auto-Add Offers - CardPointers Help Center",
+      "h1": "How to Install on Safari and Auto-Add Offers",
+      "words": 386,
+      "schema": [
+        "BreadcrumbList",
+        "ListItem",
+        "SearchAction",
+        "WebSite"
+      ],
+      "published": "",
+      "tech": []
+    },
+    {
+      "url": "https://cardpointers.com/help/extension/chrome",
+      "status": 200,
+      "template": "help",
+      "title": "How to Install on Chrome and Auto-Add Offers - CardPointers Help Center",
+      "h1": "How to Install on Chrome and Auto-Add Offers",
+      "words": 539,
+      "schema": [
+        "BreadcrumbList",
+        "ListItem",
+        "SearchAction",
+        "WebSite"
+      ],
+      "published": "",
+      "tech": []
+    },
+    {
+      "url": "https://cardpointers.com/help/extension/firefox",
+      "status": 200,
+      "template": "help",
+      "title": "How to Install on Firefox and Auto-Add Offers - CardPointers Help Center",
+      "h1": "How to Install on Firefox and Auto-Add Offers",
+      "words": 397,
+      "schema": [
+        "BreadcrumbList",
+        "ListItem",
+        "SearchAction",
+        "WebSite"
+      ],
+      "published": "",
+      "tech": []
+    },
+    {
+      "url": "https://cardpointers.com/pro/autolink/",
+      "status": 200,
+      "template": "other",
+      "title": "Link Purchase | CardPointers",
+      "h1": "Link Purchase for CardPointers+",
+      "words": 320,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/help/savings",
+      "status": 200,
+      "template": "help",
+      "title": "What is a Savings Card? - CardPointers Help Center",
+      "h1": "What is a Savings Card?",
+      "words": 118,
+      "schema": [
+        "BreadcrumbList",
+        "ListItem",
+        "SearchAction",
+        "WebSite"
+      ],
+      "published": "",
+      "tech": []
+    },
+    {
+      "url": "http://cardpointers.com/help/ai/chatgpt",
+      "status": 0,
+      "template": "help",
+      "title": "",
+      "h1": "",
+      "words": 0,
+      "schema": [],
+      "published": "",
+      "tech": []
+    },
+    {
+      "url": "http://cardpointers.com/help/ai/claude",
+      "status": 0,
+      "template": "help",
+      "title": "",
+      "h1": "",
+      "words": 0,
+      "schema": [],
+      "published": "",
+      "tech": []
+    },
+    {
+      "url": "http://cardpointers.com/help/ai/openclaw",
+      "status": 0,
+      "template": "help",
+      "title": "",
+      "h1": "",
+      "words": 0,
+      "schema": [],
+      "published": "",
+      "tech": []
+    },
+    {
+      "url": "https://cardpointers.com/null",
+      "status": 404,
+      "template": "other",
+      "title": "",
+      "h1": "",
+      "words": 0,
+      "schema": [],
+      "published": "",
+      "tech": []
+    },
+    {
+      "url": "https://cardpointers.com/gift/redeem/?id=undefined",
+      "status": 200,
+      "template": "other",
+      "title": "Redeem Gift Card | CardPointers",
+      "h1": "Redeem Gift for CardPointers+",
+      "words": 302,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/tat-ristorante-di-famiglia-5-back-65/",
+      "status": 200,
+      "template": "entity",
+      "title": "undefined | CardPointers",
+      "h1": "",
+      "words": 194,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/tat-ristorante-di-famiglia-earn-5-cash-back-11/",
+      "status": 200,
+      "template": "entity",
+      "title": "undefined | CardPointers",
+      "h1": "",
+      "words": 194,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/cards/citi-double-cash-card/",
+      "status": 200,
+      "template": "entity",
+      "title": "Citi Double Cash Card | CardPointers",
+      "h1": "",
+      "words": 333,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/tee-jayes-country-place-columbus-5-back-37/",
+      "status": 200,
+      "template": "entity",
+      "title": "undefined | CardPointers",
+      "h1": "",
+      "words": 194,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/tee-jayes-country-place-whitehall-5-back-82/",
+      "status": 200,
+      "template": "entity",
+      "title": "undefined | CardPointers",
+      "h1": "",
+      "words": 194,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/tee-jayes-country-place-grove-city-5-back-8/",
+      "status": 200,
+      "template": "entity",
+      "title": "undefined | CardPointers",
+      "h1": "",
+      "words": 194,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/tee-jayes-country-place-columbus-5-cash-back-14/",
+      "status": 200,
+      "template": "entity",
+      "title": "undefined | CardPointers",
+      "h1": "",
+      "words": 194,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/tee-jayes-country-place-columbus-earn-5-cash-back-8/",
+      "status": 200,
+      "template": "entity",
+      "title": "Tee Jaye's Country Place - Columbus: Earn 5% cash back | CardPointers",
+      "h1": "",
+      "words": 337,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/tee-jayes-country-place-whitehall-earn-5-cash-back-13/",
+      "status": 200,
+      "template": "entity",
+      "title": "undefined | CardPointers",
+      "h1": "",
+      "words": 194,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/hot-head-burritos-groveport-5-back-42/",
+      "status": 200,
+      "template": "entity",
+      "title": "undefined | CardPointers",
+      "h1": "",
+      "words": 194,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/jimmy-johns-schrock-5-back-56/",
+      "status": 200,
+      "template": "entity",
+      "title": "undefined | CardPointers",
+      "h1": "",
+      "words": 194,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/jimmy-johns-worthington-5-back-39/",
+      "status": 200,
+      "template": "entity",
+      "title": "undefined | CardPointers",
+      "h1": "",
+      "words": 194,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/jimmy-johns-5-back-206/",
+      "status": 200,
+      "template": "entity",
+      "title": "undefined | CardPointers",
+      "h1": "",
+      "words": 194,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/jimmy-johns-murrysville-5-back-38/",
+      "status": 200,
+      "template": "entity",
+      "title": "undefined | CardPointers",
+      "h1": "",
+      "words": 194,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "https://cardpointers.com/offers/jimmy-johns-canal-winchester-5-back-41/",
+      "status": 200,
+      "template": "entity",
+      "title": "undefined | CardPointers",
+      "h1": "",
+      "words": 194,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    },
+    {
+      "url": "http://cardpointers.com/login",
+      "status": 0,
+      "template": "other",
+      "title": "",
+      "h1": "",
+      "words": 0,
+      "schema": [],
+      "published": "",
+      "tech": []
+    },
+    {
+      "url": "https://cardpointers.com/cards/u-s-bank-altitude-reserve-visa-infinite/",
+      "status": 200,
+      "template": "entity",
+      "title": "U.S. Bank Altitude Reserve Visa Infinite | CardPointers",
+      "h1": "",
+      "words": 394,
+      "schema": [],
+      "published": "",
+      "tech": [
+        "Nuxt",
+        "Vue"
+      ]
+    }
+  ]
+}
