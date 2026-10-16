@@ -87,14 +87,45 @@ seo-rea reverse <domain> [--out <dir>] [--max-pages 300] [--delay-ms 500]
 MCP tool `seo_reverse` takes the same inputs and returns the summary,
 playbook and coverage.
 
+## Paid rankings (opt-in)
+
+`--budget-usd <cap>` adds what the domain actually ranks for, from
+DataForSEO. Off by default; credentials come only from
+`DATAFORSEO_LOGIN` / `DATAFORSEO_PASSWORD` in the environment.
+
+| Call                                                                                      | Endpoint                                                                               | Price (list, 2026)                 | Default                            |
+| ----------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ---------------------------------- | ---------------------------------- |
+| Ranked keywords (positions, volume, est. traffic, ranking URL, intent), sorted by traffic | `dataforseo_labs/google/ranked_keywords/live`, `limit` = `--keywords-limit` (100)      | $0.01 + $0.0001/row = $0.02        | on                                 |
+| Organic competitors (shared keywords, their size)                                         | `dataforseo_labs/google/competitors_domain/live`, `limit` = `--competitors-limit` (10) | $0.011                             | on (`--competitors-limit 0` skips) |
+| Backlink summary (backlinks, referring domains, rank)                                     | `backlinks/summary/live`                                                               | $0.02 (needs a Backlinks API plan) | `--backlinks`                      |
+
+Cost control:
+
+1. Before any call the plan is priced (cached calls count as $0) and
+   printed: `DataForSEO estimate: $0.0310 for 2 call(s) ...`.
+2. If the estimate does not fit the run cap (`--budget-usd`) or the
+   monthly cap (`--monthly-cap-usd`, default **$1.50**, summed from
+   `.seo-rea/ledger.csv`), nothing is called and the report says why.
+3. Each call is checked again, then its real `cost` from the API response
+   is appended to the ledger and shown in the report (`rankings.cost`,
+   `cost.usd`).
+4. Responses are cached for 30 days (`.seo-rea/cache`), so re-running the
+   same domain is free. Raw responses are saved as evidence.
+
+A default run costs about $0.03, so the $1.50 monthly cap allows roughly
+45-50 domains a month. A denied backlinks call (no plan) is noted and the
+rest of the report is kept.
+
+The report gains section 11 (totals, top keywords, traffic per section and
+per URL, intent mix, competitors, backlinks), ranking-based summary lines
+and two playbook steps (page-two keywords to attack, the section that
+carries their traffic).
+
 ## Roadmap
 
 v2 (cheap, opt-in budget):
 
-1. **Rankings per cluster.** For each cluster's top terms, one SERP check on
-   the free engines (already in `strategy`) and, within budget, DataForSEO
-   `ranked_keywords` for the domain (one call, about $0.01-0.02) to replace
-   inferred topics with observed rankings.
+1. ~~Rankings per section~~ (done: `--budget-usd`, see above).
 2. **Sitemap `lastmod`** for cadence when pages carry no dates.
 3. **Answer formatting.** Store H2/H3 text per page to measure question
    headings, definition-first paragraphs, lists and tables (AEO answer
