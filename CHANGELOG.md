@@ -8,6 +8,12 @@ All notable changes to this project are documented here. The format follows
 
 ### Added
 
+- Self-contained HTML reports: `--html` on `crawl`, `reverse` and `diff`
+  (diff needs `--out`), and `seo-rea html <run>` to render an existing run
+  offline. Inline SVG charts (ranking position distribution, traffic by
+  section, top keywords, competitor overlap, intent mix, issues by severity,
+  click depth, diff trends) plus an executive summary; no JavaScript, no CDN,
+  strict CSP. Example: `examples/reverse-cardpointers-rankings/report/*.html`.
 - Stable issue ids: every entry in `topActions` (dossier and strategy) has an
   `id` such as `TECH-ROBOTS-BLOCKS-ALL` or `PERF-SCORE-LOW:3f2a9c1e` (rule
   code plus an optional hash of the subject). The same problem keeps the same
