@@ -13,6 +13,7 @@ export interface CrawlCli {
   delayMs: number;
   force: boolean;
   json: boolean;
+  html: boolean;
 }
 
 export function parseCrawl(rest: string[]): CrawlCli {
@@ -27,6 +28,7 @@ export function parseCrawl(rest: string[]): CrawlCli {
       "delay-ms": { type: "string", default: "500" },
       force: { type: "boolean", default: false },
       json: { type: "boolean", default: false },
+      html: { type: "boolean", default: false },
     },
   });
   const raw = positionals[0];
@@ -43,6 +45,7 @@ export function parseCrawl(rest: string[]): CrawlCli {
     delayMs: num(v["delay-ms"], "delay-ms") ?? 500,
     force: v.force,
     json: v.json,
+    html: v.html,
   };
 }
 
@@ -53,7 +56,7 @@ export async function runCrawlCommand(
 ): Promise<number> {
   const o = cmd;
   const { runCrawl } = await import("./services/crawl.js");
-  const { json, ...rest } = o;
+  const { json, html, ...rest } = o;
   const ac = new AbortController();
   const stop = (): void => {
     err("stopping after the current page; rerun the same command to resume");
@@ -62,6 +65,7 @@ export async function runCrawlCommand(
   process.once("SIGINT", stop);
   try {
     const { report, reportPath } = await runCrawl({ ...rest, signal: ac.signal, log: err });
+    const htmlPaths = html ? await (await import("./services/html-report.js")).writeHtmlReports(o.out) : [];
     if (json) {
       printJson(report);
       return 0;
@@ -75,7 +79,8 @@ export async function runCrawlCommand(
           .slice(0, 8)
           .map((x) => `    ${x.rule} (${x.severity}): ${x.count}\n`)
           .join("") +
-        `  JSON: ${join(o.out, "report", "crawl.json")}\n`,
+        `  JSON: ${join(o.out, "report", "crawl.json")}\n` +
+        htmlPaths.map((p) => `  HTML: ${p}\n`).join(""),
     );
     return 0;
   } finally {

@@ -20,6 +20,7 @@ export interface ReverseCli {
   noCache: boolean;
   force: boolean;
   json: boolean;
+  html: boolean;
 }
 
 export function parseReverse(rest: string[]): ReverseCli {
@@ -41,6 +42,7 @@ export function parseReverse(rest: string[]): ReverseCli {
       "no-cache": { type: "boolean", default: false },
       force: { type: "boolean", default: false },
       json: { type: "boolean", default: false },
+      html: { type: "boolean", default: false },
     },
   });
   const raw = positionals[0];
@@ -70,6 +72,7 @@ export function parseReverse(rest: string[]): ReverseCli {
     noCache: v["no-cache"],
     force: v.force,
     json: v.json,
+    html: v.html,
   };
 }
 
@@ -79,7 +82,7 @@ export async function runReverseCommand(
   printJson: (v: unknown) => void,
 ): Promise<number> {
   const { runReverse } = await import("./services/reverse.js");
-  const { json, fromCrawl, ...rest } = cmd;
+  const { json, html, fromCrawl, ...rest } = cmd;
   const ac = new AbortController();
   const stop = (): void => {
     err("stopping the crawl after the current page; rerun the same command to resume");
@@ -93,6 +96,7 @@ export async function runReverseCommand(
       signal: ac.signal,
       log: err,
     });
+    const htmlPaths = html ? await (await import("./services/html-report.js")).writeHtmlReports(cmd.out) : [];
     if (json) {
       printJson(report);
       return 0;
@@ -107,7 +111,8 @@ export async function runReverseCommand(
         (report.rankings
           ? `  DataForSEO: estimated $${report.rankings.cost.estimateUsd.toFixed(4)}, actual $${report.rankings.cost.actualUsd.toFixed(4)} (${report.rankings.cost.calls} paid call(s), ${report.rankings.cost.fromCache} cached)\n`
           : "") +
-        `  JSON: ${join(cmd.out, "report", "reverse.json")}\n`,
+        `  JSON: ${join(cmd.out, "report", "reverse.json")}\n` +
+        htmlPaths.map((p) => `  HTML: ${p}\n`).join(""),
     );
     return 0;
   } finally {
