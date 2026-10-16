@@ -47,6 +47,17 @@ All notable changes to this project are documented here. The format follows
   [docs/reverse-engineering.md](docs/reverse-engineering.md); sample in
   `examples/reverse-cardpointers`.
 
+- `reverse --budget-usd <cap>`: opt-in paid rankings from DataForSEO (Labs
+  ranked keywords sorted by traffic, organic competitors, optional
+  `--backlinks` summary). Report section 11 shows ranked keywords,
+  positions, volume, estimated traffic, traffic per section and per URL,
+  intent mix and competitors. The plan is priced and printed before any
+  call, refused up front if it does not fit the run cap or the monthly cap
+  (default $1.50 for reverse), and actual API cost is logged to the ledger
+  and the report. Cached repeats cost $0. About $0.03 per domain.
+- DataForSEO adapter: per-item Labs cost estimates, task-level error
+  status, `DEPENDENCY_MISSING` when credentials are absent.
+
 ### Changed
 
 - Crawl: redirected URLs are no longer counted as indexable pages (they
