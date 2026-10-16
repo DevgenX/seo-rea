@@ -22,11 +22,12 @@ Usage:
   seo-rea <domain> [--vs <domain>] [--out <dir>] [--budget-usd 0] [options] [--json]
   seo-rea strategy <domain> [--vs <domain>] ...   Same as above: why a site leads (Strategy Dossier)
   seo-rea teardown --keyword "<kw>" --target <domain> --out <dir> [options] [--json]
-  seo-rea crawl <domain> [--out <dir>] [--max-pages 500] [--max-depth 10] [--delay-ms 500] [--force] [--json]
-  seo-rea reverse <domain> [--out <dir>] [--max-pages 300] [--from-crawl <run>] [--no-offpage] [--json]
+  seo-rea crawl <domain> [--out <dir>] [--max-pages 500] [--max-depth 10] [--delay-ms 500] [--force] [--html] [--json]
+  seo-rea reverse <domain> [--out <dir>] [--max-pages 300] [--from-crawl <run>] [--no-offpage] [--html] [--json]
                   [--budget-usd 0.05 [--keywords-limit 100] [--competitors-limit 10] [--backlinks] [--monthly-cap-usd 1.5]]
                                     Reverse engineer a domain's SEO/AEO strategy (free sources only)
-  seo-rea diff <older-run> <newer-run> [--out <dir>] [--json]   Fixed / new / regressed between two runs
+  seo-rea diff <older-run> <newer-run> [--out <dir> [--html]] [--json]   Fixed / new / regressed between two runs
+  seo-rea html <run>                (Re)render report/*.html from a crawl, reverse or diff run, offline
   seo-rea audit <domain|url> [--out <dir>] [--no-psi] [--lighthouse] [--json]
   seo-rea batch --sites <file.json|file.csv> [--out <dir>] [--site-delay-ms <n>] [options] [--json]
   seo-rea cite --out <dir> --engine <${AI_ENGINES.join("|")}>
@@ -112,6 +113,7 @@ export type Command =
   | { command: "crawl"; options: CrawlCli }
   | { command: "diff"; options: DiffCli }
   | { command: "reverse"; options: ReverseCli }
+  | { command: "html"; run: string }
   | { command: "cite"; out: string; engine: string; prompt: string; urls: string; note: string };
 
 export interface TeardownCli {
@@ -286,6 +288,11 @@ export function parseCli(argv: string[]): Command {
   if (cmd === "crawl") return { command: "crawl", options: parseCrawl(rest) };
   if (cmd === "diff") return { command: "diff", options: parseDiff(rest) };
   if (cmd === "reverse") return { command: "reverse", options: parseReverse(rest) };
+  if (cmd === "html") {
+    const { positionals } = parseArgs({ args: rest, strict: true, allowPositionals: true, options: {} });
+    if (positionals.length !== 1) throw new UsageError("html needs one run folder: seo-rea html <run>");
+    return { command: "html", run: resolve(positionals[0] as string) };
+  }
   if (cmd === "audit") {
     const { values: v, positionals } = parseArgs({
       args: rest,
@@ -474,6 +481,11 @@ async function dispatch(cmd: Command): Promise<number> {
     case "reverse": {
       const { runReverseCommand } = await import("./cli-reverse.js");
       return runReverseCommand(cmd.options, err, printJson);
+    }
+    case "html": {
+      const { writeHtmlReports } = await import("./services/html-report.js");
+      for (const p of await writeHtmlReports(cmd.run)) process.stdout.write(`HTML: ${p}\n`);
+      return 0;
     }
     case "diff": {
       const { runDiffCommand } = await import("./cli-diff.js");
