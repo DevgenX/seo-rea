@@ -2,6 +2,7 @@
 
 import { z } from "zod";
 import { SeoReaError } from "../errors.js";
+import { RankingsSchema } from "./rankings.js";
 
 export const REVERSE_SCHEMA_VERSION = "1";
 
@@ -117,6 +118,9 @@ export const ReverseReportSchema = z.object({
       evidenceIds,
     }),
   ),
+  rankings: RankingsSchema.nullable()
+    .optional()
+    .describe("Paid DataForSEO ranking data; null or absent when --budget-usd was not given"),
   unknowns: z.array(z.string()),
   evidenceIndex: z.string(),
 });
