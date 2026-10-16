@@ -1,0 +1,79 @@
+[
+  {
+    "id": "E001",
+    "source": "crawl-cardpointers.com",
+    "kind": "derived",
+    "url": "https://cardpointers.com/",
+    "note": "70 pages crawled, 59 indexable; full data in report/crawl.json",
+    "file": "E001-crawl-cardpointers-com.json",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-16T01:36:08.642Z",
+    "fromCache": false
+  },
+  {
+    "id": "E002",
+    "source": "robots-cardpointers.com",
+    "kind": "observed",
+    "url": "https://cardpointers.com/robots.txt",
+    "note": "no robots.txt",
+    "file": "E002-robots-cardpointers-com.txt",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-16T01:36:08.645Z",
+    "fromCache": false
+  },
+  {
+    "id": "E003",
+    "source": "llms-txt-cardpointers.com",
+    "kind": "observed",
+    "url": "https://cardpointers.com/llms.txt",
+    "note": "llms.txt valid",
+    "file": "E003-llms-txt-cardpointers-com.txt",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-16T01:36:09.986Z",
+    "fromCache": false
+  },
+  {
+    "id": "E004",
+    "source": "llms-full-txt-cardpointers.com",
+    "kind": "observed",
+    "url": "https://cardpointers.com/llms-full.txt",
+    "note": "llms-full.txt present",
+    "file": "E004-llms-full-txt-cardpointers-com.txt",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-16T01:36:09.987Z",
+    "fromCache": false
+  },
+  {
+    "id": "E005",
+    "source": "offpage-cardpointers.com",
+    "kind": "observed",
+    "url": "",
+    "note": "Tranco, Wikipedia, Common Crawl (free public APIs)",
+    "file": "E005-offpage-cardpointers-com.json",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-16T01:36:11.688Z",
+    "fromCache": false
+  },
+  {
+    "id": "E006",
+    "source": "dataforseo-ranked-cardpointers.com",
+    "kind": "observed",
+    "url": "https://api.dataforseo.com/v3",
+    "note": "DataForSEO ranked (paid)",
+    "file": "E006-dataforseo-ranked-cardpointers-com.json",
+    "costUsd": 0.024,
+    "fetchedAt": "2026-10-16T01:36:11.707Z",
+    "fromCache": false
+  },
+  {
+    "id": "E007",
+    "source": "dataforseo-competitors-cardpointers.com",
+    "kind": "observed",
+    "url": "https://api.dataforseo.com/v3",
+    "note": "DataForSEO competitors (paid)",
+    "file": "E007-dataforseo-competitors-cardpointers-com.json",
+    "costUsd": 0.0132,
+    "fetchedAt": "2026-10-16T01:36:11.708Z",
+    "fromCache": false
+  }
+]
