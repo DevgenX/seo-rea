@@ -151,6 +151,11 @@ export async function crawlSite(o: CrawlOptions): Promise<CrawlResult> {
     state.queue.push({ url, depth, source: "link" });
   };
 
+  // Links found after the last checkpoint are not in the saved queue: rebuild
+  // them from the pages already fetched, so a killed crawl loses nothing.
+  if (resumed)
+    for (const p of pages) if (p.depth < o.maxDepth) for (const link of p.internalLinks) enqueue(link, p.depth + 1);
+
   while (state.queue.length && pages.length < o.maxPages) {
     if (o.signal?.aborted) break;
     const item = state.queue.shift() as CrawlState["queue"][number];

@@ -102,13 +102,16 @@ export async function collectRankings(o: RankingsOptions): Promise<{ rankings: R
   let actual = 0;
   let made = 0;
   let cached = 0;
+  let billedEarlier = 0;
   for (const c of calls) {
     try {
       const r = await o.dfs.call(c.endpoint, c.task, c.estimateUsd);
       raw[c.key] = r.data;
       actual += r.costUsd;
-      if (r.fromCache) cached++;
-      else made++;
+      if (r.fromCache) {
+        cached++;
+        billedEarlier += Number(r.data?.cost) || 0;
+      } else made++;
       o.log(`DataForSEO ${c.key}: ${r.fromCache ? "from cache, $0" : `actual ${usd(r.costUsd)}`}`);
     } catch (err) {
       if (err instanceof BudgetError) {
@@ -145,6 +148,11 @@ export async function collectRankings(o: RankingsOptions): Promise<{ rankings: R
     evidenceIds,
     notes: [
       `Sections and pages are rolled up from the top ${ranked.keywords.length} keywords by estimated traffic, not every keyword.`,
+      ...(cached
+        ? [
+            `${cached} response(s) served from cache at $0; originally billed $${billedEarlier.toFixed(4)} (see the ledger).`,
+          ]
+        : []),
       ...notes,
     ],
   };

@@ -140,6 +140,37 @@ describe("crawler", () => {
     expect(all.toSorted()).toEqual(fresh.report.pages.map((p) => p.url).toSorted());
   });
 
+  it("recovers links found after the last checkpoint when resuming", async () => {
+    const out = await tmp();
+    // checkpoint never fires: the saved queue only holds the start and sitemap URLs
+    const first = await runCrawl({
+      domain: "example.com",
+      out,
+      maxPages: 2,
+      delayMs: 0,
+      fetchImpl: fakeFetch(),
+      log: quiet,
+    });
+    const state = JSON.parse(await readFile(statePath(out), "utf8")) as {
+      queue: Array<{ url: string }>;
+      seen: string[];
+    };
+    state.queue = state.queue.filter((q) => !first.report.pages[0]?.internalLinks.includes(q.url));
+    state.seen = state.seen.filter(
+      (u) => !first.report.pages[0]?.internalLinks.includes(u) || first.report.pages.some((p) => p.url === u),
+    );
+    await writeFile(statePath(out), JSON.stringify(state));
+    const second = await runCrawl({
+      domain: "example.com",
+      out,
+      maxPages: 100,
+      delayMs: 0,
+      fetchImpl: fakeFetch(),
+      log: quiet,
+    });
+    expect(second.report.pages.map((p) => p.url)).toContain("https://example.com/d4");
+  });
+
   it("aborts cleanly and keeps state for resume", async () => {
     const out = await tmp();
     const ac = new AbortController();
