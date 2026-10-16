@@ -1,0 +1,429 @@
+{
+  "$id": "https://github.com/DevgenX/seo-rea/blob/main/docs/crawl-schema.json",
+  "title": "seo-rea crawl v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1"
+    },
+    "tool": {
+      "type": "string",
+      "const": "seo-rea"
+    },
+    "toolVersion": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string",
+      "const": "crawl"
+    },
+    "runId": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "startUrl": {
+      "type": "string"
+    },
+    "timestamps": {
+      "type": "object",
+      "properties": {
+        "started": {
+          "type": "string"
+        },
+        "finished": {
+          "type": "string"
+        }
+      },
+      "required": ["started", "finished"],
+      "additionalProperties": false
+    },
+    "limits": {
+      "type": "object",
+      "properties": {
+        "maxPages": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "maxDepth": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "delayMs": {
+          "type": "number"
+        }
+      },
+      "required": ["maxPages", "maxDepth", "delayMs"],
+      "additionalProperties": false
+    },
+    "stats": {
+      "type": "object",
+      "properties": {
+        "pagesCrawled": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "htmlPages": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "indexable": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "queuedLeft": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991,
+          "description": "URLs still queued when the page limit stopped the crawl"
+        },
+        "blockedByRobots": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "sitemapUrls": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "resumed": {
+          "type": "boolean"
+        },
+        "complete": {
+          "type": "boolean",
+          "description": "True when the queue emptied before the page limit"
+        }
+      },
+      "required": [
+        "pagesCrawled",
+        "htmlPages",
+        "indexable",
+        "queuedLeft",
+        "blockedByRobots",
+        "sitemapUrls",
+        "resumed",
+        "complete"
+      ],
+      "additionalProperties": false
+    },
+    "robots": {
+      "type": "object",
+      "properties": {
+        "fetched": {
+          "type": "boolean"
+        },
+        "sitemaps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["fetched", "sitemaps"],
+      "additionalProperties": false
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "Normalised URL as queued"
+          },
+          "finalUrl": {
+            "type": "string",
+            "description": "URL after redirects"
+          },
+          "status": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991,
+            "description": "HTTP status; 0 when the fetch failed"
+          },
+          "depth": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991,
+            "description": "Clicks from the start page (sitemap-only URLs get the depth they were found at)"
+          },
+          "source": {
+            "type": "string",
+            "enum": ["start", "link", "sitemap"]
+          },
+          "contentType": {
+            "type": "string"
+          },
+          "error": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "metaDescription": {
+            "type": "string"
+          },
+          "metaRobots": {
+            "type": "string"
+          },
+          "canonical": {
+            "type": "string"
+          },
+          "h1": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "h2Count": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "wordCount": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "lang": {
+            "type": "string"
+          },
+          "hreflang": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "schemaTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "internalLinks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Unique normalised internal link targets"
+          },
+          "externalLinkCount": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "externalDomains": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Unique external domains linked from the page"
+          },
+          "published": {
+            "type": "string",
+            "description": "ISO date from article:published_time or JSON-LD datePublished, else empty"
+          },
+          "modified": {
+            "type": "string",
+            "description": "ISO date from article:modified_time or JSON-LD dateModified, else empty"
+          },
+          "tech": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Stack fingerprints seen in the HTML (generator meta, framework markers)"
+          },
+          "contentHash": {
+            "type": "string",
+            "description": "sha1 of the normalised body text; empty when not HTML"
+          },
+          "fetchedAt": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "url",
+          "finalUrl",
+          "status",
+          "depth",
+          "source",
+          "contentType",
+          "title",
+          "metaDescription",
+          "metaRobots",
+          "canonical",
+          "h1",
+          "h2Count",
+          "wordCount",
+          "lang",
+          "hreflang",
+          "schemaTypes",
+          "internalLinks",
+          "externalLinkCount",
+          "externalDomains",
+          "published",
+          "modified",
+          "tech",
+          "contentHash",
+          "fetchedAt"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "graph": {
+      "type": "object",
+      "properties": {
+        "inlinks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string"
+              },
+              "count": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": ["url", "count"],
+            "additionalProperties": false
+          },
+          "description": "Top pages by internal inlinks"
+        },
+        "pagerank": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
+              }
+            },
+            "required": ["url", "score"],
+            "additionalProperties": false
+          },
+          "description": "Top pages by internal PageRank"
+        },
+        "depthHistogram": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "depth": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "pages": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": ["depth", "pages"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["inlinks", "pagerank", "depthHistogram"],
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rule": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["high", "medium", "low"]
+          },
+          "title": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "fix": {
+            "type": "string"
+          }
+        },
+        "required": ["rule", "severity", "title", "count", "fix"],
+        "additionalProperties": false
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+(?::[a-f0-9]{8})?$",
+            "description": "Stable issue id: rule code plus subject hash"
+          },
+          "rule": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["high", "medium", "low"]
+          },
+          "url": {
+            "type": "string",
+            "description": "Page the issue is about (or the first page, for grouped issues)"
+          },
+          "detail": {
+            "type": "string"
+          },
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Every page involved (duplicates list all copies)"
+          }
+        },
+        "required": ["id", "rule", "severity", "url", "detail", "urls"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "tool",
+    "toolVersion",
+    "kind",
+    "runId",
+    "domain",
+    "startUrl",
+    "timestamps",
+    "limits",
+    "stats",
+    "robots",
+    "pages",
+    "graph",
+    "summary",
+    "issues"
+  ],
+  "additionalProperties": false
+}

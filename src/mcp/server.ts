@@ -1,6 +1,7 @@
 // MCP server (stdio). Every tool returns structured JSON with evidence ids.
 // Logs go to stderr; stdout carries the protocol.
 
+import { toErrorPayload } from "../core/errors.js";
 import { join, resolve } from "node:path";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
@@ -39,8 +40,8 @@ async function guarded(fn: () => Promise<Record<string, unknown>>): Promise<Tool
   try {
     return ok(await fn());
   } catch (err) {
-    const error = err instanceof Error ? err.message : String(err);
-    return { ...ok({ error }), isError: true };
+    const { error } = toErrorPayload(err);
+    return { ...ok({ error: error.message, code: error.code, hint: error.hint }), isError: true };
   }
 }
 
@@ -181,6 +182,104 @@ export function createServer(deps: ServerDeps = {}): McpServer {
           keywordGap: run.keywordGap.slice(0, 15),
           claims,
           unknowns: run.unknowns,
+        };
+      }),
+  );
+
+  server.registerTool(
+    "seo_crawl",
+    {
+      title: "Crawl a site",
+      description:
+        "Crawl a domain breadth-first (robots.txt respected, resumable, 1-5000 pages) and return site-wide issues with stable ids, the internal link graph and the report path. Writes report/crawl.json and report/crawl.md.",
+      inputSchema: {
+        domain: z.string().min(3),
+        out: z.string().optional(),
+        maxPages: z.number().int().min(1).max(5000).optional(),
+        maxDepth: z.number().int().min(0).optional(),
+        force: z.boolean().optional(),
+      },
+    },
+    (a) =>
+      guarded(async () => {
+        const { runCrawl } = await import("../services/crawl.js");
+        const out = outFor(a.out, `crawl-${normalizeDomain(a.domain)}`);
+        const { report, reportPath } = await runCrawl({
+          domain: a.domain,
+          out,
+          ...(a.maxPages !== undefined ? { maxPages: a.maxPages } : {}),
+          ...(a.maxDepth !== undefined ? { maxDepth: a.maxDepth } : {}),
+          ...(a.force !== undefined ? { force: a.force } : {}),
+          log,
+        });
+        return { out, reportPath, stats: report.stats, summary: report.summary, issues: report.issues.slice(0, 50) };
+      }),
+  );
+
+  server.registerTool(
+    "seo_diff",
+    {
+      title: "Compare two runs",
+      description:
+        "Compare two runs of the same command (crawl, audit, teardown or strategy) for the same domain by stable issue id: fixed, new, regressed, improved, unchanged, plus metric deltas. Pass run folders or report JSON paths.",
+      inputSchema: { oldRun: z.string().min(1), newRun: z.string().min(1), out: z.string().optional() },
+    },
+    (a) =>
+      guarded(async () => {
+        const { runDiff } = await import("../services/diff.js");
+        const { diff, reportPath } = await runDiff({
+          oldRun: a.oldRun,
+          newRun: a.newRun,
+          ...(a.out ? { out: resolve(a.out) } : {}),
+        });
+        return { reportPath, ...diff };
+      }),
+  );
+
+  server.registerTool(
+    "seo_reverse",
+    {
+      title: "Reverse engineer a domain's SEO/AEO strategy",
+      description:
+        "Crawl any domain (or reuse a crawl) and infer its strategy from free sources: target topics, content clusters and templates, programmatic patterns, internal linking hubs, free authority signals, schema usage, AEO tactics (llms.txt, AI crawler rules, FAQ/question formatting), publishing cadence and tech stack. Every claim cites evidence. Writes report/reverse.json and report/reverse.md. No paid calls.",
+      inputSchema: {
+        domain: z.string().min(3),
+        out: z.string().optional(),
+        maxPages: z.number().int().min(1).max(5000).optional(),
+        fromCrawl: z.string().optional(),
+        offpage: z.boolean().optional(),
+        budgetUsd: z.number().min(0).max(5).optional(),
+        keywordsLimit: z.number().int().min(1).max(1000).optional(),
+        backlinks: z.boolean().optional(),
+        force: z.boolean().optional(),
+      },
+    },
+    (a) =>
+      guarded(async () => {
+        const { runReverse } = await import("../services/reverse.js");
+        const out = outFor(a.out, `reverse-${normalizeDomain(a.domain)}`);
+        const { report, reportPath } = await runReverse({
+          domain: a.domain,
+          out,
+          log,
+          ...(a.maxPages !== undefined ? { maxPages: a.maxPages } : {}),
+          ...(a.fromCrawl ? { fromCrawl: resolve(a.fromCrawl) } : {}),
+          ...(a.offpage !== undefined ? { offpage: a.offpage } : {}),
+          ...(a.budgetUsd !== undefined ? { budgetUsd: a.budgetUsd } : {}),
+          ...(a.keywordsLimit !== undefined ? { keywordsLimit: a.keywordsLimit } : {}),
+          ...(a.backlinks !== undefined ? { backlinks: a.backlinks } : {}),
+          ...(a.force !== undefined ? { force: a.force } : {}),
+        });
+        return {
+          out,
+          reportPath,
+          summary: report.summary,
+          playbook: report.playbook,
+          coverage: report.coverage,
+          cost: report.cost,
+          rankings: report.rankings
+            ? { totals: report.rankings.totals, sections: report.rankings.sections, cost: report.rankings.cost }
+            : null,
         };
       }),
   );

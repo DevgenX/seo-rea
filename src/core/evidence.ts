@@ -1,3 +1,4 @@
+import { SeoReaError } from "./errors.js";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import type { Evidence, EvidenceInput } from "./types.js";
@@ -70,7 +71,7 @@ export class EvidenceStore {
   async read(id: string, maxChars = 20000): Promise<{ item: Evidence; content: string; truncated: boolean }> {
     if (!ID_RE.test(id)) throw new Error(`invalid evidence id "${id}"`);
     const item = this.get(id);
-    if (!item) throw new Error(`evidence ${id} not found in ${this.dir}`);
+    if (!item) throw new SeoReaError("NOT_FOUND", `evidence ${id} not found in ${this.dir}`);
     if (/\.(png|jpe?g|webp)$/i.test(item.file)) {
       return {
         item,

@@ -6,6 +6,71 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+
+- Self-contained HTML reports: `--html` on `crawl`, `reverse` and `diff`
+  (diff needs `--out`), and `seo-rea html <run>` to render an existing run
+  offline. Inline SVG charts (ranking position distribution, traffic by
+  section, top keywords, competitor overlap, intent mix, issues by severity,
+  click depth, diff trends) plus an executive summary; no JavaScript, no CDN,
+  strict CSP. Example: `examples/reverse-cardpointers-rankings/report/*.html`.
+- Stable issue ids: every entry in `topActions` (dossier and strategy) has an
+  `id` such as `TECH-ROBOTS-BLOCKS-ALL` or `PERF-SCORE-LOW:3f2a9c1e` (rule
+  code plus an optional hash of the subject). The same problem keeps the same
+  id across runs. Shown in the Top 10 actions table. See
+  [docs/error-codes.md](docs/error-codes.md#issue-ids).
+- Published error contract: failures carry a stable code (`USAGE`,
+  `RUN_EXISTS`, `BUDGET_REFUSED`, `SCHEMA_INVALID`, ...). The CLI prints
+  `seo-rea: [CODE] message` plus a hint, and with `--json` prints
+  `{ "error": { code, message, hint, exitCode } }` on stdout. MCP errors add
+  `code` and `hint`. JSON Schema in `docs/error-contract.schema.json`
+  (`npm run error-schema`).
+
+- `seo-rea crawl <domain>` and the MCP tool `seo_crawl`: breadth-first site
+  crawler (1-5000 pages, `--max-pages`, `--max-depth`, `--delay-ms`) that
+  obeys robots.txt, reads sitemaps, persists its queue in `data/` and resumes
+  where it stopped (Ctrl-C safe, `--force` restarts). Writes
+  `report/crawl.json` (`kind: "crawl"`, schema `docs/crawl-schema.json`) and
+  `report/crawl.md`: per-page facts, internal inlinks, click depth, internal
+  PageRank and 22 site-wide rules (`CRAWL-*`) with stable issue ids. See
+  [docs/crawl.md](docs/crawl.md); sample in `examples/cardlab-crawl`.
+
+- `seo-rea diff <older-run> <newer-run>` and the MCP tool `seo_diff`:
+  compares two crawl, audit, teardown or strategy runs by stable issue id and
+  lists fixed, new, regressed, improved and unchanged findings, plus metric
+  and per-rule deltas. Crawl issues on pages the newer crawl did not reach
+  are `not-rechecked`, not fixed. Writes `report/diff.{md,json}` with
+  `--out` (schema `docs/diff-schema.json`). See [docs/diff.md](docs/diff.md).
+
+- `seo-rea reverse <domain>` and the MCP tool `seo_reverse`: reverse
+  engineers any domain's SEO / AEO strategy from its crawl plus free signals:
+  target topics, content clusters and templates, programmatic patterns,
+  internal-link hubs, free authority proxies (Tranco, Wikipedia, Common
+  Crawl), schema usage, AEO tactics (llms.txt, AI crawler rules, FAQ /
+  question formatting, raw-HTML readability), publishing cadence and stack,
+  plus a "what to copy" playbook. Every line cites evidence; cost is $0.
+  `--from-crawl` reuses a crawl. Schema `docs/reverse-schema.json`; design in
+  [docs/reverse-engineering.md](docs/reverse-engineering.md); sample in
+  `examples/reverse-cardpointers`.
+
+- `reverse --budget-usd <cap>`: opt-in paid rankings from DataForSEO (Labs
+  ranked keywords sorted by traffic, organic competitors, optional
+  `--backlinks` summary). Report section 11 shows ranked keywords,
+  positions, volume, estimated traffic, traffic per section and per URL,
+  intent mix and competitors. The plan is priced and printed before any
+  call, refused up front if it does not fit the run cap or the monthly cap
+  (default $1.50 for reverse), and actual API cost is logged to the ledger
+  and the report. Cached repeats cost $0. About $0.03 per domain.
+- DataForSEO adapter: per-item Labs cost estimates, task-level error
+  status, `DEPENDENCY_MISSING` when credentials are absent.
+
+### Changed
+
+- Crawl: redirected URLs are no longer counted as indexable pages (they
+  inflated duplicate-title groups).
+- `dossier.json` and `strategy.json` `topActions[]` gain a required `id`;
+  JSON Schemas regenerated.
+
 ## [0.4.0] - 2026-10-15
 
 Strategy Dossier: why a site leads, from free sources.

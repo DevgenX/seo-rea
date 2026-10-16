@@ -323,6 +323,7 @@
   "topActions": [
     {
       "rank": 1,
+      "id": "SCHEMA-INVALID",
       "title": "Fix JSON-LD errors: SoftwareApplication: needs one of: aggregateRating, review",
       "why": "Invalid structured data is ignored for rich results.",
       "evidenceIds": [

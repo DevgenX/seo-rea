@@ -21,9 +21,12 @@ describe("MCP server", () => {
       "seo_adlib_lookup",
       "seo_audit_page",
       "seo_check_ai_readiness",
+      "seo_crawl",
+      "seo_diff",
       "seo_keyword_gap",
       "seo_log_citation",
       "seo_read_evidence",
+      "seo_reverse",
       "seo_strategy",
       "seo_teardown",
     ]);

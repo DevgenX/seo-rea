@@ -100,6 +100,11 @@
       "items": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+(?::[a-f0-9]{8})?$",
+            "description": "Stable issue id (rule code plus optional subject hash); same problem, same id across runs"
+          },
           "rank": {
             "type": "integer",
             "minimum": 1,
@@ -133,7 +138,7 @@
             "description": "Owner hint"
           }
         },
-        "required": ["rank", "title", "why", "evidenceIds", "effort", "impact", "owner"],
+        "required": ["id", "rank", "title", "why", "evidenceIds", "effort", "impact", "owner"],
         "additionalProperties": false
       }
     },

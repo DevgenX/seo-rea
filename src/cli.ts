@@ -7,6 +7,11 @@ import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 import type { EngineName } from "./core/types.js";
 import { normalizeDomain, parseUrlList } from "./core/util.js";
+import { toErrorPayload } from "./core/errors.js";
+import { DOMAIN_LIKE, UsageError, num } from "./cli-args.js";
+import { parseCrawl, type CrawlCli } from "./cli-crawl.js";
+import { parseDiff, type DiffCli } from "./cli-diff.js";
+import { parseReverse, type ReverseCli } from "./cli-reverse.js";
 import { VERSION } from "./version.js";
 import { AI_ENGINES } from "./adapters/cite.js";
 import { isEngineName } from "./adapters/serp.js";
@@ -17,6 +22,12 @@ Usage:
   seo-rea <domain> [--vs <domain>] [--out <dir>] [--budget-usd 0] [options] [--json]
   seo-rea strategy <domain> [--vs <domain>] ...   Same as above: why a site leads (Strategy Dossier)
   seo-rea teardown --keyword "<kw>" --target <domain> --out <dir> [options] [--json]
+  seo-rea crawl <domain> [--out <dir>] [--max-pages 500] [--max-depth 10] [--delay-ms 500] [--force] [--html] [--json]
+  seo-rea reverse <domain> [--out <dir>] [--max-pages 300] [--from-crawl <run>] [--no-offpage] [--html] [--json]
+                  [--budget-usd 0.05 [--keywords-limit 100] [--competitors-limit 10] [--backlinks] [--monthly-cap-usd 1.5]]
+                                    Reverse engineer a domain's SEO/AEO strategy (free sources only)
+  seo-rea diff <older-run> <newer-run> [--out <dir> [--html]] [--json]   Fixed / new / regressed between two runs
+  seo-rea html <run>                (Re)render report/*.html from a crawl, reverse or diff run, offline
   seo-rea audit <domain|url> [--out <dir>] [--no-psi] [--lighthouse] [--json]
   seo-rea batch --sites <file.json|file.csv> [--out <dir>] [--site-delay-ms <n>] [options] [--json]
   seo-rea cite --out <dir> --engine <${AI_ENGINES.join("|")}>
@@ -59,19 +70,16 @@ Batch: runs audit for every site, and teardown when the site has a keyword.
   <out>/summary.md. --out defaults to "out"; --site-delay-ms (default 5000) is
   the pause between sites. Entries whose domain is TODO are skipped.
 
+Crawl: breadth-first from https://<domain>/ plus sitemap URLs, obeying
+  robots.txt for the "seo-rea" token. State is saved in <out>/data/ every 25
+  pages; rerunning the same command resumes (Ctrl-C is safe). --force starts
+  over. --max-pages is capped at 5000. Writes report/crawl.md and crawl.json.
+  --out defaults to seo-rea-runs/crawl-<domain>.
+
 Paid calls (DataForSEO) read DATAFORSEO_LOGIN and DATAFORSEO_PASSWORD from the environment only.
 `;
 
-export class UsageError extends Error {
-  override name = "UsageError";
-}
-
-const num = (v: string | undefined, name: string): number | undefined => {
-  if (v === undefined) return undefined;
-  const n = Number(v);
-  if (!Number.isFinite(n) || n < 0) throw new UsageError(`--${name} must be a non-negative number`);
-  return n;
-};
+export { UsageError };
 
 export function parseEngines(v: string): EngineName[] {
   if (v.trim() === "none") return [];
@@ -102,6 +110,10 @@ export type Command =
       noCache: boolean;
       cacheDir: string;
     }
+  | { command: "crawl"; options: CrawlCli }
+  | { command: "diff"; options: DiffCli }
+  | { command: "reverse"; options: ReverseCli }
+  | { command: "html"; run: string }
   | { command: "cite"; out: string; engine: string; prompt: string; urls: string; note: string };
 
 export interface TeardownCli {
@@ -209,8 +221,6 @@ function parseTeardown(rest: string[]): TeardownCli {
   };
 }
 
-const DOMAIN_LIKE = /^(https?:\/\/)?[a-z0-9-]+(\.[a-z0-9-]+)+(\/.*)?$/i;
-
 function parseStrategy(rest: string[]): StrategyCli {
   const { values: v, positionals } = parseArgs({
     args: rest,
@@ -275,6 +285,14 @@ export function parseCli(argv: string[]): Command {
   if (cmd === "teardown") return { command: "teardown", options: parseTeardown(rest) };
   if (cmd === "strategy") return { command: "strategy", options: parseStrategy(rest) };
   if (cmd === "batch") return { command: "batch", options: parseBatch(rest) };
+  if (cmd === "crawl") return { command: "crawl", options: parseCrawl(rest) };
+  if (cmd === "diff") return { command: "diff", options: parseDiff(rest) };
+  if (cmd === "reverse") return { command: "reverse", options: parseReverse(rest) };
+  if (cmd === "html") {
+    const { positionals } = parseArgs({ args: rest, strict: true, allowPositionals: true, options: {} });
+    if (positionals.length !== 1) throw new UsageError("html needs one run folder: seo-rea html <run>");
+    return { command: "html", run: resolve(positionals[0] as string) };
+  }
   if (cmd === "audit") {
     const { values: v, positionals } = parseArgs({
       args: rest,
@@ -328,14 +346,27 @@ const printJson = (value: unknown): void => {
   process.stdout.write(`${JSON.stringify(value, null, 2)}\n`);
 };
 
+/**
+ * Report a failure per the error contract: `seo-rea: [CODE] message` on
+ * stderr, plus the JSON payload on stdout when --json was given.
+ */
+export function reportError(e: unknown, json: boolean): number {
+  const p = toErrorPayload(e);
+  process.stderr.write(`seo-rea: [${p.error.code}] ${p.error.message}\n  hint: ${p.error.hint}\n`);
+  if (p.error.code === "USAGE") process.stderr.write(`\n${HELP}`);
+  if (json) printJson(p);
+  return p.error.exitCode;
+}
+
 export async function main(argv: string[]): Promise<number> {
-  let cmd: Command;
   try {
-    cmd = parseCli(argv);
+    return await dispatch(parseCli(argv));
   } catch (e) {
-    process.stderr.write(`seo-rea: ${(e as Error).message}\n\n${HELP}`);
-    return 2;
+    return reportError(e, argv.includes("--json"));
   }
+}
+
+async function dispatch(cmd: Command): Promise<number> {
   switch (cmd.command) {
     case "help":
       process.stdout.write(HELP);
@@ -443,6 +474,23 @@ export async function main(argv: string[]): Promise<number> {
       );
       return 0;
     }
+    case "crawl": {
+      const { runCrawlCommand } = await import("./cli-crawl.js");
+      return runCrawlCommand(cmd.options, err, printJson);
+    }
+    case "reverse": {
+      const { runReverseCommand } = await import("./cli-reverse.js");
+      return runReverseCommand(cmd.options, err, printJson);
+    }
+    case "html": {
+      const { writeHtmlReports } = await import("./services/html-report.js");
+      for (const p of await writeHtmlReports(cmd.run)) process.stdout.write(`HTML: ${p}\n`);
+      return 0;
+    }
+    case "diff": {
+      const { runDiffCommand } = await import("./cli-diff.js");
+      return runDiffCommand(cmd.options, printJson);
+    }
     case "cite": {
       const { recordCitation } = await import("./services/cite.js");
       const r = await recordCitation(cmd);
@@ -470,8 +518,7 @@ if (isEntry()) {
       if (code >= 0) process.exitCode = code;
     },
     (e: unknown) => {
-      process.stderr.write(`seo-rea: ${e instanceof Error ? e.message : String(e)}\n`);
-      process.exitCode = 1;
+      process.exitCode = reportError(e, process.argv.includes("--json"));
     },
   );
 }

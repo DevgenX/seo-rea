@@ -61,6 +61,9 @@ npx seo-rea cardpointers.com                          # strategy dossier: why th
 npx seo-rea getcardlab.app --vs cardpointers.com      # side by side, plan for the challenger
 npx seo-rea teardown --keyword "credit card rewards app" --target getcardlab.app --out ./cardlab
 npx seo-rea audit getcardlab.app          # single-site AEO checks
+npx seo-rea crawl getcardlab.app          # whole-site crawl, resumable, up to 5000 pages
+npx seo-rea diff runs/last-week runs/this-week   # fixed / new / regressed since last run
+npx seo-rea reverse cardpointers.com      # reverse engineer a domain's SEO/AEO strategy, $0
 npx seo-rea doctor                        # which optional adapters can run here
 ```
 

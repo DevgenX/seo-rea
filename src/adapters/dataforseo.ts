@@ -3,6 +3,7 @@
 // against the budget before spending and logged to ledger.csv.
 
 import type { BudgetGuard } from "../core/budget.js";
+import { SeoReaError } from "../core/errors.js";
 import { TTL, type Cache } from "../core/cache.js";
 import type { SerpAd, SerpResult } from "../core/types.js";
 
@@ -12,7 +13,20 @@ const API = "https://api.dataforseo.com/v3";
 export const ESTIMATES: Record<string, number> = {
   "serp/google/organic/live/regular": 0.002,
   "dataforseo_labs/google/ranked_keywords/live": 0.02,
+  "dataforseo_labs/google/competitors_domain/live": 0.011,
+  "backlinks/summary/live": 0.02,
 };
+
+/**
+ * Upper-bound price for one call. DataForSEO Labs bills a task fee plus a
+ * fee per returned item; observed Oct 2026: ranked_keywords with 100 rows
+ * $0.0240, competitors_domain with 10 rows $0.0132. The estimate uses
+ * $0.012 + $0.00015/item so it stays above both. Backlinks summary: $0.02.
+ */
+export function estimateCost(endpoint: string, items = 0): number {
+  if (endpoint.startsWith("dataforseo_labs/")) return Math.round((0.012 + 0.00015 * items) * 10000) / 10000;
+  return ESTIMATES[endpoint] ?? 0.05;
+}
 
 export function credentialsFromEnv(env: NodeJS.ProcessEnv = process.env): { login: string; password: string } | null {
   const login = env.DATAFORSEO_LOGIN;
@@ -34,11 +48,15 @@ type DfsItem = {
   keyword_data?: { keyword?: string; keyword_info?: { search_volume?: number } };
   ranked_serp_element?: { serp_item?: { rank_group?: number } };
 };
-type DfsResponse = {
+export type DfsResponse = {
   status_code?: number;
   status_message?: string;
   cost?: number;
-  tasks?: Array<{ result?: Array<{ items?: DfsItem[] }> }>;
+  tasks?: Array<{
+    status_code?: number;
+    status_message?: string;
+    result?: Array<Record<string, unknown> & { items?: DfsItem[] }> | null;
+  }>;
 };
 
 const itemsOf = (d: DfsResponse): DfsItem[] => d.tasks?.[0]?.result?.[0]?.items ?? [];
@@ -59,14 +77,24 @@ export class DataForSEO {
     return this.guard.enabled && Boolean(this.creds);
   }
 
+  /** True when this exact task is answered from cache (costs nothing). */
+  async cached(endpoint: string, task: Record<string, unknown>): Promise<boolean> {
+    const ttl = endpoint.startsWith("serp/") ? TTL.serp : TTL.api;
+    return Boolean(await this.cache?.get<DfsResponse>(`dataforseo:${endpoint}`, JSON.stringify(task), ttl));
+  }
+
   /** POST one task. Throws BudgetError before spending if not allowed. */
-  async call(endpoint: string, task: Record<string, unknown>): Promise<PaidResponse<DfsResponse>> {
+  async call(
+    endpoint: string,
+    task: Record<string, unknown>,
+    estimateUsd: number = ESTIMATES[endpoint] ?? 0.05,
+  ): Promise<PaidResponse<DfsResponse>> {
     const query = JSON.stringify(task);
     const ttl = endpoint.startsWith("serp/") ? TTL.serp : TTL.api;
     const hit = await this.cache?.get<DfsResponse>(`dataforseo:${endpoint}`, query, ttl);
     if (hit) return { data: hit, costUsd: 0, fromCache: true };
-    await this.guard.check(`dataforseo:${endpoint}`, ESTIMATES[endpoint] ?? 0.05);
-    if (!this.creds) throw new Error("DATAFORSEO_LOGIN/DATAFORSEO_PASSWORD not set");
+    await this.guard.check(`dataforseo:${endpoint}`, estimateUsd);
+    if (!this.creds) throw new SeoReaError("DEPENDENCY_MISSING", "DATAFORSEO_LOGIN / DATAFORSEO_PASSWORD are not set");
     const auth = Buffer.from(`${this.creds.login}:${this.creds.password}`).toString("base64");
     const res = await this.fetchImpl(`${API}/${endpoint}`, {
       method: "POST",
@@ -77,8 +105,9 @@ export class DataForSEO {
     const data = (await res.json()) as DfsResponse;
     const costUsd = Number(data?.cost) || 0;
     await this.guard.record(`dataforseo:${endpoint}`, query, costUsd);
-    if (!res.ok || data?.status_code !== 20000) {
-      throw new Error(`DataForSEO ${endpoint}: ${data?.status_message ?? res.status}`);
+    const task0 = data?.tasks?.[0];
+    if (!res.ok || data?.status_code !== 20000 || (task0?.status_code !== undefined && task0.status_code !== 20000)) {
+      throw new Error(`DataForSEO ${endpoint}: ${task0?.status_message ?? data?.status_message ?? res.status}`);
     }
     await this.cache?.set(`dataforseo:${endpoint}`, query, data);
     return { data, costUsd, fromCache: false };

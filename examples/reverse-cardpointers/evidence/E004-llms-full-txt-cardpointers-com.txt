@@ -1,0 +1,155 @@
+# CardPointers
+
+> CardPointers is the #1 app for maximizing credit card rewards. It tells you exactly which card to use for every purchase and tracks thousands of card-linked offers so you never miss cashback or points. Available on iPhone, iPad, Apple Watch, Mac, Android, Vision Pro, and browser extensions for Chrome, Safari, and Firefox.
+
+## By the Numbers
+
+- **5,000+ credit cards** supported
+- **900+ banks** across **258 countries**
+- Thousands of card-linked offers tracked in real time
+- Available on **7 platforms**: iOS, iPadOS, watchOS, macOS, Android, visionOS, and web browsers
+
+## How It Works
+
+1. Add the credit and debit cards in your wallet to CardPointers
+2. CardPointers automatically knows every bonus category, rotating reward, and card-linked offer for each card
+3. When you're about to make a purchase, CardPointers tells you the best card to use — factoring in all bonuses and active offers
+4. Never miss cashback, points, or miles again
+
+## Core Features
+
+### Card Recommendations
+Tell CardPointers which cards are in your wallet, and it instantly tells you the best card to use at any merchant or spending category — factoring in bonus categories, rotating rewards, and card-linked offers.
+
+### Offer Tracking & Auto-Add
+Aggregates personalized card-linked offers from **Amex Offers, Chase Offers, Bank of America BankAmeriDeals, Citi, Capital One, Wells Fargo, and US Bank**. The browser extension can **automatically add every offer** to your accounts — no clicking through individual offers one by one. Your bank accounts and transactions stay private.
+
+### Multi-Profile Support
+Manage cards and offers for yourself, a partner, or a business — all in one app. Switch between profiles instantly.
+
+### Real-Time Notifications & AutoPilot
+- **AutoPilot**: Automatically detects your location and shows the best card/offer for that store on your lock screen
+- Alerts when you're near a merchant with an active offer
+- Alerts when new offers match your criteria
+- Reminders before offers expire
+
+### Bonus Category Tracking
+Automatically tracks rotating and quarterly bonus categories (like Chase Freedom's 5% categories) across all your cards so you always know what's earning extra.
+
+### Browser Extension (Chrome, Safari, Firefox)
+- Auto-detects merchants while you shop online
+- Shows which card to use and any active card-linked offers
+- Auto-adds all available offers to your bank accounts
+- Offers Modal for browsing and sorting all your offers in one view
+- Search and sort offers across all your cards
+
+### Apple Watch & Widgets
+- Apple Watch complication for quick card lookups
+- Interactive widgets showing nearby stores, offers, and which card to use
+- Apple Wallet integration through auto-updating passes
+
+### Additional Features
+- **Augmented Reality**: Point your camera at a store to see your best card or offer (iPhone/iPad)
+- **Siri integration**: Ask Siri which card to use for any store
+- **Pin top cards**: Set a preferred card for any store or category
+- **Annual fee reminders**: Know when each card's fee is coming up
+- **5/24 status tracking**: Track your Chase 5/24 status
+- **Value tracking**: See how much value you get from each card at renewal time
+- **Offer usage tracking**: Track offer usage to the dollar
+- **Custom/retention offers**: Add your own negotiated offers
+- **Snooze offers**: Temporarily hide offers you're not interested in
+- **Customizable dashboard**: Fully customize your home screen
+
+## Who It's For
+
+- Anyone with multiple credit cards who wants to maximize rewards
+- Points and miles enthusiasts optimizing their wallet
+- Families or couples managing cards together with multi-profile support
+- Business owners tracking business vs personal card spending
+- Travel hackers and deal seekers
+- Anyone who wants to never miss a card-linked offer again
+
+## Pricing
+
+### Free
+- Basic card recommendations
+- Basic tracking of offers
+
+### CardPointers+ (Pro)
+- Auto-add card-linked offers from every supported bank
+- Unlimited cards
+- Multi-profile support
+- Auto-add offers via browser extension
+- Custom and retention offers
+- Offer notifications and expiration reminders
+- Location-based AutoPilot
+- AR card lookups
+- Siri integration
+- Apple Wallet passes
+- Value tracking at renewal
+- 5/24 status tracking
+- Annual fee reminders
+- Customizable dashboard
+- Available as monthly or annual subscription, or lifetime purchase
+
+## Supported Platforms
+
+| Platform | Features |
+|----------|----------|
+| iPhone & iPad | Full app with AutoPilot, AR, Siri, location reminders, widgets |
+| Apple Watch | Card recommendation complication |
+| Mac | Native app |
+| Android | Full app with location features |
+| Apple Vision Pro | Native visionOS app |
+| Chrome | Browser extension to auto-add offers |
+| Safari | Browser extension to auto-add offers |
+| Firefox | Browser extension to auto-add offers |
+
+## API / MCP
+
+CardPointers offers an MCP (Model Context Protocol) server for AI assistants:
+
+- **MCP Endpoint**: `https://mcp.cardpointers.com/mcp`
+- **Capabilities**: Look up the best card for any purchase, search offers by merchant, list a user's cards, offers, and profiles
+- **Auth**: OAuth 2.0 (users log in with their CardPointers account)
+- **Works with**: Claude, ChatGPT, and any MCP-compatible AI assistant
+
+### MCP Use Cases
+- "Which card should I use at Starbucks?" — Get instant, personalized recommendations based on your cards and active offers
+- "Which offers expire this week?" — Never miss an expiring offer
+- "How much did I save with my Platinum card in 2025?" — Track your rewards history
+
+## CLI
+
+Install via Homebrew or npm:
+
+```
+brew install cardpointers/tap/cardpointers
+```
+
+```
+npm install -g @cardpointers/cli
+```
+
+### Commands
+- `cardpointers recommend <category>` — Best card for a spending category
+- `cardpointers recommend --merchant <name>` — Best card for a specific merchant
+- `cardpointers cards` — List your cards (filter by bank, status, profile)
+- `cardpointers offers` — List active offers (filter by expiring, favorite, sort by value)
+- `cardpointers search "<query>"` — Search your offers by merchant name
+- `cardpointers profiles` — List your profiles
+
+## Links
+
+- [Homepage](https://cardpointers.com)
+- [All Supported Cards](https://cardpointers.com/cards/)
+- [Active Offers](https://cardpointers.com/offers/)
+- [Search Offers by Merchant](https://cardpointers.com/search/)
+- [CardPointers Pro](https://cardpointers.com/pro/)
+- [Browser Extension](https://cardpointers.com/extension/)
+- [AI & MCP Integration](https://cardpointers.com/ai)
+- [CLI Tool](https://github.com/cardpointers/cli)
+- [App Store (iOS)](https://apps.apple.com/app/cardpointers/id1472875808)
+- [Google Play (Android)](https://play.google.com/store/apps/details?id=com.cardpointers.cardpointers)
+- [Privacy Policy](https://cardpointers.com/privacy/)
+- [Terms of Service](https://cardpointers.com/terms/)
