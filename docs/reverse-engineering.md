@@ -102,7 +102,7 @@ DataForSEO. Off by default; credentials come only from
 Cost control:
 
 1. Before any call the plan is priced (cached calls count as $0) and
-   printed: `DataForSEO estimate: $0.0310 for 2 call(s) ...`.
+   printed: `DataForSEO estimate: $0.0405 for 2 call(s) ...` (estimates are set above observed prices).
 2. If the estimate does not fit the run cap (`--budget-usd`) or the
    monthly cap (`--monthly-cap-usd`, default **$1.50**, summed from
    `.seo-rea/ledger.csv`), nothing is called and the report says why.
@@ -112,8 +112,9 @@ Cost control:
 4. Responses are cached for 30 days (`.seo-rea/cache`), so re-running the
    same domain is free. Raw responses are saved as evidence.
 
-A default run costs about $0.03, so the $1.50 monthly cap allows roughly
-45-50 domains a month. A denied backlinks call (no plan) is noted and the
+A default run costs about $0.037 (cardpointers.com, Oct 2026), so the $1.50
+monthly cap allows about 40 domains a month. With `--backlinks` the
+estimate is $0.0605, above a $0.05 run cap. A denied backlinks call (no plan) is noted and the
 rest of the report is kept.
 
 The report gains section 11 (totals, top keywords, traffic per section and
