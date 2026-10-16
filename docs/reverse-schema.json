@@ -631,6 +631,399 @@
         "additionalProperties": false
       }
     },
+    "rankings": {
+      "description": "Paid DataForSEO ranking data; null or absent when --budget-usd was not given",
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "source": {
+              "type": "string"
+            },
+            "locationCode": {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991
+            },
+            "languageCode": {
+              "type": "string"
+            },
+            "totals": {
+              "type": "object",
+              "properties": {
+                "rankedKeywords": {
+                  "anyOf": [
+                    {
+                      "type": "integer",
+                      "minimum": -9007199254740991,
+                      "maximum": 9007199254740991
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "All keywords the domain ranks for (DataForSEO count)"
+                },
+                "estTrafficMonthly": {
+                  "description": "Estimated monthly organic visits (DataForSEO etv)",
+                  "type": ["number", "null"]
+                },
+                "top3": {
+                  "anyOf": [
+                    {
+                      "type": "integer",
+                      "minimum": -9007199254740991,
+                      "maximum": 9007199254740991
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "top10": {
+                  "anyOf": [
+                    {
+                      "type": "integer",
+                      "minimum": -9007199254740991,
+                      "maximum": 9007199254740991
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "sampled": {
+                  "type": "integer",
+                  "minimum": -9007199254740991,
+                  "maximum": 9007199254740991,
+                  "description": "Keywords returned and analysed below (top by traffic)"
+                }
+              },
+              "required": ["rankedKeywords", "estTrafficMonthly", "top3", "top10", "sampled"],
+              "additionalProperties": false
+            },
+            "keywords": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "keyword": {
+                    "type": "string"
+                  },
+                  "position": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": -9007199254740991,
+                        "maximum": 9007199254740991
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "volume": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": -9007199254740991,
+                        "maximum": 9007199254740991
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "etv": {
+                    "type": "number"
+                  },
+                  "cpc": {
+                    "type": ["number", "null"]
+                  },
+                  "intent": {
+                    "type": ["string", "null"]
+                  }
+                },
+                "required": ["keyword", "position", "url", "volume", "etv", "cpc", "intent"],
+                "additionalProperties": false
+              }
+            },
+            "sections": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "keywords": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "top10": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "etv": {
+                    "type": "number"
+                  },
+                  "share": {
+                    "type": "number",
+                    "description": "Share of sampled traffic"
+                  },
+                  "topKeyword": {
+                    "type": "string"
+                  },
+                  "topUrl": {
+                    "type": "string"
+                  }
+                },
+                "required": ["key", "keywords", "top10", "etv", "share", "topKeyword", "topUrl"],
+                "additionalProperties": false
+              }
+            },
+            "pages": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "type": "string"
+                  },
+                  "keywords": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "etv": {
+                    "type": "number"
+                  },
+                  "bestKeyword": {
+                    "type": "string"
+                  },
+                  "bestPosition": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": -9007199254740991,
+                        "maximum": 9007199254740991
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": ["url", "keywords", "etv", "bestKeyword", "bestPosition"],
+                "additionalProperties": false
+              }
+            },
+            "intents": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "intent": {
+                    "type": "string"
+                  },
+                  "keywords": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "etv": {
+                    "type": "number"
+                  }
+                },
+                "required": ["intent", "keywords", "etv"],
+                "additionalProperties": false
+              }
+            },
+            "competitors": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "domain": {
+                    "type": "string"
+                  },
+                  "sharedKeywords": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "avgPosition": {
+                    "type": ["number", "null"]
+                  },
+                  "rankedKeywords": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": -9007199254740991,
+                        "maximum": 9007199254740991
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "estTrafficMonthly": {
+                    "type": ["number", "null"]
+                  }
+                },
+                "required": ["domain", "sharedKeywords", "avgPosition", "rankedKeywords", "estTrafficMonthly"],
+                "additionalProperties": false
+              }
+            },
+            "backlinks": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "rank": {
+                      "type": ["number", "null"]
+                    },
+                    "backlinks": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "minimum": -9007199254740991,
+                          "maximum": 9007199254740991
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "referringDomains": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "minimum": -9007199254740991,
+                          "maximum": 9007199254740991
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "referringMainDomains": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "minimum": -9007199254740991,
+                          "maximum": 9007199254740991
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "brokenBacklinks": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "minimum": -9007199254740991,
+                          "maximum": 9007199254740991
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "nofollowReferringDomains": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "minimum": -9007199254740991,
+                          "maximum": 9007199254740991
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "rank",
+                    "backlinks",
+                    "referringDomains",
+                    "referringMainDomains",
+                    "brokenBacklinks",
+                    "nofollowReferringDomains"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "cost": {
+              "type": "object",
+              "properties": {
+                "estimateUsd": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "actualUsd": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "calls": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "fromCache": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991
+                }
+              },
+              "required": ["estimateUsd", "actualUsd", "calls", "fromCache"],
+              "additionalProperties": false
+            },
+            "evidenceIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "notes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "source",
+            "locationCode",
+            "languageCode",
+            "totals",
+            "keywords",
+            "sections",
+            "pages",
+            "intents",
+            "competitors",
+            "backlinks",
+            "cost",
+            "evidenceIds",
+            "notes"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "unknowns": {
       "type": "array",
       "items": {

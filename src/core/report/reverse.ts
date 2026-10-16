@@ -96,6 +96,7 @@ export function renderReverse(r: ReverseReport): string {
       (p) => `| ${cell(p.step)} | ${cell(p.why)} | ${p.effort} | ${p.impact} | ${ids(p.evidenceIds)} |`,
     ),
     "",
+    ...renderRankings(r),
     "## Unknowns",
     "",
     ...r.unknowns.map((u) => `- ${u}`),
@@ -104,4 +105,55 @@ export function renderReverse(r: ReverseReport): string {
     "",
   );
   return L.join("\n");
+}
+
+function renderRankings(r: ReverseReport): string[] {
+  const k = r.rankings;
+  if (!k) return [];
+  const t = k.totals;
+  const L = [
+    "## 11. What it actually ranks for (DataForSEO, paid)",
+    "",
+    `${t.rankedKeywords ?? "?"} ranked keywords (Google, location ${k.locationCode}, ${k.languageCode}); ${t.top10 ?? "?"} in the top 10, ${t.top3 ?? "?"} in the top 3; est. ${t.estTrafficMonthly ?? "?"} visits/month. Cost: estimated $${k.cost.estimateUsd.toFixed(4)}, actual $${k.cost.actualUsd.toFixed(4)} (${k.cost.calls} paid call(s), ${k.cost.fromCache} from cache).${ev(k.evidenceIds)}`,
+    "",
+    "| Keyword | Pos | Volume | Est. visits | Intent | URL |",
+    "|---|---|---|---|---|---|",
+    ...k.keywords
+      .slice(0, 25)
+      .map(
+        (x) =>
+          `| ${cell(x.keyword)} | ${x.position ?? "-"} | ${x.volume ?? "-"} | ${x.etv} | ${x.intent ?? "-"} | ${cell(x.url)} |`,
+      ),
+    "",
+    "| Section | Keywords | Top 10 | Est. visits | Share | Best keyword |",
+    "|---|---|---|---|---|---|",
+    ...k.sections.map(
+      (x) => `| ${cell(x.key)} | ${x.keywords} | ${x.top10} | ${x.etv} | ${pct(x.share)} | ${cell(x.topKeyword)} |`,
+    ),
+    "",
+    "| Page | Keywords | Est. visits | Best keyword | Pos |",
+    "|---|---|---|---|---|",
+    ...k.pages.map(
+      (x) => `| ${cell(x.url)} | ${x.keywords} | ${x.etv} | ${cell(x.bestKeyword)} | ${x.bestPosition ?? "-"} |`,
+    ),
+    "",
+  ];
+  if (k.intents.length) L.push(`Intent mix: ${k.intents.map((i) => `${i.intent} ${i.keywords}`).join(", ")}.`, "");
+  if (k.competitors.length) {
+    L.push("| Competitor | Shared keywords | Avg pos | Ranked keywords | Est. visits |", "|---|---|---|---|---|");
+    for (const c of k.competitors)
+      L.push(
+        `| ${c.domain} | ${c.sharedKeywords} | ${c.avgPosition ?? "-"} | ${c.rankedKeywords ?? "-"} | ${c.estTrafficMonthly ?? "-"} |`,
+      );
+    L.push("");
+  }
+  if (k.backlinks) {
+    const b = k.backlinks;
+    L.push(
+      `Backlinks: ${b.backlinks ?? "?"} from ${b.referringDomains ?? "?"} referring domains (${b.referringMainDomains ?? "?"} main, ${b.nofollowReferringDomains ?? "?"} nofollow); rank ${b.rank ?? "?"}; ${b.brokenBacklinks ?? "?"} broken.`,
+      "",
+    );
+  }
+  if (k.notes.length) L.push(...k.notes.map((n) => `- ${n}`), "");
+  return L;
 }
