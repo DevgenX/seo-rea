@@ -1,0 +1,40 @@
+{
+  "tranco": {
+    "ok": true,
+    "problem": "",
+    "url": "https://tranco-list.eu/api/ranks/domain/cardpointers.com",
+    "value": {
+      "rank": 364213,
+      "date": "2026-10-15",
+      "best": 364213
+    }
+  },
+  "wikiLinks": {
+    "ok": true,
+    "problem": "",
+    "url": "https://en.wikipedia.org/w/api.php?action=query&list=exturlusage&euquery=*.cardpointers.com&euprotocol=https&eunamespace=0&eulimit=500&format=json",
+    "value": {
+      "linkingArticles": 0,
+      "sampleTitles": []
+    }
+  },
+  "wikiMentions": {
+    "ok": true,
+    "problem": "",
+    "url": "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22cardpointers%22&srlimit=5&srinfo=totalhits&format=json",
+    "value": {
+      "hits": 0,
+      "topTitles": []
+    }
+  },
+  "commonCrawl": {
+    "ok": true,
+    "problem": "",
+    "url": "https://index.commoncrawl.org/CC-MAIN-2026-39-index?url=*.cardpointers.com&output=json&showNumPages=true",
+    "value": {
+      "crawl": "CC-MAIN-2026-39",
+      "blocks": 1,
+      "pages": 1
+    }
+  }
+}
