@@ -69,7 +69,11 @@
     "start": "node dist/cli.js mcp",
     "dossier-schema": "npm run build && node -e \"import('./dist/core/dossier.js').then((m) => process.stdout.write(JSON.stringify(m.dossierJsonSchema(), null, 2) + '\\n'))\" > docs/dossier-schema.json",
     "strategy-schema": "npm run build && node -e \"import('./dist/core/strategy/schema.js').then((m) => process.stdout.write(JSON.stringify(m.strategyJsonSchema(), null, 2) + '\\n'))\" > docs/strategy-schema.json",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "error-schema": "npm run build && node -e \"import('./dist/core/errors.js').then((m) => process.stdout.write(JSON.stringify(m.errorContractJsonSchema(), null, 2) + '\\\\n'))\" > docs/error-contract.schema.json",
+    "crawl-schema": "npm run build && node -e \"import('./dist/core/crawl/schema.js').then((m) => process.stdout.write(JSON.stringify(m.crawlJsonSchema(), null, 2) + '\\\\n'))\" > docs/crawl-schema.json",
+    "diff-schema": "npm run build && node -e \"import('./dist/core/diff/schema.js').then((m) => process.stdout.write(JSON.stringify(m.diffJsonSchema(), null, 2) + '\\\\n'))\" > docs/diff-schema.json",
+    "reverse-schema": "npm run build && node -e \"import('./dist/core/reverse/schema.js').then((m) => process.stdout.write(JSON.stringify(m.reverseJsonSchema(), null, 2) + '\\\\n'))\" > docs/reverse-schema.json"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.1",

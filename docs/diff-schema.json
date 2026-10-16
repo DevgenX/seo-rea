@@ -1,0 +1,218 @@
+{
+  "$id": "https://github.com/DevgenX/seo-rea/blob/main/docs/diff-schema.json",
+  "title": "seo-rea diff v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1"
+    },
+    "tool": {
+      "type": "string",
+      "const": "seo-rea"
+    },
+    "toolVersion": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string",
+      "const": "diff"
+    },
+    "sourceKind": {
+      "type": "string",
+      "enum": ["crawl", "audit", "teardown", "strategy"]
+    },
+    "domain": {
+      "type": "string"
+    },
+    "old": {
+      "type": "object",
+      "properties": {
+        "runId": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "at": {
+          "type": "string"
+        }
+      },
+      "required": ["runId", "path", "at"],
+      "additionalProperties": false
+    },
+    "new": {
+      "type": "object",
+      "properties": {
+        "runId": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "at": {
+          "type": "string"
+        }
+      },
+      "required": ["runId", "path", "at"],
+      "additionalProperties": false
+    },
+    "counts": {
+      "type": "object",
+      "properties": {
+        "fixed": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "new": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "regressed": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "improved": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "unchanged": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "notRechecked": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": ["fixed", "new", "regressed", "improved", "unchanged", "notRechecked"],
+      "additionalProperties": false
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "old": {
+            "type": "number"
+          },
+          "new": {
+            "type": "number"
+          },
+          "delta": {
+            "type": "number"
+          }
+        },
+        "required": ["name", "old", "new", "delta"],
+        "additionalProperties": false
+      }
+    },
+    "ruleDeltas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rule": {
+            "type": "string"
+          },
+          "old": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "new": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "delta": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          }
+        },
+        "required": ["rule", "old", "new", "delta"],
+        "additionalProperties": false
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": ["fixed", "new", "regressed", "improved", "unchanged", "not-rechecked"]
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+(?::[a-f0-9]{8})?$"
+          },
+          "rule": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["high", "medium", "low"],
+            "description": "Severity in the newer run (older run for fixed / not-rechecked)"
+          },
+          "previousSeverity": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": ["high", "medium", "low"]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "detail": {
+            "type": "string",
+            "description": "What changed, in words"
+          }
+        },
+        "required": ["status", "id", "rule", "severity", "previousSeverity", "title", "url", "detail"],
+        "additionalProperties": false
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "tool",
+    "toolVersion",
+    "kind",
+    "sourceKind",
+    "domain",
+    "old",
+    "new",
+    "counts",
+    "metrics",
+    "ruleDeltas",
+    "items",
+    "notes"
+  ],
+  "additionalProperties": false
+}

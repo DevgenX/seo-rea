@@ -4,6 +4,10 @@
 seo-rea <domain> [--vs <domain>] [--out <dir>] [--budget-usd 0] [options] [--json]
 seo-rea strategy <domain> [--vs <domain>] ...
 seo-rea teardown --keyword "<kw>" --target <domain> --out <dir> [options] [--json]
+seo-rea crawl <domain> [--out <dir>] [--max-pages 500] [--max-depth 10] [--delay-ms 500] [--force] [--json]
+seo-rea reverse <domain> [--out <dir>] [--max-pages 300] [--from-crawl <run>] [--no-offpage] [--force] [--json]
+                [--budget-usd 0.05] [--monthly-cap-usd 1.5] [--keywords-limit 100] [--competitors-limit 10] [--backlinks] [--no-cache]
+seo-rea diff <older-run> <newer-run> [--out <dir>] [--json]
 seo-rea audit <domain|url> [--out <dir>] [--no-psi] [--lighthouse] [--json]
 seo-rea batch --sites <file.json|file.csv> [--out <dir>] [--site-delay-ms <n>] [options] [--json]
 seo-rea cite --out <dir> --engine <engine> --prompt "<prompt>" --urls "<url1,url2>" [--note "<text>"]
@@ -12,7 +16,8 @@ seo-rea doctor [--json]
 seo-rea --version | help
 ```
 
-Exit codes: 0 success, 1 runtime error, 2 usage error.
+Exit codes: 0 success, 1 runtime error, 2 usage error. Every failure has a
+stable code; see [error-codes.md](error-codes.md).
 
 ## strategy (also `seo-rea <domain>`)
 
@@ -38,6 +43,82 @@ Writes `report/strategy.md`, `report/strategy.json` (schema
 regenerates it), `evidence/` and `data/strategy-run.json`. A search engine
 that answers with a captcha, consent wall, HTTP 403 or 429 is not asked again
 in the same run; terms it could not check are listed as unknown.
+
+## crawl
+
+Crawls a whole site (1-5000 pages), robots.txt respected, resumable. Full
+reference: [crawl.md](crawl.md).
+
+| Option        | Default                       | Meaning                             |
+| ------------- | ----------------------------- | ----------------------------------- |
+| `<domain>`    | required                      | Site to crawl                       |
+| `--out`       | `seo-rea-runs/crawl-<domain>` | Output folder (state in `data/`)    |
+| `--max-pages` | `500`                         | Page limit, 1-5000                  |
+| `--max-depth` | `10`                          | Link depth limit from the home page |
+| `--delay-ms`  | `500`                         | Minimum gap between requests        |
+| `--force`     | off                           | Start over instead of resuming      |
+| `--html`      | off                           | Also write `report/crawl.html`      |
+| `--json`      | off                           | Print `report/crawl.json` to stdout |
+
+## reverse
+
+Reverse engineers a domain's SEO / AEO strategy from free sources and writes
+`report/reverse.{md,json}` plus `evidence/`. Design, limits and paid-ranking costs:
+[reverse-engineering.md](reverse-engineering.md).
+
+| Option                | Default                         | Meaning                                                   |
+| --------------------- | ------------------------------- | --------------------------------------------------------- |
+| `<domain>`            | required                        | Site to analyse                                           |
+| `--out`               | `seo-rea-runs/reverse-<domain>` | Output folder (the crawl is stored here too)              |
+| `--max-pages`         | `300`                           | Crawl page limit, 1-5000                                  |
+| `--delay-ms`          | `500`                           | Minimum gap between requests                              |
+| `--from-crawl`        | none                            | Reuse a crawl run folder or crawl.json                    |
+| `--no-offpage`        | off                             | Skip Tranco / Wikipedia / Common Crawl                    |
+| `--budget-usd`        | `0` (off)                       | Enable paid DataForSEO rankings; run cap in USD (max 5)   |
+| `--monthly-cap-usd`   | `1.5`                           | Monthly cap summed from `.seo-rea/ledger.csv`             |
+| `--keywords-limit`    | `100`                           | Ranked keywords to fetch (1-1000; $0.0001 each)           |
+| `--competitors-limit` | `10`                            | Organic competitors to fetch (0 skips the call)           |
+| `--backlinks`         | off                             | Add the backlink summary (~$0.02, needs a Backlinks plan) |
+| `--no-cache`          | off                             | Ignore cached API responses (cached repeats cost $0)      |
+| `--force`             | off                             | Restart the crawl and the evidence folder                 |
+| `--html`              | off                             | Also write `report/reverse.html` and `report/crawl.html`  |
+| `--json`              | off                             | Print `report/reverse.json` to stdout                     |
+
+## diff
+
+Fixed / new / regressed / improved findings between two runs of the same
+command for the same domain, matched by stable issue id. Full reference:
+[diff.md](diff.md).
+
+| Option        | Default  | Meaning                                       |
+| ------------- | -------- | --------------------------------------------- |
+| `<older-run>` | required | Run folder or report JSON                     |
+| `<newer-run>` | required | Run folder or report JSON                     |
+| `--out`       | none     | Write `report/diff.md` and `diff.json`        |
+| `--html`      | off      | Also write `report/diff.html` (needs `--out`) |
+| `--json`      | off      | Print the diff JSON to stdout                 |
+
+## html
+
+`seo-rea html <run>` renders `report/crawl.json`, `reverse.json` and
+`diff.json` in a run folder to `crawl.html`, `reverse.html` and `diff.html`,
+offline and at no cost (no crawling, no API calls). Same output as `--html`.
+
+Each HTML file is self-contained: inline CSS and inline SVG charts, no
+JavaScript, no CDN or web fonts, and a `default-src 'none'` Content Security
+Policy, so it opens from disk or an email attachment. Contents:
+
+- **reverse:** KPI cards, an executive summary (the report's findings with
+  basis and confidence), ranking position distribution, traffic by section,
+  top keywords by traffic, search intent mix, competitor overlap,
+  page-two opportunities, pages by section, templates, click depth, issues by
+  severity (from the linked crawl), programmatic patterns and the playbook.
+  The ranking charts appear only when the run has `--budget-usd` rankings.
+- **crawl:** KPI cards, summary, issues by severity, issues by rule, click
+  depth, most-linked pages and the rule table with fixes.
+- **diff:** counts, summary, findings by status, metrics before → after,
+  change in issue count per rule, new/regressed findings by severity and the
+  change list.
 
 ## teardown
 

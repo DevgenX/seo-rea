@@ -38,6 +38,7 @@
   "actionsFor": "getcardlab.app",
   "topActions": [
     {
+      "id": "STRATEGY-STEP:5d7029c1",
       "rank": 1,
       "title": "Publish a better page for \"credit card offers\", \"credit cards\", \"credit card rewards\"; cardpointers.com is not in the checked results.",
       "why": "cardpointers.com weakness: Not in the checked results for 4/4 of its own head terms",
@@ -52,6 +53,7 @@
       "owner": "content"
     },
     {
+      "id": "STRATEGY-STEP:5dd1d2c6",
       "rank": 2,
       "title": "Give each unranked head term one page with the term in title and H1: \"credit card\", \"bank bonus tracker\", \"bank bonuses\", \"card interest calculator\"",
       "why": "getcardlab.app: Not in the checked results for 5/5 of its own head terms",
@@ -67,6 +69,7 @@
       "owner": "content"
     },
     {
+      "id": "STRATEGY-STEP:7d104347",
       "rank": 3,
       "title": "Ask for App Store ratings right after the in-app moment users came for; cardpointers.com has 10,355.",
       "why": "cardpointers.com driver #1 (strength 86, hard to copy): App Store demand: \"CardPointers for Credit Cards\" rated 4.7 from 10,355 ratings",
@@ -78,6 +81,7 @@
       "owner": "seo"
     },
     {
+      "id": "STRATEGY-STEP:90c06567",
       "rank": 4,
       "title": "Build one page template like /offers/{x}-back-# and launch it for the 20 entities your users ask about most, then expand (cardpointers.com runs 11 of these; e.g. /offers/).",
       "why": "cardpointers.com driver #4 (strength 46, medium to copy): Programmatic pages: 11 URLs on one template at /offers/{x}-back-#",
@@ -90,6 +94,7 @@
       "owner": "dev"
     },
     {
+      "id": "STRATEGY-STEP:60020d1b",
       "rank": 5,
       "title": "Pick the 2-3 cardpointers.com clusters closest to your product (/cards, /offers) and publish 10+ linked pages in each before widening.",
       "why": "cardpointers.com driver #6 (strength 31, medium to copy): Topical breadth: 135 known URLs across 2 clusters of 10+ pages",
@@ -102,6 +107,7 @@
       "owner": "content"
     },
     {
+      "id": "STRATEGY-STEP:721c8c47",
       "rank": 6,
       "title": "Mark up the same templates with JSON-LD; cardpointers.com leaves 22/30 sampled pages bare.",
       "why": "cardpointers.com weakness: No JSON-LD on 22/30 sampled pages",
@@ -118,6 +124,7 @@
       "owner": "dev"
     },
     {
+      "id": "STRATEGY-STEP:e5f60ac9",
       "rank": 7,
       "title": "Give your matching pages a clear H1; cardpointers.com leaves 19/30 without one.",
       "why": "cardpointers.com weakness: No H1 on 19/30 sampled pages",
@@ -134,6 +141,7 @@
       "owner": "content"
     },
     {
+      "id": "STRATEGY-STEP:44dd598c",
       "rank": 8,
       "title": "Prompt happy users for an App Store rating (now 1)",
       "why": "Few App Store ratings: \"CardLab: Track Cards & Rewards\" has 1. Average 5.0; Finance.",
@@ -145,6 +153,7 @@
       "owner": "seo"
     },
     {
+      "id": "STRATEGY-STEP:9e8f6d6a",
       "rank": 9,
       "title": "Fix JSON-LD errors: SoftwareApplication: needs one of: aggregateRating, review; WebApplication: needs one of: aggregateRating, review",
       "why": "JSON-LD errors on 13 sampled page(s). SoftwareApplication: needs one of: aggregateRating, review; WebApplication: needs one of: aggregateRating, review",
@@ -161,6 +170,7 @@
       "owner": "dev"
     },
     {
+      "id": "STRATEGY-STEP:06b866de",
       "rank": 10,
       "title": "Get listed or reviewed on the sites that cover cardpointers: upgradedpoints.com, reddit.com, clark.com.",
       "why": "cardpointers.com driver #5 (strength 43, hard to copy): Third-party coverage: brand search \"cardpointers\" returns 3 other domains",

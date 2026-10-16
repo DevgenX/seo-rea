@@ -1,0 +1,25 @@
+# CardPointers
+
+> CardPointers is the #1 app for maximizing credit card rewards. It tells you exactly which card to use for every purchase and tracks thousands of card-linked offers so you never miss cashback or points.
+
+## Key Info
+
+- 5,000+ credit cards supported across 900+ banks in 258 countries
+- Available on iPhone, iPad, Apple Watch, Mac, Android, Vision Pro, and browser extensions (Chrome, Safari, Firefox)
+- Free tier available; CardPointers+ (Pro) unlocks unlimited cards, offers, and advanced features
+
+## Docs
+
+- [Homepage](https://cardpointers.com)
+- [All Supported Cards](https://cardpointers.com/cards/)
+- [Active Offers](https://cardpointers.com/offers/)
+- [Search Offers by Merchant](https://cardpointers.com/search/)
+- [CardPointers Pro](https://cardpointers.com/pro/)
+- [Browser Extension](https://cardpointers.com/extension/)
+- [AI & MCP Integration](https://cardpointers.com/ai)
+- [CLI Tool](https://github.com/cardpointers/cli)
+- [App Store (iOS)](https://apps.apple.com/app/cardpointers/id1472875808)
+- [Google Play (Android)](https://play.google.com/store/apps/details?id=com.cardpointers.cardpointers)
+- [Privacy Policy](https://cardpointers.com/privacy/)
+- [Terms of Service](https://cardpointers.com/terms/)
+- [Full LLM Context](https://cardpointers.com/llms-full.txt)

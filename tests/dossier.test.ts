@@ -199,6 +199,7 @@ describe("top actions", () => {
   it("renders a markdown table", () => {
     const md = renderTopActions([
       {
+        id: "TECH-ROBOTS-BLOCKS-ALL",
         rank: 1,
         title: "Fix a | b",
         why: "Because",
@@ -209,6 +210,6 @@ describe("top actions", () => {
       },
     ]).join("\n");
     expect(md).toContain("## Top 10 actions");
-    expect(md).toContain("| 1 | Fix a \\| b | Because | high | S | dev | E001 |");
+    expect(md).toContain("| 1 | `TECH-ROBOTS-BLOCKS-ALL` | Fix a \\| b | Because | high | S | dev | E001 |");
   });
 });

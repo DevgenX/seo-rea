@@ -2,6 +2,7 @@
 // Nothing here runs unless playwright-core is installed and a Chromium build
 // is present (`npx playwright install chromium`).
 
+import { SeoReaError } from "../core/errors.js";
 import { existsSync } from "node:fs";
 import type * as PW from "playwright-core";
 import type { Availability } from "../core/types.js";
@@ -46,7 +47,7 @@ export class BrowserSession {
   async page(): Promise<PW.Page> {
     if (!this.context) {
       const pw = await loadPlaywright();
-      if (!pw) throw new Error("playwright-core not installed");
+      if (!pw) throw new SeoReaError("DEPENDENCY_MISSING", "playwright-core not installed");
       // The full Chromium build in new headless mode, with the browser's own
       // version in a normal desktop user agent (no "HeadlessChrome" token).
       this.browser = await pw.chromium.launch({ headless: true, channel: "chromium" });

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "E001",
+    "source": "crawl-cardpointers.com",
+    "kind": "derived",
+    "url": "https://cardpointers.com/",
+    "note": "70 pages crawled, 59 indexable; full data in report/crawl.json",
+    "file": "E001-crawl-cardpointers-com.json",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-15T22:39:28.358Z",
+    "fromCache": false
+  },
+  {
+    "id": "E002",
+    "source": "robots-cardpointers.com",
+    "kind": "observed",
+    "url": "https://cardpointers.com/robots.txt",
+    "note": "no robots.txt",
+    "file": "E002-robots-cardpointers-com.txt",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-15T22:39:28.360Z",
+    "fromCache": false
+  },
+  {
+    "id": "E003",
+    "source": "llms-txt-cardpointers.com",
+    "kind": "observed",
+    "url": "https://cardpointers.com/llms.txt",
+    "note": "llms.txt valid",
+    "file": "E003-llms-txt-cardpointers-com.txt",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-15T22:39:30.755Z",
+    "fromCache": false
+  },
+  {
+    "id": "E004",
+    "source": "llms-full-txt-cardpointers.com",
+    "kind": "observed",
+    "url": "https://cardpointers.com/llms-full.txt",
+    "note": "llms-full.txt present",
+    "file": "E004-llms-full-txt-cardpointers-com.txt",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-15T22:39:30.757Z",
+    "fromCache": false
+  },
+  {
+    "id": "E005",
+    "source": "offpage-cardpointers.com",
+    "kind": "observed",
+    "url": "",
+    "note": "Tranco, Wikipedia, Common Crawl (free public APIs)",
+    "file": "E005-offpage-cardpointers-com.json",
+    "costUsd": 0,
+    "fetchedAt": "2026-10-15T22:39:32.442Z",
+    "fromCache": false
+  }
+]
