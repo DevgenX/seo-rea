@@ -57,6 +57,7 @@ reference: [crawl.md](crawl.md).
 | `--max-depth` | `10`                          | Link depth limit from the home page |
 | `--delay-ms`  | `500`                         | Minimum gap between requests        |
 | `--force`     | off                           | Start over instead of resuming      |
+| `--html`      | off                           | Also write `report/crawl.html`      |
 | `--json`      | off                           | Print `report/crawl.json` to stdout |
 
 ## reverse
@@ -80,6 +81,7 @@ Reverse engineers a domain's SEO / AEO strategy from free sources and writes
 | `--backlinks`         | off                             | Add the backlink summary (~$0.02, needs a Backlinks plan) |
 | `--no-cache`          | off                             | Ignore cached API responses (cached repeats cost $0)      |
 | `--force`             | off                             | Restart the crawl and the evidence folder                 |
+| `--html`              | off                             | Also write `report/reverse.html` and `report/crawl.html`  |
 | `--json`              | off                             | Print `report/reverse.json` to stdout                     |
 
 ## diff
@@ -88,12 +90,35 @@ Fixed / new / regressed / improved findings between two runs of the same
 command for the same domain, matched by stable issue id. Full reference:
 [diff.md](diff.md).
 
-| Option        | Default  | Meaning                                |
-| ------------- | -------- | -------------------------------------- |
-| `<older-run>` | required | Run folder or report JSON              |
-| `<newer-run>` | required | Run folder or report JSON              |
-| `--out`       | none     | Write `report/diff.md` and `diff.json` |
-| `--json`      | off      | Print the diff JSON to stdout          |
+| Option        | Default  | Meaning                                       |
+| ------------- | -------- | --------------------------------------------- |
+| `<older-run>` | required | Run folder or report JSON                     |
+| `<newer-run>` | required | Run folder or report JSON                     |
+| `--out`       | none     | Write `report/diff.md` and `diff.json`        |
+| `--html`      | off      | Also write `report/diff.html` (needs `--out`) |
+| `--json`      | off      | Print the diff JSON to stdout                 |
+
+## html
+
+`seo-rea html <run>` renders `report/crawl.json`, `reverse.json` and
+`diff.json` in a run folder to `crawl.html`, `reverse.html` and `diff.html`,
+offline and at no cost (no crawling, no API calls). Same output as `--html`.
+
+Each HTML file is self-contained: inline CSS and inline SVG charts, no
+JavaScript, no CDN or web fonts, and a `default-src 'none'` Content Security
+Policy, so it opens from disk or an email attachment. Contents:
+
+- **reverse:** KPI cards, an executive summary (the report's findings with
+  basis and confidence), ranking position distribution, traffic by section,
+  top keywords by traffic, search intent mix, competitor overlap,
+  page-two opportunities, pages by section, templates, click depth, issues by
+  severity (from the linked crawl), programmatic patterns and the playbook.
+  The ranking charts appear only when the run has `--budget-usd` rankings.
+- **crawl:** KPI cards, summary, issues by severity, issues by rule, click
+  depth, most-linked pages and the rule table with fixes.
+- **diff:** counts, summary, findings by status, metrics before → after,
+  change in issue count per rule, new/regressed findings by severity and the
+  change list.
 
 ## teardown
 
