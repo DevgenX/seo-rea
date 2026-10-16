@@ -17,6 +17,11 @@ import { inferStrategy } from "../core/reverse/infer.js";
 import { REVERSE_SCHEMA_VERSION, validateReverse, type ReverseReport } from "../core/reverse/schema.js";
 import type { AdapterContext, Logger } from "../core/types.js";
 import { normalizeDomain, runIdFrom } from "../core/util.js";
+import { DataForSEO } from "../adapters/dataforseo.js";
+import { BudgetGuard } from "../core/budget.js";
+import { Cache } from "../core/cache.js";
+import { rankingFindings } from "../core/reverse/rankings.js";
+import { collectRankings } from "./reverse-rankings.js";
 import { VERSION } from "../version.js";
 import { runCrawl } from "./crawl.js";
 
@@ -27,6 +32,16 @@ export interface ReverseOptions {
   delayMs?: number;
   /** Reuse an existing crawl (run folder or crawl.json) instead of crawling. */
   fromCrawl?: string;
+  /** Paid rankings: run cap in USD (0 = off, the default). */
+  budgetUsd?: number;
+  /** Monthly cap summed from the ledger (default 1.50). */
+  monthlyCapUsd?: number;
+  keywordsLimit?: number;
+  competitorsLimit?: number;
+  backlinks?: boolean;
+  ledgerPath?: string;
+  cacheDir?: string;
+  noCache?: boolean;
   /** Skip Tranco / Wikipedia / Common Crawl lookups. */
   offpage?: boolean;
   force?: boolean;
@@ -38,6 +53,7 @@ export interface ReverseOptions {
 }
 
 export const REVERSE_DEFAULT_PAGES = 300;
+export const REVERSE_MONTHLY_CAP_USD = 1.5;
 
 /** Domain labels plus the name without common prefixes/suffixes (getcardlab -> cardlab). */
 export function brandTokens(domain: string): string[] {
@@ -188,6 +204,28 @@ export async function runReverse(o: ReverseOptions): Promise<{ report: ReverseRe
     ).id;
   }
 
+  const runId = runIdFrom(createdAt);
+  const budgetUsd = o.budgetUsd ?? 0;
+  const guard = new BudgetGuard(
+    { runCapUsd: budgetUsd, monthlyCapUsd: o.monthlyCapUsd ?? REVERSE_MONTHLY_CAP_USD },
+    resolve(o.ledgerPath ?? ".seo-rea/ledger.csv"),
+    runId,
+    now,
+  );
+  const cache = new Cache(resolve(o.cacheDir ?? ".seo-rea/cache"), { now, disabled: o.noCache ?? false });
+  const dfs = new DataForSEO(guard, cache, o.env ?? process.env, o.fetchImpl ?? globalThis.fetch);
+  const { rankings, reason } = await collectRankings({
+    domain,
+    dfs,
+    guard,
+    store,
+    log,
+    keywordsLimit: o.keywordsLimit ?? 100,
+    competitorsLimit: o.competitorsLimit ?? 10,
+    backlinks: o.backlinks ?? false,
+  });
+  if (!rankings && budgetUsd > 0) log(`rankings skipped: ${reason}`);
+
   const inferred = inferStrategy({
     crawl,
     crawlReportPath: relative(o.out, crawlPath) || crawlPath,
@@ -197,11 +235,21 @@ export async function runReverse(o: ReverseOptions): Promise<{ report: ReverseRe
     now: createdAt,
     brandTokens: brandTokens(domain),
   });
+  if (rankings) {
+    const extra = rankingFindings(rankings);
+    inferred.summary.unshift(...extra.summary);
+    inferred.playbook.unshift(...extra.playbook);
+    inferred.unknowns[0] = "Rankings: DataForSEO Labs estimates (Google US); traffic is modelled, not measured.";
+    if (!rankings.backlinks)
+      inferred.unknowns[1] = "Backlinks: no link index queried (pass --backlinks); free proxies only.";
+  } else if (budgetUsd > 0) inferred.unknowns.push(`Paid rankings not available: ${reason}.`);
+  inferred.cost = { usd: rankings?.cost.actualUsd ?? 0, paidCalls: rankings?.cost.calls ?? 0 };
   const report = validateReverse({
     ...inferred,
+    rankings,
     schemaVersion: REVERSE_SCHEMA_VERSION,
     toolVersion: VERSION,
-    runId: runIdFrom(createdAt),
+    runId,
     timestamps: { createdAt: createdAt.toISOString(), writtenAt: now().toISOString() },
     evidenceIndex: "evidence/index.md",
   } satisfies ReverseReport);

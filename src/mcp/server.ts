@@ -248,6 +248,9 @@ export function createServer(deps: ServerDeps = {}): McpServer {
         maxPages: z.number().int().min(1).max(5000).optional(),
         fromCrawl: z.string().optional(),
         offpage: z.boolean().optional(),
+        budgetUsd: z.number().min(0).max(5).optional(),
+        keywordsLimit: z.number().int().min(1).max(1000).optional(),
+        backlinks: z.boolean().optional(),
         force: z.boolean().optional(),
       },
     },
@@ -262,9 +265,22 @@ export function createServer(deps: ServerDeps = {}): McpServer {
           ...(a.maxPages !== undefined ? { maxPages: a.maxPages } : {}),
           ...(a.fromCrawl ? { fromCrawl: resolve(a.fromCrawl) } : {}),
           ...(a.offpage !== undefined ? { offpage: a.offpage } : {}),
+          ...(a.budgetUsd !== undefined ? { budgetUsd: a.budgetUsd } : {}),
+          ...(a.keywordsLimit !== undefined ? { keywordsLimit: a.keywordsLimit } : {}),
+          ...(a.backlinks !== undefined ? { backlinks: a.backlinks } : {}),
           ...(a.force !== undefined ? { force: a.force } : {}),
         });
-        return { out, reportPath, summary: report.summary, playbook: report.playbook, coverage: report.coverage };
+        return {
+          out,
+          reportPath,
+          summary: report.summary,
+          playbook: report.playbook,
+          coverage: report.coverage,
+          cost: report.cost,
+          rankings: report.rankings
+            ? { totals: report.rankings.totals, sections: report.rankings.sections, cost: report.rankings.cost }
+            : null,
+        };
       }),
   );
 

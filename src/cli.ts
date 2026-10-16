@@ -24,6 +24,7 @@ Usage:
   seo-rea teardown --keyword "<kw>" --target <domain> --out <dir> [options] [--json]
   seo-rea crawl <domain> [--out <dir>] [--max-pages 500] [--max-depth 10] [--delay-ms 500] [--force] [--json]
   seo-rea reverse <domain> [--out <dir>] [--max-pages 300] [--from-crawl <run>] [--no-offpage] [--json]
+                  [--budget-usd 0.05 [--keywords-limit 100] [--competitors-limit 10] [--backlinks] [--monthly-cap-usd 1.5]]
                                     Reverse engineer a domain's SEO/AEO strategy (free sources only)
   seo-rea diff <older-run> <newer-run> [--out <dir>] [--json]   Fixed / new / regressed between two runs
   seo-rea audit <domain|url> [--out <dir>] [--no-psi] [--lighthouse] [--json]
