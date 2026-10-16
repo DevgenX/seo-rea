@@ -18,13 +18,13 @@ export const ESTIMATES: Record<string, number> = {
 };
 
 /**
- * Upper-bound price for one call. DataForSEO Labs bills a flat task fee
- * plus a fee per returned item (2026 list prices: $0.01 + $0.0001/item);
- * Backlinks summary is a flat $0.02. Rounded up so the pre-call check never
- * under-estimates.
+ * Upper-bound price for one call. DataForSEO Labs bills a task fee plus a
+ * fee per returned item; observed Oct 2026: ranked_keywords with 100 rows
+ * $0.0240, competitors_domain with 10 rows $0.0132. The estimate uses
+ * $0.012 + $0.00015/item so it stays above both. Backlinks summary: $0.02.
  */
 export function estimateCost(endpoint: string, items = 0): number {
-  if (endpoint.startsWith("dataforseo_labs/")) return Math.round((0.01 + 0.0001 * items) * 10000) / 10000;
+  if (endpoint.startsWith("dataforseo_labs/")) return Math.round((0.012 + 0.00015 * items) * 10000) / 10000;
   return ESTIMATES[endpoint] ?? 0.05;
 }
 
